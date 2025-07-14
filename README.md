@@ -21,8 +21,8 @@ Before you begin, ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd DentalIQ
+git clone https://github.com/mtaher2/Dental_Appointment_MS.git
+cd Dental_Appointment_MS
 ```
 
 ### 2. Install Dependencies
