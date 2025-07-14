@@ -1,1 +1,408 @@
+/* Header Styles */
+.main-header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1.5px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px 12px 18px;
+}
+.header-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+.header-menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header-menu li a {
+  color: #222;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.header-menu li a:hover {
+  color: #6c63ff;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.header-icon {
+  font-size: 1.2rem;
+  color: #6c63ff;
+  cursor: pointer;
+}
+.header-avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+@media (max-width: 900px) {
+  .header-nav {
+    padding: 12px 10px 12px 10px;
+  }
+  .header-menu {
+    gap: 16px;
+  }
+}
+
+/* Add spacing below header for main content */
+main.container.mt-4 {
+  margin-top: 48px !important;
+}
+
 /* Add your custom CSS here */
+/* Payment Options Page */
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 32px 0;
+}
+.payment-form-section {
+  flex: 2;
+}
+.payment-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+.payment-form input[type="text"],
+.payment-form input[type="password"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  background: #f9f9fb;
+  transition: border 0.2s;
+}
+.payment-form input:focus {
+  border: 1.5px solid #6c63ff;
+  outline: none;
+}
+.payment-row {
+  display: flex;
+  gap: 18px;
+}
+.paypal-section {
+  margin: 20px 0 12px 0;
+}
+.paypal-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+.pay-now-btn {
+  width: 100%;
+  background: #4b61b8;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 22px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  margin-top: 22px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.pay-now-btn:hover {
+  background: #354a8c;
+}
+.breadcrumb {
+  font-size: 0.97rem;
+  color: #6c63ff;
+  margin-bottom: 18px;
+}
+.breadcrumb a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+.breadcrumb span {
+  color: #222;
+}
+.payment-summary {
+  flex: 1;
+  background: #fafaff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(80, 80, 120, 0.07);
+  padding: 28px 28px 18px 28px;
+  min-width: 220px;
+  max-width: 260px;
+  margin-top: 32px;
+}
+.payment-summary h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+.summary-row.total {
+  font-weight: 700;
+  color: #222;
+  margin-top: 16px;
+  font-size: 1.08rem;
+}
+.payment-message {
+  margin-top: 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b61b8;
+}
+
+/* Shared Table Styles for Patient Pages */
+.payment-history-container,
+.invoices-container,
+.health-record-container,
+.family-dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(80, 80, 120, 0.07);
+  padding: 32px 24px;
+}
+.payment-history-table,
+.invoices-table,
+.health-record-table,
+.family-dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+}
+.payment-history-table th,
+.invoices-table th,
+.health-record-table th,
+.family-dashboard-table th {
+  background: #f4f6fa;
+  color: #4b61b8;
+  font-weight: 600;
+  padding: 12px 8px;
+  border-bottom: 2px solid #e5e7eb;
+  text-align: left;
+}
+.payment-history-table td,
+.invoices-table td,
+.health-record-table td,
+.family-dashboard-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+.payment-history-table tr:last-child td,
+.invoices-table tr:last-child td,
+.health-record-table tr:last-child td,
+.family-dashboard-table tr:last-child td {
+  border-bottom: none;
+}
+.family-dashboard-table a,
+.invoices-table a {
+  color: #4b61b8;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Payment History Page (ph-table) */
+.ph-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 40px 0 24px 0;
+  letter-spacing: -0.5px;
+}
+.ph-table-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: none;
+  border: 2px solid #6c63ff;
+  padding: 0;
+}
+.ph-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.ph-table th, .ph-table td {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 1rem;
+}
+.ph-table th {
+  background: #fff;
+  color: #222;
+  font-weight: 600;
+  border-bottom: 2px solid #6c63ff;
+}
+.ph-table td {
+  background: #fff;
+  color: #222;
+  border-bottom: 1px solid #e5e7eb;
+}
+.ph-table tr:last-child td {
+  border-bottom: none;
+}
+.ph-table a {
+  color: #6c63ff;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.ph-table th:first-child, .ph-table td:first-child {
+  border-top-left-radius: 12px;
+}
+.ph-table th:last-child, .ph-table td:last-child {
+  border-top-right-radius: 12px;
+}
+
+/* Payment Options Page (po-title) */
+.po-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+/* Payment History Page - Professional Card Design */
+.ph-bg {
+  min-height: 100vh;
+  background: #f6f7fb;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 0 0 0;
+}
+.ph-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(80, 80, 120, 0.10);
+  max-width: 950px;
+  width: 100%;
+  margin: 0 16px;
+  padding: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+}
+.ph-card-header {
+  padding: 32px 36px 0 36px;
+}
+.ph-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.5px;
+  color: #222;
+}
+.ph-table-wrapper {
+  padding: 0 36px;
+}
+.ph-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 0;
+}
+.ph-table th, .ph-table td {
+  padding: 18px 18px;
+  text-align: left;
+  font-size: 1.05rem;
+}
+.ph-table th {
+  background: #f4f6fa;
+  color: #4b61b8;
+  font-weight: 700;
+  border-bottom: 2px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.ph-table td {
+  background: #fff;
+  color: #222;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+.ph-table tr:last-child td {
+  border-bottom: none;
+}
+.ph-table tr:hover td {
+  background: #f6f7fb;
+}
+.ph-table a {
+  color: #6c63ff;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.ph-table a:hover {
+  color: #354a8c;
+}
+.ph-table th:first-child, .ph-table td:first-child {
+  border-top-left-radius: 12px;
+}
+.ph-table th:last-child, .ph-table td:last-child {
+  border-top-right-radius: 12px;
+}
+@media (max-width: 900px) {
+  .ph-card-header, .ph-table-wrapper {
+    padding: 0 10px;
+  }
+  .ph-card {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .payment-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .payment-summary {
+    max-width: 100%;
+    min-width: unset;
+    margin-top: 18px;
+  }
+  .ph-table-wrapper {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
