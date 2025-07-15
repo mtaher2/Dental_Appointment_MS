@@ -1,1 +1,91 @@
 /* Add your custom CSS here */
+
+/* Receptionist Dashboard Styles */
+.dashboard-container {
+    font-family: 'Inter', 'Noto Sans', sans-serif;
+}
+
+.dashboard-card {
+    transition: all 0.3s ease;
+    background-color: #DDC9F9;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.status-button {
+    transition: all 0.2s ease;
+    background-color: #415FA5;
+    color: white;
+}
+
+.status-button:hover {
+    opacity: 0.8;
+}
+
+.action-button {
+    transition: all 0.2s ease;
+    cursor: pointer;
+    color: #415FA5;
+    margin: 4px;
+    padding: 8px 16px;
+    min-height: 40px;
+    width: 96px;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.action-button:hover {
+    color: #2d4a8a;
+    text-decoration: underline;
+}
+
+/* Ensure buttons never touch each other */
+.action-button + .action-button {
+    margin-left: 16px;
+}
+
+/* Additional spacing for button groups */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.filter-button {
+    background-color: #415FA5;
+    color: white;
+}
+
+.filter-button:hover {
+    background-color: #2d4a8a;
+}
+
+/* Responsive table styles */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
