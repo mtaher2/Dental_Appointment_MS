@@ -15,6 +15,7 @@ const expressLayouts = require('express-ejs-layouts');
 // const errorHandler = require('./src/middleware/errorHandler');
 
 // Import routes
+const authRoutes = require('./src/routes/auth/auth');
 
 const app = express();
 
@@ -62,6 +63,9 @@ app.use(compression());
 //     message: 'Too many requests from this IP, please try again in an hour!'
 // });
 // app.use('/api', limiter);
+
+// Auth routes
+app.use('/auth', authRoutes);
 
 // Home route
 app.get('/', (req, res) => {

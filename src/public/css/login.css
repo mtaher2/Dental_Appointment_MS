@@ -1,0 +1,348 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: #edeaff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Exact layout overrides for reference image */
+.exact-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #edeaff;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 0 32px rgba(80, 80, 160, 0.08);
+    position: relative;
+}
+.exact-left {
+    flex: 0.7;
+    background: linear-gradient(135deg, #7b5cff 0%, #4e8cff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 32px 0 0 32px;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+    min-width: 320px;
+    max-width: 420px;
+    position: relative;
+}
+.exact-logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.exact-logo-img {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+}
+.exact-logo-text {
+    color: #0a1a3a;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+.exact-logo-title {
+    color: #2563eb;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.exact-logo-subtitle {
+    color: #0a1a3a;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+/* Center the 3D tooth image between the two columns */
+.exact-tooth-3d {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 480px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    /* Make sure it is not covered by form content */
+}
+.exact-tooth-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 8px 32px rgba(80, 80, 160, 0.2));
+}
+.exact-right {
+    flex: 2.3;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border-top-left-radius: 120px;
+    border-bottom-left-radius: 120px;
+    min-width: 350px;
+    position: relative;
+    box-shadow: 0 0 32px rgba(80, 80, 160, 0.08);
+}
+.exact-form-wrapper {
+    width: 100%;
+    max-width: 370px;
+    margin: 0 auto;
+    padding: 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+}
+.exact-title {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 8px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: lowercase;
+}
+.exact-subtitle {
+    color: #888;
+    font-size: 1.05rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.exact-apple-btn {
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 32px;
+    border: 1.5px solid #bbb;
+    background: #fff;
+    color: #222;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 2px 8px rgba(80, 80, 160, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.exact-apple-btn:hover {
+    border-color: #222;
+    box-shadow: 0 4px 16px rgba(80, 80, 160, 0.10);
+}
+.exact-divider {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1.5px solid #eee;
+    line-height: 0.1em;
+    margin: 18px 0 18px 0;
+    position: relative;
+}
+.exact-divider span {
+    background: #fff;
+    padding: 0 16px;
+    color: #bbb;
+    font-size: 1.01rem;
+    position: relative;
+    z-index: 1;
+}
+.exact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.exact-form-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.exact-input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    opacity: 0.7;
+}
+.exact-form-group input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    background: #f8f8ff;
+    transition: border-color 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+.exact-form-group input:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+.exact-form-options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+    width: 100%;
+}
+.exact-remember-me {
+    font-size: 0.98rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+}
+.exact-remember-me input[type="checkbox"] {
+    accent-color: #2563eb;
+    margin-right: 6px;
+}
+.exact-login-btn {
+    width: 100%;
+    padding: 13px 0;
+    border-radius: 32px;
+    border: none;
+    background: #4e6cff;
+    color: #fff;
+    font-size: 1.13rem;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(80, 80, 160, 0.04);
+    letter-spacing: 0.2px;
+}
+.exact-login-btn:hover {
+    background: #2563eb;
+    box-shadow: 0 4px 16px rgba(80, 80, 160, 0.10);
+}
+.exact-forgot {
+    margin-top: 16px;
+    text-align: center;
+    width: 100%;
+}
+.exact-forgot a {
+    color: #4e6cff;
+    text-decoration: none;
+    font-size: 1.01rem;
+    transition: color 0.2s;
+}
+.exact-forgot a:hover {
+    color: #2563eb;
+}
+
+/* Responsive for exact layout */
+@media (max-width: 1200px) {
+    .exact-tooth-3d {
+        width: 340px;
+        height: 340px;
+    }
+}
+@media (max-width: 900px) {
+    .exact-layout {
+        flex-direction: column;
+        border-radius: 0;
+    }
+    .exact-left, .exact-right {
+        border-radius: 0;
+        min-width: 0;
+        max-width: none;
+    }
+    .exact-left {
+        align-items: center;
+        justify-content: center;
+        padding: 24px 0 0 0;
+    }
+    .exact-tooth-3d {
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 220px;
+        height: auto;
+        margin: 0 auto 16px auto;
+        pointer-events: auto;
+    }
+    .exact-right {
+        border-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+@media (max-width: 600px) {
+    .exact-layout {
+        flex-direction: column;
+        border-radius: 0;
+    }
+    .exact-left, .exact-right {
+        border-radius: 0;
+        min-width: 0;
+        max-width: none;
+    }
+    .exact-form-wrapper {
+        padding: 18px 0;
+        max-width: 98vw;
+    }
+    .exact-tooth-img {
+        width: 100px;
+    }
+    .exact-logo-img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Entrance animation for panels */
+.login-left {
+    animation: slideInLeft 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.login-right {
+    animation: slideInRight 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Floating animation for 3D tooth image */
+.tooth-img {
+    animation: floatTooth 2.5s ease-in-out infinite alternate;
+}
+@keyframes floatTooth {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-18px) scale(1.04);
+    }
+} 
+
+
+
+
+
