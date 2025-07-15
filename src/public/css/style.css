@@ -1,1 +1,10 @@
 /* Add your custom CSS here */
+button, .btn {
+  background-color: #415FA5 !important;
+  color: #fff !important;
+  border: none;
+}
+button:hover, .btn:hover {
+  background-color: #2E4A8C !important;
+  color: #fff !important;
+}

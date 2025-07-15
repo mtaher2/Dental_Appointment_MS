@@ -72,6 +72,42 @@ app.get('/', (req, res) => {
     });
 });
 
+// Appointments page route
+app.get('/receptionist/appointments', (req, res) => {
+    res.render('pages/receptionist/appointments', {
+        title: 'Appointments',
+        success_msg: '',
+        error_msg: ''
+    });
+});
+
+// New Appointment page route
+app.get('/receptionist/appointments/new', (req, res) => {
+    res.render('pages/receptionist/new-appointment', {
+        title: 'New Appointment',
+        success_msg: '',
+        error_msg: ''
+    });
+});
+
+// Billing page route
+app.get('/receptionist/billing', (req, res) => {
+    res.render('pages/receptionist/billing', {
+        title: 'Billing Support',
+        success_msg: '',
+        error_msg: ''
+    });
+});
+
+// Receipts page route
+app.get('/receptionist/billing/receipts', (req, res) => {
+    res.render('pages/receptionist/receipts', {
+        title: 'Receipts',
+        success_msg: '',
+        error_msg: ''
+    });
+});
+
 // Error handling
 // app.use(errorHandler);
 
