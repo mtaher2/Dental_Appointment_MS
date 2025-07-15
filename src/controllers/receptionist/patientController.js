@@ -208,6 +208,37 @@ const patientController = {
         }
     },
 
+    // Render Edit Patient page
+    getEditPatient: async (req, res) => {
+        try {
+            const { patientId } = req.params;
+            console.log('Getting patient for editing:', patientId);
+            
+            // TODO: Fetch patient data from database
+            const patient = {
+                id: patientId,
+                name: 'Sarah Carter',
+                dateOfBirth: '1985-03-15',
+                gender: 'Female',
+                language: 'English'
+            };
+            
+            res.render('pages/receptionist/edit-patient', {
+                title: 'Edit Patient Info',
+                success_msg: '',
+                error_msg: '',
+                patient: patient
+            });
+        } catch (error) {
+            console.error('Error rendering edit patient page:', error);
+            res.status(500).render('pages/receptionist/edit-patient', {
+                title: 'Edit Patient Info',
+                success_msg: '',
+                error_msg: 'Error loading patient data'
+            });
+        }
+    },
+
     // Upload document
     uploadDocument: async (req, res) => {
         try {

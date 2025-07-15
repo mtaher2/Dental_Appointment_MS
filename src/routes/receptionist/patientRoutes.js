@@ -9,6 +9,9 @@ router.get('/patients', patientController.getPatientManagement);
 router.get('/family-members/add', patientController.getAddFamilyMember);
 router.post('/family-members/add', patientController.postAddFamilyMember);
 
+// Edit Patient page (specific route before parameterized routes)
+router.get('/patients/:patientId/edit', patientController.getEditPatient);
+
 // Search patients (specific route before parameterized routes)
 router.get('/patients/search', patientController.searchPatients);
 
