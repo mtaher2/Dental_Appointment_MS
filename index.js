@@ -16,11 +16,7 @@ const expressLayouts = require('express-ejs-layouts');
 
 // Import routes
 const patientRoutes = require('./src/routes/patient');
-const superAdminDashboardRoute = require('./src/routes/superAdmin/dashboard');
-const superAdminSystemConfigRoute = require('./src/routes/superAdmin/systemConfig');
-const superAdminDevToolsRoute = require('./src/routes/superAdmin/devTools');
-const superAdminMasterLogsRoute = require('./src/routes/superAdmin/masterLogs');
-const superAdminAdminsRoute = require('./src/routes/superAdmin/admins');
+const superAdminRoutes = require('./src/routes/superAdmin/superadmin');
 
 const app = express();
 
@@ -80,16 +76,8 @@ app.get('/', (req, res) => {
 
 // Register patient routes
 app.use('/patient', patientRoutes);
-// Register super admin dashboard route
-app.use('/superadmin/dashboard', superAdminDashboardRoute);
-// Register super admin system config route
-app.use('/superadmin/system-config', superAdminSystemConfigRoute);
-// Register super admin developer tools route
-app.use('/superadmin/dev-tools', superAdminDevToolsRoute);
-// Register super admin master logs route
-app.use('/superadmin/master-logs', superAdminMasterLogsRoute);
-// Register super admin admins route
-app.use('/superadmin/admins', superAdminAdminsRoute);
+// Register super admin routes
+app.use('/superadmin', superAdminRoutes);
 
 // Error handling
 // app.use(errorHandler);
