@@ -1,22 +1,101 @@
-<div class="health-record-container">
-  <h2>My Health Record</h2>
-  <table class="health-record-table">
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Visit Reason</th>
-        <th>Treatment</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Example row -->
-      <tr>
-        <td>2024-06-01</td>
-        <td>Checkup</td>
-        <td>Cleaning</td>
-        <td>All good</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="health-record-modern-container">
+  <h2 class="hr-title">My Health Record</h2>
+
+  <!-- Timeline -->
+  <div class="hr-section">
+    <h3 class="hr-section-title">Timeline</h3>
+    <ul class="hr-timeline">
+      <li><span class="material-icons hr-timeline-icon">event</span> Annual Checkup <span class="hr-timeline-date">January 15, 2024</span></li>
+      <li><span class="material-icons hr-timeline-icon">event</span> Dental Cleaning <span class="hr-timeline-date">March 20, 2024</span></li>
+      <li><span class="material-icons hr-timeline-icon">event</span> Allergy Test <span class="hr-timeline-date">May 10, 2024</span></li>
+      <li><span class="material-icons hr-timeline-icon">event</span> Flu Shot <span class="hr-timeline-date">October 5, 2023</span></li>
+      <li><span class="material-icons hr-timeline-icon">event</span> Physical Therapy <span class="hr-timeline-date">November 12, 2023</span></li>
+    </ul>
+  </div>
+
+  <!-- Health Metrics -->
+  <div class="hr-section">
+    <h3 class="hr-section-title">Health Metrics</h3>
+    <div class="hr-metrics-cards">
+      <div class="hr-metric-card">
+        <div class="hr-metric-title">Blood Pressure</div>
+        <div class="hr-metric-value">120/80 mmHg</div>
+        <div class="hr-metric-sub">Last 12 Months <span class="hr-metric-up">+2%</span></div>
+        <!-- Placeholder SVG for line chart -->
+        <svg class="hr-metric-chart" width="220" height="60"><polyline fill="none" stroke="#4b61b8" stroke-width="2" points="0,40 20,30 40,35 60,25 80,30 100,20 120,25 140,15 160,20 180,10 200,20 220,5" /></svg>
+        <div class="hr-metric-xaxis">Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</div>
+      </div>
+      <div class="hr-metric-card">
+        <div class="hr-metric-title">Cholesterol Level</div>
+        <div class="hr-metric-value">200 mg/dL</div>
+        <div class="hr-metric-sub">Last 12 Months <span class="hr-metric-down">-5%</span></div>
+        <!-- Placeholder SVG for bar chart -->
+        <svg class="hr-metric-chart" width="220" height="60">
+          <rect x="10" y="30" width="10" height="20" fill="#bfc7e6" />
+          <rect x="30" y="25" width="10" height="25" fill="#bfc7e6" />
+          <rect x="50" y="20" width="10" height="30" fill="#bfc7e6" />
+          <rect x="70" y="15" width="10" height="35" fill="#bfc7e6" />
+          <rect x="90" y="10" width="10" height="40" fill="#4b61b8" />
+          <rect x="110" y="20" width="10" height="30" fill="#bfc7e6" />
+          <rect x="130" y="25" width="10" height="25" fill="#bfc7e6" />
+          <rect x="150" y="30" width="10" height="20" fill="#bfc7e6" />
+        </svg>
+        <div class="hr-metric-xaxis">Jan Feb Mar Apr May Jun Jul Aug Sep</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Medical History -->
+  <div class="hr-section">
+    <h3 class="hr-section-title">Medical History</h3>
+    <div class="hr-history-grid">
+      <div>
+        <div class="hr-history-label">Chronic Illnesses</div>
+        <div class="hr-history-value">None</div>
+      </div>
+      <div>
+        <div class="hr-history-label">Allergies</div>
+        <div class="hr-history-value">Pollen, Dust</div>
+      </div>
+      <div>
+        <div class="hr-history-label">Medications</div>
+        <div class="hr-history-value">Ibuprofen, Cetirizine</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Procedures & Treatments -->
+  <div class="hr-section">
+    <h3 class="hr-section-title">Procedures & Treatments</h3>
+    <div class="hr-history-grid">
+      <div>
+        <div class="hr-history-label">Past Treatments</div>
+        <div class="hr-history-value">Physical Therapy (2023), Dental Filling (2022)</div>
+      </div>
+      <div>
+        <div class="hr-history-label">X-rays</div>
+        <div class="hr-history-value">Chest X-ray (2023), Dental X-ray (2022)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Emergency Contact -->
+  <div class="hr-section">
+    <h3 class="hr-section-title">Emergency Contact</h3>
+    <form class="hr-emergency-form">
+      <div class="hr-form-row">
+        <label for="emergencyName">Contact Name</label>
+        <input type="text" id="emergencyName" name="emergencyName" placeholder="Enter name">
+      </div>
+      <div class="hr-form-row">
+        <label for="emergencyRelation">Relationship</label>
+        <input type="text" id="emergencyRelation" name="emergencyRelation" placeholder="Enter relationship">
+      </div>
+      <div class="hr-form-row">
+        <label for="emergencyPhone">Phone Number</label>
+        <input type="text" id="emergencyPhone" name="emergencyPhone" placeholder="Enter phone number">
+      </div>
+      <button type="submit" class="hr-update-btn">Update Emergency Contact</button>
+    </form>
+  </div>
 </div> 

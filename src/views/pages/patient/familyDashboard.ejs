@@ -1,22 +1,81 @@
-<div class="family-dashboard-container">
-  <h2>Family Dashboard</h2>
-  <table class="family-dashboard-table">
-    <thead>
-      <tr>
-        <th>Member</th>
-        <th>Relation</th>
-        <th>Health Record</th>
-        <th>Payments</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Example row -->
-      <tr>
-        <td>Jane Doe</td>
-        <td>Daughter</td>
-        <td><a href="#">View</a></td>
-        <td><a href="#">View</a></td>
-      </tr>
-    </tbody>
-  </table>
+<div class="family-dashboard-modern-container">
+  <h2 class="fd-title">Family Dashboard</h2>
+  <p class="fd-subtitle">Manage your family's health records and appointments</p>
+
+  <div class="fd-section">
+    <h3 class="fd-section-title">Family Members</h3>
+    <div class="fd-family-list">
+      <!-- Example family member -->
+      <div class="fd-family-member">
+        <img src="/public/images/avatar-female.png" alt="Sophia Carter" class="fd-avatar">
+        <div class="fd-member-info">
+          <div class="fd-member-name">Sophia Carter</div>
+          <div class="fd-member-age">Age: 32</div>
+        </div>
+        <span class="fd-arrow">&gt;</span>
+      </div>
+      <div class="fd-family-member">
+        <img src="/public/images/avatar-male.png" alt="Ethan Carter" class="fd-avatar">
+        <div class="fd-member-info">
+          <div class="fd-member-name">Ethan Carter</div>
+          <div class="fd-member-age">Age: 35</div>
+        </div>
+        <span class="fd-arrow">&gt;</span>
+      </div>
+      <div class="fd-family-member">
+        <img src="/public/images/avatar-female.png" alt="Olivia Carter" class="fd-avatar">
+        <div class="fd-member-info">
+          <div class="fd-member-name">Olivia Carter</div>
+          <div class="fd-member-age">Age: 15</div>
+        </div>
+        <span class="fd-arrow">&gt;</span>
+      </div>
+      <div class="fd-family-member">
+        <img src="/public/images/avatar-male.png" alt="Noah Carter" class="fd-avatar">
+        <div class="fd-member-info">
+          <div class="fd-member-name">Noah Carter</div>
+          <div class="fd-member-age">Age: 10</div>
+        </div>
+        <span class="fd-arrow">&gt;</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="fd-section">
+    <h3 class="fd-section-title">Upcoming Appointments</h3>
+    <div class="fd-appointments-list">
+      <div class="fd-appointment">
+        <div class="fd-appointment-icon">
+          <span class="material-icons">event</span>
+        </div>
+        <div class="fd-appointment-info">
+          <div class="fd-appointment-title">Olivia Carter - Annual Checkup</div>
+          <div class="fd-appointment-type">Pediatrics</div>
+          <div class="fd-appointment-doctor">Dr. Amelia Bennett</div>
+        </div>
+        <div class="fd-appointment-date">July 15, 2024</div>
+      </div>
+      <div class="fd-appointment">
+        <div class="fd-appointment-icon">
+          <span class="material-icons">event</span>
+        </div>
+        <div class="fd-appointment-info">
+          <div class="fd-appointment-title">Ethan Carter - Routine Checkup</div>
+          <div class="fd-appointment-type">General Practice</div>
+          <div class="fd-appointment-doctor">Dr. Benjamin Harris</div>
+        </div>
+        <div class="fd-appointment-date">July 20, 2024</div>
+      </div>
+      <div class="fd-appointment">
+        <div class="fd-appointment-icon">
+          <span class="material-icons">event</span>
+        </div>
+        <div class="fd-appointment-info">
+          <div class="fd-appointment-title">Sophia Carter - Follow-up Appointment</div>
+          <div class="fd-appointment-type">Family Medicine</div>
+        </div>
+        <div class="fd-appointment-date">August 5, 2024</div>
+      </div>
+    </div>
+  </div>
 </div> 
