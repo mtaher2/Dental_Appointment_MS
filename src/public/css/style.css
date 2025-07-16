@@ -1,1 +1,2057 @@
-/* Add your custom CSS here */
+/* --- PATIENT PAGES - SELECT DOCTOR (IMPROVED) --- */
+
+/* Reset and base styles for patient pages */
+.patient-header, .patient-main {
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- IMPROVED HEADER BAR DESIGN --- */
+
+/* Header Styles */
+.patient-header {
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 70px;
+}
+
+/* Enhanced Logo Box */
+.header-left .logo-box {
+    background: #f0f8ff;
+    border: 2px dashed #4e8cff;
+    border-radius: 12px;
+    padding: 12px 20px;
+    box-shadow: 0 2px 8px rgba(78, 140, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.header-left .logo-box:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(78, 140, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+.logo-text {
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 2px rgba(78, 140, 255, 0.1);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Enhanced Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: all 0.2s ease;
+    position: relative;
+    padding: 8px 0;
+}
+
+.nav-link:hover {
+    color: #4e8cff;
+    transform: translateY(-1px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4e8cff;
+    transition: width 0.2s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Enhanced Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.notification-icon {
+    color: #666;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 8px;
+    border-radius: 50%;
+    background: #f8f9fa;
+}
+
+.notification-icon:hover {
+    color: #4e8cff;
+    background: #e6f3ff;
+    transform: scale(1.1);
+}
+
+/* Enhanced Profile Section */
+.profile-picture {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.profile-picture:hover {
+    border-color: #4e8cff;
+    background: #e6f3ff;
+    transform: translateY(-1px);
+}
+
+.profile-picture img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.profile-text {
+    color: #555;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-left: 8px;
+}
+
+.header-separator {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e0e0e0, transparent);
+    margin: 0 40px;
+    opacity: 0.6;
+}
+
+/* --- IMPROVED TITLE & SEARCH SECTION --- */
+
+/* Main Content */
+.patient-main {
+    margin-top: 90px;
+    background: #fff;
+    min-height: calc(100vh - 90px);
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+
+/* Enhanced Page Title */
+.page-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+}
+
+.page-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #4e8cff, #2563eb);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Enhanced Search Section */
+.search-section {
+    margin-bottom: 35px;
+}
+
+.search-container {
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    font-size: 1.1rem;
+    z-index: 2;
+}
+
+.search-input {
+    width: 100%;
+    padding: 14px 18px 14px 48px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 25px;
+    font-size: 1rem;
+    background: #fafafa;
+    transition: all 0.2s ease;
+    color: #374151;
+    font-weight: 400;
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4e8cff;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(78, 140, 255, 0.08);
+    transform: translateY(-1px);
+}
+
+.search-input:hover {
+    border-color: #d1d5db;
+    background: #f9fafb;
+}
+
+/* Doctors Section - Two Column Layout */
+.doctors-section {
+    margin-top: 50px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Left Column - Doctor Listings */
+.doctor-listings {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.doctor-card {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+
+.doctor-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.doctor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.doctor-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.doctor-specialty {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+.view-profile-btn {
+    background: #4e8cff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    align-self: flex-start;
+    box-shadow: 0 2px 6px rgba(78, 140, 255, 0.2);
+}
+
+.view-profile-btn:hover {
+    background: #2563eb;
+    box-shadow: 0 4px 12px rgba(78, 140, 255, 0.3);
+}
+
+/* Right Column - Doctor Images */
+.doctor-images {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.doctor-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #f0f0f0;
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .doctors-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .doctor-images {
+        order: -1;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .doctor-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 15px 20px;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .main-container {
+        padding: 20px;
+    }
+    
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .doctor-card {
+        padding: 20px;
+    }
+    
+    .doctor-name {
+        font-size: 1.3rem;
+    }
+    
+    .doctor-images {
+        gap: 15px;
+    }
+    
+    .doctor-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-actions {
+        gap: 15px;
+    }
+    
+    .profile-picture img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .search-input {
+        padding: 16px 16px 16px 50px;
+        font-size: 1rem;
+    }
+    
+    .doctor-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* --- BOOK APPOINTMENT PAGE STYLES --- */
+
+/* Appointment Form */
+.appointment-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+}
+
+.form-section {
+    margin-bottom: 35px;
+}
+
+.form-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 15px;
+    letter-spacing: -0.2px;
+}
+
+/* Button Groups */
+.button-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.option-btn {
+    background: #f3f4f6;
+    color: #6b7280;
+    border: 2px solid #e5e7eb;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 120px;
+    text-align: center;
+}
+
+.option-btn:hover {
+    background: #e5e7eb;
+    border-color: #d1d5db;
+    color: #374151;
+}
+
+.option-btn.active {
+    background: #2563eb;
+    color: #fff;
+    border-color: #2563eb;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+}
+
+.option-btn.active:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+/* Doctor Selection */
+.doctor-selection {
+    margin-top: 10px;
+}
+
+.doctor-select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #fafafa;
+    color: #374151;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.doctor-select:focus {
+    outline: none;
+    border-color: #4e8cff;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(78, 140, 255, 0.08);
+}
+
+/* Booking Rules */
+.booking-rules {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.booking-rules p {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Input Groups */
+.input-group {
+    margin-top: 10px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #fafafa;
+    color: #374151;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4e8cff;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(78, 140, 255, 0.08);
+}
+
+.form-input:hover {
+    border-color: #d1d5db;
+    background: #f9fafb;
+}
+
+.form-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 14px 18px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #fafafa;
+    color: #374151;
+    transition: all 0.2s ease;
+    resize: vertical;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.form-textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #4e8cff;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(78, 140, 255, 0.08);
+}
+
+.form-textarea:hover {
+    border-color: #d1d5db;
+    background: #f9fafb;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.book-appointment-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+    min-width: 180px;
+}
+
+.book-appointment-btn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+.book-appointment-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design for Book Appointment */
+@media (max-width: 768px) {
+    .appointment-form {
+        padding: 25px;
+        margin: 0 10px;
+    }
+    
+    .button-group {
+        gap: 8px;
+    }
+    
+    .option-btn {
+        min-width: 100px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .form-actions {
+        justify-content: center;
+    }
+    
+    .book-appointment-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .appointment-form {
+        padding: 20px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .option-btn {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .section-label {
+        font-size: 1rem;
+    }
+    
+    .form-input,
+    .form-textarea,
+    .doctor-select {
+        padding: 12px 16px;
+        font-size: 0.95rem;
+    }
+}
+
+/* --- ENHANCED BOOK APPOINTMENT PAGE STYLES --- */
+
+/* Page Subtitle */
+.page-subtitle {
+    text-align: center;
+    color: #6b7280;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: -0.2px;
+}
+
+/* Doctor Information Section */
+.doctor-info-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #f8fafc;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.doctor-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.3px;
+}
+
+.doctor-details {
+    color: #6b7280;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Calendar Section */
+.calendar-section {
+    margin-bottom: 40px;
+}
+
+.calendar-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calendar {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    min-width: 280px;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.calendar-nav-btn {
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.calendar-nav-btn:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.calendar-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.calendar-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.calendar-days span {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #6b7280;
+    padding: 8px 4px;
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.date {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #374151;
+    padding: 8px 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date:hover {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+.date.selected {
+    background: #8b5cf6;
+    color: #fff;
+    font-weight: 500;
+}
+
+.date.other-month {
+    color: #d1d5db;
+}
+
+/* Time Slots Section */
+.time-slots-section {
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.time-slots-section .section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.time-slots-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.time-slot-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.time-slot-item:hover {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+.time-slot-item input[type="radio"] {
+    display: none;
+}
+
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    margin-right: 15px;
+    position: relative;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.time-slot-item input[type="radio"]:checked + .radio-custom {
+    border-color: #2563eb;
+    background: #2563eb;
+}
+
+.time-slot-item input[type="radio"]:checked + .radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.time-slot-text {
+    font-size: 1rem;
+    color: #374151;
+    font-weight: 500;
+}
+
+.time-slot-item input[type="radio"]:checked ~ .time-slot-text {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+/* Enhanced Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.book-appointment-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+    min-width: 120px;
+}
+
+.book-appointment-btn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+.book-appointment-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design for Enhanced Book Appointment */
+@media (max-width: 768px) {
+    .calendar-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .calendar {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .doctor-info-section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .doctor-name {
+        font-size: 1.6rem;
+    }
+    
+    .time-slots-section {
+        margin: 0 10px 30px;
+    }
+    
+    .form-actions {
+        justify-content: center;
+        margin: 30px 10px 0;
+    }
+    
+    .book-appointment-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar {
+        padding: 15px;
+    }
+    
+    .calendar-title {
+        font-size: 1rem;
+    }
+    
+    .date {
+        font-size: 0.85rem;
+        padding: 6px 2px;
+        min-height: 28px;
+    }
+    
+    .time-slot-item {
+        padding: 12px 16px;
+    }
+    
+    .time-slot-text {
+        font-size: 0.95rem;
+    }
+    
+    .doctor-name {
+        font-size: 1.4rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* --- APPOINTMENT CONFIRMED PAGE STYLES --- */
+
+/* Confirmation Header */
+.confirmation-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 40px 0;
+}
+
+.confirmation-icon {
+    width: 80px;
+    height: 80px;
+    background: #8b5cf6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.confirmation-icon i {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.confirmation-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.5px;
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.confirmation-message {
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+/* Appointment Details Section */
+.appointment-details-section {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.appointment-details-section .section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 25px 0;
+    text-align: left;
+}
+
+.details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 0;
+}
+
+.detail-icon {
+    width: 40px;
+    height: 40px;
+    background: #f3f4f6;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.detail-icon i {
+    font-size: 1.1rem;
+    color: #6b7280;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.detail-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1f2937;
+    line-height: 1.4;
+}
+
+/* Booking Rules Section */
+.booking-rules-section {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.booking-rules-section .section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 15px 0;
+    text-align: left;
+}
+
+.rules-text {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Cancel & Rebook Button */
+.cancel-rebook-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+    min-width: 180px;
+    animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.cancel-rebook-btn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+.cancel-rebook-btn:active {
+    transform: translateY(0);
+}
+
+/* Enhanced Form Actions for Confirmation Page */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for Appointment Confirmed */
+@media (max-width: 768px) {
+    .confirmation-header {
+        padding: 30px 0;
+        margin-bottom: 40px;
+    }
+    
+    .confirmation-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+    
+    .confirmation-icon i {
+        font-size: 2rem;
+    }
+    
+    .confirmation-title {
+        font-size: 2rem;
+    }
+    
+    .confirmation-message {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .appointment-details-section {
+        padding: 25px 20px;
+        margin: 0 10px 25px;
+    }
+    
+    .booking-rules-section {
+        padding: 20px;
+        margin: 0 10px 30px;
+    }
+    
+    .detail-item {
+        gap: 12px;
+    }
+    
+    .detail-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .detail-icon i {
+        font-size: 1rem;
+    }
+    
+    .detail-value {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .confirmation-title {
+        font-size: 1.8rem;
+    }
+    
+    .confirmation-message {
+        font-size: 0.95rem;
+    }
+    
+    .appointment-details-section {
+        padding: 20px 15px;
+    }
+    
+    .booking-rules-section {
+        padding: 18px 15px;
+    }
+    
+    .detail-item {
+        gap: 10px;
+    }
+    
+    .detail-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .detail-icon i {
+        font-size: 0.9rem;
+    }
+    
+    .detail-label {
+        font-size: 0.85rem;
+    }
+    
+    .detail-value {
+        font-size: 0.95rem;
+    }
+    
+    .cancel-rebook-btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+        min-width: 160px;
+    }
+}
+
+/* --- SHARE YOUR EXPERIENCE PAGE STYLES --- */
+
+/* Rating Overview Section */
+.rating-overview-section {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+}
+
+.overall-rating {
+    text-align: center;
+    min-width: 200px;
+}
+
+.rating-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.rating-stars {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.rating-stars i {
+    font-size: 1.8rem;
+    color: #d1d5db;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.rating-stars i.fas {
+    color: #fbbf24;
+}
+
+.rating-stars i:hover {
+    color: #fbbf24;
+    transform: scale(1.1);
+}
+
+.rating-count {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.rating-distribution {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.distribution-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.star-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6b7280;
+    min-width: 15px;
+}
+
+.distribution-bar {
+    flex: 1;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background: #fbbf24;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.distribution-percent {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 500;
+    min-width: 30px;
+    text-align: right;
+}
+
+/* Comments Section */
+.comments-section {
+    margin-bottom: 40px;
+}
+
+.comments-textarea {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    resize: vertical;
+    min-height: 120px;
+    transition: all 0.2s ease;
+    background: #fff;
+}
+
+.comments-textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.comments-textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* Additional Questions Section */
+.additional-questions-section {
+    margin-bottom: 40px;
+}
+
+.additional-questions-section .section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.question-item {
+    margin-bottom: 35px;
+}
+
+.question-label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.question-input {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.question-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.question-select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.question-input i {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.question-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.option-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.option-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.option-btn.active {
+    background: #1e40af;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Feedback Footer */
+.feedback-footer {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 30px;
+    margin-top: 40px;
+}
+
+.disclaimer-text {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Submit Feedback Button */
+.submit-feedback-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+    min-width: 180px;
+}
+
+.submit-feedback-btn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+.submit-feedback-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design for Share Experience */
+@media (max-width: 768px) {
+    .rating-overview-section {
+        flex-direction: column;
+        gap: 30px;
+        padding: 25px 20px;
+        margin: 0 10px 30px;
+    }
+    
+    .overall-rating {
+        min-width: auto;
+    }
+    
+    .rating-number {
+        font-size: 3rem;
+    }
+    
+    .rating-stars i {
+        font-size: 1.6rem;
+    }
+    
+    .distribution-item {
+        gap: 10px;
+    }
+    
+    .comments-section {
+        margin: 0 10px 30px;
+    }
+    
+    .additional-questions-section {
+        margin: 0 10px 30px;
+    }
+    
+    .question-options {
+        gap: 8px;
+    }
+    
+    .option-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .feedback-footer {
+        margin: 30px 10px 0;
+    }
+    
+    .form-actions {
+        justify-content: center;
+    }
+    
+    .submit-feedback-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rating-overview-section {
+        padding: 20px 15px;
+    }
+    
+    .rating-number {
+        font-size: 2.5rem;
+    }
+    
+    .rating-stars i {
+        font-size: 1.4rem;
+    }
+    
+    .question-label {
+        font-size: 1rem;
+    }
+    
+    .question-select {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
+    
+    .option-btn {
+        padding: 7px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .comments-textarea {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+    
+    .disclaimer-text {
+        font-size: 0.85rem;
+    }
+    
+    .submit-feedback-btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+        min-width: 160px;
+    }
+}
+
+/* --- RATE YOUR DENTIST PAGE STYLES --- */
+
+/* Rate Dentist Header */
+.rate-dentist-header {
+    background: #fff;
+    color: #000;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.rate-dentist-header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.rate-dentist-header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.clinic-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.rate-dentist-header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.rate-dentist-header .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.settings-icon {
+    color: #6b7280;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.settings-icon:hover {
+    background: rgba(107, 114, 128, 0.1);
+}
+
+.rate-dentist-header .profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.rate-dentist-header .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Rate Dentist Main Content */
+.rate-dentist-main {
+    background: #fff;
+    min-height: calc(100vh - 60px);
+    padding: 20px 0;
+}
+
+.rate-dentist-main .main-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.rate-dentist-main .page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 12px 0;
+    text-align: left;
+    letter-spacing: -0.3px;
+}
+
+.rate-dentist-main .page-subtitle {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 0 0 30px 0;
+    line-height: 1.4;
+}
+
+/* Feedback Sections */
+.feedback-sections {
+    margin-bottom: 35px;
+}
+
+.feedback-section {
+    margin-bottom: 35px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.feedback-section .section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 10px 0;
+}
+
+.section-question {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+
+.rating-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rating-row {
+    display: flex;
+    gap: 8px;
+}
+
+.rating-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
+}
+
+.rating-btn.wide-btn {
+    flex: 1;
+    width: 100%;
+}
+
+.rating-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.rating-btn.active {
+    background: #1e40af;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+.rating-btn:active {
+    transform: translateY(0);
+}
+
+/* Overall Satisfaction Section */
+.overall-satisfaction-section {
+    margin-bottom: 40px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.overall-satisfaction-section .section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 10px 0;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.star-rating i {
+    font-size: 1.8rem;
+    color: #d1d5db;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.star-rating i.fas,
+.star-rating i.active {
+    color: #fbbf24;
+}
+
+.star-rating i:hover {
+    color: #fbbf24;
+    transform: scale(1.1);
+}
+
+.satisfaction-question {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+
+.satisfaction-textarea {
+    margin-top: 15px;
+}
+
+.satisfaction-textarea textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    resize: vertical;
+    min-height: 100px;
+    transition: all 0.2s ease;
+    background: #fff;
+}
+
+.satisfaction-textarea textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.satisfaction-textarea textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* Submit Button */
+.rate-dentist-main .form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.rate-dentist-main .submit-feedback-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+    min-width: 180px;
+}
+
+.rate-dentist-main .submit-feedback-btn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+.rate-dentist-main .submit-feedback-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design for Rate Dentist */
+@media (max-width: 768px) {
+    .rate-dentist-header .header-container {
+        padding: 0 15px;
+    }
+    
+    .rate-dentist-main .main-container {
+        padding: 0 15px;
+    }
+    
+    .feedback-section {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .overall-satisfaction-section {
+        padding: 20px;
+    }
+    
+    .rating-options {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .rating-btn {
+        flex: none;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .star-rating i {
+        font-size: 1.8rem;
+    }
+    
+    .satisfaction-textarea textarea {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+    
+    .rate-dentist-main .submit-feedback-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rate-dentist-header {
+        padding: 12px 0;
+    }
+    
+    .rate-dentist-header .header-left {
+        gap: 12px;
+    }
+    
+    .clinic-name {
+        font-size: 1rem;
+    }
+    
+    .rate-dentist-main {
+        padding: 30px 0;
+    }
+    
+    .feedback-section {
+        padding: 18px 15px;
+    }
+    
+    .overall-satisfaction-section {
+        padding: 18px 15px;
+    }
+    
+    .feedback-section .section-title,
+    .overall-satisfaction-section .section-title {
+        font-size: 1.2rem;
+    }
+    
+    .section-question {
+        font-size: 0.95rem;
+    }
+    
+    .rating-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .star-rating i {
+        font-size: 1.6rem;
+    }
+    
+    .satisfaction-textarea textarea {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .rate-dentist-main .submit-feedback-btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+        min-width: 160px;
+    }
+}

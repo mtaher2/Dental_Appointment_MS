@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Confirmed - Dental Clinic</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="patient-header">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo-box">
+                    <span class="logo-text">DENTAL CLINIC</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <nav class="nav-menu">
+                    <a href="#" class="nav-link">Dashboard</a>
+                    <a href="#" class="nav-link">Appointments</a>
+                    <a href="#" class="nav-link">Messages</a>
+                    <a href="#" class="nav-link">Documents</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="profile-picture">
+                        <img src="/images/patient-profile.jpg" alt="Patient Profile" onerror="this.src='https://via.placeholder.com/35x35/4e8cff/ffffff?text=U'">
+                        <span class="profile-text">Patient Profile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-separator"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="patient-main">
+        <div class="main-container">
+            <!-- Confirmation Header -->
+            <div class="confirmation-header">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h1 class="confirmation-title">Appointment Confirmed</h1>
+                <p class="confirmation-message">Your appointment has been successfully scheduled. Please review the details below.</p>
+            </div>
+
+            <!-- Appointment Details Section -->
+            <div class="appointment-details-section">
+                <h2 class="section-title">Appointment Details</h2>
+                <div class="details-list">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="detail-content">
+                            <span class="detail-label">Date & Time</span>
+                            <span class="detail-value">Dr. Emily Carter</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="detail-content">
+                            <span class="detail-label">Appointment Type</span>
+                            <span class="detail-value">General Consultation</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detail-content">
+                            <span class="detail-label">Location</span>
+                            <span class="detail-value">123 Medical Plaza, Suite 456, Anytown, USA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Rules Section -->
+            <div class="booking-rules-section">
+                <h2 class="section-title">Booking Rules</h2>
+                <p class="rules-text">Please arrive 15 minutes before your scheduled appointment time. Cancellations must be made at least 24 hours in advance to avoid a cancellation fee.</p>
+            </div>
+
+            <!-- Action Button -->
+            <div class="form-actions">
+                <button type="button" class="cancel-rebook-btn">Cancel & Rebook</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Add any JavaScript functionality here
+        document.querySelector('.cancel-rebook-btn').addEventListener('click', function() {
+            // Handle cancel and rebook action
+            console.log('Cancel & Rebook clicked');
+            // You can redirect to the book appointment page or show a modal
+            // window.location.href = '/patient/book-appointment';
+        });
+    </script>
+</body>
+</html> 
