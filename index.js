@@ -15,6 +15,7 @@ const expressLayouts = require('express-ejs-layouts');
 // const errorHandler = require('./src/middleware/errorHandler');
 
 // Import routes
+const patientRoutes = require('./src/routes/patient');
 
 const app = express();
 
@@ -71,6 +72,9 @@ app.get('/', (req, res) => {
         error_msg: ''
     });
 });
+
+// Register patient routes
+app.use('/patient', patientRoutes);
 
 // Error handling
 // app.use(errorHandler);
