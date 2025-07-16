@@ -1,0 +1,79 @@
+<div class="logsaudit-container">
+  <h1 class="logsaudit-title">Logs & Audit</h1>
+  <p class="logsaudit-description">View detailed activity logs for all roles and actions, with options to filter by user, action type, and date.</p>
+
+  <div class="logsaudit-filter-section">
+    <h2 class="logsaudit-filter-title">Filter Logs</h2>
+    <form class="logsaudit-filter-form">
+      <div class="logsaudit-form-row">
+        <label for="filterUser">User</label>
+        <input type="text" id="filterUser" class="logsaudit-input" />
+      </div>
+      <div class="logsaudit-form-row">
+        <label for="filterAction">Action Type</label>
+        <input type="text" id="filterAction" class="logsaudit-input" />
+      </div>
+      <div class="logsaudit-form-row">
+        <label for="filterDate">Date Range</label>
+        <input type="text" id="filterDate" class="logsaudit-input" />
+      </div>
+    </form>
+    <div class="logsaudit-actions">
+      <button class="apply-filters-btn">Apply Filters</button>
+    </div>
+  </div>
+
+  <div class="logsaudit-logs-section">
+    <h2 class="logsaudit-logs-title">Activity Logs</h2>
+    <div class="logsaudit-table-wrapper">
+      <table class="logsaudit-table">
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>User</th>
+            <th>Role</th>
+            <th>Action</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#" class="log-link">2024-03-15 10:00 AM</a></td>
+            <td><a href="#" class="log-link">Dr. Emily Carter</a></td>
+            <td><a href="#" class="log-link">Doctor</a></td>
+            <td><a href="#" class="log-link">Appointment Created</a></td>
+            <td>Appointment for patient Michael Johnson scheduled.</td>
+          </tr>
+          <tr>
+            <td><a href="#" class="log-link">2024-03-15 11:30 AM</a></td>
+            <td><a href="#" class="log-link">Sarah Miller</a></td>
+            <td><a href="#" class="log-link">Receptionist</a></td>
+            <td><a href="#" class="log-link">Patient Record Updated</a></td>
+            <td>Updated contact information for patient Olivia Brown.</td>
+          </tr>
+          <tr>
+            <td><a href="#" class="log-link">2024-03-15 02:15 PM</a></td>
+            <td><a href="#" class="log-link">Dr. Emily Carter</a></td>
+            <td><a href="#" class="log-link">Doctor</a></td>
+            <td><a href="#" class="log-link">Prescription Issued</a></td>
+            <td>Prescription for medication X issued to patient Michael Johnson.</td>
+          </tr>
+          <tr>
+            <td><a href="#" class="log-link">2024-03-16 09:45 AM</a></td>
+            <td><a href="#" class="log-link">Admin User</a></td>
+            <td><a href="#" class="log-link">Admin</a></td>
+            <td><a href="#" class="log-link">User Account Created</a></td>
+            <td>New user account created for Dr. David Lee.</td>
+          </tr>
+          <tr>
+            <td><a href="#" class="log-link">2024-03-16 12:00 PM</a></td>
+            <td><a href="#" class="log-link">Sarah Miller</a></td>
+            <td><a href="#" class="log-link">Receptionist</a></td>
+            <td><a href="#" class="log-link">Appointment Rescheduled</a></td>
+            <td>Appointment for patient Olivia Brown rescheduled to 2024-03-22.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> 
