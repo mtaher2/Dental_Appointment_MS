@@ -16,11 +16,7 @@ const expressLayouts = require('express-ejs-layouts');
 
 // Import routes
 const patientRoutes = require('./src/routes/patient');
-const adminUserManagementRoute = require('./src/routes/admin/userManagement');
-const adminClinicConfigRoute = require('./src/routes/admin/clinicConfig');
-const adminNotificationSettingsRoute = require('./src/routes/admin/notificationSettings');
-const adminLogsAuditRoute = require('./src/routes/admin/logsAudit');
-const adminReportingRoute = require('./src/routes/admin/reporting');
+const adminRoutes = require('./src/routes/admin/admin');
 
 const app = express();
 
@@ -81,16 +77,8 @@ app.get('/', (req, res) => {
 
 // Register patient routes
 app.use('/patient', patientRoutes);
-// Register admin user management route
-app.use('/admin/user-management', adminUserManagementRoute);
-// Register admin clinic configuration route
-app.use('/admin/clinic-configuration', adminClinicConfigRoute);
-// Register admin notification settings route
-app.use('/admin/notification-settings', adminNotificationSettingsRoute);
-// Register admin logs & audit route
-app.use('/admin/logs-audit', adminLogsAuditRoute);
-// Register admin reporting route
-app.use('/admin/reporting', adminReportingRoute);
+// Register admin routes
+app.use('/admin', adminRoutes);
 
 // Error handling
 // app.use(errorHandler);
