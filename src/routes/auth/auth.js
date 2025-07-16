@@ -6,7 +6,8 @@ router.get('/login', (req, res) => {
     res.render('pages/auth/login', {
         title: 'Login',
         success_msg: '',
-        error_msg: ''
+        error_msg: '',
+        layout: false
     });
 });
 
@@ -15,7 +16,8 @@ router.get('/forgot-password', (req, res) => {
     res.render('pages/auth/forgot-password', {
         title: 'Forgot Password',
         success_msg: '',
-        error_msg: ''
+        error_msg: '',
+        layout: false
     });
 });
 
@@ -24,7 +26,8 @@ router.get('/check-email', (req, res) => {
     res.render('pages/auth/check-email', {
         title: 'Check Your Email',
         success_msg: '',
-        error_msg: ''
+        error_msg: '',
+        layout: false
     });
 });
 
@@ -34,7 +37,8 @@ router.get('/reset-password', (req, res) => {
         title: 'Reset Password',
         success_msg: '',
         error_msg: '',
-        token: req.query.token || ''
+        token: req.query.token || '',
+        layout: false
     });
 });
 
@@ -43,7 +47,8 @@ router.get('/success', (req, res) => {
     res.render('pages/auth/success', {
         title: 'Password Reset Success',
         success_msg: '',
-        error_msg: ''
+        error_msg: '',
+        layout: false
     });
 });
 
