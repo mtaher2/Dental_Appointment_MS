@@ -1,0 +1,98 @@
+<div class="reports-container">
+  <h2 class="reports-title">Reports</h2>
+  <p class="reports-subtitle">Generate financial statements for billing officers.</p>
+  
+  <!-- Tab Navigation -->
+  <div class="reports-tabs">
+    <button class="report-tab active" data-tab="daily">Daily Reports</button>
+    <button class="report-tab" data-tab="doctor">Doctor Reports</button>
+    <button class="report-tab" data-tab="department">Department Reports</button>
+  </div>
+  
+  <!-- Export Options Section -->
+  <div class="reports-section">
+    <h3 class="reports-section-title">Export Options</h3>
+    <div class="reports-form-row">
+      <div class="reports-field">
+        <label for="exportType">Select Export Type</label>
+        <div class="reports-select-wrapper">
+          <select id="exportType" name="exportType" class="reports-select">
+            <option value="">Choose export type</option>
+            <option value="pdf">PDF</option>
+            <option value="excel">Excel</option>
+            <option value="csv">CSV</option>
+          </select>
+          <div class="select-arrow">▼</div>
+        </div>
+      </div>
+      
+      <div class="reports-field">
+        <label for="dateRange">Select Date Range</label>
+        <div class="reports-select-wrapper">
+          <select id="dateRange" name="dateRange" class="reports-select">
+            <option value="">Choose date range</option>
+            <option value="today">Today</option>
+            <option value="week">This Week</option>
+            <option value="month">This Month</option>
+            <option value="quarter">This Quarter</option>
+            <option value="year">This Year</option>
+          </select>
+          <div class="select-arrow">▼</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Filters Section -->
+  <div class="reports-section">
+    <h3 class="reports-section-title">Filters</h3>
+    <div class="reports-form-row">
+      <div class="reports-field">
+        <label for="invoiceStatus">Invoice Status</label>
+        <div class="reports-select-wrapper">
+          <select id="invoiceStatus" name="invoiceStatus" class="reports-select">
+            <option value="">All statuses</option>
+            <option value="paid">Paid</option>
+            <option value="unpaid">Unpaid</option>
+            <option value="overdue">Overdue</option>
+            <option value="partial">Partial</option>
+          </select>
+          <div class="select-arrow">▼</div>
+        </div>
+      </div>
+      
+      <div class="reports-field">
+        <label for="paymentMethod">Payment Method</label>
+        <div class="reports-select-wrapper">
+          <select id="paymentMethod" name="paymentMethod" class="reports-select">
+            <option value="">All methods</option>
+            <option value="cash">Cash</option>
+            <option value="card">Card</option>
+            <option value="insurance">Insurance</option>
+            <option value="online">Online</option>
+          </select>
+          <div class="select-arrow">▼</div>
+        </div>
+      </div>
+      
+      <div class="reports-field">
+        <label for="installmentPlans">Installment Plans</label>
+        <div class="reports-select-wrapper">
+          <select id="installmentPlans" name="installmentPlans" class="reports-select">
+            <option value="">All plans</option>
+            <option value="none">No Installments</option>
+            <option value="monthly">Monthly</option>
+            <option value="quarterly">Quarterly</option>
+            <option value="yearly">Yearly</option>
+          </select>
+          <div class="select-arrow">▼</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Action Button -->
+  <div class="reports-actions">
+    <button type="button" class="generate-report-btn">Generate Report</button>
+  </div>
+</div> 

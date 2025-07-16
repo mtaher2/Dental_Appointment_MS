@@ -1525,3 +1525,884 @@ main.container.mt-4 {
   display: inline-block;
   transition: color 0.18s, text-decoration 0.18s;
 }
+
+/* --- Billing Officer Invoice Management: Match Screenshot Design & Colors --- */
+.billing-invoice-table-wrapper {
+  border: 2px solid #B9AFFF;
+  border-radius: 16px;
+  background: #fff;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+.billing-invoice-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+}
+.billing-invoice-table th, .billing-invoice-table td {
+  border-bottom: 1px solid #B9AFFF;
+  padding: 18px 14px;
+  text-align: left;
+  background: #fff;
+}
+.billing-invoice-table th {
+  background: #fff;
+  font-weight: 700;
+  color: #222;
+  font-size: 1.01rem;
+  border-top: none;
+}
+.billing-invoice-table tr:last-child td {
+  border-bottom: none;
+}
+/* --- Billing Status Badges: Uniform Size --- */
+.billing-status-badge {
+  display: inline-block;
+  min-width: 140px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #4B6CB7;
+  color: #fff;
+  border: none;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+  transition: background 0.18s;
+  vertical-align: middle;
+}
+.billing-status-badge.partial {
+  background: #6B7FD7;
+}
+.billing-invoice-filters-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+.billing-filter-chip {
+  background: #F3F4F6;
+  color: #222;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.billing-filter-chip.active {
+  background: #222;
+  color: #fff;
+}
+.billing-filter-chip:hover:not(.active) {
+  background: #E5E5EA;
+  color: #222;
+}
+.billing-invoice-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 18px;
+  margin-bottom: 40px;
+}
+.billing-invoice-action-btn {
+  background: #4B6CB7;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+}
+.billing-invoice-action-btn.secondary {
+  background: #F3F4F6;
+  color: #222;
+  font-weight: 700;
+}
+.billing-invoice-action-btn:hover, .billing-invoice-action-btn:focus {
+  background: #3957a3;
+  color: #fff;
+}
+.billing-invoice-action-btn.secondary:hover, .billing-invoice-action-btn.secondary:focus {
+  background: #E5E5EA;
+  color: #222;
+}
+@media (max-width: 900px) {
+  .billing-invoice-container {
+    padding: 8px 2px;
+  }
+  .billing-invoice-table th, .billing-invoice-table td {
+    padding: 10px 6px;
+    font-size: 0.97rem;
+  }
+  .billing-invoice-actions-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+}
+
+/* --- Billing Invoice Management: Improved Search & Filter Row --- */
+.billing-invoice-search-row {
+  margin-bottom: 0;
+  width: 100%;
+}
+.billing-invoice-searchbar {
+  display: flex;
+  align-items: center;
+  background: #F3F4F6;
+  border-radius: 999px;
+  padding: 0 20px;
+  min-width: 260px;
+  max-width: 100%;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+}
+.billing-invoice-searchbar .search-icon {
+  font-size: 1.3rem;
+  color: #A3A3B3;
+  margin-right: 10px;
+}
+.billing-invoice-search-input {
+  border: none;
+  background: transparent;
+  font-size: 1.08rem;
+  width: 100%;
+  outline: none;
+  color: #222;
+  padding: 12px 0;
+}
+.billing-invoice-search-input::placeholder {
+  color: #A3A3B3;
+  opacity: 1;
+}
+.billing-invoice-filters-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+/* --- Billing Officer Record Payment Styles --- */
+.record-payment-container {
+  max-width: 540px;
+  margin: 48px auto;
+  padding: 32px 0 32px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.record-payment-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+}
+.record-payment-form {
+  width: 100%;
+}
+.record-payment-field {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.record-payment-field label {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.record-payment-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid #E5E5EA;
+  border-radius: 10px;
+  font-size: 1.08rem;
+  background: #fff;
+  transition: border 0.2s;
+  margin-bottom: 0;
+  color: #222;
+  font-family: inherit;
+}
+.record-payment-input:focus {
+  border-color: #4B6CB7;
+  outline: none;
+}
+.record-payment-input::placeholder {
+  color: #A3A3B3;
+  opacity: 1;
+}
+.record-payment-input[type="date"] {
+  color: #222;
+}
+.record-payment-notes {
+  min-height: 90px;
+  resize: vertical;
+}
+.record-payment-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  margin-top: 8px;
+}
+.record-payment-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #4B6CB7;
+  margin: 0;
+}
+.record-payment-checkbox-label {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 400;
+  cursor: pointer;
+}
+.record-payment-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+.record-payment-btn {
+  background: #4B6CB7;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+}
+.record-payment-btn:hover, .record-payment-btn:focus {
+  background: #3957a3;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .record-payment-container {
+    padding: 8px 2px;
+  }
+  .record-payment-actions-row {
+    justify-content: center;
+  }
+}
+
+/* Receipts & History Page Styles */
+.receipts-history-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.receipts-history-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.receipts-section,
+.payment-history-section {
+  margin-bottom: 50px;
+}
+
+.receipts-subtitle,
+.payment-history-subtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.receipts-table-wrapper,
+.payment-history-table-wrapper {
+  background: #fff;
+  border: 1.5px solid #B9AFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(185, 175, 255, 0.1);
+}
+
+.receipts-table,
+.payment-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.receipts-table th,
+.receipts-table td,
+.payment-history-table th,
+.payment-history-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #B9AFFF;
+  color: #222;
+}
+
+.receipts-table th,
+.payment-history-table th {
+  background: #f8f9ff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #222;
+  border-bottom: 2px solid #B9AFFF;
+}
+
+.receipts-table tr:last-child td,
+.payment-history-table tr:last-child td {
+  border-bottom: none;
+}
+
+.amount-cell {
+  text-align: right;
+  font-weight: 600;
+}
+
+.view-receipt-link {
+  color: #4256D0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.view-receipt-link:hover,
+.view-receipt-link:focus {
+  color: #354a8c;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .receipts-history-page-container {
+    padding: 20px 15px;
+  }
+  
+  .receipts-table th,
+  .receipts-table td,
+  .payment-history-table th,
+  .payment-history-table td {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .receipts-history-title {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+  
+  .receipts-subtitle,
+  .payment-history-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Apply Discount Page Styles */
+.apply-discount-container {
+  max-width: 600px;
+  margin: 48px auto;
+  padding: 40px 20px;
+  background: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.apply-discount-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.apply-discount-form {
+  width: 100%;
+}
+
+.apply-discount-field {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-discount-field label {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.apply-discount-input,
+.apply-discount-textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #E5E5EA;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+  color: #222;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.apply-discount-input:focus,
+.apply-discount-textarea:focus {
+  border-color: #4B6CB7;
+  outline: none;
+}
+
+.apply-discount-input::placeholder,
+.apply-discount-textarea::placeholder {
+  color: #A3A3B3;
+  opacity: 1;
+}
+
+.apply-discount-textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.discount-note {
+  font-size: 0.875rem;
+  color: #A3A3B3;
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+.apply-discount-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.apply-discount-btn {
+  background: #4B6CB7;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+  min-width: 140px;
+}
+
+.apply-discount-btn:hover,
+.apply-discount-btn:focus {
+  background: #3957a3;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .apply-discount-container {
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+  
+  .apply-discount-title {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+  
+  .apply-discount-actions {
+    justify-content: center;
+  }
+  
+  .apply-discount-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Reports Page Styles */
+.reports-container {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 40px 20px;
+  background: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.reports-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.reports-subtitle {
+  font-size: 1rem;
+  color: #A3A3B3;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.reports-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #E5E5EA;
+}
+
+.report-tab {
+  background: none;
+  border: none;
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #A3A3B3;
+  cursor: pointer;
+  transition: color 0.2s, border-bottom 0.2s;
+  position: relative;
+}
+
+.report-tab.active {
+  color: #4B6CB7;
+  border-bottom: 2px solid #4B6CB7;
+}
+
+.report-tab:hover:not(.active) {
+  color: #222;
+}
+
+.reports-section {
+  margin-bottom: 40px;
+}
+
+.reports-section-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.reports-form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.reports-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.reports-field label {
+  font-size: 0.875rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.reports-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.reports-select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #E5E5EA;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fff;
+  color: #222;
+  font-family: inherit;
+  appearance: none;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+.reports-select:focus {
+  border-color: #4B6CB7;
+  outline: none;
+}
+
+.reports-select option {
+  color: #222;
+  background: #fff;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #222;
+  font-size: 0.75rem;
+  pointer-events: none;
+  transition: transform 0.2s;
+}
+
+.reports-select:focus + .select-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.reports-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.generate-report-btn {
+  background: #4B6CB7;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+  min-width: 160px;
+}
+
+.generate-report-btn:hover,
+.generate-report-btn:focus {
+  background: #3957a3;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .reports-container {
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+  
+  .reports-title {
+    font-size: 1.75rem;
+    margin-bottom: 6px;
+  }
+  
+  .reports-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+  
+  .reports-tabs {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .report-tab {
+    text-align: center;
+    border-bottom: 1px solid #E5E5EA;
+  }
+  
+  .report-tab.active {
+    border-bottom: 2px solid #4B6CB7;
+  }
+  
+  .reports-form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .reports-actions {
+    justify-content: center;
+  }
+  
+  .generate-report-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Activity Log Page Styles */
+.activity-log-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.activity-log-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 32px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.activity-log-search-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 32px;
+  align-items: center;
+}
+
+.activity-log-searchbar {
+  display: flex;
+  align-items: center;
+  background: #F3F4F6;
+  border-radius: 10px;
+  padding: 0 16px;
+  flex: 1;
+  max-width: 400px;
+  height: 48px;
+}
+
+.activity-log-searchbar .search-icon {
+  font-size: 1.1rem;
+  color: #A3A3B3;
+  margin-right: 12px;
+}
+
+.activity-log-search-input {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  color: #222;
+  padding: 12px 0;
+}
+
+.activity-log-search-input::placeholder {
+  color: #A3A3B3;
+  opacity: 1;
+}
+
+.activity-log-filter-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.activity-log-filter {
+  padding: 12px 40px 12px 16px;
+  border: 1px solid #E5E5EA;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  background: #fff;
+  color: #222;
+  font-family: inherit;
+  appearance: none;
+  cursor: pointer;
+  transition: border 0.2s;
+  min-width: 160px;
+}
+
+.activity-log-filter:focus {
+  border-color: #4B6CB7;
+  outline: none;
+}
+
+.activity-log-filter option {
+  color: #222;
+  background: #fff;
+}
+
+.filter-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #222;
+  font-size: 0.75rem;
+  pointer-events: none;
+  transition: transform 0.2s;
+}
+
+.activity-log-filter:focus + .filter-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.activity-log-table-wrapper {
+  background: #fff;
+  border: 1.5px solid #B9AFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(185, 175, 255, 0.1);
+}
+
+.activity-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.activity-log-table th,
+.activity-log-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #B9AFFF;
+  color: #222;
+}
+
+.activity-log-table th {
+  background: #f8f9ff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #222;
+  border-bottom: 2px solid #B9AFFF;
+}
+
+.activity-log-table tr:last-child td {
+  border-bottom: none;
+}
+
+.activity-log-table tr:hover td {
+  background: #f8f9ff;
+}
+
+@media (max-width: 900px) {
+  .activity-log-container {
+    padding: 20px 15px;
+  }
+  
+  .activity-log-title {
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+  }
+  
+  .activity-log-search-row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .activity-log-searchbar {
+    max-width: none;
+  }
+  
+  .activity-log-filter-wrapper {
+    align-self: flex-start;
+  }
+  
+  .activity-log-filter {
+    min-width: 140px;
+  }
+  
+  .activity-log-table th,
+  .activity-log-table td {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}
