@@ -1,20 +1,20 @@
-<div class="masterlogs-container">
+<div class="masterlogs-container fade-slide-in">
   <h1 class="masterlogs-title">Master Logs & Audit</h1>
   <p class="masterlogs-description">View and export system-wide logs. Filter by clinic, user, IP address, device, action type, and date/time range.</p>
 
   <form class="masterlogs-search-form">
     <div class="masterlogs-searchbar-row">
-      <div class="masterlogs-searchbar">
+      <div class="admins-searchbar">
         <span class="material-icons search-icon">search</span>
-        <input type="text" placeholder="Search logs" class="masterlogs-search-input" />
+        <input type="text" placeholder="Search logs" class="admins-search-input" />
       </div>
-      <div class="masterlogs-filters">
-        <button type="button" class="filter-chip">Clinic</button>
-        <button type="button" class="filter-chip">User</button>
-        <button type="button" class="filter-chip">IP Address</button>
-        <button type="button" class="filter-chip">Device</button>
-        <button type="button" class="filter-chip">Action Type</button>
-      </div>
+    </div>
+    <div class="masterlogs-filters" style="margin-top: 16px; margin-bottom: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+      <button type="button" class="filter-chip">Clinic</button>
+      <button type="button" class="filter-chip">User</button>
+      <button type="button" class="filter-chip">IP Address</button>
+      <button type="button" class="filter-chip">Device</button>
+      <button type="button" class="filter-chip">Action Type</button>
     </div>
     <div class="masterlogs-date-row">
       <div class="date-field">
@@ -28,8 +28,8 @@
     </div>
   </form>
 
-  <div class="masterlogs-table-wrapper">
-    <table class="masterlogs-table">
+  <div class="masterlogs-table-wrapper admins-table-wrapper">
+    <table class="masterlogs-table admins-table">
       <thead>
         <tr>
           <th>Timestamp</th>
@@ -43,7 +43,7 @@
       <tbody>
         <tr>
           <td>2024-01-15 10:33:00</td>
-          <td>Clinic A</td>
+          <td class="clinic-muted">Clinic A</td>
           <td>192.168.100.100</td>
           <td>Desktop</td>
           <td>User Login</td>
@@ -51,7 +51,7 @@
         </tr>
         <tr>
           <td>2024-01-15 10:40:00</td>
-          <td>User: Sarah Lee</td>
+          <td class="clinic-muted">User: Sarah Lee</td>
           <td>192.168.101.101</td>
           <td>Mobile</td>
           <td>Appointment Created</td>
@@ -59,7 +59,7 @@
         </tr>
         <tr>
           <td>2024-01-15 12:00:00</td>
-          <td>Clinic B</td>
+          <td class="clinic-muted">Clinic B</td>
           <td>192.168.102.110</td>
           <td>Tablet</td>
           <td>Patient Record Updated</td>
@@ -67,7 +67,7 @@
         </tr>
         <tr>
           <td>2024-01-15 13:01:00</td>
-          <td>User: Michael Chan</td>
+          <td class="clinic-muted">User: Michael Chan</td>
           <td>192.168.103.104</td>
           <td>Desktop</td>
           <td>Document Uploaded</td>
@@ -75,7 +75,7 @@
         </tr>
         <tr>
           <td>2024-01-15 13:05:00</td>
-          <td>Clinic A</td>
+          <td class="clinic-muted">Clinic A</td>
           <td>192.168.100.100</td>
           <td>Mobile</td>
           <td>Payment Received</td>
@@ -83,7 +83,7 @@
         </tr>
         <tr>
           <td>2024-01-15 13:10:00</td>
-          <td>User: Olivia Brown</td>
+          <td class="clinic-muted">User: Olivia Brown</td>
           <td>192.168.105.106</td>
           <td>Desktop</td>
           <td>User Logout</td>
@@ -91,7 +91,7 @@
         </tr>
         <tr>
           <td>2024-01-15 13:20:00</td>
-          <td>Clinic C</td>
+          <td class="clinic-muted">Clinic C</td>
           <td>192.168.106.108</td>
           <td>Tablet</td>
           <td>Inventory Updated</td>
@@ -99,7 +99,7 @@
         </tr>
         <tr>
           <td>2024-01-15 13:30:00</td>
-          <td>User: Ethan Clark</td>
+          <td class="clinic-muted">User: Ethan Clark</td>
           <td>192.168.107.109</td>
           <td>Mobile</td>
           <td>Message Sent</td>
@@ -107,7 +107,7 @@
         </tr>
         <tr>
           <td>2024-01-15 13:40:00</td>
-          <td>Clinic D</td>
+          <td class="clinic-muted">Clinic D</td>
           <td>192.168.108.110</td>
           <td>Desktop</td>
           <td>Billing Report Generated</td>
@@ -115,7 +115,7 @@
         </tr>
         <tr>
           <td>2024-01-15 13:50:00</td>
-          <td>User: Aqa Wilson</td>
+          <td class="clinic-muted">User: Aqa Wilson</td>
           <td>192.168.109.109</td>
           <td>Mobile</td>
           <td>Appointment Cancelled</td>
@@ -124,7 +124,7 @@
       </tbody>
     </table>
   </div>
-  <div class="masterlogs-actions">
+  <div class="masterlogs-actions" style="margin-top: 18px;">
     <button class="export-logs-btn">Export Logs</button>
   </div>
 </div> 
