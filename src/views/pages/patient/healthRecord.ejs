@@ -4,12 +4,42 @@
   <!-- Timeline -->
   <div class="hr-section hr-animate-section">
     <h3 class="hr-section-title">Timeline</h3>
-    <ul class="hr-timeline">
-      <li><span class="material-icons hr-timeline-icon">event</span> Annual Checkup <span class="hr-timeline-date">January 15, 2024</span></li>
-      <li><span class="material-icons hr-timeline-icon">event</span> Dental Cleaning <span class="hr-timeline-date">March 20, 2024</span></li>
-      <li><span class="material-icons hr-timeline-icon">event</span> Allergy Test <span class="hr-timeline-date">May 10, 2024</span></li>
-      <li><span class="material-icons hr-timeline-icon">event</span> Flu Shot <span class="hr-timeline-date">October 5, 2023</span></li>
-      <li><span class="material-icons hr-timeline-icon">event</span> Physical Therapy <span class="hr-timeline-date">November 12, 2023</span></li>
+    <ul class="hr-timeline-vertical">
+      <li class="hr-timeline-event">
+        <span class="hr-timeline-icon"><i class="fa-regular fa-calendar"></i></span>
+        <div class="hr-timeline-content">
+          <div class="hr-timeline-title">Annual Checkup</div>
+          <div class="hr-timeline-date">January 15, 2024</div>
+        </div>
+      </li>
+      <li class="hr-timeline-event">
+        <span class="hr-timeline-icon"><i class="fa-solid fa-tooth"></i></span>
+        <div class="hr-timeline-content">
+          <div class="hr-timeline-title">Dental Cleaning</div>
+          <div class="hr-timeline-date">March 20, 2024</div>
+        </div>
+      </li>
+      <li class="hr-timeline-event">
+        <span class="hr-timeline-icon"><i class="fa-solid fa-allergies"></i></span>
+        <div class="hr-timeline-content">
+          <div class="hr-timeline-title">Allergy Test</div>
+          <div class="hr-timeline-date">May 10, 2024</div>
+        </div>
+      </li>
+      <li class="hr-timeline-event">
+        <span class="hr-timeline-icon"><i class="fa-solid fa-syringe"></i></span>
+        <div class="hr-timeline-content">
+          <div class="hr-timeline-title">Flu Shot</div>
+          <div class="hr-timeline-date">October 5, 2023</div>
+        </div>
+      </li>
+      <li class="hr-timeline-event">
+        <span class="hr-timeline-icon"><i class="fa-solid fa-dumbbell"></i></span>
+        <div class="hr-timeline-content">
+          <div class="hr-timeline-title">Physical Therapy</div>
+          <div class="hr-timeline-date">November 12, 2023</div>
+        </div>
+      </li>
     </ul>
   </div>
 
@@ -21,25 +51,14 @@
         <div class="hr-metric-title">Blood Pressure</div>
         <div class="hr-metric-value">120/80 mmHg</div>
         <div class="hr-metric-sub">Last 12 Months <span class="hr-metric-up">+2%</span></div>
-        <!-- Placeholder SVG for line chart -->
-        <svg class="hr-metric-chart" width="220" height="60"><polyline fill="none" stroke="#4b61b8" stroke-width="2" points="0,40 20,30 40,35 60,25 80,30 100,20 120,25 140,15 160,20 180,10 200,20 220,5" /></svg>
+        <canvas id="bpChart" width="320" height="80" class="hr-metric-chart"></canvas>
         <div class="hr-metric-xaxis">Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</div>
       </div>
       <div class="hr-metric-card">
         <div class="hr-metric-title">Cholesterol Level</div>
         <div class="hr-metric-value">200 mg/dL</div>
         <div class="hr-metric-sub">Last 12 Months <span class="hr-metric-down">-5%</span></div>
-        <!-- Placeholder SVG for bar chart -->
-        <svg class="hr-metric-chart" width="220" height="60">
-          <rect x="10" y="30" width="10" height="20" fill="#bfc7e6" />
-          <rect x="30" y="25" width="10" height="25" fill="#bfc7e6" />
-          <rect x="50" y="20" width="10" height="30" fill="#bfc7e6" />
-          <rect x="70" y="15" width="10" height="35" fill="#bfc7e6" />
-          <rect x="90" y="10" width="10" height="40" fill="#4b61b8" />
-          <rect x="110" y="20" width="10" height="30" fill="#bfc7e6" />
-          <rect x="130" y="25" width="10" height="25" fill="#bfc7e6" />
-          <rect x="150" y="30" width="10" height="20" fill="#bfc7e6" />
-        </svg>
+        <canvas id="cholChart" width="320" height="80" class="hr-metric-chart"></canvas>
         <div class="hr-metric-xaxis">Jan Feb Mar Apr May Jun Jul Aug Sep</div>
       </div>
     </div>
@@ -57,6 +76,8 @@
         <div class="hr-history-label">Allergies</div>
         <div class="hr-history-value">Pollen, Dust</div>
       </div>
+    </div>
+    <div class="hr-history-grid">
       <div>
         <div class="hr-history-label">Medications</div>
         <div class="hr-history-value">Ibuprofen, Cetirizine</div>
@@ -98,4 +119,62 @@
       <button type="submit" class="hr-update-btn">Update Emergency Contact</button>
     </form>
   </div>
-</div> 
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Blood Pressure Line Chart
+const bpCtx = document.getElementById('bpChart').getContext('2d');
+new Chart(bpCtx, {
+  type: 'line',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    datasets: [{
+      label: 'Blood Pressure',
+      data: [120, 122, 121, 123, 124, 125, 126, 124, 123, 125, 127, 128],
+      borderColor: '#4b61b8',
+      backgroundColor: 'rgba(75,97,184,0.08)',
+      tension: 0.4,
+      pointRadius: 0,
+      borderWidth: 2,
+      fill: true,
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { display: false },
+      y: { display: false, min: 110, max: 130 }
+    },
+    elements: { line: { borderJoinStyle: 'round' } },
+    responsive: false,
+    maintainAspectRatio: false
+  }
+});
+// Cholesterol Bar Chart
+const cholCtx = document.getElementById('cholChart').getContext('2d');
+new Chart(cholCtx, {
+  type: 'bar',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+    datasets: [{
+      label: 'Cholesterol',
+      data: [180, 185, 190, 200, 210, 205, 200, 195, 200],
+      backgroundColor: function(context) {
+        // Highlight May as the highest bar
+        return context.dataIndex === 4 ? '#4b61b8' : '#bfc7e6';
+      },
+      borderRadius: 4,
+      borderSkipped: false
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { display: false },
+      y: { display: false, min: 170, max: 220 }
+    },
+    responsive: false,
+    maintainAspectRatio: false
+  }
+});
+</script> 
