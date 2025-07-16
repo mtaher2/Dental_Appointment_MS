@@ -1200,72 +1200,71 @@ main.container.mt-4 {
 }
 
 /* --- Invoices Modern Table Styles (Updated for Screenshot) --- */
-.invoices-modern-container {
+.invoices-page-container {
   max-width: 900px;
-  margin: 48px auto 0 auto;
+  margin: 40px auto 0 auto;
   background: none;
-  border-radius: 0;
   box-shadow: none;
+  border-radius: 0;
   padding: 0;
 }
-.invoices-modern-title {
+.invoices-title {
   font-size: 2rem;
   font-weight: 700;
-  margin: 0 0 8px 0;
+  margin-bottom: 0;
   letter-spacing: -0.5px;
-  color: #111;
+  text-align: left;
 }
-.invoices-modern-subtitle {
+.invoices-subtitle {
   color: #888;
   font-size: 1.05rem;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+  margin-top: 4px;
+  text-align: left;
 }
-.invoices-modern-table-wrapper {
-  border: 2px solid #6c63ff;
+.invoices-table-wrapper {
+  border: 1.5px solid #6c63ff;
   border-radius: 12px;
   overflow-x: auto;
   background: #fff;
+  margin-top: 18px;
   box-shadow: none;
-  margin: 0 auto;
-  padding: 0;
 }
-.invoices-modern-table {
+.invoices-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
 }
-.invoices-modern-table th, .invoices-modern-table td {
-  padding: 16px 18px;
+.invoices-table th, .invoices-table td {
+  padding: 14px 18px;
   text-align: left;
   font-size: 1rem;
-}
-.invoices-modern-table th {
-  background: #fff;
   color: #222;
-  font-weight: 600;
-  border-bottom: 2px solid #6c63ff;
-}
-.invoices-modern-table td {
   background: #fff;
-  color: #222;
+}
+.invoices-table th {
+  font-weight: 700;
+  border-bottom: 1.5px solid #6c63ff;
+}
+.invoices-table td {
   border-bottom: 1px solid #e5e7eb;
 }
-.invoices-modern-table tr:last-child td {
+.invoices-table tr:last-child td {
   border-bottom: none;
 }
-.invoices-modern-table td:last-child {
+.invoices-table td:last-child {
   text-align: center;
   vertical-align: middle;
 }
-/* --- Consistent Invoice Status Badge Size --- */
-.invoice-status {
+/* Uniform size for all invoice-status buttons in invoices table */
+.invoices-table .invoice-status {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 110px;
+  width: 120px;
   height: 40px;
   padding: 0;
   border-radius: 20px;
@@ -1273,52 +1272,76 @@ main.container.mt-4 {
   font-weight: 600;
   color: #fff;
   text-align: center;
-  box-sizing: border-box;
-  margin-right: 8px;
-  background: #4b61b8;
-  box-shadow: none;
+  border: none;
+  margin: 0 auto;
+  background: #4660ad;
 }
-.invoice-status.paid {
-  background: #4b61b8;
+.invoices-table .invoice-status.paid {
+  background: #4660ad;
 }
-.invoice-status.unpaid {
+.invoices-table .invoice-status.unpaid {
   background: #f5a623;
 }
-.invoice-status.overdue {
+.invoices-table .invoice-status.overdue {
   background: #e57373;
 }
-.pay-now-btn {
-  background: #4b61b8;
-  color: #fff;
-  font-weight: 600;
-  border: none;
-  border-radius: 999px;
-  padding: 8px 28px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
-  box-shadow: none;
+/* Remove custom design for Pay Now button in Invoices table */
+.invoices-table .pay-now-btn {
+  all: unset;
   display: inline-block;
-  margin: 0 auto;
-  min-width: 100px;
+  padding: initial;
+  margin: initial;
+  color: initial;
+  background: initial;
+  border: initial;
+  border-radius: initial;
+  font: inherit;
+  cursor: pointer;
   text-align: center;
 }
-.pay-now-btn:hover, .pay-now-btn:focus {
-  background: #354a8c;
-  box-shadow: 0 4px 16px 0 rgba(80, 80, 120, 0.16);
-  transform: translateY(-2px) scale(1.04);
+.invoices-table .pay-now-btn:hover, .invoices-table .pay-now-btn:focus {
+  color: #4b61b8;
+  text-decoration: underline;
+  background: none;
   outline: none;
 }
+
+/* Center status in its column for invoices table */
+.invoices-table td:nth-child(5),
+.invoices-table th:nth-child(5) {
+  text-align: center;
+  vertical-align: middle;
+}
+.invoices-table .invoice-status {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center action in its column for invoices table */
+.invoices-table td:nth-child(6),
+.invoices-table th:nth-child(6) {
+  text-align: center;
+  vertical-align: middle;
+}
+.invoices-table .pay-now-btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
 @media (max-width: 900px) {
-  .invoices-modern-container {
+  .invoices-page-container {
     padding: 0 4vw;
   }
-  .invoices-modern-table-wrapper {
+  .invoices-table-wrapper {
     border-radius: 0;
     border-left: none;
     border-right: none;
   }
-  .invoices-modern-table th, .invoices-modern-table td {
+  .invoices-table th, .invoices-table td {
     padding: 12px 8px;
     font-size: 0.97rem;
   }
@@ -1437,4 +1460,68 @@ main.container.mt-4 {
     text-align: left;
     min-width: unset;
   }
+}
+
+/* Invoices Table Pay Now Button - Match View Button Style */
+.invoices-table .pay-now-btn {
+  background: #4b61b8;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px 0 rgba(80, 80, 120, 0.10);
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 100px;
+  text-align: center;
+}
+.invoices-table .pay-now-btn:hover, .invoices-table .pay-now-btn:focus {
+  background: #354a8c;
+  box-shadow: 0 4px 16px 0 rgba(80, 80, 120, 0.16);
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+
+/* Make Pay Now button in invoices table match the View button style */
+.invoices-table .pay-now-btn {
+  color: #6c63ff;
+  font-weight: 700;
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  transition: color 0.18s, text-decoration 0.18s;
+}
+.invoices-table .pay-now-btn:hover, .invoices-table .pay-now-btn:focus {
+  color: #4b61b8;
+  text-decoration: underline;
+  background: none;
+}
+
+/* Remove white rectangle from Pay Now button in invoices table */
+.invoices-table .pay-now-btn {
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  color: #6c63ff;
+  font-weight: 700;
+  border-radius: 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.18s, text-decoration 0.18s;
 }
