@@ -1,0 +1,113 @@
+<div class="usermgmt-container">
+  <h1 class="usermgmt-title">User Management</h1>
+  <p class="usermgmt-description">Manage user accounts, roles, and permissions within the system.</p>
+
+  <h2 class="usermgmt-section-title">User List</h2>
+  <div class="usermgmt-table-wrapper">
+    <table class="usermgmt-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dr. Olivia Bennett</td>
+          <td>olivia.bennett@example.com</td>
+          <td><span class="role-badge doctor">Doctor</span></td>
+          <td><span class="status-badge active">Active</span></td>
+          <td><a href="#" class="edit-link">Edit</a></td>
+        </tr>
+        <tr>
+          <td>Nurse Ethan Carter</td>
+          <td>ethan.carter@example.com</td>
+          <td><span class="role-badge nurse">Nurse</span></td>
+          <td><span class="status-badge active">Active</span></td>
+          <td><a href="#" class="edit-link">Edit</a></td>
+        </tr>
+        <tr>
+          <td>Receptionist Chloe Davis</td>
+          <td>chloe.davis@example.com</td>
+          <td><span class="role-badge receptionist">Receptionist</span></td>
+          <td><span class="status-badge active">Active</span></td>
+          <td><a href="#" class="edit-link">Edit</a></td>
+        </tr>
+        <tr>
+          <td>Admin Liam Foster</td>
+          <td>liam.foster@example.com</td>
+          <td><span class="role-badge admin">Admin</span></td>
+          <td><span class="status-badge active">Active</span></td>
+          <td><a href="#" class="edit-link">Edit</a></td>
+        </tr>
+        <tr>
+          <td>Inactive User Noah Green</td>
+          <td>noah.green@example.com</td>
+          <td><span class="role-badge patient">Patient</span></td>
+          <td><span class="status-badge inactive">Inactive</span></td>
+          <td><a href="#" class="edit-link">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="usermgmt-actions">
+    <button class="create-user-btn">Create New User</button>
+  </div>
+
+  <h2 class="usermgmt-section-title">User Roles</h2>
+  <div class="usermgmt-table-wrapper">
+    <table class="usermgmt-roles-table">
+      <thead>
+        <tr>
+          <th>Role Name</th>
+          <th>Description</th>
+          <th>Permissions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Doctor</td>
+          <td>Medical professionals with full access to patient records and appointment scheduling.</td>
+          <td>View/Edit Patient Records, Schedule Appointments</td>
+        </tr>
+        <tr>
+          <td>Nurse</td>
+          <td>Assists doctors and manages patient care tasks.</td>
+          <td>View Patient Records, Manage Appointments</td>
+        </tr>
+        <tr>
+          <td>Receptionist</td>
+          <td>Handles front desk operations and patient communication.</td>
+          <td>Schedule Appointments, Manage Patient Information</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="usermgmt-section-title">User Permissions</h2>
+  <form class="usermgmt-permissions-form">
+    <div class="permission-checkbox">
+      <input type="checkbox" id="perm1" checked />
+      <label for="perm1">View Patient Records</label>
+    </div>
+    <div class="permission-checkbox">
+      <input type="checkbox" id="perm2" checked />
+      <label for="perm2">Edit Patient Records</label>
+    </div>
+    <div class="permission-checkbox">
+      <input type="checkbox" id="perm3" checked />
+      <label for="perm3">Schedule Appointments</label>
+    </div>
+    <div class="permission-checkbox">
+      <input type="checkbox" id="perm4" />
+      <label for="perm4">Manage Clinic Settings</label>
+    </div>
+    <div class="permission-checkbox">
+      <input type="checkbox" id="perm5" />
+      <label for="perm5">Generate Reports</label>
+    </div>
+  </form>
+</div> 

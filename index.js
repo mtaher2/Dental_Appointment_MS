@@ -16,6 +16,7 @@ const expressLayouts = require('express-ejs-layouts');
 
 // Import routes
 const patientRoutes = require('./src/routes/patient');
+const adminRoutes = require('./src/routes/admin/admin');
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.set('layout', 'layouts/main');
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'src/public')));
+app.use('/js', express.static(path.join(__dirname, 'src/public/js')));
 
 // Middleware
 app.use(express.json({ limit: '10kb' }));
@@ -75,6 +77,8 @@ app.get('/', (req, res) => {
 
 // Register patient routes
 app.use('/patient', patientRoutes);
+// Register admin routes
+app.use('/admin', adminRoutes);
 
 // Error handling
 // app.use(errorHandler);

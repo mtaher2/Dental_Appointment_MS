@@ -1525,3 +1525,752 @@ main.container.mt-4 {
   display: inline-block;
   transition: color 0.18s, text-decoration 0.18s;
 }
+
+/* Admin User Management Styles */
+.usermgmt-container {
+  max-width: 1100px;
+  margin: 48px auto;
+  padding: 32px 0 32px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.usermgmt-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+.usermgmt-description {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+.usermgmt-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 32px 0 12px 0;
+  color: #222;
+}
+/* --- User Management Table Redesign --- */
+.usermgmt-table-wrapper {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  border: 2px solid #4b5fa9;
+  overflow-x: auto;
+  background: #fff;
+  box-shadow: none;
+}
+.usermgmt-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+}
+.usermgmt-table th, .usermgmt-table td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1.5px solid #e0e7ff;
+}
+.usermgmt-table th {
+  background: #fff;
+  font-weight: 700;
+  color: #4b5fa9;
+  font-size: 1.01rem;
+  border-bottom: 2px solid #4b5fa9;
+}
+.usermgmt-table tr:last-child td {
+  border-bottom: none;
+}
+.role-badge, .status-badge {
+  display: inline-block;
+  padding: 7px 28px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  letter-spacing: 0.01em;
+  background: #4b5fa9;
+  box-shadow: none;
+}
+.role-badge.doctor,
+.role-badge.nurse,
+.role-badge.receptionist,
+.role-badge.admin,
+.role-badge.patient {
+  background: #4b5fa9;
+}
+.status-badge.active {
+  background: #4b5fa9;
+  color: #fff;
+}
+.status-badge.inactive {
+  background: #64748b;
+  color: #fff;
+}
+.edit-link {
+  color: #4b5fa9;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.18s;
+  font-size: 1rem;
+}
+.edit-link:hover, .edit-link:focus {
+  color: #1e40af;
+  text-decoration: underline;
+}
+.create-user-btn {
+  background: #4b5fa9;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: none;
+  margin-top: 12px;
+}
+.create-user-btn:hover {
+  background: #354a8c;
+}
+.usermgmt-permissions-form {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.permission-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+.permission-checkbox input[type="checkbox"] {
+  accent-color: #2563eb;
+  width: 18px;
+  height: 18px;
+}
+.permission-checkbox label {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+}
+/* User Management Table Header Row */
+.usermgmt-table-header-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 12px;
+}
+.role-badge, .status-badge {
+  min-width: 120px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.create-user-btn {
+  margin-top: 0;
+}
+.usermgmt-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+@media (max-width: 900px) {
+  .usermgmt-container {
+    padding: 8px 2px;
+  }
+  .usermgmt-table th, .usermgmt-table td, .usermgmt-roles-table th, .usermgmt-roles-table td {
+    padding: 8px 6px;
+    font-size: 0.97rem;
+  }
+}
+
+.usermgmt-roles-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid #4b5fa9;
+  background: #fff;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.usermgmt-roles-table th, .usermgmt-roles-table td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1.5px solid #e0e7ff;
+}
+.usermgmt-roles-table th {
+  background: #fff;
+  font-weight: 700;
+  color: #4b5fa9;
+  font-size: 1.01rem;
+  border-bottom: 2px solid #4b5fa9;
+}
+.usermgmt-roles-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Admin Clinic Configuration Styles */
+.clinicconfig-container {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 32px 0 32px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.clinicconfig-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+.clinicconfig-description {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+.clinicconfig-section {
+  margin-bottom: 36px;
+}
+.clinicconfig-section-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+.clinicconfig-table-wrapper {
+  border-radius: 12px;
+  border: 2px solid #4b5fa9;
+  overflow-x: auto;
+  background: #fff;
+  margin-bottom: 8px;
+}
+.clinicconfig-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+}
+.clinicconfig-table th, .clinicconfig-table td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1.5px solid #e0e7ff;
+}
+.clinicconfig-table th {
+  background: #fff;
+  font-weight: 700;
+  color: #4b5fa9;
+  font-size: 1.01rem;
+  border-bottom: 2px solid #4b5fa9;
+}
+.clinicconfig-table tr:last-child td {
+  border-bottom: none;
+}
+.edit-link {
+  color: #4b5fa9;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.18s;
+  font-size: 1rem;
+}
+.edit-link:hover, .edit-link:focus {
+  color: #1e40af;
+  text-decoration: underline;
+}
+.clinicconfig-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+.add-btn {
+  background: #4b5fa9;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: none;
+}
+.add-btn:hover {
+  background: #354a8c;
+}
+@media (max-width: 900px) {
+  .clinicconfig-container {
+    padding: 8px 2px;
+  }
+  .clinicconfig-table th, .clinicconfig-table td {
+    padding: 8px 6px;
+    font-size: 0.97rem;
+  }
+}
+
+/* Admin Notification Settings Styles */
+.notifsettings-container {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 32px 0 32px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.notifsettings-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+.notifsettings-description {
+  color: #a3a3c2;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+.notifsettings-section {
+  margin-bottom: 36px;
+}
+.notifsettings-section-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+.notifsettings-table-wrapper {
+  border-radius: 12px;
+  border: 1.5px solid #c7c7f7;
+  overflow-x: auto;
+  background: #fff;
+  margin-bottom: 8px;
+}
+.notifsettings-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+}
+.notifsettings-table th, .notifsettings-table td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1.5px solid #e0e7ff;
+}
+.notifsettings-table th {
+  background: #fff;
+  font-weight: 700;
+  color: #4b5fa9;
+  font-size: 1.01rem;
+  border-bottom: 2px solid #c7c7f7;
+}
+.notifsettings-table tr:last-child td {
+  border-bottom: none;
+}
+.edit-link {
+  color: #4b5fa9;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.18s;
+  font-size: 1rem;
+}
+.edit-link:hover, .edit-link:focus {
+  color: #1e40af;
+  text-decoration: underline;
+}
+.notifsettings-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+.add-btn {
+  background: #4b5fa9;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: none;
+}
+.add-btn:hover {
+  background: #354a8c;
+}
+.notifsettings-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.notifsettings-form-row label {
+  font-size: 0.98rem;
+  color: #374151;
+  font-weight: 500;
+}
+.notifsettings-input {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+}
+.notifsettings-input:focus {
+  border-color: #4b5fa9;
+  outline: none;
+}
+.notifsettings-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 18px;
+}
+.notifsettings-toggle-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.notifsettings-toggle-desc {
+  color: #a3a3c2;
+  font-size: 0.97rem;
+}
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e7eb;
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(80,80,120,0.10);
+}
+input:checked + .slider {
+  background-color: #4b5fa9;
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+@media (max-width: 900px) {
+  .notifsettings-container {
+    padding: 8px 2px;
+  }
+  .notifsettings-table th, .notifsettings-table td {
+    padding: 8px 6px;
+    font-size: 0.97rem;
+  }
+}
+
+@keyframes fadeSlideInAdmin {
+  0% {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-slide-in {
+  animation: fadeSlideInAdmin 0.7s cubic-bezier(0.4,0,0.2,1) both;
+}
+.usermgmt-container,
+.clinicconfig-container,
+.notifsettings-container {
+  opacity: 0;
+  animation: fadeSlideInAdmin 0.7s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* Admin Logs & Audit Styles */
+.logsaudit-container {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 32px 0 32px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.logsaudit-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+.logsaudit-description {
+  color: #a3a3c2;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+.logsaudit-filter-section {
+  margin-bottom: 36px;
+}
+.logsaudit-filter-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+.logsaudit-filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+}
+.logsaudit-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.logsaudit-form-row label {
+  font-size: 0.98rem;
+  color: #374151;
+  font-weight: 500;
+}
+.logsaudit-input {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+}
+.logsaudit-input:focus {
+  border-color: #4b5fa9;
+  outline: none;
+}
+.logsaudit-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+.apply-filters-btn {
+  background: #4b5fa9;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: none;
+}
+.apply-filters-btn:hover {
+  background: #354a8c;
+}
+.logsaudit-logs-section {
+  margin-top: 48px;
+}
+.logsaudit-logs-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+.logsaudit-table-wrapper {
+  border-radius: 12px;
+  border: 1.5px solid #c7c7f7;
+  overflow-x: auto;
+  background: #fff;
+  margin-bottom: 8px;
+}
+.logsaudit-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+}
+.logsaudit-table th, .logsaudit-table td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1.5px solid #e0e7ff;
+}
+.logsaudit-table th {
+  background: #fff;
+  font-weight: 700;
+  color: #4b5fa9;
+  font-size: 1.01rem;
+  border-bottom: 2px solid #c7c7f7;
+}
+.logsaudit-table tr:last-child td {
+  border-bottom: none;
+}
+.log-link {
+  color: #4b5fa9;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.18s;
+  font-size: 1rem;
+}
+.log-link:hover, .log-link:focus {
+  color: #1e40af;
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .logsaudit-container {
+    padding: 8px 2px;
+  }
+  .logsaudit-table th, .logsaudit-table td {
+    padding: 8px 6px;
+    font-size: 0.97rem;
+  }
+}
+
+/* Admin Reporting Styles */
+.reporting-container {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 32px 0 32px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.reporting-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+.reporting-description {
+  color: #a3a3c2;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+.reporting-section {
+  margin-bottom: 36px;
+}
+.reporting-section-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+.reporting-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(80,80,120,0.06);
+  padding: 28px 32px 24px 32px;
+  margin-bottom: 18px;
+}
+.reporting-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.reporting-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.reporting-card-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.reporting-card-sub {
+  color: #a3a3c2;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.reporting-card-change.positive {
+  color: #10b981;
+  font-weight: 600;
+}
+.reporting-chart-bar, .reporting-chart-line {
+  margin-bottom: 12px;
+}
+.reporting-chart-xaxis {
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+  font-size: 0.98rem;
+  color: #a3a3c2;
+  margin-top: 2px;
+  margin-left: 8px;
+}
+.reporting-chart-bar-activity {
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+.activity-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.activity-bar-row span {
+  min-width: 90px;
+  color: #6366f1;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.activity-bar {
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 8px;
+  flex: 1;
+}
+.reporting-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+.export-btn {
+  background: #4b5fa9;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+  box-shadow: none;
+}
+.export-btn.secondary {
+  background: #a3a3c2;
+  color: #fff;
+}
+.export-btn:hover {
+  background: #354a8c;
+}
+@media (max-width: 900px) {
+  .reporting-container {
+    padding: 8px 2px;
+  }
+  .reporting-card {
+    padding: 16px 6px 12px 6px;
+  }
+}

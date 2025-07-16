@@ -1,0 +1,104 @@
+<div class="notifsettings-container">
+  <h1 class="notifsettings-title">Notification Settings</h1>
+  <p class="notifsettings-description">Configure email and SMS templates, reminder intervals, feedback triggers, and enable/disable notification types globally.</p>
+
+  <div class="notifsettings-section">
+    <h2 class="notifsettings-section-title">Email Templates</h2>
+    <div class="notifsettings-table-wrapper">
+      <table class="notifsettings-table">
+        <thead>
+          <tr>
+            <th>Template Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Appointment Confirmation</td>
+            <td>Template for confirming appointments via email.</td>
+            <td><a href="#" class="edit-link">Edit</a></td>
+          </tr>
+          <tr>
+            <td>Appointment Reminder</td>
+            <td>Template for reminding patients about upcoming appointments.</td>
+            <td><a href="#" class="edit-link">Edit</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notifsettings-actions"><button class="add-btn">Add New Email Template</button></div>
+  </div>
+
+  <div class="notifsettings-section">
+    <h2 class="notifsettings-section-title">SMS Templates</h2>
+    <div class="notifsettings-table-wrapper">
+      <table class="notifsettings-table">
+        <thead>
+          <tr>
+            <th>Template Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Appointment Confirmation</td>
+            <td>Template for confirming appointments via SMS.</td>
+            <td><a href="#" class="edit-link">Edit</a></td>
+          </tr>
+          <tr>
+            <td>Appointment Reminder</td>
+            <td>Template for reminding patients about upcoming appointments.</td>
+            <td><a href="#" class="edit-link">Edit</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notifsettings-actions"><button class="add-btn">Add New SMS Template</button></div>
+  </div>
+
+  <div class="notifsettings-section">
+    <h2 class="notifsettings-section-title">Reminder Intervals</h2>
+    <div class="notifsettings-form-row">
+      <label for="emailReminder">Email Reminder Interval</label>
+      <input type="text" id="emailReminder" class="notifsettings-input" />
+    </div>
+    <div class="notifsettings-form-row">
+      <label for="smsReminder">SMS Reminder Interval</label>
+      <input type="text" id="smsReminder" class="notifsettings-input" />
+    </div>
+  </div>
+
+  <div class="notifsettings-section">
+    <h2 class="notifsettings-section-title">Feedback Triggers</h2>
+    <div class="notifsettings-form-row">
+      <label for="feedbackTrigger">Feedback Request Trigger</label>
+      <input type="text" id="feedbackTrigger" class="notifsettings-input" />
+    </div>
+  </div>
+
+  <div class="notifsettings-section">
+    <h2 class="notifsettings-section-title">Notification Types</h2>
+    <div class="notifsettings-toggle-row">
+      <div class="notifsettings-toggle-labels">
+        <label for="emailNotif">Email Notifications</label>
+        <span class="notifsettings-toggle-desc">Enable or disable email notifications globally.</span>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="emailNotif" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="notifsettings-toggle-row">
+      <div class="notifsettings-toggle-labels">
+        <label for="smsNotif">SMS Notifications</label>
+        <span class="notifsettings-toggle-desc">Enable or disable SMS notifications globally.</span>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="smsNotif" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div> 

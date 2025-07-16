@@ -1,0 +1,70 @@
+<div class="reporting-container">
+  <h1 class="reporting-title">Reporting</h1>
+  <p class="reporting-description">Access comprehensive reports on appointment statistics, financial summaries, and user activity. Export data in PDF or Excel formats.</p>
+
+  <div class="reporting-section">
+    <h2 class="reporting-section-title">Appointment Statistics</h2>
+    <div class="reporting-card">
+      <div class="reporting-card-header">
+        <div>
+          <div class="reporting-card-title">Appointments by Month</div>
+          <div class="reporting-card-value">120</div>
+          <div class="reporting-card-sub">Last 12 Months <span class="reporting-card-change positive">+15%</span></div>
+        </div>
+      </div>
+      <div class="reporting-chart-bar">
+        <canvas id="appointmentsByMonthChart" width="220" height="60"></canvas>
+        <div class="reporting-chart-xaxis">
+          <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
+        </div>
+      </div>
+      <div class="reporting-card-actions">
+        <button class="export-btn">Export as PDF</button>
+        <button class="export-btn secondary">Export as Excel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="reporting-section">
+    <h2 class="reporting-section-title">Financial Summaries</h2>
+    <div class="reporting-card">
+      <div class="reporting-card-header">
+        <div>
+          <div class="reporting-card-title">Revenue Over Time</div>
+          <div class="reporting-card-value">$50,000</div>
+          <div class="reporting-card-sub">Last 12 Months <span class="reporting-card-change positive">+10%</span></div>
+        </div>
+      </div>
+      <div class="reporting-chart-line">
+        <canvas id="revenueOverTimeChart" width="220" height="60"></canvas>
+        <div class="reporting-chart-xaxis">
+          <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span>
+        </div>
+      </div>
+      <div class="reporting-card-actions">
+        <button class="export-btn">Export as PDF</button>
+        <button class="export-btn secondary">Export as Excel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="reporting-section">
+    <h2 class="reporting-section-title">User Activity Dashboards</h2>
+    <div class="reporting-card">
+      <div class="reporting-card-header">
+        <div>
+          <div class="reporting-card-title">User Logins</div>
+          <div class="reporting-card-value">500</div>
+          <div class="reporting-card-sub">Last 30 Days <span class="reporting-card-change positive">+5%</span></div>
+        </div>
+      </div>
+      <div class="reporting-chart-bar-activity">
+        <canvas id="userLoginsChart" width="220" height="100"></canvas>
+      </div>
+      <div class="reporting-card-actions">
+        <button class="export-btn">Export as PDF</button>
+        <button class="export-btn secondary">Export as Excel</button>
+      </div>
+    </div>
+  </div>
+</div> 
