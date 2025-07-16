@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient History - Clinic Assistant</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Include Assistant Header -->
+    <%- include('../../partials/assistant-header') %>
+
+    <!-- Main Content Area -->
+    <div class="patient-history-container">
+        <!-- Left Section - Patient Information and Upload -->
+        <div class="left-section">
+            <div class="patient-history-section">
+                <h1 class="main-title">Patient History</h1>
+                <p class="subtitle">Review the patient's medical history and upload new records.</p>
+            </div>
+
+            <div class="patient-info-section">
+                <h2 class="section-title">Patient Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Name</span>
+                        <span class="info-value">Sophia Clark</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Date of Birth</span>
+                        <span class="info-value">July 12, 1985</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Gender</span>
+                        <span class="info-value">Female</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Medical ID</span>
+                        <span class="info-value">1234567</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="medical-history-section">
+                <h2 class="section-title">Medical History</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Allergies</span>
+                        <span class="info-value">Penicillin</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Medications</span>
+                        <span class="info-value">Lisinopril</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Conditions</span>
+                        <span class="info-value">Hypertension</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upload-records-section">
+                <h2 class="section-title">Upload Records</h2>
+                <div class="upload-zone">
+                    <div class="upload-content">
+                        <p class="upload-text">Drag and drop files here</p>
+                        <p class="upload-subtext">Or click to browse your files</p>
+                    </div>
+                    <button class="upload-files-btn" type="button">Upload Files</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section - Upload Details -->
+        <div class="right-section">
+            <div class="upload-details-section">
+                <h2 class="section-title">Upload Details</h2>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label" for="patient-name">Patient</label>
+                        <input type="text" id="patient-name" class="form-input" placeholder="Enter patient name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="appointment-details">Appointment</label>
+                        <input type="text" id="appointment-details" class="form-input" placeholder="Enter appointment details" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="datetime">Date/Time</label>
+                        <input type="datetime-local" id="datetime" class="form-input" required>
+                    </div>
+                    <button class="save-btn" type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigned Patients</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="assigned-patients-container">
+    <%- include('../../partials/assistant-header') %>
+
+  <div class="assistant-main-content">
+    <!-- Left Sidebar - Tasks -->
+    <div class="assistant-sidebar">
+      <h2 class="assistant-sidebar-title">Tasks</h2>
+      <div class="assistant-tasks-list">
+        <div class="assistant-task-item">
+          <div class="assistant-task-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="assistant-task-info">
+            <div class="assistant-task-name">Patient Check-in</div>
+            <div class="assistant-task-time">10:00 AM</div>
+          </div>
+        </div>
+        
+        <div class="assistant-task-item">
+          <div class="assistant-task-icon">
+            <i class="fas fa-file-medical"></i>
+          </div>
+          <div class="assistant-task-info">
+            <div class="assistant-task-name">Review Lab Results</div>
+            <div class="assistant-task-time">11:30 AM</div>
+          </div>
+        </div>
+        
+        <div class="assistant-task-item">
+          <div class="assistant-task-icon">
+            <i class="fas fa-stethoscope"></i>
+          </div>
+          <div class="assistant-task-info">
+            <div class="assistant-task-name">Prepare for Surgery</div>
+            <div class="assistant-task-time">1:00 PM</div>
+          </div>
+        </div>
+        
+        <div class="assistant-task-item">
+          <div class="assistant-task-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="assistant-task-info">
+            <div class="assistant-task-name">Follow-up Calls</div>
+            <div class="assistant-task-time">2:45 PM</div>
+          </div>
+        </div>
+        
+        <div class="assistant-task-item">
+          <div class="assistant-task-icon">
+            <i class="fas fa-edit"></i>
+          </div>
+          <div class="assistant-task-info">
+            <div class="assistant-task-name">Update Patient Records</div>
+            <div class="assistant-task-time">4:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="assistant-content">
+      <h1 class="assistant-content-title">Assigned Patients</h1>
+      
+      <div class="assistant-table-wrapper">
+        <table class="assistant-patients-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Room</th>
+              <th>Doctor</th>
+              <th>Appointment Type</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sophia Bennett</td>
+              <td>Room 101</td>
+              <td>Dr. Ethan Carter</td>
+              <td>Check-up</td>
+              <td><span class="assistant-status-badge scheduled">Scheduled</span></td>
+            </tr>
+            <tr>
+              <td>Liam Harper</td>
+              <td>Room 203</td>
+              <td>Dr. Olivia Hayes</td>
+              <td>Consultation</td>
+              <td><span class="assistant-status-badge in-progress">In Progress</span></td>
+            </tr>
+            <tr>
+              <td>Ava Morgan</td>
+              <td>Room 112</td>
+              <td>Dr. Noah Clark</td>
+              <td>Follow-up</td>
+              <td><span class="assistant-status-badge completed">Completed</span></td>
+            </tr>
+            <tr>
+              <td>Jackson Reed</td>
+              <td>Room 305</td>
+              <td>Dr. Isabella Foster</td>
+              <td>Emergency</td>
+              <td><span class="assistant-status-badge pending">Pending</span></td>
+            </tr>
+            <tr>
+              <td>Chloe Turner</td>
+              <td>Room 210</td>
+              <td>Dr. Caleb Wright</td>
+              <td>Routine</td>
+              <td><span class="assistant-status-badge scheduled">Scheduled</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
