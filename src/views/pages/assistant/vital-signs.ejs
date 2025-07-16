@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Vital Signs</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="vital-signs-container">
+    <%- include('../../partials/assistant-header') %>
+    
+    <!-- Main Content Area -->
+    <div class="vital-signs-content">
+      <div class="vital-signs-header">
+        <h1 class="vital-signs-title">Record Vital Signs</h1>
+        <p class="vital-signs-subtitle">Enter the patient's vital signs for this appointment.</p>
+      </div>
+      
+      <div class="vital-signs-form-container">
+        <form class="vital-signs-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="blood-pressure">Blood Pressure (mmHg)</label>
+              <input type="text" id="blood-pressure" name="blood-pressure" placeholder="e.g., 120/80" class="form-input">
+            </div>
+            
+            <div class="form-group">
+              <label for="pulse">Pulse (beats/min)</label>
+              <input type="text" id="pulse" name="pulse" placeholder="e.g., 72" class="form-input">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="temperature">Temperature (°F)</label>
+              <input type="text" id="temperature" name="temperature" placeholder="e.g., 98.6" class="form-input">
+            </div>
+            
+            <div class="form-group">
+              <label for="weight">Weight (lbs)</label>
+              <input type="text" id="weight" name="weight" placeholder="e.g., 150" class="form-input">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="height">Height (in)</label>
+              <input type="text" id="height" name="height" placeholder="e.g., 65" class="form-input">
+            </div>
+            
+            <div class="form-group">
+              <label for="respiratory-rate">Respiratory Rate (breaths/min)</label>
+              <input type="text" id="respiratory-rate" name="respiratory-rate" placeholder="e.g., 16" class="form-input">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="oxygen-saturation">Oxygen Saturation (%)</label>
+              <input type="text" id="oxygen-saturation" name="oxygen-saturation" placeholder="e.g., 98" class="form-input">
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="update-records-btn">Update Records</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

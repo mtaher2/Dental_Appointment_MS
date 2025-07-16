@@ -16,6 +16,7 @@ const expressLayouts = require('express-ejs-layouts');
 
 // Import routes
 const patientRoutes = require('./src/routes/patient');
+const assistantRoutes = require('./src/routes/assistant/assistant');
 
 const app = express();
 
@@ -75,6 +76,9 @@ app.get('/', (req, res) => {
 
 // Register patient routes
 app.use('/patient', patientRoutes);
+
+// Register assistant routes
+app.use('/assistant', assistantRoutes);
 
 // Error handling
 // app.use(errorHandler);
