@@ -16,7 +16,8 @@ const expressLayouts = require('express-ejs-layouts');
 
 // Import routes
 const receptionistRoutes = require('./src/routes/receptionist/dashboardRoutes');
-const patientRoutes = require('./src/routes/receptionist/patientRoutes');
+const receptionistPatientRoutes = require('./src/routes/receptionist/patientRoutes');
+const patientRoutes = require('./src/routes/patient');
 
 const app = express();
 
@@ -67,7 +68,7 @@ app.use(compression());
 
 // Routes
 app.use('/receptionist', receptionistRoutes);
-app.use('/receptionist', patientRoutes);
+app.use('/receptionist', receptionistPatientRoutes);
 
 // Home route
 app.get('/', (req, res) => {
@@ -77,6 +78,9 @@ app.get('/', (req, res) => {
         error_msg: ''
     });
 });
+
+// Register patient routes
+app.use('/patient', patientRoutes);
 
 // Error handling
 // app.use(errorHandler);

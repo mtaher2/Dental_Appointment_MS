@@ -12,7 +12,25 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-
+    <% 
+    // Get current URL path
+    const currentPath = typeof path !== 'undefined' ? path : '';
+    const hideHeaderPaths = [
+        '/receptionist/dashboard',
+        '/receptionist/patients',
+        '/receptionist/patients/1/edit',
+        '/receptionist/family-members/add'
+    ];
+    
+    // Check if current path should hide header
+    const shouldHideHeader = hideHeaderPaths.some(hidePath => 
+        currentPath.includes(hidePath.replace('/receptionist', ''))
+    );
+    
+    if (!shouldHideHeader) { 
+    %>
+    <%- include('../partials/header') %>
+    <% } %>
     <!-- Main Content -->
     <main class="container mt-4">
         

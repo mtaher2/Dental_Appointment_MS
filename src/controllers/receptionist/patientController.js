@@ -50,6 +50,7 @@ const patientController = {
                 title: 'Patient Management',
                 success_msg: '',
                 error_msg: '',
+                path: '/patients',
                 ...patientData
             });
         } catch (error) {
@@ -57,7 +58,8 @@ const patientController = {
             res.status(500).render('pages/receptionist/patient-management', {
                 title: 'Patient Management',
                 success_msg: '',
-                error_msg: 'Error loading patient data'
+                error_msg: 'Error loading patient data',
+                path: '/patients'
             });
         }
     },
@@ -175,14 +177,16 @@ const patientController = {
             res.render('pages/receptionist/add-family-member', {
                 title: 'Add Family Member',
                 success_msg: '',
-                error_msg: ''
+                error_msg: '',
+                path: '/family-members/add'
             });
         } catch (error) {
             console.error('Error rendering add family member page:', error);
             res.status(500).render('pages/receptionist/add-family-member', {
                 title: 'Add Family Member',
                 success_msg: '',
-                error_msg: 'Error loading page'
+                error_msg: 'Error loading page',
+                path: '/family-members/add'
             });
         }
     },
@@ -227,6 +231,7 @@ const patientController = {
                 title: 'Edit Patient Info',
                 success_msg: '',
                 error_msg: '',
+                path: '/patients/1/edit',
                 patient: patient
             });
         } catch (error) {
@@ -234,7 +239,8 @@ const patientController = {
             res.status(500).render('pages/receptionist/edit-patient', {
                 title: 'Edit Patient Info',
                 success_msg: '',
-                error_msg: 'Error loading patient data'
+                error_msg: 'Error loading patient data',
+                path: '/patients/1/edit'
             });
         }
     },

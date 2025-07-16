@@ -105,6 +105,7 @@ const dashboardController = {
                 title: 'Receptionist Dashboard',
                 success_msg: '',
                 error_msg: '',
+                path: '/dashboard',
                 ...dashboardData
             });
         } catch (error) {
@@ -112,7 +113,8 @@ const dashboardController = {
             res.status(500).render('pages/receptionist/dashboard', {
                 title: 'Receptionist Dashboard',
                 success_msg: '',
-                error_msg: 'Error loading dashboard data'
+                error_msg: 'Error loading dashboard data',
+                path: '/dashboard'
             });
         }
     },
