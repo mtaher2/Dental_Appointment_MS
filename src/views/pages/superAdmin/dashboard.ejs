@@ -1,0 +1,73 @@
+<div class="superadmin-dashboard-container">
+  <div class="dashboard-header">
+    <h1 class="dashboard-title">Super Admin Dashboard</h1>
+    <p class="dashboard-description">Overview of all clinics and branches within the system</p>
+  </div>
+  <div class="dashboard-stats-cards">
+    <div class="stat-card">
+      <div class="stat-label">Total Active Users</div>
+      <div class="stat-value">1,234</div>
+      <div class="stat-change positive">+10%</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Appointments Today</div>
+      <div class="stat-value">567</div>
+      <div class="stat-change positive">+5%</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Overall Billing</div>
+      <div class="stat-value">$123,456</div>
+      <div class="stat-change positive">+8%</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">System Performance</div>
+      <div class="stat-value">99.9%</div>
+      <div class="stat-change positive">+0.1%</div>
+    </div>
+  </div>
+  <div class="dashboard-section">
+    <h2 class="section-title">Appointment Statistics</h2>
+    <div class="section-content stats-charts">
+      <div class="chart-card">
+        <div class="chart-title">Appointments Over Time</div>
+        <div class="chart-value positive">+15%</div>
+        <div class="chart-subtitle">Last 30 Days <span class="chart-change positive">+15%</span></div>
+        <canvas id="appointmentsOverTimeChart" class="dashboard-graph appointments-over-time-graph"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Appointments by Clinic</div>
+        <div class="chart-value positive">+8%</div>
+        <div class="chart-subtitle">This Month <span class="chart-change positive">+8%</span></div>
+        <canvas id="appointmentsByClinicChart" class="dashboard-graph appointments-by-clinic-graph"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-section">
+    <h2 class="section-title">Billing and Payment Summaries</h2>
+    <div class="section-content stats-charts">
+      <div class="chart-card">
+        <div class="chart-title">Billing by Clinic</div>
+        <div class="chart-value positive">+12%</div>
+        <div class="chart-subtitle">This Month <span class="chart-change positive">+12%</span></div>
+        <canvas id="billingByClinicChart" class="dashboard-graph billing-by-clinic-graph"></canvas>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Payment Methods</div>
+        <div class="chart-value positive">+5%</div>
+        <div class="chart-subtitle">This Month <span class="chart-change positive">+5%</span></div>
+        <canvas id="paymentMethodsChart" class="dashboard-graph payment-methods-graph"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-section">
+    <h2 class="section-title">System Performance Indicators</h2>
+    <div class="section-content">
+      <div class="chart-card full-width">
+        <div class="chart-title">System Uptime</div>
+        <div class="chart-value">99.9%</div>
+        <div class="chart-subtitle">Last 30 Days <span class="chart-change positive">+0.1%</span></div>
+        <canvas id="systemUptimeChart" class="dashboard-graph system-uptime-graph"></canvas>
+      </div>
+    </div>
+  </div>
+</div> 
