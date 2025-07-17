@@ -1,4 +1,4 @@
-nodemonconst express = require('express');
+const express = require('express');
 const router = express.Router();
 
 // Select Doctor Page
@@ -44,6 +44,14 @@ router.get('/share-experience', (req, res) => {
         success_msg: '',
         error_msg: ''
     });
+});
+
+router.get('/internal-communication', (req, res) => {
+  res.render('pages/assistant/internal-communication', {
+    title: 'Internal Communication',
+    user: req.user || null,
+    layout: false
+  });
 });
 
 module.exports = router; 

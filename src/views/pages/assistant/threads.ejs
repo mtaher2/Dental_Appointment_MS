@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threads - Internal Communication</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header Bar -->
+    <header class="internal-header">
+        <div class="header-left">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search">
+            </div>
+        </div>
+        <div class="header-center">
+            <h1 class="header-title">Internal Communication</h1>
+        </div>
+        <div class="header-right">
+            <button class="user-button">
+                <i class="fas fa-paper-plane"></i>
+                <span>Mohamed Abdelshafy</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="internal-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <!-- Direct Messages Section -->
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">Direct Messages</h2>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <div class="contact-avatar">
+                            <img src="/images/clara-bennett.jpg" alt="Clara Bennett">
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">Clara Bennett</div>
+                            <div class="contact-role">Receptionist</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-avatar">
+                            <img src="/images/ethan-carter.jpg" alt="Dr. Ethan Carter">
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">Dr. Ethan Carter</div>
+                            <div class="contact-role">Doctor</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-avatar">
+                            <img src="/images/olivia-turner.jpg" alt="Olivia Turner">
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">Olivia Turner</div>
+                            <div class="contact-role">Nurse</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-avatar">
+                            <img src="/images/liam-harper.jpg" alt="Liam Harper">
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-name">Liam Harper</div>
+                            <div class="contact-role">Admin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Channels Section -->
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">Channels</h2>
+                <div class="channel-list">
+                    <div class="channel-item">
+                        <div class="channel-icon-bg">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name">General</div>
+                            <div class="channel-description">All Staff</div>
+                        </div>
+                    </div>
+                    <div class="channel-item">
+                        <div class="channel-icon-bg">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name">Front Desk</div>
+                            <div class="channel-description">Receptionists</div>
+                        </div>
+                    </div>
+                    <div class="channel-item">
+                        <div class="channel-icon-bg">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name">Physicians</div>
+                            <div class="channel-description">Doctors</div>
+                        </div>
+                    </div>
+                    <div class="channel-item">
+                        <div class="channel-icon-bg">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name">Nursing Team</div>
+                            <div class="channel-description">Nurses</div>
+                        </div>
+                    </div>
+                    <div class="channel-item">
+                        <div class="channel-icon-bg">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name">Management</div>
+                            <div class="channel-description">Admins</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Sub Navigation -->
+            <div class="sub-nav">
+                <div class="search-container-top">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input-top" placeholder="Search">
+                </div>
+                <div class="nav-tabs">
+                    <button class="nav-tab" onclick="window.location.href='/assistant/internal-communication'">Messages</button>
+                    <button class="nav-tab active" onclick="window.location.href='/assistant/threads'">Threads</button>
+                </div>
+            </div>
+
+            <!-- Channel Title -->
+            <div class="channel-header">
+                <h2 class="channel-title">General</h2>
+            </div>
+
+            <!-- Thread Messages -->
+            <div class="threads-container">
+                <div class="thread-item">
+                    <div class="thread-icon-bg">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <div class="thread-content">
+                        <div class="thread-title">Appointment Schedule</div>
+                        <div class="thread-message">Good morning, team! Just a reminder to check the schedule for today's appointments and ensure all patient files are updated.</div>
+                        <div class="thread-contributors">Clara Bennett, Liam Harper</div>
+                    </div>
+                </div>
+
+                <div class="thread-item">
+                    <div class="thread-icon-bg">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <div class="thread-content">
+                        <div class="thread-title">Examination Room Prep</div>
+                        <div class="thread-message">Morning everyone! I'm preparing the examination rooms and will notify the doctors when patients arrive.</div>
+                        <div class="thread-contributors">Olivia Turner, Dr. Ethan Carter</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message Input Area -->
+            <div class="message-input-container">
+                <div class="message-input-wrapper">
+                    <input type="text" class="message-input" placeholder="#general">
+                    <div class="input-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-image"></i>
+                        </button>
+                        <button class="action-btn">
+                            <i class="far fa-smile"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
