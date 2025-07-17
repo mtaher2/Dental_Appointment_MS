@@ -3,30 +3,39 @@ const cors = require('cors');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const compression = require('compression');
-// const mongoSanitize = require('express-mongo-sanitize');
-// const xss = require('xss-clean');
-// const rateLimit = require('express-rate-limit');
 const hpp = require('hpp');
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
-// require('dotenv').config();
+const fileUpload = require('express-fileupload');
+require('dotenv').config();
 
-// const connectDB = require('./src/database/connection');
-// const errorHandler = require('./src/middleware/errorHandler');
+const connectDB = require('./src/database/connection');
 
 // Import routes
-const patientRoutes = require('./src/routes/patient');
+const patientRoutes = require('./src/routes/patientRoutes');
+const adminRoutes = require('./src/routes/adminRoutes');
 
 const app = express();
 
 // Connect to MongoDB
-// connectDB();
+connectDB().then(() => {
+    console.log('Database connection ready');
+}).catch((err) => {
+    console.error('Database connection error:', err);
+    process.exit(1);
+});
 
 // EJS setup
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('layout', 'layouts/main');
+
+// File Upload
+app.use(fileUpload({
+    limits: { fileSize: 5 * 1024 * 1024 }, // 5MB max file size
+    createParentPath: true
+}));
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'src/public')));
@@ -52,17 +61,11 @@ app.use(helmet({
 }));
 app.use(morgan('dev'));
 app.use(compression());
-// app.use(mongoSanitize());
-// app.use(xss());
-// app.use(hpp());
+app.use(hpp());
 
-// // Rate limiting
-// const limiter = rateLimit({
-//     max: 100,
-//     windowMs: 60 * 60 * 1000, // 1 hour
-//     message: 'Too many requests from this IP, please try again in an hour!'
-// });
-// app.use('/api', limiter);
+// Routes
+app.use('/api/v1/patients', patientRoutes);
+app.use('/api/v1/admin', adminRoutes);
 
 // Home route
 app.get('/', (req, res) => {
@@ -73,11 +76,6 @@ app.get('/', (req, res) => {
     });
 });
 
-// Register patient routes
-app.use('/patient', patientRoutes);
-
-// Error handling
-// app.use(errorHandler);
 
 // Handle unhandled routes
 app.all('*', (req, res) => {
