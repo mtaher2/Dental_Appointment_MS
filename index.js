@@ -15,6 +15,9 @@ const expressLayouts = require('express-ejs-layouts');
 // const errorHandler = require('./src/middleware/errorHandler');
 
 // Import routes
+const receptionistRoutes = require('./src/routes/receptionist/dashboardRoutes');
+const receptionistPatientRoutes = require('./src/routes/receptionist/patientRoutes');
+const patientRoutes = require('./src/routes/patient');
 
 const app = express();
 
@@ -63,6 +66,10 @@ app.use(compression());
 // });
 // app.use('/api', limiter);
 
+// Routes
+app.use('/receptionist', receptionistRoutes);
+app.use('/receptionist', receptionistPatientRoutes);
+
 // Home route
 app.get('/', (req, res) => {
     res.render('pages/home', {
@@ -107,6 +114,8 @@ app.get('/receptionist/billing/receipts', (req, res) => {
         error_msg: ''
     });
 });
+// Register patient routes
+app.use('/patient', patientRoutes);
 
 // Error handling
 // app.use(errorHandler);
