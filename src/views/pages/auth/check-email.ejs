@@ -17,7 +17,7 @@
                 <h2 class="login-title exact-title">Check your email</h2>
                 <p class="login-subtitle exact-subtitle">we sent a reset link to contact@example.com</p>
                 
-                <div class="verification-form">
+                <form class="verification-form" action="/auth/reset-password" method="GET">
                     <div class="code-inputs">
                         <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
                         <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
@@ -25,9 +25,8 @@
                         <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
                         <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
                     </div>
-                    
-                    <button type="button" class="login-btn exact-login-btn">Verify Code</button>
-                </div>
+                    <button type="submit" class="login-btn exact-login-btn">Verify Code</button>
+                </form>
                 
                 <div class="forgot-password exact-forgot">
                     <a href="/auth/forgot-password">Haven't got email yet? Resend email</a>

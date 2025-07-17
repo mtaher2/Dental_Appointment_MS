@@ -70,8 +70,8 @@ app.use('/auth', authRoutes);
 
 // Home route
 app.get('/', (req, res) => {
-    res.render('pages/home', {
-        title: 'Welcome',
+    res.render('pages/auth/login', {
+        title: 'Login',
         success_msg: '',
         error_msg: ''
     });
