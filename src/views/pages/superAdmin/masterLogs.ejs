@@ -5,16 +5,17 @@
   <form class="masterlogs-search-form">
     <div class="masterlogs-searchbar-row">
       <div class="admins-searchbar">
-        <span class="material-icons search-icon">search</span>
-        <input type="text" placeholder="Search logs" class="admins-search-input" />
+        <i class="fa fa-search search-icon"></i>
+        <input type="text" placeholder="Search logs" class="admins-search-input" id="masterlogs-search" />
       </div>
     </div>
     <div class="masterlogs-filters" style="margin-top: 16px; margin-bottom: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
-      <button type="button" class="filter-chip">Clinic</button>
-      <button type="button" class="filter-chip">User</button>
-      <button type="button" class="filter-chip">IP Address</button>
-      <button type="button" class="filter-chip">Device</button>
-      <button type="button" class="filter-chip">Action Type</button>
+      <button type="button" class="filter-chip active" data-filter="all">All</button>
+      <button type="button" class="filter-chip" data-filter="clinic">Clinic</button>
+      <button type="button" class="filter-chip" data-filter="user">User</button>
+      <button type="button" class="filter-chip" data-filter="ip">IP Address</button>
+      <button type="button" class="filter-chip" data-filter="device">Device</button>
+      <button type="button" class="filter-chip" data-filter="action">Action Type</button>
     </div>
     <div class="masterlogs-date-row">
       <div class="date-field">
