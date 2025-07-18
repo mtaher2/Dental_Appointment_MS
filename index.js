@@ -17,6 +17,7 @@ const expressLayouts = require('express-ejs-layouts');
 // Import routes
 const authRoutes = require('./src/routes/auth/auth');
 const patientRoutes = require('./src/routes/patient');
+const adminRoutes = require('./src/routes/admin/admin');
 
 const app = express();
 
@@ -67,6 +68,9 @@ app.use(compression());
 
 // Auth routes
 app.use('/auth', authRoutes);
+
+// Admin routes
+app.use('/admin', adminRoutes);
 
 // Home route
 app.get('/', (req, res) => {

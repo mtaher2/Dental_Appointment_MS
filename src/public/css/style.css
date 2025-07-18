@@ -366,8 +366,8 @@ body {
     padding: 13px 0;
     border-radius: 32px;
     border: none;
-    background: #4e6cff;
-    color: #fff;
+    background: #415FA5;
+    color: #FFFFFF;
     font-size: 1.13rem;
     font-weight: 600;
     margin-top: 32px;
@@ -377,8 +377,29 @@ body {
     letter-spacing: 0.2px;
 }
 .forgot-reset-btn:hover {
-    background: #2563eb;
+    background: #344c84;
     box-shadow: 0 4px 16px rgba(80, 80, 160, 0.10);
+}
+
+.forgot-title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #414141;
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+
+.forgot-subtitle {
+    color: #BABABA;
+    font-size: 1.08rem;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.forgot-form-group input::placeholder {
+    color: #A9A9A9;
 }
 
 .forgot-right {
@@ -1404,6 +1425,22 @@ body {
   }
 }
 
+.success-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 24px 0 16px 0;
+  text-align: center;
+}
+
+.success-desc {
+  font-size: 1.1rem;
+  color: #E0E0E0;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
 /* Remove any left margin/padding from the body for this page */
 body .success-bg {
   margin: 0;
@@ -1415,8 +1452,8 @@ body .success-bg {
   display: block;
   width: 80%;
   max-width: 360px;
-  background: linear-gradient(90deg, #4663a8 0%, #4e8cff 100%);
-  color: #fff;
+  background: #3B5998;
+  color: #FFFFFF;
   border: none;
   padding: 22px 0;
   border-radius: 32px;
@@ -1432,8 +1469,8 @@ body .success-bg {
 }
 
 .success-btn:hover {
-  background: linear-gradient(90deg, #4e8cff 0%, #4663a8 100%);
-  color: #fff;
+  background: #2d4373;
+  color: #FFFFFF;
   box-shadow: 0 8px 32px rgba(80, 80, 160, 0.18);
   transform: scale(1.04);
   text-decoration: none;
