@@ -43,5 +43,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     message.textContent = 'Payment successful! (demo)';
     message.style.color = '#4b61b8';
+      });
   });
+
+// Navigation Active State Handler for Admin Pages
+document.addEventListener('DOMContentLoaded', function() {
+    // Get current page path
+    const currentPath = window.location.pathname;
+    
+    // Remove any existing active classes
+    const menuLinks = document.querySelectorAll('.header-menu a');
+    menuLinks.forEach(link => link.classList.remove('active'));
+    
+    // Add active class to current page button
+    const pageMap = {
+        '/admin/user-management': 'User Management',
+        '/admin/clinic-configuration': 'Clinic Config',
+        '/admin/logs-audit': 'Logs & Audit',
+        '/admin/reporting': 'Reporting',
+        '/admin/notification-settings': 'Notifications'
+    };
+    
+    // Find and activate the current page button
+    menuLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
 }); 
