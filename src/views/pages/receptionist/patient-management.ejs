@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
       rel="stylesheet"
@@ -12,15 +14,15 @@
     <title>MediCare - Patient Management</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/patient-management.css">
   </head>
   <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#111418]">
-            <div class="size-4">
+    <div class="patient-management-root">
+      <div class="patient-management-container">
+        <header class="patient-management-header">
+          <div class="patient-management-header-left">
+            <div class="patient-management-header-icon">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill-rule="evenodd"
@@ -30,20 +32,19 @@
                 ></path>
               </svg>
             </div>
-            <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">MediCare</h2>
+            <h2 class="patient-management-header-title">MediCare</h2>
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="/receptionist/dashboard">Dashboard</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="/receptionist/appointments">Appointments</a>
-              <a class="text-[#415FA5] text-sm font-medium leading-normal" href="/receptionist/patients">Patients</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="/receptionist/billing">Billing</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="/receptionist/reports">Reports</a>
+          <div class="patient-management-header-right">
+            <div class="patient-management-nav">
+              <a class="patient-management-nav-link" href="/receptionist/dashboard">Dashboard</a>
+              <a class="patient-management-nav-link" href="/receptionist/appointments">Appointments</a>
+              <a class="patient-management-nav-link active" href="/receptionist/patients">Patients</a>
+              <a class="patient-management-nav-link" href="/receptionist/billing">Billing</a>
+              <a class="patient-management-nav-link" href="/receptionist/reports">Reports</a>
+              <a class="patient-management-nav-link" href="/receptionist/messages">Messages</a>
             </div>
-            <button
-              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f5] text-[#111418] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
-            >
-              <div class="text-[#111418]" data-icon="Bell" data-size="20px" data-weight="regular">
+            <button class="patient-management-notification-btn">
+              <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
                   <path
                     d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
@@ -52,118 +53,111 @@
               </div>
             </button>
             <div
-              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              class="patient-management-avatar"
               style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIxsNlKDAKEhXxvp6kZXztReu8k3K0s_eT-bpI9LSqRIKdtZQ8ctqUT-0W7L50JBM39k0HmAtrRGAvppNVls2qH7KD6sST-MYGxM14hGjwhJDMhCs0EYP_nFSmIHyvpQxK3yDY_M7Engyvx6rlHobWAmT8mikxQtszjFbVD8LuZSwhmJA10B6fCFbbmwDMxb0bcYIJglEUDjbEf0BrWH-Qi8mppk1KA4RClF8CEtoHBJ8V0znFBD3sCs_f5YbMvdJI9Zl82_jWZv0");'
             ></div>
           </div>
         </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="flex flex-wrap justify-between gap-3 p-4">
-              <div class="flex min-w-72 flex-col gap-3">
-                <p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight">Patient Management</p>
-                <p class="text-[#60758a] text-sm font-normal leading-normal">Create and manage patient records, update information, and link family members.</p>
+        <div class="patient-management-main">
+          <div class="patient-management-content-container">
+            <div class="patient-management-page-header">
+              <div class="patient-management-header-content">
+                <p class="patient-management-page-title">Patient Management</p>
+                <p class="patient-management-page-subtitle">Create and manage patient records, update information, and link family members.</p>
               </div>
             </div>
-            <div class="flex flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1 max-w-[480px]">
-                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Patient Name</p>
-                <input
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#d6d0e7] bg-white focus:border-[#415FA5] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                  value=""
-                />
+            <div class="patient-management-form-row">
+              <label class="patient-management-field">
+                <p class="patient-management-field-label">Patient Name</p>
+                <input class="patient-management-input" value="" />
               </label>
             </div>
-            <div class="flex flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1 max-w-[240px]">
-                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Date of Birth</p>
-                <input
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#d6d0e7] bg-white focus:border-[#415FA5] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                  value=""
-                />
+            <div class="patient-management-form-row">
+              <label class="patient-management-field half-width">
+                <p class="patient-management-field-label">Date of Birth</p>
+                <input class="patient-management-input" value="" />
               </label>
-              <label class="flex flex-col min-w-40 flex-1 max-w-[240px]">
-                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Gender</p>
-                <input
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#d6d0e7] bg-white focus:border-[#415FA5] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                  value=""
-                />
+              <label class="patient-management-field half-width">
+                <p class="patient-management-field-label">Gender</p>
+                <input class="patient-management-input" value="" />
               </label>
             </div>
-            <div class="flex flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1 max-w-[480px]">
-                <p class="text-[#111418] text-base font-medium leading-normal pb-2">Language</p>
-                <select
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#d6d0e7] bg-white focus:border-[#415FA5] h-14 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                >
+            <div class="patient-management-form-row">
+              <label class="patient-management-field">
+                <p class="patient-management-field-label">Language</p>
+                <select class="patient-management-select">
                   <option value="one"></option>
                   <option value="two">two</option>
                   <option value="three">three</option>
                 </select>
               </label>
             </div>
-            <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Family Members</h3>
-            <div class="flex items-center gap-4 bg-white border border-[#dbe0e6] rounded-lg px-4 min-h-[72px] py-2 justify-between max-w-[480px] mx-4">
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Ethan Carter</p>
-                <p class="text-[#60758a] text-sm font-normal leading-normal line-clamp-2">Spouse</p>
+            <h3 class="patient-management-section-title">Family Members</h3>
+            <div class="patient-management-list-item">
+              <div class="patient-management-list-content">
+                <p class="patient-management-list-title">Ethan Carter</p>
+                <p class="patient-management-list-subtitle">Spouse</p>
               </div>
-              <div class="shrink-0"><button class="text-base font-medium leading-normal text-[#415FA5]">View</button></div>
-            </div>
-            <div class="flex items-center gap-4 bg-white border border-[#dbe0e6] rounded-lg px-4 min-h-[72px] py-2 justify-between max-w-[480px] mx-4 mt-2">
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Olivia Carter</p>
-                <p class="text-[#60758a] text-sm font-normal leading-normal line-clamp-2">Child</p>
+              <div class="patient-management-list-action">
+                <button class="patient-management-view-btn">View</button>
               </div>
-              <div class="shrink-0"><button class="text-base font-medium leading-normal text-[#415FA5]">View</button></div>
             </div>
-            <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Appointment Notes</h3>
-            <div class="flex flex-wrap items-end gap-4 px-4 py-3">
-              <label class="flex flex-col min-w-40 flex-1 max-w-[480px]">
-                <textarea
-                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#111418] focus:outline-0 focus:ring-0 border border-[#d6d0e7] bg-white focus:border-[#415FA5] min-h-36 placeholder:text-[#60758a] p-[15px] text-base font-normal leading-normal"
-                ></textarea>
+            <div class="patient-management-list-item">
+              <div class="patient-management-list-content">
+                <p class="patient-management-list-title">Olivia Carter</p>
+                <p class="patient-management-list-subtitle">Child</p>
+              </div>
+              <div class="patient-management-list-action">
+                <button class="patient-management-view-btn">View</button>
+              </div>
+            </div>
+            <h3 class="patient-management-section-title">Appointment Notes</h3>
+            <div class="patient-management-form-row">
+              <label class="patient-management-field">
+                <textarea class="patient-management-textarea"></textarea>
               </label>
             </div>
-            <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Documents</h3>
-            <div class="flex items-center gap-4 bg-white border border-[#dbe0e6] rounded-lg px-4 min-h-[72px] py-2 justify-between max-w-[480px] mx-4">
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">ID Card</p>
-                <p class="text-[#60758a] text-sm font-normal leading-normal line-clamp-2">National ID</p>
+            <h3 class="patient-management-section-title">Documents</h3>
+            <div class="patient-management-list-item">
+              <div class="patient-management-list-content">
+                <p class="patient-management-list-title">ID Card</p>
+                <p class="patient-management-list-subtitle">National ID</p>
               </div>
-              <div class="shrink-0"><button class="text-base font-medium leading-normal text-[#415FA5]">View</button></div>
+              <div class="patient-management-list-action">
+                <button class="patient-management-view-btn">View</button>
+              </div>
             </div>
-            <div class="flex items-center gap-4 bg-white border border-[#dbe0e6] rounded-lg px-4 min-h-[72px] py-2 justify-between max-w-[480px] mx-4 mt-2">
-              <div class="flex flex-col justify-center">
-                <p class="text-[#111418] text-base font-medium leading-normal line-clamp-1">Insurance Card</p>
-                <p class="text-[#60758a] text-sm font-normal leading-normal line-clamp-2">Insurance</p>
+            <div class="patient-management-list-item">
+              <div class="patient-management-list-content">
+                <p class="patient-management-list-title">Insurance Card</p>
+                <p class="patient-management-list-subtitle">Insurance</p>
               </div>
-              <div class="shrink-0"><button class="text-base font-medium leading-normal text-[#415FA5]">View</button></div>
+              <div class="patient-management-list-action">
+                <button class="patient-management-view-btn">View</button>
+              </div>
             </div>
           </div>
-          <div class="layout-content-container flex flex-col w-[360px] ml-8">
-            <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Patient Actions</h3>
-            <div class="flex px-4 py-3">
+          <div class="patient-management-sidebar">
+            <h3 class="patient-management-sidebar-title">Patient Actions</h3>
+            <div class="patient-management-action-section">
               <a href="/receptionist/patients/<%= patient.id %>/edit"
-                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 flex-1 bg-[#415FA5] text-white text-sm font-bold leading-normal tracking-[0.015em] text-center">
+                 class="patient-management-action-btn">
                 Edit Patient Info
               </a>
             </div>
-            <div class="flex px-4 py-3">
+            <div class="patient-management-action-section">
               <a href="/receptionist/family-members/add"
-                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 flex-1 bg-[#415FA5] text-white text-sm font-bold leading-normal tracking-[0.015em] text-center">
-                <span class="truncate">Add Family Member</span>
+                 class="patient-management-action-btn">
+                <span>Add Family Member</span>
               </a>
             </div>
-            <div class="flex px-4 py-3">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 flex-1 bg-[#415FA5] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-              >
-                <span class="truncate">Upload Document</span>
+            <div class="patient-management-action-section">
+              <button class="patient-management-action-btn">
+                <span>Upload Document</span>
               </button>
             </div>
-            <h3 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Medical/Dental History (View Only)</h3>
-            <p class="text-[#60758a] text-base font-normal leading-normal pb-3 pt-1 px-4">
+            <h3 class="patient-management-sidebar-title">Medical/Dental History (View Only)</h3>
+            <p class="patient-management-sidebar-text">
               Access to medical and dental history is restricted to view-only for receptionists. Editing capabilities are not available.
             </p>
           </div>

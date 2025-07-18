@@ -1,0 +1,509 @@
+/* Receptionist Dashboard Styles */
+
+/* Root Layout */
+.dashboard-root {
+  font-family: Inter, "Noto Sans", sans-serif;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  border-bottom: 1px solid #f0f2f5;
+  padding: 12px 40px;
+}
+
+.dashboard-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #111418;
+}
+
+.dashboard-header-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.dashboard-header-title {
+  color: #111418;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.dashboard-header-right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 32px;
+}
+
+/* Navigation */
+.dashboard-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.dashboard-nav-link {
+  color: #111418;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.dashboard-nav-link:hover {
+  color: #415FA5;
+}
+
+/* Notification Button */
+.dashboard-notification-btn {
+  display: flex;
+  max-width: 480px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 40px;
+  background-color: #f0f2f5;
+  color: #111418;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.015em;
+  min-width: 0;
+  padding: 0 10px;
+  border: none;
+}
+
+/* User Avatar */
+.dashboard-avatar {
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  background-size: cover;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* Main Content */
+.dashboard-main {
+  padding: 0 160px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.dashboard-content-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  flex: 1;
+}
+
+/* Page Header */
+.dashboard-page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+}
+
+.dashboard-header-content {
+  display: flex;
+  min-width: 288px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dashboard-page-title {
+  color: #111418;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.dashboard-page-subtitle {
+  color: #60758a;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+}
+
+/* Section Titles */
+.dashboard-section-title {
+  color: #111418;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  padding: 20px 16px 12px 16px;
+}
+
+/* Stats Cards */
+.dashboard-stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+}
+
+.dashboard-stat-card {
+  display: flex;
+  min-width: 158px;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid #dbe0e6;
+  background-color: #DDC9F9;
+}
+
+.dashboard-stat-label {
+  color: #111418;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.dashboard-stat-number {
+  color: #111418;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.dashboard-stat-change {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.dashboard-stat-change.positive {
+  color: #078838;
+}
+
+.dashboard-stat-change.negative {
+  color: #e73908;
+}
+
+/* Action Buttons */
+.dashboard-actions {
+  display: flex;
+  justify-content: stretch;
+}
+
+.dashboard-action-buttons {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  justify-content: flex-start;
+}
+
+.dashboard-btn {
+  display: flex;
+  min-width: 84px;
+  max-width: 480px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.015em;
+  border: none;
+}
+
+.dashboard-btn-secondary {
+  background-color: #f0f2f5;
+  color: #111418;
+}
+
+.dashboard-btn-primary {
+  background-color: #415FA5;
+  color: white;
+}
+
+.dashboard-btn:hover {
+  opacity: 0.9;
+}
+
+/* Filter Buttons */
+.dashboard-filters {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  flex-wrap: wrap;
+  padding-right: 16px;
+  text-align: center;
+}
+
+.dashboard-filter-btn {
+  display: flex;
+  height: 32px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  background-color: #415FA5;
+  color: white;
+  padding-left: 16px;
+  padding-right: 8px;
+  border: none;
+  cursor: pointer;
+  padding-top: 15PX;
+  
+}
+
+.dashboard-filter-text {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* Tables */
+.dashboard-table-section {
+  padding: 12px 16px;
+}
+
+.dashboard-table-wrapper {
+  display: flex;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #dbe0e6;
+  background-color: white;
+}
+
+.dashboard-table {
+  flex: 1;
+  border-collapse: collapse;
+}
+
+.dashboard-table thead tr {
+  background-color: white;
+}
+
+.dashboard-table th {
+  padding: 12px 16px;
+  text-align: left;
+  color: #111418;
+  width: 400px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.dashboard-table th:last-child {
+  width: 240px;
+}
+
+.dashboard-table .action-header {
+  color: #60758a;
+}
+
+.dashboard-table tbody tr {
+  border-top: 1px solid #dbe0e6;
+}
+
+.dashboard-table td {
+  height: 72px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+}
+
+.dashboard-table .patient-name {
+  color: #111418;
+  width: 400px;
+}
+
+.dashboard-table .appointment-info {
+  color: #60758a;
+  width: 400px;
+}
+
+.dashboard-table .action-cell {
+  width: 240px;
+  color: #60758a;
+  font-weight: bold;
+  letter-spacing: 0.015em;
+}
+
+/* Status Button */
+.dashboard-status-btn {
+  display: flex;
+  min-width: 84px;
+  max-width: 480px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 32px;
+  padding: 0 16px;
+  background-color: #415FA5;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  width: 100%;
+  border: none;
+}
+
+/* Action Buttons in Tables */
+.dashboard-action-btn {
+  display: flex;
+  width: 96px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 40px;
+  padding: 0 16px;
+  background-color: #415FA5;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  border: none;
+}
+
+.dashboard-check-in-btn {
+  display: flex;
+  width: 96px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 40px;
+  padding: 0 16px;
+  background-color: #415FA5;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  border: none;
+}
+
+.dashboard-check-in-btn:hover {
+  color: #2d4a8a;
+}
+
+/* Responsive Table Columns */
+@container (max-width: 120px) {
+  .dashboard-table-col-1 { display: none; }
+}
+
+@container (max-width: 240px) {
+  .dashboard-table-col-2 { display: none; }
+}
+
+@container (max-width: 360px) {
+  .dashboard-table-col-3 { display: none; }
+}
+
+@container (max-width: 480px) {
+  .dashboard-table-col-4 { display: none; }
+}
+
+@container (max-width: 600px) {
+  .dashboard-table-col-5 { display: none; }
+}
+
+@container (max-width: 720px) {
+  .dashboard-table-col-6 { display: none; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-main {
+    padding: 0 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .dashboard-header {
+    padding: 12px 20px;
+  }
+  
+  .dashboard-nav {
+    gap: 20px;
+  }
+  
+  .dashboard-stats-container {
+    flex-direction: column;
+  }
+  
+  .dashboard-stat-card {
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header-right {
+    gap: 16px;
+  }
+  
+  .dashboard-nav {
+    gap: 16px;
+  }
+  
+  .dashboard-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .dashboard-header-content {
+    min-width: unset;
+  }
+  
+  .dashboard-action-btn {
+    width: 80px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+  }
+} 

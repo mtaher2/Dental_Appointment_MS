@@ -1,0 +1,458 @@
+/* Receptionist Patient Management Styles */
+
+/* Root Layout */
+.patient-management-root {
+  font-family: Inter, "Noto Sans", sans-serif;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.patient-management-container {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+/* Header */
+.patient-management-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  border-bottom: 1px solid #f0f2f5;
+  padding: 12px 40px;
+}
+
+.patient-management-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #111418;
+}
+
+.patient-management-header-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.patient-management-header-title {
+  color: #111418;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.patient-management-header-right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 32px;
+}
+
+/* Navigation */
+.patient-management-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.patient-management-nav-link {
+  color: #111418;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.patient-management-nav-link.active {
+  color: #415FA5;
+}
+
+.patient-management-nav-link:hover {
+  color: #415FA5;
+}
+
+/* Notification Button */
+.patient-management-notification-btn {
+  display: flex;
+  max-width: 480px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 40px;
+  background-color: #f0f2f5;
+  color: #111418;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.015em;
+  min-width: 0;
+  padding: 0 10px;
+  border: none;
+}
+
+/* User Avatar */
+.patient-management-avatar {
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+  background-size: cover;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* Main Content */
+.patient-management-main {
+  padding: 0 160px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.patient-management-content-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  flex: 1;
+}
+
+.patient-management-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  margin-left: 32px;
+}
+
+/* Page Header */
+.patient-management-page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+}
+
+.patient-management-header-content {
+  display: flex;
+  min-width: 288px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.patient-management-page-title {
+  color: #111418;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.patient-management-page-subtitle {
+  color: #60758a;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+}
+
+/* Form Sections */
+.patient-management-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 12px 16px;
+}
+
+.patient-management-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  flex: 1;
+  max-width: 480px;
+}
+
+.patient-management-field.half-width {
+  max-width: 240px;
+}
+
+.patient-management-field-label {
+  color: #111418;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  padding-bottom: 8px;
+}
+
+.patient-management-input,
+.patient-management-select,
+.patient-management-textarea {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+  resize: none;
+  overflow: hidden;
+  border-radius: 12px;
+  color: #111418;
+  border: 1px solid #d6d0e7;
+  background-color: white;
+  height: 56px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: normal;
+}
+
+.patient-management-input:focus,
+.patient-management-select:focus,
+.patient-management-textarea:focus {
+  outline: none;
+  border-color: #415FA5;
+}
+
+.patient-management-input::placeholder,
+.patient-management-textarea::placeholder {
+  color: #60758a;
+}
+
+.patient-management-textarea {
+  min-height: 144px;
+  resize: vertical;
+}
+
+/* Section Titles */
+.patient-management-section-title {
+  color: #111418;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  padding: 16px 16px 8px 16px;
+}
+
+/* List Items */
+.patient-management-list-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: white;
+  border: 1px solid #dbe0e6;
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 72px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  justify-content: space-between;
+  max-width: 480px;
+  margin: 0 16px 8px 16px;
+}
+
+.patient-management-list-item:first-of-type {
+  margin-top: 0;
+}
+
+.patient-management-list-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.patient-management-list-title {
+  color: #111418;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.patient-management-list-subtitle {
+  color: #60758a;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.patient-management-list-action {
+  flex-shrink: 0;
+}
+
+.patient-management-view-btn {
+  display: flex;
+  height: 32px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  background-color: #415FA5;
+  color: white;
+  padding-left: 16px;
+  padding-right: 8px;
+  border: none;
+  cursor: pointer;
+  padding-top: 15PX;
+}
+
+.patient-management-view-btn:hover {
+  color: #2E4A8C;
+}
+
+/* Action Buttons */
+.patient-management-action-section {
+  display: flex;
+  padding: 12px 16px;
+}
+
+.patient-management-action-btn {
+  display: flex;
+  min-width: 84px;
+  max-width: 480px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 40px;
+  padding: 0 16px;
+  flex: 1;
+  background-color: #415FA5;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.015em;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.patient-management-action-btn:hover {
+  background-color: #2E4A8C;
+  color: white;
+}
+
+.patient-management-action-btn span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Sidebar Content */
+.patient-management-sidebar-title {
+  color: #111418;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  padding: 16px 16px 8px 16px;
+}
+
+.patient-management-sidebar-text {
+  color: #60758a;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: normal;
+  padding: 4px 16px 12px 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .patient-management-main {
+    flex-direction: column;
+    padding: 0 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .patient-management-sidebar {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .patient-management-main {
+    padding: 0 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .patient-management-header {
+    padding: 12px 20px;
+  }
+  
+  .patient-management-nav {
+    gap: 20px;
+  }
+  
+  .patient-management-form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .patient-management-field {
+    max-width: none;
+  }
+  
+  .patient-management-field.half-width {
+    max-width: none;
+  }
+  
+  .patient-management-list-item {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .patient-management-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .patient-management-header-content {
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .patient-management-header-right {
+    gap: 16px;
+  }
+  
+  .patient-management-nav {
+    gap: 16px;
+  }
+  
+  .patient-management-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .patient-management-list-action {
+    align-self: flex-end;
+  }
+} 
