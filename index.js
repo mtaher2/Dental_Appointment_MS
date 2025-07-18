@@ -12,7 +12,7 @@ require('dotenv').config();
 const connectDB = require('./src/database/connection');
 
 // Import routes
-const patientRoutes = require('./src/routes/patientRoutes');
+const patientRoutes = require('./src/routes/patients');
 const adminRoutes = require('./src/routes/adminRoutes');
 
 const app = express();
@@ -64,7 +64,7 @@ app.use(compression());
 app.use(hpp());
 
 // Routes
-app.use('/api/v1/patients', patientRoutes);
+app.use('/patients', patientRoutes);
 app.use('/api/v1/admin', adminRoutes);
 
 // Home route
