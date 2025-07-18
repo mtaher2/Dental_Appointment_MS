@@ -12,11 +12,15 @@ router.post('/resetPassword', authController.resetPassword);
 // Protected routes
 router.use(authController.protect);
 
-// Profile routes
+// Routes that don't require password change
+router.patch('/updatePassword', authController.updatePassword);
+router.post('/logout', authController.logout);
+
+// Routes that require password change check
+router.use(authController.enforcePasswordChange);
+
 router.get('/profile', patientController.getProfile);
 router.patch('/profile', patientController.updateProfile);
-router.patch('/updatePassword', authController.updatePassword);
-router.patch('/emergencyContact', patientController.updateEmergencyContact);
 
 // Family member routes
 router.get('/family', patientController.getFamilyMembers);

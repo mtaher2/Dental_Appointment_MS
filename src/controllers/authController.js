@@ -94,6 +94,17 @@ exports.protect = catchAsync(async (req, res, next) => {
     next();
 });
 
+// Middleware to enforce password change on first login
+exports.enforcePasswordChange = catchAsync(async (req, res, next) => {
+    // Skip password change enforcement for these routes
+    const allowedPaths = ['/updatePassword', '/logout'];
+    if (!req.patient.isFirstLogin || allowedPaths.includes(req.path)) {
+        return next();
+    }
+
+    return next(new AppError('Please change your password before accessing the system.', 403));
+});
+
 exports.forgotPassword = catchAsync(async (req, res, next) => {
     // 1) Get patient based on POSTed email
     const patient = await Patient.findOne({ email: req.body.email });
@@ -190,6 +201,7 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
 
     // 3) If so, update password
     patient.password = req.body.password;
+    patient.isFirstLogin = false; // Set isFirstLogin to false after password change
     await patient.save();
 
     // 4) Log the password update
@@ -202,4 +214,19 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
 
     // 5) Log in patient, send JWT
     createSendToken(patient, 200, req, res);
+});
+
+exports.logout = catchAsync(async (req, res) => {
+    // Log the logout activity
+    await ActivityLog.create({
+        patient: req.patient._id,
+        action: 'logout',
+        ipAddress: req.ip,
+        userAgent: req.headers['user-agent']
+    });
+
+    res.status(200).json({
+        status: 'success',
+        message: 'Successfully logged out'
+    });
 }); 

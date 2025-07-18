@@ -10,6 +10,7 @@ const fileUpload = require('express-fileupload');
 require('dotenv').config();
 
 const connectDB = require('./src/database/connection');
+const errorHandler = require('./src/middleware/errorHandler');
 
 // Import routes
 const patientRoutes = require('./src/routes/patientRoutes');
@@ -76,15 +77,16 @@ app.get('/', (req, res) => {
     });
 });
 
-
 // Handle unhandled routes
-app.all('*', (req, res) => {
-    res.status(404).render('pages/home', {
-        title: '404 - Not Found',
-        success_msg: '',
-        error_msg: 'Page not found'
-    });
+app.all('*', (req, res, next) => {
+    const err = new Error(`Can't find ${req.originalUrl} on this server!`);
+    err.status = 'fail';
+    err.statusCode = 404;
+    next(err);
 });
+
+// Error handling middleware
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
