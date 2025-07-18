@@ -38,6 +38,17 @@
 .header-menu li a:hover {
   color: #6c63ff;
 }
+.header-menu li a.active {
+  background: #6c63ff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.header-menu li a.active:hover {
+  background: #5a52e6;
+  color: #fff;
+}
 .header-right {
   display: flex;
   align-items: center;
@@ -1600,6 +1611,16 @@ main.container.mt-4 {
 .billing-filter-chip:hover:not(.active) {
   background: #E5E5EA;
   color: #222;
+}
+
+/* Table row animation for filtering */
+.billing-invoice-table tbody tr {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.billing-invoice-table tbody tr.hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
 }
 .billing-invoice-actions-row {
   display: flex;
