@@ -1625,3 +1625,46 @@ main.container.mt-4 {
   display: inline-block;
   transition: color 0.18s, text-decoration 0.18s;
 }
+
+/* Add missing CSS classes for inline styles */
+
+/* Header logo text styling */
+.header-logo-text {
+    color: #6c63ff;
+    font-weight: 700;
+}
+
+/* Breadcrumb current page styling */
+.breadcrumb-current {
+    font-weight: 600;
+    color: #222;
+}
+
+/* PayPal label styling */
+.paypal-label {
+    margin-bottom: 8px;
+}
+
+/* Avatar background images - these should be set via CSS instead of inline styles */
+.dashboard-avatar,
+.appointments-avatar,
+.billing-avatar,
+.receipts-avatar,
+.patient-management-avatar {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIxsNlKDAKEhXxvp6kZXztReu8k3K0s_eT-bpI9LSqRIKdtZQ8ctqUT-0W7L50JBM39k0HmAtrRGAvppNVls2qH7KD6sST-MYGxM14hGjwhJDMhCs0EYP_nFSmIHyvpQxK3yDY_M7Engyvx6rlHobWAmT8mikxQtszjFbVD8LuZSwhmJA10B6fCFbbmwDMxb0bcYIJglEUDjbEf0BrWH-Qi8mppk1KA4RClF8CEtoHBJ8V0znFBD3sCs_f5YbMvdJI9Zl82_jWZv0");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Urgent appointment checkbox styling */
+#urgentAppointment {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Font family for pages that had inline font-family */
+.relative.flex.size-full.min-h-screen.flex-col.bg-white.group\/design-root.overflow-x-hidden {
+    font-family: Inter, "Noto Sans", sans-serif;
+}
