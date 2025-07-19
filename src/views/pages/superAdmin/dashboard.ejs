@@ -7,15 +7,15 @@
     <div class="stat-card">
       <div class="stat-label">Total Active Users</div>
       <div class="stat-value">1,234</div>
-      <div class="stat-change positive">+10%</div>
+      <div class="stat-change positive">+8%</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Appointments Today</div>
       <div class="stat-value">567</div>
-      <div class="stat-change positive">+5%</div>
+      <div class="stat-change positive">+12%</div>
     </div>
     <div class="stat-card">
-      <div class="stat-label">Overall Billing</div>
+      <div class="stat-label">Online Billing</div>
       <div class="stat-value">$123,456</div>
       <div class="stat-change positive">+8%</div>
     </div>
@@ -65,9 +65,16 @@
       <div class="chart-card full-width">
         <div class="chart-title">System Uptime</div>
         <div class="chart-value">99.9%</div>
-        <div class="chart-subtitle">Last 30 Days <span class="chart-change positive">+0.1%</span></div>
+        <div class="chart-subtitle">Last 4 Weeks <span class="chart-change positive">+0.1%</span></div>
         <canvas id="systemUptimeChart" class="dashboard-graph system-uptime-graph"></canvas>
       </div>
     </div>
   </div>
+  
+  <!-- Debug info for development -->
+  <script>
+    console.log('Dashboard page loaded, checking for Chart.js...');
+    console.log('Chart.js available:', typeof Chart !== 'undefined');
+    console.log('Canvas elements found:', document.querySelectorAll('.dashboard-graph').length);
+  </script>
 </div> 

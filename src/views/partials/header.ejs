@@ -3,16 +3,60 @@
     <div class="header-left">
       <a href="/" class="header-logo"> <span style="color:#6c63ff;font-weight:700;">DENTAL CLINIC</span> </a>
     </div>
-    <ul class="header-menu">
+    
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    
+    <!-- Navigation Menu -->
+    <ul class="header-menu" id="headerMenu">
       <li><a href="/superadmin/dashboard">Dashboard</a></li>
       <li><a href="/superadmin/admins">Admins</a></li>
       <li><a href="/superadmin/system-config">System Config</a></li>
       <li><a href="/superadmin/master-logs">Master Logs</a></li>
       <li><a href="/superadmin/dev-tools">Dev Tools</a></li>
     </ul>
+    
     <div class="header-right">
       <span class="header-icon"><i class="fa fa-bell"></i></span>
       <span class="header-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" /></span>
     </div>
   </nav>
-</header> 
+</header>
+
+<script>
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileToggle = document.querySelector('.mobile-menu-toggle');
+  const headerMenu = document.querySelector('.header-menu');
+  
+  if (mobileToggle && headerMenu) {
+    mobileToggle.addEventListener('click', function() {
+      headerMenu.classList.toggle('active');
+      mobileToggle.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.header-nav')) {
+        headerMenu.classList.remove('active');
+        mobileToggle.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }
+    });
+    
+    // Close menu when clicking on a link
+    headerMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        headerMenu.classList.remove('active');
+        mobileToggle.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      });
+    });
+  }
+});
+</script> 

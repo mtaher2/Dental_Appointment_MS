@@ -9,14 +9,71 @@
         <input type="text" placeholder="Search logs" class="admins-search-input" id="masterlogs-search" />
       </div>
     </div>
-    <div class="masterlogs-filters" style="margin-top: 16px; margin-bottom: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
-      <button type="button" class="filter-chip active" data-filter="all">All</button>
-      <button type="button" class="filter-chip" data-filter="clinic">Clinic</button>
-      <button type="button" class="filter-chip" data-filter="user">User</button>
-      <button type="button" class="filter-chip" data-filter="ip">IP Address</button>
-      <button type="button" class="filter-chip" data-filter="device">Device</button>
-      <button type="button" class="filter-chip" data-filter="action">Action Type</button>
+    
+    <!-- Filter Dropdowns Row -->
+    <div class="masterlogs-filters-row">
+      <div class="filter-dropdown-group">
+        <select class="filter-dropdown" id="clinic-filter">
+          <option value="" selected>Clinic</option>
+          <option value="clinic-a">Clinic A</option>
+          <option value="clinic-b">Clinic B</option>
+          <option value="clinic-c">Clinic C</option>
+          <option value="clinic-d">Clinic D</option>
+        </select>
+        <i class="fa fa-chevron-down dropdown-arrow"></i>
+      </div>
+      
+      <div class="filter-dropdown-group">
+        <select class="filter-dropdown" id="user-filter">
+          <option value="" selected>User</option>
+          <option value="alex-johnson">Alex Johnson</option>
+          <option value="sarah-lee">Sarah Lee</option>
+          <option value="michael-chan">Michael Chan</option>
+          <option value="olivia-brown">Olivia Brown</option>
+          <option value="ethan-clark">Ethan Clark</option>
+        </select>
+        <i class="fa fa-chevron-down dropdown-arrow"></i>
+      </div>
+      
+      <div class="filter-dropdown-group">
+        <select class="filter-dropdown" id="ip-filter">
+          <option value="" selected>IP Address</option>
+          <option value="192.168.100.100">192.168.100.100</option>
+          <option value="192.168.101.101">192.168.101.101</option>
+          <option value="192.168.102.110">192.168.102.110</option>
+          <option value="192.168.103.104">192.168.103.104</option>
+        </select>
+        <i class="fa fa-chevron-down dropdown-arrow"></i>
+      </div>
+      
+      <div class="filter-dropdown-group">
+        <select class="filter-dropdown" id="device-filter">
+          <option value="" selected>Device</option>
+          <option value="desktop">Desktop</option>
+          <option value="mobile">Mobile</option>
+          <option value="tablet">Tablet</option>
+        </select>
+        <i class="fa fa-chevron-down dropdown-arrow"></i>
+      </div>
+      
+      <div class="filter-dropdown-group">
+        <select class="filter-dropdown" id="action-filter">
+          <option value="" selected>Action Type</option>
+          <option value="login">User Login</option>
+          <option value="logout">User Logout</option>
+          <option value="appointment-created">Appointment Created</option>
+          <option value="appointment-cancelled">Appointment Cancelled</option>
+          <option value="record-updated">Patient Record Updated</option>
+          <option value="document-uploaded">Document Uploaded</option>
+          <option value="payment-received">Payment Received</option>
+          <option value="inventory-updated">Inventory Updated</option>
+          <option value="message-sent">Message Sent</option>
+          <option value="billing-report">Billing Report Generated</option>
+        </select>
+        <i class="fa fa-chevron-down dropdown-arrow"></i>
+      </div>
     </div>
+    
     <div class="masterlogs-date-row">
       <div class="date-field">
         <label for="startDate">Start Date</label>
@@ -128,4 +185,119 @@
   <div class="masterlogs-actions" style="margin-top: 18px;">
     <button class="export-logs-btn">Export Logs</button>
   </div>
-</div> 
+</div>
+
+<script>
+// Master Logs Filter Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('masterlogs-search');
+  const clinicFilter = document.getElementById('clinic-filter');
+  const userFilter = document.getElementById('user-filter');
+  const ipFilter = document.getElementById('ip-filter');
+  const deviceFilter = document.getElementById('device-filter');
+  const actionFilter = document.getElementById('action-filter');
+  const startDateFilter = document.getElementById('startDate');
+  const endDateFilter = document.getElementById('endDate');
+  const tableRows = document.querySelectorAll('.masterlogs-table tbody tr');
+
+  // Filter function
+  function filterTable() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const clinicValue = clinicFilter.value;
+    const userValue = userFilter.value;
+    const ipValue = ipFilter.value;
+    const deviceValue = deviceFilter.value;
+    const actionValue = actionFilter.value;
+    const startDate = startDateFilter.value;
+    const endDate = endDateFilter.value;
+
+    tableRows.forEach(row => {
+      const cells = row.querySelectorAll('td');
+      const timestamp = cells[0].textContent;
+      const userClinic = cells[1].textContent.toLowerCase();
+      const ipAddress = cells[2].textContent;
+      const device = cells[3].textContent.toLowerCase();
+      const action = cells[4].textContent.toLowerCase();
+      const data = cells[5].textContent.toLowerCase();
+
+      // Check all filter conditions
+      let showRow = true;
+
+      // Search filter
+      if (searchTerm && !userClinic.includes(searchTerm) && 
+          !ipAddress.includes(searchTerm) && !device.includes(searchTerm) && 
+          !action.includes(searchTerm) && !data.includes(searchTerm)) {
+        showRow = false;
+      }
+
+      // Clinic filter
+      if (clinicValue && !userClinic.includes(clinicValue.replace('-', ' '))) {
+        showRow = false;
+      }
+
+      // User filter (simplified)
+      if (userValue && !userClinic.includes(userValue.replace('-', ' '))) {
+        showRow = false;
+      }
+
+      // IP filter
+      if (ipValue && !ipAddress.includes(ipValue)) {
+        showRow = false;
+      }
+
+      // Device filter
+      if (deviceValue && !device.includes(deviceValue)) {
+        showRow = false;
+      }
+
+      // Action filter
+      if (actionValue) {
+        const actionMap = {
+          'login': 'user login',
+          'logout': 'user logout',
+          'appointment-created': 'appointment created',
+          'appointment-cancelled': 'appointment cancelled',
+          'record-updated': 'record updated',
+          'document-uploaded': 'document uploaded',
+          'payment-received': 'payment received',
+          'inventory-updated': 'inventory updated',
+          'message-sent': 'message sent',
+          'billing-report': 'billing report'
+        };
+        if (!action.includes(actionMap[actionValue] || actionValue)) {
+          showRow = false;
+        }
+      }
+
+      // Date filters (basic implementation)
+      if (startDate || endDate) {
+        const rowDate = new Date(timestamp.split(' ')[0]);
+        if (startDate && rowDate < new Date(startDate)) {
+          showRow = false;
+        }
+        if (endDate && rowDate > new Date(endDate)) {
+          showRow = false;
+        }
+      }
+
+      // Show/hide row
+      row.style.display = showRow ? '' : 'none';
+    });
+  }
+
+  // Add event listeners
+  searchInput.addEventListener('input', filterTable);
+  clinicFilter.addEventListener('change', filterTable);
+  userFilter.addEventListener('change', filterTable);
+  ipFilter.addEventListener('change', filterTable);
+  deviceFilter.addEventListener('change', filterTable);
+  actionFilter.addEventListener('change', filterTable);
+  startDateFilter.addEventListener('change', filterTable);
+  endDateFilter.addEventListener('change', filterTable);
+
+  // Export functionality
+  document.querySelector('.export-logs-btn').addEventListener('click', function() {
+    alert('Export functionality would be implemented here');
+  });
+});
+</script> 
