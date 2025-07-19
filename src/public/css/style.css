@@ -292,12 +292,20 @@ body {
 .forgot-logo-section {
     display: flex;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
+
 .forgot-logo-img {
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+    margin-right: 18px;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.forgot-logo-img:hover {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
+    transform: scale(1.05) rotate(2deg);
 }
 .forgot-logo-text {
     color: #0a1a3a;
@@ -511,12 +519,20 @@ body {
 .login-logo-section {
     display: flex;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
+
 .login-logo-img {
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+    margin-right: 18px;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.login-logo-img:hover {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
+    transform: scale(1.05) rotate(2deg);
 }
 .login-logo-text {
     color: #0a1a3a;
@@ -709,12 +725,20 @@ body {
 .reset-logo-section {
     display: flex;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
+
 .reset-logo-img {
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+    margin-right: 18px;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.reset-logo-img:hover {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
+    transform: scale(1.05) rotate(2deg);
 }
 .reset-logo-text {
     color: #0a1a3a;
@@ -907,12 +931,20 @@ body {
 .success-logo-section {
     display: flex;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
+
 .success-logo-img {
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+    margin-right: 18px;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.success-logo-img:hover {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
+    transform: scale(1.05) rotate(2deg);
 }
 .success-logo-text {
     color: #0a1a3a;
@@ -1089,13 +1121,10 @@ body {
     overflow: visible;
 }
 
+
+
 .logo-section, .exact-logo-section {
     margin: 32px 0 0 32px;
-    padding: 16px 24px;
-    background: rgba(255,255,255,0.05);
-    border: 3px solid #4e8cff;
-    border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(80, 80, 160, 0.10);
     display: flex;
     align-items: center;
     position: absolute;
@@ -1105,9 +1134,16 @@ body {
 }
 
 .logo-img, .exact-logo-img {
-    width: 60px !important;
-    height: 60px !important;
-    margin-right: 16px;
+    width: 120px !important;
+    height: 120px !important;
+    margin-right: 18px;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.logo-img:hover, .exact-logo-img:hover {
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
+    transform: scale(1.05) rotate(2deg);
 }
 
 .logo-text {
@@ -1136,21 +1172,22 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
-    min-height: 400px;
+    height: 100vh;
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-40%);
+    left: 60%;
+    top: 65%;
+    transform: translate(-50%, -50%);
     z-index: 10;
 }
 
 .tooth-img, .exact-tooth-img {
     width: 320px;
+    height: 320px;
     max-width: 90%;
-    height: auto;
     display: block;
     margin: 0 auto;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
 }
 
 /* Right panel styling */
@@ -3228,4 +3265,121 @@ main.container.mt-4 {
   text-decoration: none;
   display: inline-block;
   transition: color 0.18s, text-decoration 0.18s;
+}
+
+/* 
+========================================
+ANIMATIONS FOR AUTH PAGES IMAGES
+========================================
+*/
+
+/* Keyframe Animations */
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(-20px) rotate(-5deg);
+    filter: blur(4px);
+  }
+  30% {
+    opacity: 0.3;
+    transform: scale(0.8) translateY(-10px) rotate(-2deg);
+    filter: blur(2px);
+  }
+  70% {
+    opacity: 0.8;
+    transform: scale(1.02) translateY(2px) rotate(1deg);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) rotate(0deg);
+    filter: blur(0px);
+  }
+}
+
+@keyframes toothFloat {
+  0% {
+    transform: translateY(-40%) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-42%) rotateY(5deg);
+  }
+  50% {
+    transform: translateY(-38%) rotateY(0deg);
+  }
+  75% {
+    transform: translateY(-42%) rotateY(-5deg);
+  }
+  100% {
+    transform: translateY(-40%) rotateY(0deg);
+  }
+}
+
+@keyframes toothPulse {
+  0% {
+    filter: drop-shadow(0 8px 16px rgba(80, 80, 160, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 12px 24px rgba(80, 80, 160, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0 8px 16px rgba(80, 80, 160, 0.2));
+  }
+}
+
+@keyframes forgotToothFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* Logo Animations */
+.logo-img, .exact-logo-img {
+  animation: logoFadeIn 1.2s ease-out 0.3s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+/* 3D Tooth Animations */
+.tooth-img, .exact-tooth-img {
+  animation: toothFloat 4s ease-in-out infinite, toothPulse 3s ease-in-out infinite;
+  animation-fill-mode: both;
+  transform-origin: center center;
+}
+
+/* Hover effects for enhanced interactivity */
+.logo-img:hover, .exact-logo-img:hover {
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
+  transform: scale(1.05) rotate(2deg);
+  transition: all 0.3s ease;
+}
+
+.tooth-img:hover, .exact-tooth-img:hover {
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
+  transform: scale(1.05) rotate(2deg);
+  transition: all 0.3s ease;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .logo-img, .exact-logo-img, .tooth-img, .exact-tooth-img {
+    animation: none;
+  }
+  
+  .logo-img:hover, .exact-logo-img:hover, .tooth-img:hover, .exact-tooth-img:hover {
+    transform: none;
+    transition: none;
+  }
 }
