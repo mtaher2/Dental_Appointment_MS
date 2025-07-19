@@ -377,82 +377,336 @@
   padding: 4px 16px 12px 16px;
 }
 
+/* Mobile Menu Button */
+.patient-management-mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #111418;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.patient-management-mobile-menu-btn:hover {
+  background-color: #f0f2f5;
+}
+
+/* Mobile Overlay */
+.patient-management-mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.patient-management-mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .patient-management-main {
+  .patient-management-nav {
+    gap: 24px;
+  }
+  
+  .patient-management-content-container {
+    padding: 0 20px;
+  }
+  
+  .patient-management-main-content {
     flex-direction: column;
-    padding: 0 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  }
+  
+  .patient-management-table-section {
+    flex: none;
   }
   
   .patient-management-sidebar {
     width: 100%;
     margin-left: 0;
-    margin-top: 32px;
+    margin-top: 24px;
   }
 }
 
 @media (max-width: 768px) {
+  /* Layout adjustments */
   .patient-management-main {
-    padding: 0 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .patient-management-content-container {
+    width: 100%;
+    padding: 0;
   }
   
   .patient-management-header {
-    padding: 12px 20px;
+    padding: 12px 16px;
   }
   
+  .patient-management-header-right {
+    gap: 12px;
+  }
+  
+  /* Show mobile menu button on mobile/tablet */
+  .patient-management-mobile-menu-btn {
+    display: block;
+  }
+  
+  /* Hide desktop navigation on mobile/tablet */
   .patient-management-nav {
-    gap: 20px;
-  }
-  
-  .patient-management-form-row {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 280px;
+    background-color: white;
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
+    padding: 80px 24px 24px;
+    gap: 8px;
+    z-index: 999;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
   }
   
-  .patient-management-field {
-    max-width: none;
+  /* Show mobile navigation when open */
+  .patient-management-nav.mobile-open {
+    display: flex;
+    transform: translateX(0);
   }
   
-  .patient-management-field.half-width {
-    max-width: none;
+  .patient-management-nav-link {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: block;
   }
   
-  .patient-management-list-item {
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
+  .patient-management-nav-link:hover,
+  .patient-management-nav-link.active {
+    background-color: #f0f2f5;
+    color: #415FA5;
   }
   
+  /* Page content */
   .patient-management-page-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
   }
   
-  .patient-management-header-content {
+  .patient-management-page-title {
+    font-size: 24px;
     min-width: unset;
+  }
+  
+  .patient-management-new-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Main content layout */
+  .patient-management-main-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .patient-management-table-section {
+    flex: none;
+    margin: 0 -16px;
+    padding: 0 16px;
+  }
+  
+  .patient-management-sidebar {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    order: -1; /* Show sidebar first on mobile */
+  }
+  
+  /* Search */
+  .patient-management-search {
+    margin: 16px 0;
+  }
+  
+  .patient-management-search-field {
+    width: 100%;
+  }
+  
+  /* Tables */
+  .patient-management-table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+  }
+  
+  .patient-management-table {
+    min-width: 600px;
+  }
+  
+  .patient-management-table th,
+  .patient-management-table td {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .patient-management-table th:first-child,
+  .patient-management-table td:first-child {
+    padding-left: 16px;
+  }
+  
+  .patient-management-table th:last-child,
+  .patient-management-table td:last-child {
+    padding-right: 16px;
+  }
+  
+  /* Action buttons in sidebar */
+  .patient-management-action-btn {
+    width: 100%;
+    margin-bottom: 8px;
+    justify-content: center;
+  }
+  
+  .patient-management-action-section {
+    margin-bottom: 16px;
+  }
+  
+  .patient-management-sidebar-title {
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
+  /* Mobile-specific adjustments */
+  .patient-management-header {
+    padding: 10px 12px;
+  }
+  
+  .patient-management-main {
+    padding: 12px;
+  }
+  
   .patient-management-header-right {
-    gap: 16px;
+    gap: 8px;
   }
   
   .patient-management-nav {
-    gap: 16px;
-  }
-  
-  .patient-management-list-item {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 12px;
   }
   
-  .patient-management-list-action {
-    align-self: flex-end;
+  /* Page header */
+  .patient-management-page-header {
+    padding: 16px 0;
+  }
+  
+  .patient-management-page-title {
+    font-size: 20px;
+  }
+  
+  .patient-management-page-subtitle {
+    font-size: 13px;
+  }
+  
+  /* Search */
+  .patient-management-search-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+    height: 44px;
+  }
+  
+  /* Tables */
+  .patient-management-table-section {
+    margin: 0 -12px;
+    padding: 0 12px;
+  }
+  
+  .patient-management-table {
+    min-width: 500px;
+  }
+  
+  .patient-management-table th,
+  .patient-management-table td {
+    padding: 10px 6px;
+    font-size: 13px;
+  }
+  
+  .patient-management-table th:first-child,
+  .patient-management-table td:first-child {
+    padding-left: 12px;
+  }
+  
+  .patient-management-table th:last-child,
+  .patient-management-table td:last-child {
+    padding-right: 12px;
+  }
+  
+  /* Sidebar */
+  .patient-management-sidebar {
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .patient-management-sidebar-title {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .patient-management-action-section {
+    margin-bottom: 12px;
+  }
+  
+  .patient-management-action-btn {
+    height: 44px; /* Touch-friendly */
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  /* Touch targets */
+  .patient-management-nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .patient-management-new-btn {
+    min-height: 44px;
+  }
+  
+  /* Patient info cards for mobile */
+  .patient-management-patient-card {
+    display: block;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .patient-management-patient-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .patient-management-patient-info {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 4px;
   }
 } 

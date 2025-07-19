@@ -14,6 +14,7 @@
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/patient-management.css?v=responsive2024">
   </head>
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
@@ -32,13 +33,21 @@
             </div>
             <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">MediCare</h2>
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="/receptionist/dashboard">Dashboard</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="/receptionist/appointments">Appointments</a>
-              <a class="text-[#415FA5] text-sm font-medium leading-normal" href="/receptionist/patients">Patients</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="/receptionist/billing">Billing</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="/receptionist/reports">Reports</a>
+          <div class="patient-management-header-right">
+            <!-- Mobile hamburger menu button -->
+            <button class="patient-management-mobile-menu-btn" id="mobileMenuBtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+              </svg>
+            </button>
+            
+            <div class="patient-management-nav">
+              <a class="patient-management-nav-link" href="/receptionist/dashboard">Dashboard</a>
+              <a class="patient-management-nav-link" href="/receptionist/appointments">Appointments</a>
+              <a class="patient-management-nav-link active" href="/receptionist/patients">Patients</a>
+              <a class="patient-management-nav-link" href="/receptionist/billing">Billing</a>
+              <a class="patient-management-nav-link" href="/receptionist/reports">Reports</a>
+              <a class="patient-management-nav-link" href="/receptionist/messages">Messages</a>
             </div>
             <button
               class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f0f2f5] text-[#111418] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
@@ -92,8 +101,7 @@
                   <option value="">Select gender</option>
                   <option value="Male" <%= patient && patient.gender === 'Male' ? 'selected' : '' %>>Male</option>
                   <option value="Female" <%= patient && patient.gender === 'Female' ? 'selected' : '' %>>Female</option>
-                  <option value="Other" <%= patient && patient.gender === 'Other' ? 'selected' : '' %>>Other</option>
-                  <option value="Prefer not to say" <%= patient && patient.gender === 'Prefer not to say' ? 'selected' : '' %>>Prefer not to say</option>
+               
                 </select>
               </label>
             </div>
@@ -127,6 +135,86 @@
       </div>
     </div>
 
+    <!-- Mobile Menu Overlay -->
+    <div class="patient-management-mobile-overlay" id="mobileOverlay"></div>
+
+    <script>
+    // Mobile menu functionality
+    function toggleMobileMenu() {
+      try {
+        const nav = document.querySelector('.patient-management-nav');
+        const overlay = document.getElementById('mobileOverlay');
+        const body = document.body;
+        
+        console.log('Toggle clicked', { nav, overlay });
+        console.log('Screen width:', window.innerWidth);
+        console.log('Nav display:', window.getComputedStyle(nav).display);
+        
+        if (nav && overlay) {
+          nav.classList.toggle('mobile-open');
+          overlay.classList.toggle('active');
+          body.classList.toggle('mobile-menu-open');
+          console.log('Menu toggled successfully');
+          console.log('Nav classes:', nav.className);
+          console.log('Overlay classes:', overlay.className);
+        } else {
+          console.error('Elements not found', { nav, overlay });
+        }
+      } catch (error) {
+        console.error('Error in toggle function:', error);
+      }
+    }
+
+    // Initialize mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add click event listener to hamburger button
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        console.log('Mobile menu button event listener added');
+      }
+
+      // Add click event listener to overlay
+      const overlay = document.getElementById('mobileOverlay');
+      if (overlay) {
+        overlay.addEventListener('click', toggleMobileMenu);
+        console.log('Overlay event listener added');
+      }
+
+      // Close mobile menu when clicking on navigation links
+      const navLinks = document.querySelectorAll('.patient-management-nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          const nav = document.querySelector('.patient-management-nav');
+          const overlay = document.getElementById('mobileOverlay');
+          const body = document.body;
+          
+          if (nav && overlay && nav.classList.contains('mobile-open')) {
+            nav.classList.remove('mobile-open');
+            overlay.classList.remove('active');
+            body.classList.remove('mobile-menu-open');
+          }
+        });
+      });
+
+      // Close mobile menu on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const nav = document.querySelector('.patient-management-nav');
+          const overlay = document.getElementById('mobileOverlay');
+          const body = document.body;
+          
+          if (nav && overlay && nav.classList.contains('mobile-open')) {
+            nav.classList.remove('mobile-open');
+            overlay.classList.remove('active');
+            body.classList.remove('mobile-menu-open');
+          }
+        }
+      });
+
+      console.log('Mobile menu initialization complete');
+    });
+    </script>
     <script src="/js/receptionist-edit-patient.js"></script>
   </body>
 </html> 

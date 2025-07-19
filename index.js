@@ -15,8 +15,6 @@ const expressLayouts = require('express-ejs-layouts');
 // const errorHandler = require('./src/middleware/errorHandler');
 
 // Import routes
-const receptionistRoutes = require('./src/routes/receptionist/dashboardRoutes');
-const receptionistPatientRoutes = require('./src/routes/receptionist/patientRoutes');
 const patientRoutes = require('./src/routes/patient');
 
 const app = express();
@@ -67,8 +65,6 @@ app.use(compression());
 // app.use('/api', limiter);
 
 // Routes
-app.use('/receptionist', receptionistRoutes);
-app.use('/receptionist', receptionistPatientRoutes);
 
 // Home route
 app.get('/', (req, res) => {
@@ -76,6 +72,44 @@ app.get('/', (req, res) => {
         title: 'Welcome',
         success_msg: '',
         error_msg: ''
+    });
+});
+
+// Receptionist Dashboard route
+app.get('/receptionist/dashboard', (req, res) => {
+    res.render('pages/receptionist/dashboard', {
+        title: 'Dashboard',
+        success_msg: '',
+        error_msg: '',
+        patients: [
+            {
+                id: 1,
+                patientName: 'John Doe',
+                appointmentTime: '09:00 AM',
+                serviceType: 'Regular Checkup',
+                doctorName: 'Dr. Smith',
+                room: 'Room 101',
+                status: 'Scheduled'
+            },
+            {
+                id: 2,
+                patientName: 'Jane Smith',
+                appointmentTime: '10:30 AM',
+                serviceType: 'Cleaning',
+                doctorName: 'Dr. Johnson',
+                room: 'Room 102',
+                status: 'In Progress'
+            },
+            {
+                id: 3,
+                patientName: 'Mike Wilson',
+                appointmentTime: '02:00 PM',
+                serviceType: 'Cavity Filling',
+                doctorName: 'Dr. Brown',
+                room: 'Room 103',
+                status: 'Completed'
+            }
+        ]
     });
 });
 
@@ -92,6 +126,56 @@ app.get('/receptionist/appointments', (req, res) => {
 app.get('/receptionist/appointments/new', (req, res) => {
     res.render('pages/receptionist/new-appointment', {
         title: 'New Appointment',
+        success_msg: '',
+        error_msg: ''
+    });
+});
+
+// Patient Management page route
+app.get('/receptionist/patients', (req, res) => {
+    res.render('pages/receptionist/patient-management', {
+        title: 'Patient Management',
+        success_msg: '',
+        error_msg: '',
+        patient: {
+            id: 1,
+            name: 'John Doe',
+            email: 'john@example.com',
+            phone: '+1234567890',
+            address: '123 Main St',
+            dateOfBirth: '1990-01-01',
+            gender: 'Male',
+            emergencyContact: 'Jane Doe',
+            emergencyPhone: '+1234567891'
+        }
+    });
+});
+
+// Edit Patient page route
+app.get('/receptionist/patients/:id/edit', (req, res) => {
+    res.render('pages/receptionist/edit-patient', {
+        title: 'Edit Patient',
+        success_msg: '',
+        error_msg: '',
+        patient: {
+            id: req.params.id,
+            name: 'John Doe',
+            email: 'john@example.com',
+            phone: '+1234567890',
+            address: '123 Main St',
+            dateOfBirth: '1990-01-01',
+            gender: 'Male',
+            language: 'English',
+            emergencyContact: 'Jane Doe',
+            emergencyPhone: '+1234567891'
+        }
+    });
+});
+
+// Add Family Member page route
+app.get('/receptionist/family-members/add', (req, res) => {
+    res.render('pages/receptionist/add-family-member', {
+        title: 'Add Family Member',
         success_msg: '',
         error_msg: ''
     });
