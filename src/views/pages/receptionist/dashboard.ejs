@@ -234,7 +234,7 @@
                           </td>
                           <td class="dashboard-table-col-5 appointment-info"><%= patient.room %></td>
                           <td class="dashboard-table-col-6 action-cell">
-                            <button class="dashboard-check-in-btn" data-patient-id="<%= patient.id %>">Check In</button>
+                            <button class="dashboard-action-btn" data-patient-id="<%= patient.id %>">Check In</button>
                           </td>
                         </tr>
                       <% }); %>
@@ -253,7 +253,7 @@
                         </td>
                         <td class="dashboard-table-col-5 appointment-info">Room 101</td>
                         <td class="dashboard-table-col-6 action-cell">
-                          <button class="c">Check In</button>
+                          <button class="dashboard-action-btn">Check In</button>
                         </td>
                       </tr>
                     <% } %>
@@ -413,7 +413,7 @@
       }
 
       // Add event listeners for check-in buttons
-      const checkInButtons = document.querySelectorAll('.dashboard-check-in-btn');
+      const checkInButtons = document.querySelectorAll('.dashboard-action-btn[data-patient-id]');
       checkInButtons.forEach(button => {
         button.addEventListener('click', () => {
           const patientId = button.getAttribute('data-patient-id');

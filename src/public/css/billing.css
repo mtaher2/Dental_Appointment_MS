@@ -972,7 +972,7 @@
   
   /* Show mobile menu button on mobile/tablet */
   .billing-mobile-menu-btn {
-    display: block;
+    display: block !important;
   }
   
   /* Hide desktop navigation on mobile/tablet */
@@ -1289,7 +1289,7 @@ body.mobile-menu-open {
   }
   
   .receipts-mobile-menu-btn {
-    display: block;
+    display: block !important;
   }
   
   .receipts-nav {

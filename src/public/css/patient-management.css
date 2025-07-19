@@ -307,11 +307,9 @@
   border-radius: 8px;
   background-color: #415FA5;
   color: white;
-  padding-left: 16px;
-  padding-right: 8px;
+  padding: 0 16px;
   border: none;
   cursor: pointer;
-  padding-top: 15PX;
 }
 
 .patient-management-view-btn:hover {

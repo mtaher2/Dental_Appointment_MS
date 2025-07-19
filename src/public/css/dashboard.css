@@ -409,6 +409,11 @@
   border: none;
 }
 
+.dashboard-action-btn:hover {
+  background-color: #2d4a8a;
+  color: white;
+}
+
 .dashboard-check-in-btn {
   display: flex;
   width: 96px;
@@ -430,7 +435,8 @@
 }
 
 .dashboard-check-in-btn:hover {
-  color: #2d4a8a;
+  background-color: #2d4a8a;
+  color: white;
 }
 
 /* Responsive Table Columns */
