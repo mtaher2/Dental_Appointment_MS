@@ -1566,7 +1566,7 @@ main.container.mt-4 {
 }
 
 .assistant-refresh-btn {
-  background: #4256D0;
+  background: #415FA5;
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -1578,7 +1578,7 @@ main.container.mt-4 {
 }
 
 .assistant-refresh-btn:hover {
-  background: #354a8c;
+  background: #334a85;
 }
 
 .assistant-table-wrapper {
@@ -1636,16 +1636,10 @@ main.container.mt-4 {
 .assistant-status-badge.completed,
 .assistant-status-badge.checked-in,
 .assistant-status-badge.ready,
-.assistant-status-badge.occupied {
-  background: #4256D0;
-}
-
-.assistant-status-badge.canceled {
-  background: #A3A3B3;
-}
-
+.assistant-status-badge.occupied,
+.assistant-status-badge.canceled,
 .assistant-status-badge.vacant {
-  background: #6B8DE3;
+  background: #415FA5;
 }
 
 @media (max-width: 900px) {
