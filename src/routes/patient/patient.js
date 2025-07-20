@@ -46,4 +46,13 @@ router.get('/share-experience', (req, res) => {
     });
 });
 
+// Patient Profile Page
+router.get('/profile', (req, res) => {
+    res.render('pages/patient/profile', {
+        title: 'Patient Profile',
+        success_msg: '',
+        error_msg: ''
+    });
+});
+
 module.exports = router; 

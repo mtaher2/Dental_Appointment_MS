@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Profile - Dental Clinic</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="dental-header">
+        <div class="header-container">
+            <div class="header-left">
+                <h1 class="clinic-logo">DENTAL CLINIC</h1>
+            </div>
+            <div class="header-right">
+                <nav class="main-nav">
+                    <a href="/patient/select-doctor" class="nav-item">Select Doctor</a>
+                    <a href="/patient/book-appointment" class="nav-item">Book Appointment</a>
+                    <a href="/patient/appointment-confirmed" class="nav-item">Appointment Status</a>
+                    <a href="/patient/rate-dentist" class="nav-item">Rate Dentist</a>
+                    <a href="/patient/share-experience" class="nav-item">Share Experience</a>
+                </nav>
+                <div class="header-icons">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <a href="/patient/profile" class="user-profile">
+                        <img src="/images/doctor/profile .svg" alt="User Profile">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Title -->
+            <h2 class="page-heading">Patient Profile</h2>
+
+            <!-- Profile Information -->
+            <div class="profile-section">
+                <div class="profile-avatar-section">
+                    <div class="profile-avatar">
+                        <img src="/images/patient-avatar.jpg" alt="Profile Picture" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjYwIiBmaWxsPSIjNDE1RkE1Ii8+Cjxzdmcgd2lkdGg9IjcyIiBoZWlnaHQ9IjcyIiB2aWV3Qm94PSIwIDAgNzIgNzIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9InRyYW5zZm9ybTogdHJhbnNsYXRlKDI0cHgsIDI0cHgpOyI+CjxjaXJjbGUgY3g9IjM2IiBjeT0iMjQiIHI9IjEyIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMzYgNDBDMjYuMSA0MCAyMCA0NSAyMCA1MFY2MEg1MlY1MEM1MiA0NSA0NS45IDQwIDM2IDQwWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo='">
+                    </div>
+                    <button class="change-photo-btn">Change Photo</button>
+                </div>
+
+                <div class="profile-info">
+                    <h3 class="section-heading">Personal Information</h3>
+                    
+                    <div class="form-section">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-input" value="John" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-input" value="Doe" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-input" value="john.doe@email.com" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-input" value="+1 (555) 123-4567" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Date of Birth</label>
+                                <input type="date" class="form-input" value="1990-01-15" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Gender</label>
+                                <select class="form-input" disabled>
+                                    <option value="male" selected>Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Address</label>
+                            <textarea class="form-textarea" rows="3" readonly>123 Main Street, Apartment 4B
+New York, NY 10001
+United States</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Medical Information -->
+                    <h3 class="section-heading">Medical Information</h3>
+                    
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label class="form-label">Allergies</label>
+                            <textarea class="form-textarea" rows="2" readonly>Penicillin, Peanuts</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Current Medications</label>
+                            <textarea class="form-textarea" rows="2" readonly>Vitamins, Blood pressure medication</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Medical History</label>
+                            <textarea class="form-textarea" rows="3" readonly>No significant dental issues. Regular checkups every 6 months. Last cleaning performed 3 months ago.</textarea>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="form-actions">
+                        <button type="button" class="edit-profile-btn">Edit Profile</button>
+                        <button type="button" class="save-profile-btn" style="display: none;">Save Changes</button>
+                        <button type="button" class="cancel-edit-btn" style="display: none;">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Edit profile functionality
+        document.querySelector('.edit-profile-btn').addEventListener('click', function() {
+            // Enable all form fields
+            document.querySelectorAll('.form-input, .form-textarea').forEach(field => {
+                field.removeAttribute('readonly');
+                field.removeAttribute('disabled');
+            });
+
+            // Toggle button visibility
+            this.style.display = 'none';
+            document.querySelector('.save-profile-btn').style.display = 'inline-block';
+            document.querySelector('.cancel-edit-btn').style.display = 'inline-block';
+        });
+
+        // Cancel edit
+        document.querySelector('.cancel-edit-btn').addEventListener('click', function() {
+            // Disable all form fields
+            document.querySelectorAll('.form-input, .form-textarea').forEach(field => {
+                field.setAttribute('readonly', true);
+                if (field.tagName === 'SELECT') {
+                    field.setAttribute('disabled', true);
+                }
+            });
+
+            // Toggle button visibility
+            this.style.display = 'none';
+            document.querySelector('.save-profile-btn').style.display = 'none';
+            document.querySelector('.edit-profile-btn').style.display = 'inline-block';
+        });
+
+        // Save profile
+        document.querySelector('.save-profile-btn').addEventListener('click', function() {
+            alert('Profile saved successfully!');
+            
+            // Disable all form fields
+            document.querySelectorAll('.form-input, .form-textarea').forEach(field => {
+                field.setAttribute('readonly', true);
+                if (field.tagName === 'SELECT') {
+                    field.setAttribute('disabled', true);
+                }
+            });
+
+            // Toggle button visibility
+            this.style.display = 'none';
+            document.querySelector('.cancel-edit-btn').style.display = 'none';
+            document.querySelector('.edit-profile-btn').style.display = 'inline-block';
+        });
+
+        // Change photo
+        document.querySelector('.change-photo-btn').addEventListener('click', function() {
+            alert('Photo upload functionality would be implemented here!');
+        });
+    </script>
+</body>
+</html> 

@@ -10,22 +10,26 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header class="rate-dentist-header">
+    <header class="dental-header">
         <div class="header-container">
             <div class="header-left">
-                <button class="close-btn">
-                    <i class="fas fa-times"></i>
-                </button>
-                <span class="clinic-name">ClinicName</span>
+                <h1 class="clinic-logo">DENTAL CLINIC</h1>
             </div>
             <div class="header-right">
-                <div class="header-actions">
-                    <div class="settings-icon">
-                        <i class="fas fa-cog"></i>
+                <nav class="main-nav">
+                    <a href="/patient/select-doctor" class="nav-item">Select Doctor</a>
+                    <a href="/patient/book-appointment" class="nav-item">Book Appointment</a>
+                    <a href="/patient/appointment-confirmed" class="nav-item">Appointment Status</a>
+                    <a href="/patient/rate-dentist" class="nav-item">Rate Dentist</a>
+                    <a href="/patient/share-experience" class="nav-item">Share Experience</a>
+                </nav>
+                <div class="header-icons">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
                     </div>
-                    <div class="profile-picture">
-                        <img src="/images/patient-profile.jpg" alt="Patient Profile" onerror="this.src='https://via.placeholder.com/35x35/6b7280/ffffff?text=U'">
-                    </div>
+                    <a href="/patient/profile" class="user-profile">
+                        <img src="/images/doctor/profile .svg" alt="User Profile">
+                    </a>
                 </div>
             </div>
         </div>

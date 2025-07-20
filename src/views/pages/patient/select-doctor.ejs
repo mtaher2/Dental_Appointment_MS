@@ -10,43 +10,40 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header class="patient-header">
+    <header class="dental-header">
         <div class="header-container">
             <div class="header-left">
-                <div class="logo-box">
-                    <span class="logo-text">DENTAL CLINIC</span>
-                </div>
+                <h1 class="clinic-logo">DENTAL CLINIC</h1>
             </div>
             <div class="header-right">
-                <nav class="nav-menu">
-                    <a href="#" class="nav-link">Dashboard</a>
-                    <a href="#" class="nav-link">Appointments</a>
-                    <a href="#" class="nav-link">Messages</a>
-                    <a href="#" class="nav-link">Documents</a>
+                <nav class="main-nav">
+                    <a href="/patient/select-doctor" class="nav-item">Select Doctor</a>
+                    <a href="/patient/book-appointment" class="nav-item">Book Appointment</a>
+                    <a href="/patient/appointment-confirmed" class="nav-item">Appointment Status</a>
+                    <a href="/patient/rate-dentist" class="nav-item">Rate Dentist</a>
+                    <a href="/patient/share-experience" class="nav-item">Share Experience</a>
                 </nav>
-                <div class="header-actions">
-                    <div class="notification-icon">
+                <div class="header-icons">
+                    <div class="notification-bell">
                         <i class="fas fa-bell"></i>
                     </div>
-                    <div class="profile-picture">
-                        <img src="/images/patient-profile.jpg" alt="Patient Profile" onerror="this.src='https://via.placeholder.com/35x35/4e8cff/ffffff?text=U'">
-                        <span class="profile-text">Patient Profile</span>
-                    </div>
+                    <a href="/patient/profile" class="user-profile">
+                        <img src="/images/doctor/profile .svg" alt="User Profile">
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="header-separator"></div>
     </header>
 
     <!-- Main Content -->
-    <main class="patient-main">
-        <div class="main-container">
+    <main class="main-content">
+        <div class="container">
             <!-- Page Title -->
-            <h1 class="page-title">Select a Doctor</h1>
+            <h2 class="page-heading">Select a Doctor</h2>
 
             <!-- Search Bar -->
-            <div class="search-section">
-                <div class="search-container">
+            <div class="search-container">
+                <div class="search-box">
                     <i class="fas fa-search search-icon"></i>
                     <input type="text" class="search-input" placeholder="Search for a doctor">
                 </div>
@@ -54,61 +51,54 @@
 
             <!-- Available Doctors Section -->
             <div class="doctors-section">
-                <h2 class="section-title">Available Doctors</h2>
+                <h3 class="section-heading">Available Doctors</h3>
                 
-                <div class="doctors-grid">
-                    <!-- Left Column - Doctor Listings -->
-                    <div class="doctor-listings">
-                        <!-- Doctor 1 -->
-                        <div class="doctor-card">
-                            <div class="doctor-info">
-                                <h3 class="doctor-name">Dr. Amelia Carter</h3>
-                                <p class="doctor-specialty">Specialty: General Dentistry</p>
-                                <button class="view-profile-btn">View Profile</button>
-                            </div>
+                <div class="doctors-list">
+                    <!-- Doctor 1 -->
+                    <div class="doctor-row">
+                        <div class="doctor-details">
+                            <h4 class="doctor-name">Dr. Amelia Carter</h4>
+                            <p class="doctor-specialty">Specialty: Cardiology</p>
+                            <button class="view-profile-btn">View Profile</button>
                         </div>
-
-                        <!-- Doctor 2 -->
-                        <div class="doctor-card">
-                            <div class="doctor-info">
-                                <h3 class="doctor-name">Dr. Ethan Bennett</h3>
-                                <p class="doctor-specialty">Specialty: Orthodontics</p>
-                                <button class="view-profile-btn">View Profile</button>
-                            </div>
-                        </div>
-
-                        <!-- Doctor 3 -->
-                        <div class="doctor-card">
-                            <div class="doctor-info">
-                                <h3 class="doctor-name">Dr. Olivia Hayes</h3>
-                                <p class="doctor-specialty">Specialty: Pediatric Dentistry</p>
-                                <button class="view-profile-btn">View Profile</button>
-                            </div>
-                        </div>
-
-                        <!-- Doctor 4 -->
-                        <div class="doctor-card">
-                            <div class="doctor-info">
-                                <h3 class="doctor-name">Dr. Noah Thompson</h3>
-                                <p class="doctor-specialty">Specialty: Oral Surgery</p>
-                                <button class="view-profile-btn">View Profile</button>
-                            </div>
+                        <div class="doctor-photo">
+                            <img src="/images/doctor/doctor1.svg" alt="Dr. Amelia Carter">
                         </div>
                     </div>
 
-                    <!-- Right Column - Doctor Images -->
-                    <div class="doctor-images">
-                        <div class="doctor-image">
-                            <img src="/images/doctor-amelia.jpg" alt="Dr. Amelia Carter" onerror="this.src='https://via.placeholder.com/140x140/20B2AA/ffffff?text=AC'">
+                    <!-- Doctor 2 -->
+                    <div class="doctor-row">
+                        <div class="doctor-details">
+                            <h4 class="doctor-name">Dr. Ethan Bennett</h4>
+                            <p class="doctor-specialty">Specialty: Dermatology</p>
+                            <button class="view-profile-btn">View Profile</button>
                         </div>
-                        <div class="doctor-image">
-                            <img src="/images/doctor-ethan.jpg" alt="Dr. Ethan Bennett" onerror="this.src='https://via.placeholder.com/140x140/808080/ffffff?text=EB'">
+                        <div class="doctor-photo">
+                            <img src="/images/doctor/doctor2.svg" alt="Dr. Ethan Bennett">
                         </div>
-                        <div class="doctor-image">
-                            <img src="/images/doctor-olivia.jpg" alt="Dr. Olivia Hayes" onerror="this.src='https://via.placeholder.com/140x140/20B2AA/ffffff?text=OH'">
+                    </div>
+
+                    <!-- Doctor 3 -->
+                    <div class="doctor-row">
+                        <div class="doctor-details">
+                            <h4 class="doctor-name">Dr. Olivia Hayes</h4>
+                            <p class="doctor-specialty">Specialty: Pediatrics</p>
+                            <button class="view-profile-btn">View Profile</button>
                         </div>
-                        <div class="doctor-image">
-                            <img src="/images/doctor-noah.jpg" alt="Dr. Noah Thompson" onerror="this.src='https://via.placeholder.com/140x140/4682B4/ffffff?text=NT'">
+                        <div class="doctor-photo">
+                            <img src="/images/doctor/doctor3.svg" alt="Dr. Olivia Hayes">
+                        </div>
+                    </div>
+
+                    <!-- Doctor 4 -->
+                    <div class="doctor-row">
+                        <div class="doctor-details">
+                            <h4 class="doctor-name">Dr. Noah Thompson</h4>
+                            <p class="doctor-specialty">Specialty: Orthodontics</p>
+                            <button class="view-profile-btn">View Profile</button>
+                        </div>
+                        <div class="doctor-photo">
+                            <img src="/images/doctor/doctor4.svg" alt="Dr. Noah Thompson">
                         </div>
                     </div>
                 </div>

@@ -10,250 +10,354 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header class="patient-header">
+    <header class="dental-header">
         <div class="header-container">
             <div class="header-left">
-                <div class="logo-box">
-                    <span class="logo-text">DENTAL CLINIC</span>
-                </div>
+                <h1 class="clinic-logo">DENTAL CLINIC</h1>
             </div>
             <div class="header-right">
-                <nav class="nav-menu">
-                    <a href="#" class="nav-link">Dashboard</a>
-                    <a href="#" class="nav-link">Appointments</a>
-                    <a href="#" class="nav-link">Messages</a>
-                    <a href="#" class="nav-link">Documents</a>
+                <nav class="main-nav">
+                    <a href="/patient/select-doctor" class="nav-item">Select Doctor</a>
+                    <a href="/patient/book-appointment" class="nav-item">Book Appointment</a>
+                    <a href="/patient/appointment-confirmed" class="nav-item">Appointment Status</a>
+                    <a href="/patient/rate-dentist" class="nav-item">Rate Dentist</a>
+                    <a href="/patient/share-experience" class="nav-item">Share Experience</a>
                 </nav>
-                <div class="header-actions">
-                    <div class="notification-icon">
+                <div class="header-icons">
+                    <div class="notification-bell">
                         <i class="fas fa-bell"></i>
                     </div>
-                    <div class="profile-picture">
-                        <img src="/images/patient-profile.jpg" alt="Patient Profile" onerror="this.src='https://via.placeholder.com/35x35/4e8cff/ffffff?text=U'">
-                        <span class="profile-text">Patient Profile</span>
-                    </div>
+                    <a href="/patient/profile" class="user-profile">
+                        <img src="/images/doctor/profile .svg" alt="User Profile">
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="header-separator"></div>
     </header>
 
     <!-- Main Content -->
-    <main class="patient-main">
-        <div class="main-container">
+    <main class="main-content">
+        <div class="container">
             <!-- Page Title -->
-            <h1 class="page-title">Book an appointment</h1>
-            <p class="page-subtitle">Manual Selection</p>
+            <h2 class="page-heading">Book an appointment</h2>
 
-            <!-- Doctor Information -->
-            <div class="doctor-info-section">
-                <h2 class="doctor-name">Dr. Emily Carter</h2>
-                <p class="doctor-details">Dentist - 5 years of experience</p>
-            </div>
-
-            <!-- Calendar Section -->
-            <div class="calendar-section">
-                <div class="calendar-container">
-                    <!-- October 2024 Calendar -->
-                    <div class="calendar">
-                        <div class="calendar-header">
-                            <button class="calendar-nav-btn" onclick="previousMonth()">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <h3 class="calendar-title">October 2024</h3>
-                            <button class="calendar-nav-btn" onclick="nextMonth()">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                        <div class="calendar-grid">
-                            <div class="calendar-days">
-                                <span>S</span>
-                                <span>M</span>
-                                <span>T</span>
-                                <span>W</span>
-                                <span>T</span>
-                                <span>F</span>
-                                <span>S</span>
-                            </div>
-                            <div class="calendar-dates">
-                                <span class="date other-month">29</span>
-                                <span class="date other-month">30</span>
-                                <span class="date">1</span>
-                                <span class="date">2</span>
-                                <span class="date">3</span>
-                                <span class="date selected">4</span>
-                                <span class="date">5</span>
-                                <span class="date">6</span>
-                                <span class="date">7</span>
-                                <span class="date">8</span>
-                                <span class="date">9</span>
-                                <span class="date">10</span>
-                                <span class="date">11</span>
-                                <span class="date">12</span>
-                                <span class="date">13</span>
-                                <span class="date">14</span>
-                                <span class="date">15</span>
-                                <span class="date">16</span>
-                                <span class="date">17</span>
-                                <span class="date">18</span>
-                                <span class="date">19</span>
-                                <span class="date">20</span>
-                                <span class="date">21</span>
-                                <span class="date">22</span>
-                                <span class="date">23</span>
-                                <span class="date">24</span>
-                                <span class="date">25</span>
-                                <span class="date">26</span>
-                                <span class="date">27</span>
-                                <span class="date">28</span>
-                                <span class="date">29</span>
-                                <span class="date">30</span>
-                                <span class="date">31</span>
-                                <span class="date other-month">1</span>
-                                <span class="date other-month">2</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- November 2024 Calendar -->
-                    <div class="calendar">
-                        <div class="calendar-header">
-                            <button class="calendar-nav-btn" onclick="previousMonth()">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <h3 class="calendar-title">November 2024</h3>
-                            <button class="calendar-nav-btn" onclick="nextMonth()">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                        <div class="calendar-grid">
-                            <div class="calendar-days">
-                                <span>S</span>
-                                <span>M</span>
-                                <span>T</span>
-                                <span>W</span>
-                                <span>T</span>
-                                <span>F</span>
-                                <span>S</span>
-                            </div>
-                            <div class="calendar-dates">
-                                <span class="date other-month">27</span>
-                                <span class="date other-month">28</span>
-                                <span class="date other-month">29</span>
-                                <span class="date other-month">30</span>
-                                <span class="date other-month">31</span>
-                                <span class="date">1</span>
-                                <span class="date">2</span>
-                                <span class="date">3</span>
-                                <span class="date">4</span>
-                                <span class="date">5</span>
-                                <span class="date">6</span>
-                                <span class="date">7</span>
-                                <span class="date">8</span>
-                                <span class="date">9</span>
-                                <span class="date">10</span>
-                                <span class="date">11</span>
-                                <span class="date">12</span>
-                                <span class="date">13</span>
-                                <span class="date">14</span>
-                                <span class="date">15</span>
-                                <span class="date">16</span>
-                                <span class="date">17</span>
-                                <span class="date">18</span>
-                                <span class="date">19</span>
-                                <span class="date">20</span>
-                                <span class="date">21</span>
-                                <span class="date">22</span>
-                                <span class="date">23</span>
-                                <span class="date">24</span>
-                                <span class="date">25</span>
-                                <span class="date">26</span>
-                                <span class="date">27</span>
-                                <span class="date">28</span>
-                                <span class="date">29</span>
-                                <span class="date">30</span>
-                                <span class="date other-month">1</span>
-                                <span class="date other-month">2</span>
-                                <span class="date other-month">3</span>
-                                <span class="date other-month">4</span>
-                                <span class="date other-month">5</span>
-                                <span class="date other-month">6</span>
-                                <span class="date other-month">7</span>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Appointment Type Section -->
+            <div class="appointment-section">
+                <h3 class="section-heading">Appointment type</h3>
+                <div class="appointment-types">
+                    <button class="appointment-type-btn active">Cleaning</button>
+                    <button class="appointment-type-btn">Consultation</button>
+                    <button class="appointment-type-btn">Braces</button>
+                    <button class="appointment-type-btn">Surgery</button>
+                    <button class="appointment-type-btn">Follow-up</button>
                 </div>
             </div>
 
-            <!-- Time Slots Section -->
-            <div class="time-slots-section">
-                <h3 class="section-title">Available time slots</h3>
-                <div class="time-slots-list">
-                    <label class="time-slot-item">
-                        <input type="radio" name="timeSlot" value="10:00" checked>
-                        <span class="radio-custom"></span>
-                        <span class="time-slot-text">10:00 AM - Dr. Emily Carter</span>
-                    </label>
-                    <label class="time-slot-item">
-                        <input type="radio" name="timeSlot" value="11:00">
-                        <span class="radio-custom"></span>
-                        <span class="time-slot-text">11:00 AM - Dr. Emily Carter</span>
-                    </label>
-                    <label class="time-slot-item">
-                        <input type="radio" name="timeSlot" value="12:00">
-                        <span class="radio-custom"></span>
-                        <span class="time-slot-text">12:00 PM - Dr. Emily Carter</span>
-                    </label>
-                    <label class="time-slot-item">
-                        <input type="radio" name="timeSlot" value="13:00">
-                        <span class="radio-custom"></span>
-                        <span class="time-slot-text">1:00 PM - Dr. Emily Carter</span>
-                    </label>
-                    <label class="time-slot-item">
-                        <input type="radio" name="timeSlot" value="14:00">
-                        <span class="radio-custom"></span>
-                        <span class="time-slot-text">2:00 PM - Dr. Emily Carter</span>
-                    </label>
+            <!-- Select Doctor Section -->
+            <div class="doctor-selection-section">
+                <h3 class="section-heading">Select a doctor</h3>
+                <div class="doctor-selection-options">
+                    <button class="doctor-selection-btn active" id="manual-selection-btn">Manual doctor selection</button>
+                    <button class="doctor-selection-btn">Auto-assign</button>
                 </div>
             </div>
 
-            <!-- Action Button -->
+            <!-- Booking Rules Section -->
+            <div class="booking-rules-section">
+                <h3 class="section-heading">Booking rules</h3>
+                <p class="booking-rules-text">Bookings must be made at least 2 hours in advance. Cancellations are allowed up to 5 hours before the appointment.</p>
+            </div>
+
+            <!-- Reason for Visit Section -->
+            <div class="form-section">
+                <h3 class="section-heading">Reason for visit (optional)</h3>
+                <div class="input-container">
+                    <input type="text" class="form-input" placeholder="Add a reason">
+                </div>
+            </div>
+
+            <!-- Describe Symptoms Section -->
+            <div class="form-section">
+                <h3 class="section-heading">Describe symptoms (optional)</h3>
+                <div class="textarea-container">
+                    <textarea class="form-textarea" rows="5" placeholder="Describe your symptoms..."></textarea>
+                </div>
+            </div>
+
+            <!-- Book Appointment Button -->
             <div class="form-actions">
-                <button type="submit" class="book-appointment-btn">Book</button>
+                <button type="submit" class="book-appointment-btn">Book appointment</button>
             </div>
         </div>
     </main>
 
+    <!-- Manual Selection Modal -->
+    <div id="manual-selection-modal" class="modal-overlay">
+        <div class="modal-container">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h2 class="modal-title">DENTAL CLINIC</h2>
+                <button class="close-modal-btn" id="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <div class="selection-info">
+                    <p class="selection-type">Manual Selection</p>
+                    <h3 class="doctor-info">Dr. Emily Carter</h3>
+                    <p class="doctor-details">Dentist, 5 years of experience</p>
+                </div>
+
+                <!-- Calendar Section -->
+                <div class="calendar-section">
+                    <div class="calendar-container">
+                        <!-- October 2024 Calendar -->
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <button class="calendar-nav-btn" onclick="previousMonth()">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h3 class="calendar-title">October 2024</h3>
+                                <button class="calendar-nav-btn" onclick="nextMonth()">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="calendar-grid">
+                                <div class="calendar-days">
+                                    <span>M</span>
+                                    <span>T</span>
+                                    <span>W</span>
+                                    <span>T</span>
+                                    <span>F</span>
+                                    <span>S</span>
+                                    <span>S</span>
+                                </div>
+                                <div class="calendar-dates">
+                                    <span class="date other-month">30</span>
+                                    <span class="date">1</span>
+                                    <span class="date">2</span>
+                                    <span class="date">3</span>
+                                    <span class="date selected">4</span>
+                                    <span class="date">5</span>
+                                    <span class="date">6</span>
+                                    <span class="date">7</span>
+                                    <span class="date">8</span>
+                                    <span class="date">9</span>
+                                    <span class="date">10</span>
+                                    <span class="date">11</span>
+                                    <span class="date">12</span>
+                                    <span class="date">13</span>
+                                    <span class="date">14</span>
+                                    <span class="date">15</span>
+                                    <span class="date">16</span>
+                                    <span class="date">17</span>
+                                    <span class="date">18</span>
+                                    <span class="date">19</span>
+                                    <span class="date">20</span>
+                                    <span class="date">21</span>
+                                    <span class="date">22</span>
+                                    <span class="date">23</span>
+                                    <span class="date">24</span>
+                                    <span class="date">25</span>
+                                    <span class="date">26</span>
+                                    <span class="date">27</span>
+                                    <span class="date">28</span>
+                                    <span class="date">29</span>
+                                    <span class="date">30</span>
+                                    <span class="date">31</span>
+                                    <span class="date other-month">1</span>
+                                    <span class="date other-month">2</span>
+                                    <span class="date other-month">3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- November 2024 Calendar -->
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <button class="calendar-nav-btn" onclick="previousMonth()">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h3 class="calendar-title">November 2024</h3>
+                                <button class="calendar-nav-btn" onclick="nextMonth()">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="calendar-grid">
+                                <div class="calendar-days">
+                                    <span>M</span>
+                                    <span>T</span>
+                                    <span>W</span>
+                                    <span>T</span>
+                                    <span>F</span>
+                                    <span>S</span>
+                                    <span>S</span>
+                                </div>
+                                <div class="calendar-dates">
+                                    <span class="date other-month">28</span>
+                                    <span class="date other-month">29</span>
+                                    <span class="date other-month">30</span>
+                                    <span class="date other-month">31</span>
+                                    <span class="date">1</span>
+                                    <span class="date">2</span>
+                                    <span class="date">3</span>
+                                    <span class="date">4</span>
+                                    <span class="date">5</span>
+                                    <span class="date">6</span>
+                                    <span class="date">7</span>
+                                    <span class="date">8</span>
+                                    <span class="date">9</span>
+                                    <span class="date">10</span>
+                                    <span class="date">11</span>
+                                    <span class="date">12</span>
+                                    <span class="date">13</span>
+                                    <span class="date">14</span>
+                                    <span class="date">15</span>
+                                    <span class="date">16</span>
+                                    <span class="date">17</span>
+                                    <span class="date">18</span>
+                                    <span class="date">19</span>
+                                    <span class="date">20</span>
+                                    <span class="date">21</span>
+                                    <span class="date">22</span>
+                                    <span class="date">23</span>
+                                    <span class="date">24</span>
+                                    <span class="date">25</span>
+                                    <span class="date">26</span>
+                                    <span class="date">27</span>
+                                    <span class="date">28</span>
+                                    <span class="date">29</span>
+                                    <span class="date">30</span>
+                                    <span class="date other-month">1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Available Time Slots -->
+                <div class="time-slots-section">
+                    <h3 class="time-slots-title">Available time slots</h3>
+                    <div class="time-slots-list">
+                        <label class="time-slot-item">
+                            <input type="radio" name="timeSlot" value="10:00" checked>
+                            <span class="radio-custom"></span>
+                            <span class="time-slot-text">10:00 AM - Dr. Emily Carter</span>
+                        </label>
+                        <label class="time-slot-item">
+                            <input type="radio" name="timeSlot" value="11:00">
+                            <span class="radio-custom"></span>
+                            <span class="time-slot-text">11:00 AM - Dr. Emily Carter</span>
+                        </label>
+                        <label class="time-slot-item">
+                            <input type="radio" name="timeSlot" value="12:00">
+                            <span class="radio-custom"></span>
+                            <span class="time-slot-text">12:00 PM - Dr. Emily Carter</span>
+                        </label>
+                        <label class="time-slot-item">
+                            <input type="radio" name="timeSlot" value="13:00">
+                            <span class="radio-custom"></span>
+                            <span class="time-slot-text">1:00 PM - Dr. Emily Carter</span>
+                        </label>
+                        <label class="time-slot-item">
+                            <input type="radio" name="timeSlot" value="14:00">
+                            <span class="radio-custom"></span>
+                            <span class="time-slot-text">2:00 PM - Dr. Emily Carter</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button class="book-modal-btn">Book</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Appointment type selection
+        document.querySelectorAll('.appointment-type-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.appointment-type-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('manual-selection-modal');
+        const manualBtn = document.getElementById('manual-selection-btn');
+        const closeBtn = document.getElementById('close-modal');
+
+        // Open modal when clicking Manual doctor selection
+        manualBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        // Close modal
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Doctor selection
+        document.querySelectorAll('.doctor-selection-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.id !== 'manual-selection-btn') {
+                    document.querySelectorAll('.doctor-selection-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
         // Calendar functionality
         function previousMonth() {
-            // Add calendar navigation logic here
             console.log('Previous month');
         }
 
         function nextMonth() {
-            // Add calendar navigation logic here
             console.log('Next month');
         }
 
-        // Date selection
+        // Date selection in modal
         document.querySelectorAll('.date').forEach(date => {
             date.addEventListener('click', function() {
-                // Remove selected class from all dates
-                document.querySelectorAll('.date').forEach(d => d.classList.remove('selected'));
-                // Add selected class to clicked date
-                this.classList.add('selected');
+                if (!this.classList.contains('other-month')) {
+                    document.querySelectorAll('.date').forEach(d => d.classList.remove('selected'));
+                    this.classList.add('selected');
+                }
             });
         });
 
         // Time slot selection
         document.querySelectorAll('input[name="timeSlot"]').forEach(radio => {
             radio.addEventListener('change', function() {
-                // Remove checked from all radio buttons
-                document.querySelectorAll('input[name="timeSlot"]').forEach(r => r.checked = false);
-                // Check the selected radio button
-                this.checked = true;
+                console.log('Selected time:', this.value);
             });
+        });
+
+        // Book button in modal
+        document.querySelector('.book-modal-btn').addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            alert('Appointment booked successfully!');
+        });
+
+        // Form submission
+        document.querySelector('.book-appointment-btn').addEventListener('click', function() {
+            alert('Appointment booking functionality would be implemented here!');
         });
     </script>
 </body>
