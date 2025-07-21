@@ -21,7 +21,8 @@ const activityLogSchema = new mongoose.Schema({
             'feedback_submit',
             'document_view',
             'payment_initiate',
-            'payment_complete'
+            'payment_complete',
+            'emergency_contact_update'
         ]
     },
     ipAddress: {

@@ -21,6 +21,7 @@ router.use(authController.enforcePasswordChange);
 
 router.get('/profile', patientController.getProfile);
 router.patch('/profile', patientController.updateProfile);
+router.put('/emergency-contact', patientController.updateEmergencyContact);
 
 // Family member routes
 router.get('/family', patientController.getFamilyMembers);

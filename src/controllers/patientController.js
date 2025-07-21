@@ -119,29 +119,57 @@ exports.getFamilyMembers = catchAsync(async (req, res, next) => {
 });
 
 exports.updateEmergencyContact = catchAsync(async (req, res, next) => {
+    // Validate required fields
     const { name, relationship, phoneNumber } = req.body;
 
     if (!name || !relationship || !phoneNumber) {
-        return next(new AppError('Please provide all emergency contact details.', 400));
+        return next(new AppError('Please provide name, relationship, and phone number for emergency contact', 400));
     }
 
-    const patient = await Patient.findByIdAndUpdate(
-        req.patient.id,
-        {
-            emergencyContact: { name, relationship, phoneNumber }
-        },
-        {
-            new: true,
-            runValidators: true
-        }
-    );
+    // Validate phone number format (must start with + and have 5-15 digits)
+    if (!phoneNumber.startsWith('+') || !/^\+[1-9]\d{4,14}$/.test(phoneNumber)) {
+        return next(new AppError('Phone number must start with + followed by 5-15 digits (e.g., +12345678901)', 400));
+    }
 
-    res.status(200).json({
-        status: 'success',
-        data: {
-            patient
+    try {
+        // First find the patient
+        const patient = await Patient.findById(req.patient.id);
+        
+        if (!patient) {
+            return next(new AppError('Patient not found', 404));
         }
-    });
+
+        // Update emergency contact information
+        patient.emergencyContact = {
+            name,
+            relationship,
+            phoneNumber
+        };
+
+        // Save will run the validators
+        await patient.save({ validateModifiedOnly: true });
+
+        // Log emergency contact update
+        await ActivityLog.create({
+            patient: patient._id,
+            action: 'emergency_contact_update',
+            ipAddress: req.ip,
+            userAgent: req.headers['user-agent'],
+            details: { emergencyContact: { name, relationship, phoneNumber } }
+        });
+
+        res.status(200).json({
+            status: 'success',
+            data: {
+                emergencyContact: patient.emergencyContact
+            }
+        });
+    } catch (error) {
+        if (error.name === 'ValidationError') {
+            return next(new AppError(error.message, 400));
+        }
+        return next(error);
+    }
 });
 
 exports.getActivityLog = catchAsync(async (req, res, next) => {
