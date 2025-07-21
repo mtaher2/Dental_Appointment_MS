@@ -8,27 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="login-container exact-layout">
-        <div class="login-left exact-left">
-            <div class="logo-section exact-logo-section">
-                <img src="/images/logo.svg" alt="Dental Clinic Logo" class="logo-img exact-logo-img">
+    <div class="success-full-layout">
+        <div class="success-content-wrapper">
+            <!-- Success Icon -->
+            <div class="success-icon-circle">
+                <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                    <circle cx="60" cy="60" r="50" fill="#F5F5F5"/>
+                    <path d="M40 65l18 18 25-30" stroke="#3B82F6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </div>
-            <div class="tooth-3d exact-tooth-3d">
-                <img src="/images/Rectangle.svg" alt="3D Tooth" class="tooth-img exact-tooth-img">
-            </div>
-        </div>
-        <div class="login-right exact-right">
-            <div class="login-form-wrapper exact-form-wrapper">
-                <div class="success-icon">
-                    <svg width="160" height="160" viewBox="0 0 160 160" fill="none">
-                        <circle cx="80" cy="80" r="75" fill="#F5F5F5"/>
-                        <path d="M55 85l22 22 32-44" stroke="#3B82F6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <h2 class="success-title">Successful</h2>
-                <div class="success-desc">congratulation your password has been changed. Click continue to login</div>
-                <a href="/auth/login" class="success-btn">Continue</a>
-            </div>
+            
+            <!-- Success Title -->
+            <h1 class="success-main-title">Successful</h1>
+            
+            <!-- Success Description -->
+            <p class="success-main-desc">congratulation. your password has been changed. Click continue to login</p>
+            
+            <!-- Continue Button -->
+            <a href="/auth/login" class="success-main-btn">Continue</a>
         </div>
     </div>
 </body>
