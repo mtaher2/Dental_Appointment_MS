@@ -76,9 +76,24 @@ const patientSchema = new mongoose.Schema({
         select: false
     },
     emergencyContact: {
-        name: String,
-        relationship: String,
-        phoneNumber: String
+        name: {
+            type: String,
+            trim: true
+        },
+        relationship: {
+            type: String,
+            trim: true
+        },
+        phoneNumber: {
+            type: String,
+            validate: {
+                validator: function(v) {
+                    // Strictly require plus sign and 5-15 digits
+                    return /^\+[1-9]\d{4,14}$/.test(v);
+                },
+                message: props => `${props.value} is not a valid phone number! Phone number must start with + followed by 5-15 digits (e.g., +12345678901)`
+            }
+        }
     },
     familyMembers: [{
         type: mongoose.Schema.ObjectId,
