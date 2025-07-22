@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Your Email - Dental Clinic</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container exact-layout">
+        <div class="login-left exact-left">
+            <div class="logo-section exact-logo-section">
+                <img src="/images/logo.svg" alt="Dental Clinic Logo" class="logo-img exact-logo-img">
+            </div>
+            <div class="tooth-3d exact-tooth-3d">
+                <img src="/images/Rectangle.svg" alt="3D Tooth" class="tooth-img exact-tooth-img">
+            </div>
+        </div>
+        <div class="login-right exact-right">
+            <div class="login-form-wrapper exact-form-wrapper">
+                <h2 class="login-title exact-title">Check your email</h2>
+                <p class="login-subtitle exact-subtitle">we sent a reset link to contact@example.com</p>
+                
+                <form class="verification-form" action="/auth/reset-password" method="GET">
+                    <div class="code-inputs">
+                        <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
+                        <input type="text" class="code-input" maxlength="1" pattern="[0-9]">
+                    </div>
+                    <button type="submit" class="login-btn exact-login-btn">Verify Code</button>
+                </form>
+                
+                <div class="forgot-password exact-forgot">
+                    <a href="/auth/forgot-password">Haven't got email yet? Resend email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-focus to next input when typing in verification code
+        const codeInputs = document.querySelectorAll('.code-input');
+        codeInputs.forEach((input, index) => {
+            input.addEventListener('input', function() {
+                if (this.value.length === 1 && index < codeInputs.length - 1) {
+                    codeInputs[index + 1].focus();
+                }
+            });
+            
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace' && this.value.length === 0 && index > 0) {
+                    codeInputs[index - 1].focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

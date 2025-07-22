@@ -1,5 +1,54 @@
 const express = require('express');
+const authController = require('../../controllers/authController');
+const patientController = require('../../controllers/patientController');
 const router = express.Router();
+
+// ===== VIEW ROUTES =====
+
+// Payment Options
+router.get('/payment', (req, res) => {
+  res.render('pages/patient/paymentOptions', {
+    title: 'Payment Options',
+    success_msg: '',
+    error_msg: ''
+  });
+});
+
+// Payment History
+router.get('/payment-history', (req, res) => {
+  res.render('pages/patient/paymentHistory', {
+    title: 'Payment History',
+    success_msg: '',
+    error_msg: ''
+  });
+});
+
+// Invoices
+router.get('/invoices', (req, res) => {
+  res.render('pages/patient/invoices', {
+    title: 'Invoices',
+    success_msg: '',
+    error_msg: ''
+  });
+});
+
+// My Health Record
+router.get('/health-record', (req, res) => {
+  res.render('pages/patient/healthRecord', {
+    title: 'My Health Record',
+    success_msg: '',
+    error_msg: ''
+  });
+});
+
+// Family Dashboard
+router.get('/family-dashboard', (req, res) => {
+  res.render('pages/patient/familyDashboard', {
+    title: 'Family Dashboard',
+    success_msg: '',
+    error_msg: ''
+  });
+});
 
 // Select Doctor Page
 router.get('/select-doctor', (req, res) => {
@@ -45,5 +94,35 @@ router.get('/share-experience', (req, res) => {
         error_msg: ''
     });
 });
+
+// ===== API ROUTES =====
+
+// Public API routes (no authentication required)
+router.post('/api/login', authController.login);
+router.post('/api/forgotPassword', authController.forgotPassword);
+router.post('/api/verifyOTP', authController.verifyOTP);
+router.post('/api/resetPassword', authController.resetPassword);
+
+// Protected API routes (authentication required)
+router.use('/api', authController.protect);
+
+// Routes that don't require password change
+router.patch('/api/updatePassword', authController.updatePassword);
+router.post('/api/logout', authController.logout);
+
+// Routes that require password change check
+router.use('/api', authController.enforcePasswordChange);
+
+// Profile API routes
+router.get('/api/profile', patientController.getProfile);
+router.patch('/api/profile', patientController.updateProfile);
+router.patch('/api/emergencyContact', patientController.updateEmergencyContact);
+
+// Family member API routes
+router.get('/api/family', patientController.getFamilyMembers);
+router.post('/api/family', patientController.addFamilyMember);
+
+// Activity log API
+router.get('/api/activity', patientController.getActivityLog);
 
 module.exports = router; 

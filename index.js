@@ -13,8 +13,10 @@ const connectDB = require('./src/database/connection');
 const errorHandler = require('./src/middleware/errorHandler');
 
 // Import routes
-const patientRoutes = require('./src/routes/patients');
-const adminRoutes = require('./src/routes/adminRoutes');
+const authRoutes = require('./src/routes/auth/auth');
+const patientRoutes = require('./src/routes/patient/patient');
+const adminViewRoutes = require('./src/routes/admin/admin');
+const adminApiRoutes = require('./src/routes/superAdmin/adminRoutes');
 
 const app = express();
 
@@ -65,13 +67,21 @@ app.use(compression());
 app.use(hpp());
 
 // Routes
-app.use('/patients', patientRoutes);
-app.use('/api/v1/admin', adminRoutes);
+app.use('/api/v1/admin', adminApiRoutes);
+
+// Auth routes
+app.use('/auth', authRoutes);
+
+// Patient routes (includes both view and API routes)
+app.use('/patient', patientRoutes);
+
+// Admin view routes
+app.use('/admin', adminViewRoutes);
 
 // Home route
 app.get('/', (req, res) => {
-    res.render('pages/home', {
-        title: 'Welcome',
+    res.render('pages/auth/login', {
+        title: 'Login',
         success_msg: '',
         error_msg: ''
     });
@@ -93,3 +103,5 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
     console.log(`http://localhost:${PORT}`);
 }); 
+
+//
