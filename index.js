@@ -10,13 +10,13 @@ const fileUpload = require('express-fileupload');
 require('dotenv').config();
 
 const connectDB = require('./src/database/connection');
+const errorHandler = require('./src/middleware/errorHandler');
 
 // Import routes
 const authRoutes = require('./src/routes/auth/auth');
-const patientViewRoutes = require('./src/routes/patient');
+const patientRoutes = require('./src/routes/patient/patient');
 const adminViewRoutes = require('./src/routes/admin/admin');
-const patientApiRoutes = require('./src/routes/patientRoutes');
-const adminApiRoutes = require('./src/routes/adminRoutes');
+const adminApiRoutes = require('./src/routes/superAdmin/adminRoutes');
 
 const app = express();
 
@@ -67,14 +67,15 @@ app.use(compression());
 app.use(hpp());
 
 // Routes
-app.use('/api/v1/patients', patientApiRoutes);
 app.use('/api/v1/admin', adminApiRoutes);
 
 // Auth routes
 app.use('/auth', authRoutes);
 
-// View routes
-app.use('/patient', patientViewRoutes);
+// Patient routes (includes both view and API routes)
+app.use('/patient', patientRoutes);
+
+// Admin view routes
 app.use('/admin', adminViewRoutes);
 
 // Home route
@@ -86,15 +87,16 @@ app.get('/', (req, res) => {
     });
 });
 
-
 // Handle unhandled routes
-app.all('*', (req, res) => {
-    res.status(404).render('pages/home', {
-        title: '404 - Not Found',
-        success_msg: '',
-        error_msg: 'Page not found'
-    });
+app.all('*', (req, res, next) => {
+    const err = new Error(`Can't find ${req.originalUrl} on this server!`);
+    err.status = 'fail';
+    err.statusCode = 404;
+    next(err);
 });
+
+// Error handling middleware
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
