@@ -2187,45 +2187,43 @@ main.container.mt-4 {
 }
 
 .activity-table-wrapper {
-  border: 2px solid #E0E7FF;
-  border-radius: 12px;
+  border: 1.5px solid #695C8A;
+  border-radius: 10px;
   overflow: hidden;
-  background: #FFFFFF;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  box-shadow: none;
 }
-
 .activity-table {
   width: 100%;
-  border-collapse: collapse;
-  background: #FFFFFF;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
 }
-
 .activity-table th {
-  background: #F8FAFC;
-  padding: 18px 24px;
-  text-align: left;
-  font-size: 15px;
+  background: #F8F8FC;
+  color: #222;
   font-weight: 600;
-  color: #1F2937;
-  border-bottom: 1px solid #E0E7FF;
-  text-transform: capitalize;
+  padding: 16px 20px;
+  border-bottom: 1px solid #695C8A;
+  border-right: none;
 }
-
 .activity-table td {
-  padding: 18px 24px;
-  font-size: 14px;
-  color: #1F2937;
-  border-bottom: 1px solid #E0E7FF;
-  vertical-align: top;
-  line-height: 1.5;
+  color: #222;
+  font-weight: 400;
+  padding: 16px 20px;
+  border-bottom: 1px solid #695C8A;
+  border-right: none;
+  background: #fff;
 }
-
 .activity-table tr:last-child td {
   border-bottom: none;
 }
-
+.activity-table th, .activity-table td {
+  border-left: none;
+  border-right: none;
+}
 .activity-table tr:hover {
-  background: #F9FAFB;
+  background: #fff;
 }
 
 .activity-table th:first-child,
@@ -2294,6 +2292,7 @@ main.container.mt-4 {
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 8px 0 rgba(80, 80, 120, 0.03);
+  background: transparent;
 }
 .assistant-header-left {
   display: flex;
@@ -2363,4 +2362,132 @@ main.container.mt-4 {
   .assistant-header-title {
     font-size: 1.05rem;
   }
+}
+
+/* --- Assistant Header Flex Layout --- */
+.assistant-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 64px;
+}
+.assistant-header-left {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+}
+.assistant-header-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+.assistant-header-center {
+  flex: 2 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.assistant-header-nav {
+  display: flex;
+  gap: 36px;
+}
+.assistant-nav-link {
+  color: #222;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.assistant-nav-link:hover,
+.assistant-nav-link.active {
+  color: #4b61b8;
+  text-decoration: underline;
+}
+.assistant-header-right {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.assistant-profile-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #6c63ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f6fa;
+}
+.assistant-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+@media (max-width: 900px) {
+  .assistant-header-flex {
+    padding: 0 10px;
+    height: 56px;
+  }
+  .assistant-header-nav {
+    gap: 16px;
+  }
+  .assistant-header-title {
+    font-size: 1.05rem;
+  }
+}
+
+/* --- Activity Log Color Refinement --- */
+.activity-log-container {
+  background: #F7F7FA;
+}
+.activity-log-title {
+  color: #222;
+}
+.section-title {
+  color: #222;
+}
+.activity-log-description {
+  color: #6B7280;
+}
+.activity-table-wrapper {
+  border: 2px solid #695C8A;
+}
+.activity-table th {
+  color: #222;
+  background: #F8F8FC;
+}
+.activity-table td {
+  color: #222;
+}
+.assistant-header-title {
+  color: #222;
+}
+.assistant-nav-link {
+  color: #222;
+}
+.assistant-nav-link:hover,
+.assistant-nav-link.active {
+  color: #695C8A;
+  text-decoration: underline;
+}
+.assistant-profile-circle {
+  border: 2px solid #695C8A;
+}
+
+.assistant-header, .assistant-header * {
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background: #F7F7FA;
 }

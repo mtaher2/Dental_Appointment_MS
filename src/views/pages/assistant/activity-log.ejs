@@ -10,20 +10,23 @@
 <body>
     <!-- Header Navigation Bar -->
     <header class="assistant-header">
-        <div class="assistant-header-left">
-            <span class="assistant-header-title">Clinic Assistant</span>
-            <i class="fas fa-chevron-down assistant-header-arrow"></i>
-        </div>
-        <div class="assistant-header-nav">
-            <a href="/assistant" class="assistant-nav-link">Dashboard</a>
-            <a href="/assistant/todays-tasks" class="assistant-nav-link">Today's Tasks</a>
-            <a href="/assistant/vital-signs" class="assistant-nav-link">Vital Signs</a>
-            <a href="/assistant/upload-records" class="assistant-nav-link">Upload Records</a>
-            <a href="/assistant/settings" class="assistant-nav-link">Settings</a>
-        </div>
-        <div class="assistant-header-profile">
-            <div class="assistant-profile-circle">
-                <img src="/images/assistant-profile.jpg" alt="Assistant Profile" class="assistant-profile-img">
+        <div class="assistant-header-flex">
+            <div class="assistant-header-left">
+                <span class="assistant-header-title">Clinic Assistant</span>
+            </div>
+            <div class="assistant-header-center">
+                <nav class="assistant-header-nav">
+                    <a href="#" class="assistant-nav-link">Dashboard</a>
+                    <a href="#" class="assistant-nav-link">Today's Tasks</a>
+                    <a href="#" class="assistant-nav-link">Vital Signs</a>
+                    <a href="#" class="assistant-nav-link">Upload Records</a>
+                    <a href="#" class="assistant-nav-link">Settings</a>
+                </nav>
+            </div>
+            <div class="assistant-header-right">
+                <div class="assistant-profile-circle">
+                    <img src="/images/assistant/assistant 1.svg" alt="Assistant Profile" class="assistant-profile-img">
+                </div>
             </div>
         </div>
     </header>
@@ -44,8 +47,8 @@
                     <thead>
                         <tr>
                             <th>Timestamp</th>
-                            <th>Action</th>
-                            <th>User</th>
+                            <th>action</th>
+                            <th>user</th>
                             <th>Details</th>
                         </tr>
                     </thead>
@@ -63,64 +66,46 @@
                             <td>Patient: David Lee, Inquiry: Appointment rescheduling</td>
                         </tr>
                         <tr>
-                            <td>2024-03-15 10:30 AM</td>
+                            <td>2024-03-15 11:00 AM</td>
                             <td>patient update</td>
                             <td>Emily Carter</td>
                             <td>Patient: Maria Rodriguez, Amount: $150, Service: Consultation</td>
                         </tr>
                         <tr>
-                            <td>2024-03-15 10:45 AM</td>
+                            <td>2024-03-15 11:30 AM</td>
                             <td>Profile Edit</td>
                             <td>Emily Carter</td>
                             <td>Patient: John Williams, Field: Address, New Value: 123 Oak Street</td>
                         </tr>
                         <tr>
-                            <td>2024-03-15 11:00 AM</td>
+                            <td>2024-03-15 12:00 PM</td>
                             <td>Internal Communication</td>
                             <td>Emily Carter</td>
                             <td>Message: Sent to Dr. Robert Smith regarding patient Sarah Johnson's appointment</td>
                         </tr>
                         <tr>
-                            <td>2024-03-15 11:15 AM</td>
+                            <td>2024-03-15 1:00 PM</td>
                             <td>Manual Override</td>
                             <td>Emily Carter</td>
                             <td>Action: Appointment slot manually opened, Reason: Emergency</td>
                         </tr>
                         <tr>
-                            <td>2024-03-15 11:30 AM</td>
+                            <td>2024-03-15 2:00 PM</td>
                             <td>Appointment Scheduled</td>
                             <td>Emily Carter</td>
                             <td>Patient: Michael Brown, Doctor: Dr. Robert Smith, Time: 2024-03-22 10:00 AM</td>
                         </tr>
                         <tr>
-                            <td>2024-03-15 11:45 AM</td>
+                            <td>2024-03-15 3:00 PM</td>
                             <td>Payment Received</td>
                             <td>Emily Carter</td>
                             <td>Patient: Christopher Wilson, Amount: $200, Service: Procedure</td>
                         </tr>
                         <tr>
-                            <td>2024-03-15 12:00 PM</td>
+                            <td>2024-03-15 3:30 PM</td>
                             <td>Profile Edit</td>
                             <td>Emily Carter</td>
                             <td>Patient: Amanda Taylor, Field: Phone Number, New Value: 555-123-4567</td>
-                        </tr>
-                        <tr>
-                            <td>2024-03-15 12:15 PM</td>
-                            <td>viral signs entry</td>
-                            <td>Emily Carter</td>
-                            <td>Patient: Lisa Davis, BP: 120/80, HR: 72, Temperature: 98.6°F</td>
-                        </tr>
-                        <tr>
-                            <td>2024-03-15 12:30 PM</td>
-                            <td>patient update</td>
-                            <td>Emily Carter</td>
-                            <td>Patient: Jennifer Smith, Status: Checked in, Room: 3A</td>
-                        </tr>
-                        <tr>
-                            <td>2024-03-15 12:45 PM</td>
-                            <td>Internal Communication</td>
-                            <td>Emily Carter</td>
-                            <td>Message: Sent to Nursing Team channel regarding patient updates</td>
                         </tr>
                     </tbody>
                 </table>
