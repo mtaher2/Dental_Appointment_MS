@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rate Your Dentist - Dental Clinic</title>
+    <title>Rate Your Dentist</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,8 +12,7 @@
     <!-- Header Section -->
     <header class="dental-header">
         <div class="header-container">
-            <div class="header-left">
-                <h1 class="clinic-logo">DENTAL CLINIC</h1>
+            <div class="header-left">                <h1 class="clinic-logo">DENTAL CLINIC</h1>
             </div>
             <div class="header-right">
                 <nav class="main-nav">
@@ -27,9 +26,7 @@
                     <div class="notification-bell">
                         <i class="fas fa-bell"></i>
                     </div>
-                    <a href="/patient/profile" class="user-profile">
-                        <img src="/images/doctor/profile .svg" alt="User Profile">
-                    </a>
+                    <!-- Patient Profile link removed -->
                 </div>
             </div>
         </div>
@@ -54,9 +51,7 @@
                             <button type="button" class="rating-btn" data-value="disagree">Disagree</button>
                             <button type="button" class="rating-btn" data-value="neutral">Neutral</button>
                             <button type="button" class="rating-btn" data-value="agree">Agree</button>
-                        </div>
-                        <div class="rating-row">
-                            <button type="button" class="rating-btn wide-btn" data-value="strongly-agree">Strongly Agree</button>
+                            <button type="button" class="rating-btn" data-value="strongly-agree">Strongly Agree</button>
                         </div>
                     </div>
                 </div>
@@ -71,9 +66,7 @@
                             <button type="button" class="rating-btn" data-value="disagree">Disagree</button>
                             <button type="button" class="rating-btn" data-value="neutral">Neutral</button>
                             <button type="button" class="rating-btn" data-value="agree">Agree</button>
-                        </div>
-                        <div class="rating-row">
-                            <button type="button" class="rating-btn wide-btn" data-value="strongly-agree">Strongly Agree</button>
+                            <button type="button" class="rating-btn" data-value="strongly-agree">Strongly Agree</button>
                         </div>
                     </div>
                 </div>
@@ -88,9 +81,7 @@
                             <button type="button" class="rating-btn" data-value="long">Long</button>
                             <button type="button" class="rating-btn" data-value="average">Average</button>
                             <button type="button" class="rating-btn" data-value="short">Short</button>
-                        </div>
-                        <div class="rating-row">
-                            <button type="button" class="rating-btn wide-btn" data-value="very-short">Very Short</button>
+                            <button type="button" class="rating-btn" data-value="very-short">Very Short</button>
                         </div>
                     </div>
                 </div>
@@ -99,7 +90,6 @@
             <!-- Overall Satisfaction Section -->
             <div class="overall-satisfaction-section">
                 <h2 class="section-title">Overall Satisfaction</h2>
-                <p class="satisfaction-question">Overall, how satisfied were you with your consultation with this doctor?</p>
                 <div class="star-rating">
                     <i class="fas fa-star active"></i>
                     <i class="far fa-star"></i>
@@ -107,6 +97,7 @@
                     <i class="far fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
+                <p class="satisfaction-question">Overall, how satisfied were you with your consultation with this doctor?</p>
                 <div class="satisfaction-textarea">
                     <textarea placeholder="Overall, how satisfied were you with your consultation with this doctor?" rows="4"></textarea>
                 </div>
@@ -127,7 +118,6 @@
                 const section = this.closest('.feedback-section');
                 const allButtons = section.querySelectorAll('.rating-btn');
                 allButtons.forEach(button => button.classList.remove('active'));
-                
                 // Add active class to clicked button
                 this.classList.add('active');
             });
@@ -141,27 +131,12 @@
                     s.classList.remove('fas', 'active');
                     s.classList.add('far');
                 });
-                
                 // Fill stars up to clicked star
                 for (let i = 0; i <= index; i++) {
                     document.querySelectorAll('.star-rating i')[i].classList.remove('far');
                     document.querySelectorAll('.star-rating i')[i].classList.add('fas', 'active');
                 }
             });
-        });
-
-        // Close button functionality
-        document.querySelector('.close-btn').addEventListener('click', function() {
-            // Handle close action - could redirect or show modal
-            console.log('Close clicked');
-            // window.history.back();
-        });
-
-        // Submit feedback functionality
-        document.querySelector('.submit-feedback-btn').addEventListener('click', function() {
-            // Handle submit action
-            console.log('Submit feedback clicked');
-            // Collect all form data and submit
         });
     </script>
 </body>
