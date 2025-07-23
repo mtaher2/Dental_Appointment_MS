@@ -2491,3 +2491,7 @@ main.container.mt-4 {
 body {
   background: #F7F7FA;
 }
+
+.internal-header, .internal-header *, .internal-container, .internal-container * {
+  font-family: 'Inter', sans-serif;
+}
