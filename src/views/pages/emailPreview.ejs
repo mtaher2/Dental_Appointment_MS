@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Templates Preview - <%= title %></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: #6c63ff;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .templates-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .template-section {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .template-title {
+            color: #6c63ff;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .email-preview {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f6f7fb;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .template-info {
+            background: #f0f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .navigation {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .nav-link {
+            display: inline-block;
+            background: #6c63ff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .nav-link:hover {
+            background: #4b61b8;
+        }
+        @media (max-width: 768px) {
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📧 Email Templates Preview</h1>
+            <p>Dental Clinic Email System - Live Templates</p>
+        </div>
+
+        <div class="navigation">
+            <a href="/email-preview/welcome" class="nav-link">👋 View Welcome Email</a>
+            <a href="/email-preview/otp" class="nav-link">🔐 View OTP Email</a>
+            <a href="/" class="nav-link">🏠 Home</a>
+        </div>
+
+        <div class="templates-grid">
+            <!-- Welcome Email Template -->
+            <div class="template-section">
+                <div class="template-title">👋 Welcome Email Template</div>
+                <div class="template-info">
+                    <strong>Used when:</strong> Admin creates a new patient account<br>
+                    <strong>Contains:</strong> Login credentials, temporary password, security tips<br>
+                    <strong>Source:</strong> src/utils/email.js - generateTemplate('welcome')
+                </div>
+                <div class="email-preview">
+                    <%- welcomeEmailHtml %>
+                </div>
+            </div>
+
+            <!-- OTP Email Template -->
+            <div class="template-section">
+                <div class="template-title">🔐 OTP Email Template</div>
+                <div class="template-info">
+                    <strong>Used when:</strong> Patient requests password reset<br>
+                    <strong>Contains:</strong> 6-digit OTP code, security warnings, expiration info<br>
+                    <strong>Source:</strong> src/utils/email.js - generateTemplate('passwordReset')
+                </div>
+                <div class="email-preview">
+                    <%- otpEmailHtml %>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #e8f5e8; border: 2px solid #4caf50; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <h3 style="color: #2e7d32; margin-bottom: 15px;">✅ Live Email Templates</h3>
+            <p><strong>Status:</strong> These templates are rendered live from your Email class</p>
+            <p><strong>Location:</strong> <code>src/utils/email.js</code></p>
+            <p><strong>Task:</strong> DAMS-36 - Design and implement welcome & OTP email templates</p>
+        </div>
+    </div>
+</body>
+</html> 
