@@ -28,13 +28,6 @@ router.get('/activity-log', (req, res) => {
   });
 });
 
-// Navigation Buttons Demo route
-router.get('/nav-buttons-demo', (req, res) => {
-  res.render('pages/assistant/nav-buttons-demo', {
-    title: 'Navigation Buttons Demo',
-    user: req.user || null,
-    layout: false
-  });
-});
+
 
 module.exports = router; 

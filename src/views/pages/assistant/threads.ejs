@@ -9,27 +9,24 @@
 </head>
 <body>
     <!-- Top Header Bar -->
-    <header class="internal-header">
-        <div class="header-left">
+    <header class="internal-header improved-header">
+        <div class="header-left improved-header-left">
             <div class="search-container">
                 <i class="fas fa-search search-icon"></i>
                 <input type="text" class="search-input" placeholder="Search">
             </div>
+            <h1 class="header-title improved-title">Internal Communication</h1>
         </div>
-        <div class="header-center">
-            <h1 class="header-title">Internal Communication</h1>
-        </div>
-        <div class="header-right">
-        </div>
+        <div class="header-right"></div>
     </header>
 
     <!-- Main Container -->
     <div class="internal-container">
         <!-- Left Sidebar -->
-        <div class="sidebar">
+        <aside class="sidebar improved-sidebar">
             <!-- Direct Messages Section -->
-            <div class="sidebar-section">
-                <h2 class="sidebar-title">Direct Messages</h2>
+            <section class="sidebar-section">
+                <h2 class="sidebar-title improved-sidebar-title">Direct Messages</h2>
                 <div class="contact-list">
                     <div class="contact-item">
                         <div class="contact-avatar">
@@ -68,14 +65,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </section>
             <!-- Channels Section -->
-            <div class="sidebar-section">
-                <h2 class="sidebar-title">Channels</h2>
+            <section class="sidebar-section">
+                <h2 class="sidebar-title improved-sidebar-title">Channels</h2>
                 <div class="channel-list">
                     <div class="channel-item">
-                        <div class="channel-icon-bg">
+                        <div class="channel-icon">
                             <i class="fas fa-hashtag"></i>
                         </div>
                         <div class="channel-info">
@@ -84,7 +80,7 @@
                         </div>
                     </div>
                     <div class="channel-item">
-                        <div class="channel-icon-bg">
+                        <div class="channel-icon">
                             <i class="fas fa-hashtag"></i>
                         </div>
                         <div class="channel-info">
@@ -93,7 +89,7 @@
                         </div>
                     </div>
                     <div class="channel-item">
-                        <div class="channel-icon-bg">
+                        <div class="channel-icon">
                             <i class="fas fa-hashtag"></i>
                         </div>
                         <div class="channel-info">
@@ -102,7 +98,7 @@
                         </div>
                     </div>
                     <div class="channel-item">
-                        <div class="channel-icon-bg">
+                        <div class="channel-icon">
                             <i class="fas fa-hashtag"></i>
                         </div>
                         <div class="channel-info">
@@ -111,7 +107,7 @@
                         </div>
                     </div>
                     <div class="channel-item">
-                        <div class="channel-icon-bg">
+                        <div class="channel-icon">
                             <i class="fas fa-hashtag"></i>
                         </div>
                         <div class="channel-info">
@@ -120,72 +116,56 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </aside>
 
         <!-- Main Content Area -->
-        <div class="main-content">
-            <!-- Sub Navigation -->
-            <div class="sub-nav">
-                <div class="search-container-top">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" class="search-input-top" placeholder="Search">
-                </div>
-                <div class="nav-tabs">
+        <main class="main-content improved-main-content">
+            <!-- Sub Navigation Tabs -->
+            <nav class="sub-nav improved-sub-nav">
+                <div class="nav-tabs improved-nav-tabs">
                     <button class="nav-tab" onclick="window.location.href='/assistant/internal-communication'">Messages</button>
                     <button class="nav-tab active" onclick="window.location.href='/assistant/threads'">Threads</button>
                 </div>
-            </div>
-
+            </nav>
             <!-- Channel Title -->
-            <div class="channel-header">
-                <h2 class="channel-title">General</h2>
+            <div class="channel-header improved-channel-header">
+                <h2 class="channel-title improved-channel-title">General</h2>
             </div>
-
             <!-- Thread Messages -->
-            <div class="threads-container">
-                <div class="thread-item">
-                    <div class="thread-icon-bg">
-                        <i class="fas fa-hashtag"></i>
-                    </div>
-                    <div class="thread-content">
+            <section class="threads-list improved-threads-list">
+                <div class="thread-card">
+                    <div class="thread-hashtag"><i class="fas fa-hashtag"></i></div>
+                    <div class="thread-details">
                         <div class="thread-title">Appointment Schedule</div>
                         <div class="thread-message">Good morning, team! Just a reminder to check the schedule for today's appointments and ensure all patient files are updated.</div>
                         <div class="thread-contributors">Clara Bennett, Liam Harper</div>
                     </div>
                 </div>
-
-                <div class="thread-item">
-                    <div class="thread-icon-bg">
-                        <i class="fas fa-hashtag"></i>
-                    </div>
-                    <div class="thread-content">
+                <div class="thread-card">
+                    <div class="thread-hashtag"><i class="fas fa-hashtag"></i></div>
+                    <div class="thread-details">
                         <div class="thread-title">Examination Room Prep</div>
                         <div class="thread-message">Morning everyone! I'm preparing the examination rooms and will notify the doctors when patients arrive.</div>
                         <div class="thread-contributors">Olivia Turner, Dr. Ethan Carter</div>
                     </div>
                 </div>
-            </div>
-
+            </section>
             <!-- Message Input Area -->
-            <div class="message-input-container">
-                <div class="message-input-wrapper">
-                    <input type="text" class="message-input" placeholder="#general">
-                    <div class="input-actions">
-                        <button class="action-btn">
-                            <i class="fas fa-image"></i>
-                        </button>
-                        <button class="action-btn">
-                            <i class="far fa-smile"></i>
-                        </button>
+            <div class="message-input-container improved-message-input-container">
+                <div class="message-input-wrapper improved-message-input-wrapper">
+                    <input type="text" class="message-input" placeholder="Message">
+                    <div class="input-actions improved-input-actions">
+                        <button class="action-btn"><i class="fas fa-image"></i></button>
+                        <button class="action-btn"><i class="far fa-smile"></i></button>
                     </div>
                 </div>
-                <button class="send-btn">
+                <button class="send-btn improved-send-btn">
                     <i class="fas fa-paper-plane"></i>
                     Send
                 </button>
             </div>
-        </div>
+        </main>
     </div>
 </body>
 </html> 

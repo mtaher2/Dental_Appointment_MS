@@ -9,27 +9,24 @@
 </head>
 <body>
     <!-- Top Header Bar -->
-    <header class="internal-header">
-        <div class="header-left">
+    <header class="internal-header improved-header">
+        <div class="header-left" style="display: flex; align-items: center; gap: 28px;">
             <div class="search-container">
                 <i class="fas fa-search search-icon"></i>
                 <input type="text" class="search-input" placeholder="Search">
             </div>
+            <h1 class="header-title improved-title" style="margin: 0;">Internal Communication</h1>
         </div>
-        <div class="header-center">
-            <h1 class="header-title">Internal Communication</h1>
-        </div>
-        <div class="header-right">
-        </div>
+        <div class="header-right"></div>
     </header>
 
     <!-- Main Container -->
     <div class="internal-container">
         <!-- Left Sidebar -->
-        <div class="sidebar">
+        <aside class="sidebar improved-sidebar">
             <!-- Direct Messages Section -->
-            <div class="sidebar-section">
-                <h2 class="sidebar-title">Direct Messages</h2>
+            <section class="sidebar-section">
+                <h2 class="sidebar-title improved-sidebar-title">Direct Messages</h2>
                 <div class="contact-list">
                     <div class="contact-item">
                         <div class="contact-avatar">
@@ -68,11 +65,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </section>
             <!-- Channels Section -->
-            <div class="sidebar-section">
-                <h2 class="sidebar-title">Channels</h2>
+            <section class="sidebar-section">
+                <h2 class="sidebar-title improved-sidebar-title">Channels</h2>
                 <div class="channel-list">
                     <div class="channel-item">
                         <div class="channel-icon">
@@ -120,27 +116,27 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </aside>
 
         <!-- Main Content Area -->
-        <div class="main-content">
+        <main class="main-content improved-main-content">
             <!-- Sub Navigation -->
-            <div class="sub-nav">
-                <div class="nav-tabs">
+            <nav class="sub-nav improved-sub-nav">
+                <div class="nav-tabs improved-nav-tabs">
                     <button class="nav-tab active" onclick="window.location.href='/assistant/internal-communication'">Messages</button>
                     <button class="nav-tab" onclick="window.location.href='/assistant/threads'">Threads</button>
                 </div>
-            </div>
+            </nav>
 
             <!-- Channel Title -->
-            <div class="channel-header">
-                <h2 class="channel-title">General</h2>
+            <div class="channel-header improved-channel-header">
+                <h2 class="channel-title improved-channel-title">General</h2>
             </div>
 
             <!-- Chat Messages -->
-            <div class="chat-container">
-                <div class="message incoming">
+            <section class="chat-container improved-chat-container">
+                <div class="message incoming improved-message-incoming">
                     <div class="message-avatar">
                         <img src="/images/Depth 5, Frame 1.svg" alt="Emily Carter">
                     </div>
@@ -151,8 +147,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="message outgoing">
+                <div class="message outgoing improved-message-outgoing">
                     <div class="message-content">
                         <div class="message-sender">David Lee</div>
                         <div class="message-bubble outgoing-bubble">
@@ -163,8 +158,7 @@
                         <img src="/images/Depth 5, Frame 1.svg" alt="David Lee">
                     </div>
                 </div>
-
-                <div class="message incoming">
+                <div class="message incoming improved-message-incoming">
                     <div class="message-avatar">
                         <img src="/images/Depth 5, Frame 1.svg" alt="Sarah Miller">
                     </div>
@@ -175,8 +169,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="message outgoing">
+                <div class="message outgoing improved-message-outgoing">
                     <div class="message-content">
                         <div class="message-sender">Dr. Robert Harris</div>
                         <div class="message-bubble outgoing-bubble">
@@ -187,30 +180,24 @@
                         <img src="/images/Depth 5, Frame 1.svg" alt="Dr. Robert Harris">
                     </div>
                 </div>
-            </div>
+            </section>
 
             <!-- Message Input Area -->
-            <div class="message-input-container">
-                <div class="message-input-wrapper">
+            <div class="message-input-container improved-message-input-container">
+                <div class="message-input-wrapper improved-message-input-wrapper">
                     <input type="text" class="message-input" placeholder="Message">
-                    <div class="input-actions">
-                        <button class="action-btn">
-                            <i class="fas fa-image"></i>
-                        </button>
-                        <button class="action-btn">
-                            <i class="fas fa-link"></i>
-                        </button>
-                        <button class="action-btn">
-                            <i class="far fa-smile"></i>
-                        </button>
+                    <div class="input-actions improved-input-actions">
+                        <button class="action-btn"><i class="fas fa-image"></i></button>
+                        <button class="action-btn"><i class="fas fa-link"></i></button>
+                        <button class="action-btn"><i class="far fa-smile"></i></button>
                     </div>
                 </div>
-                <button class="send-btn">
+                <button class="send-btn improved-send-btn">
                     <i class="fas fa-paper-plane"></i>
                     Send
                 </button>
             </div>
-        </div>
+        </main>
     </div>
 </body>
 </html> 
