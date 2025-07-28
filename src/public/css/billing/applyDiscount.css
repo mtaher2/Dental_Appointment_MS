@@ -1,0 +1,121 @@
+/* Apply Discount Page Styles */
+.apply-discount-container {
+  max-width: 600px;
+  margin: 48px auto;
+  padding: 40px 20px;
+  background: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.apply-discount-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.apply-discount-form {
+  width: 100%;
+}
+
+.apply-discount-field {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-discount-field label {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.apply-discount-input,
+.apply-discount-textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #E5E5EA;
+  border-radius: 15px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+  color: #222;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.apply-discount-input:focus,
+.apply-discount-textarea:focus {
+  border-color: #4B6CB7;
+  outline: none;
+}
+
+.apply-discount-input::placeholder,
+.apply-discount-textarea::placeholder {
+  color: #A3A3B3;
+  opacity: 1;
+}
+
+.apply-discount-textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.discount-note {
+  font-size: 0.875rem;
+  color: #A3A3B3;
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+.apply-discount-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.apply-discount-btn {
+  background: #4B6CB7;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+  min-width: 140px;
+}
+
+.apply-discount-btn:hover,
+.apply-discount-btn:focus {
+  background: #3957a3;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .apply-discount-container {
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+  
+  .apply-discount-title {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+  
+  .apply-discount-actions {
+    justify-content: center;
+  }
+  
+  .apply-discount-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+} 
