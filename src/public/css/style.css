@@ -1511,28 +1511,20 @@ main.container.mt-4 {
 /* ===== ASSISTANT DASHBOARD STYLES ===== */
 
 .assistant-dashboard-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   background: #fff;
   font-family: 'Inter', Arial, sans-serif;
 }
 
 .assistant-dashboard-header {
-  margin-bottom: 40px;
-  transition: all 0.3s ease;
-  padding: 20px;
-  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-radius: 0;
   background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
   border: 1px solid transparent;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-.assistant-dashboard-header:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  border-color: #B9AFFF;
-  background: linear-gradient(135deg, #f0f2ff 0%, #ffffff 100%);
 }
 
 .assistant-dashboard-title {
@@ -1541,11 +1533,6 @@ main.container.mt-4 {
   color: #333;
   margin-bottom: 8px;
   letter-spacing: -0.5px;
-  transition: color 0.3s ease;
-}
-
-.assistant-dashboard-header:hover .assistant-dashboard-title {
-  color: #415FA5;
 }
 
 .assistant-dashboard-subtitle {
@@ -1553,11 +1540,6 @@ main.container.mt-4 {
   color: #666;
   font-weight: 400;
   margin: 0;
-  transition: color 0.3s ease;
-}
-
-.assistant-dashboard-header:hover .assistant-dashboard-subtitle {
-  color: #415FA5;
 }
 
 .assistant-schedule-section,
@@ -1565,7 +1547,7 @@ main.container.mt-4 {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin-bottom: 32px;
+  margin: 0 20px 32px 20px;
   overflow: hidden;
 }
 
@@ -1708,7 +1690,7 @@ main.container.mt-4 {
 .assistant-header {
   background: #fff;
   color: #333;
-  padding: 16px 24px;
+  padding: 8px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
