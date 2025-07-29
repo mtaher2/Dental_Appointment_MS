@@ -3761,6 +3761,15 @@ ANIMATIONS FOR AUTH PAGES IMAGES
 .doctor-profile {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    background: #f0f0f0;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+.doctor-profile:hover {
+    opacity: 0.8;
 }
 
 .doctor-avatar {
@@ -3768,6 +3777,11 @@ ANIMATIONS FOR AUTH PAGES IMAGES
     height: 32px;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid #e5e7eb;
+    background: #f3f4f6;
+    display: block;
+    min-width: 32px;
+    min-height: 32px;
 }
 
 /* Doctor Main Content */
@@ -3785,9 +3799,10 @@ ANIMATIONS FOR AUTH PAGES IMAGES
 
 /* Dashboard Page Styles */
 .doctor-page-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.doctor-controls-section {
     margin-bottom: 32px;
 }
 
@@ -3928,51 +3943,65 @@ ANIMATIONS FOR AUTH PAGES IMAGES
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Alerts Layout */
 .doctor-alert-card {
     display: flex;
-    align-items: center;
-    gap: 16px;
-    background: #fef7ec;
-    border: 1px solid #fed7aa;
-    border-radius: 8px;
-    padding: 16px;
+    align-items: flex-start;
+    gap: 24px;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
 }
 
-.doctor-alert-content h3 {
-    font-size: 16px;
+.doctor-alert-content {
+    flex: 1;
+    padding: 0;
+}
+
+.doctor-alert-name {
+    font-size: 18px;
     font-weight: 600;
     color: #1f2937;
-    margin: 0 0 4px 0;
+    margin: 0 0 8px 0;
 }
 
-.doctor-alert-content p {
+.doctor-alert-details {
     font-size: 14px;
     color: #6b7280;
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
-.doctor-alert-avatar img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+.doctor-alert-avatar-section {
+    flex-shrink: 0;
+}
+
+.doctor-alert-full-image {
+    width: 200px;
+    height: 140px;
+    border-radius: 12px;
     object-fit: cover;
+    display: block;
 }
 
 .doctor-time-metric {
-    text-align: center;
+    margin-top: 16px;
 }
 
 .doctor-time-label {
     font-size: 14px;
     color: #6b7280;
     margin-bottom: 8px;
+    font-weight: 500;
 }
 
 .doctor-time-value {
     font-size: 36px;
     font-weight: 700;
     color: #1f2937;
+    margin: 0;
 }
 
 /* Bottom Row */

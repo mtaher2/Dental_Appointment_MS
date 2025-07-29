@@ -28,7 +28,7 @@
             <div class="doctor-header-right">
                 <i class="fas fa-bell doctor-notification"></i>
                 <div class="doctor-profile">
-                    <img src="/images/doctor-avatar.jpg" alt="Dr. Emily Carter" class="doctor-avatar">
+                    <img src="/images/patient-sophia.jpg" alt="Sophia Clark" class="doctor-avatar" onerror="this.style.display='none'; console.log('Image failed to load');">
                 </div>
             </div>
         </div>
@@ -41,6 +41,10 @@
             <div class="doctor-page-header">
                 <h1 class="doctor-page-title">Real-Time Dashboard</h1>
                 <p class="doctor-page-subtitle">Live updates and manual refresh available</p>
+            </div>
+
+            <!-- Controls -->
+            <div class="doctor-controls-section">
                 <div class="doctor-refresh-controls">
                     <button class="doctor-refresh-btn active">Refresh</button>
                     <button class="doctor-today-btn">Today</button>
@@ -102,102 +106,96 @@
                 </div>
             </section>
 
-            <!-- Alerts and Metrics Row -->
-            <div class="doctor-metrics-row">
-                <!-- Alerts -->
-                <section class="doctor-alerts">
-                    <h2 class="doctor-section-title">Alerts</h2>
-                    <div class="doctor-alert-card">
-                        <div class="doctor-alert-content">
-                            <h3>Sophia Clark</h3>
-                            <p>Allergies: Penicillin, Medications: None, Chronic Conditions: Asthma</p>
-                        </div>
-                        <div class="doctor-alert-avatar">
-                            <img src="/images/patient-sophia.jpg" alt="Sophia Clark">
-                        </div>
+            <!-- Alerts -->
+            <section class="doctor-section">
+                <h2 class="doctor-section-title">Alerts</h2>
+                <div class="doctor-alert-card">
+                    <div class="doctor-alert-content">
+                        <h3 class="doctor-alert-name">Sophia Clark</h3>
+                        <p class="doctor-alert-details">Allergies: Penicillin, Medications: None, Chronic Conditions: Asthma</p>
                     </div>
-                </section>
+                    <div class="doctor-alert-avatar-section">
+                        <img src="/images/patient-sophia.jpg" alt="Sophia Clark" class="doctor-alert-full-image">
+                    </div>
+                </div>
+            </section>
 
-                <!-- Average Time -->
-                <section class="doctor-avg-time">
-                    <h2 class="doctor-section-title">Avg. Time per Patient</h2>
-                    <div class="doctor-time-metric">
-                        <div class="doctor-time-label">Average Time</div>
-                        <div class="doctor-time-value">35 mins</div>
-                    </div>
-                </section>
-            </div>
+            <!-- Average Time per Patient -->
+            <section class="doctor-section">
+                <h2 class="doctor-section-title">Avg. Time per Patient</h2>
+                <div class="doctor-time-metric">
+                    <div class="doctor-time-label">Average Time</div>
+                    <div class="doctor-time-value">35 mins</div>
+                </div>
+            </section>
 
-            <!-- Follow-ups and Treatments Row -->
-            <div class="doctor-bottom-row">
-                <!-- Same-Day Follow-Ups -->
-                <section class="doctor-followups">
-                    <h2 class="doctor-section-title">Same-Day Follow-Ups</h2>
-                    <div class="doctor-table-wrapper">
-                        <table class="doctor-table">
-                            <thead>
-                                <tr>
-                                    <th>Patient Name</th>
-                                    <th>Appointment Time</th>
-                                    <th>Service Type</th>
-                                    <th>Room</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Olivia Carter</td>
-                                    <td>11:00 AM</td>
-                                    <td>Follow-up</td>
-                                    <td>103</td>
-                                    <td><span class="doctor-status completed">Completed</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Noah Evans</td>
-                                    <td>2:00 PM</td>
-                                    <td>Follow-up</td>
-                                    <td>106</td>
-                                    <td><span class="doctor-status scheduled">Scheduled</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+            <!-- Same-Day Follow-Ups -->
+            <section class="doctor-section">
+                <h2 class="doctor-section-title">Same-Day Follow-Ups</h2>
+                <div class="doctor-table-wrapper">
+                    <table class="doctor-table">
+                        <thead>
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>Appointment Time</th>
+                                <th>Service Type</th>
+                                <th>Room</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Olivia Carter</td>
+                                <td>11:00 AM</td>
+                                <td>Follow-up</td>
+                                <td>103</td>
+                                <td><span class="doctor-status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Noah Evans</td>
+                                <td>2:00 PM</td>
+                                <td>Follow-up</td>
+                                <td>106</td>
+                                <td><span class="doctor-status scheduled">Scheduled</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-                <!-- Pending Treatments -->
-                <section class="doctor-treatments">
-                    <h2 class="doctor-section-title">Pending Treatments</h2>
-                    <div class="doctor-table-wrapper">
-                        <table class="doctor-table">
-                            <thead>
-                                <tr>
-                                    <th>Patient Name</th>
-                                    <th>Appointment Time</th>
-                                    <th>Service Type</th>
-                                    <th>Room</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Liam Foster</td>
-                                    <td>12:00 PM</td>
-                                    <td>Treatment</td>
-                                    <td>104</td>
-                                    <td><span class="doctor-status scheduled">Scheduled</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Mia Hughes</td>
-                                    <td>3:00 PM</td>
-                                    <td>Treatment</td>
-                                    <td>107</td>
-                                    <td><span class="doctor-status scheduled">Scheduled</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-            </div>
+            <!-- Pending Treatments -->
+            <section class="doctor-section">
+                <h2 class="doctor-section-title">Pending Treatments</h2>
+                <div class="doctor-table-wrapper">
+                    <table class="doctor-table">
+                        <thead>
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>Appointment Time</th>
+                                <th>Service Type</th>
+                                <th>Room</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liam Foster</td>
+                                <td>12:00 PM</td>
+                                <td>Treatment</td>
+                                <td>104</td>
+                                <td><span class="doctor-status scheduled">Scheduled</span></td>
+                            </tr>
+                            <tr>
+                                <td>Mia Hughes</td>
+                                <td>3:00 PM</td>
+                                <td>Treatment</td>
+                                <td>107</td>
+                                <td><span class="doctor-status scheduled">Scheduled</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
     </main>
 </body>
