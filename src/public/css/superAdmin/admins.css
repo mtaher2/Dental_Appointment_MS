@@ -1,0 +1,236 @@
+/* Super Admin Admins Page Styles */
+
+/* Color Variables */
+:root {
+  --admins-blue: #415FA5;
+  --admins-blue-hover: #2d3a8c;
+  --admins-border: #B9AFFF;
+  --admins-muted: #A3A3B3;
+}
+
+/* Animations */
+@keyframes fadeSlideInAdmins {
+  0% { opacity: 0; transform: translateY(32px); }
+  100% { opacity: 1; transform: none; }
+}
+
+.fade-slide-in {
+  animation: fadeSlideInAdmins 0.7s cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+
+/* Main Container */
+.admins-container {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 32px 0 32px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Title */
+.admins-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.admins-subtitle {
+  color: #6b7280;
+  font-size: 1.08rem;
+  margin-bottom: 18px;
+  margin-top: 0;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Header Row */
+.admins-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 18px;
+}
+
+/* Search Form */
+.admins-search-form {
+  flex: 1;
+}
+
+.admins-searchbar {
+  display: flex;
+  align-items: center;
+  background: #E5E5EA;
+  border-radius: 12px;
+  padding: 10px 20px;
+  min-width: 260px;
+  max-width: 420px;
+  width: 100%;
+}
+
+.admins-search-input {
+  border: none;
+  background: transparent;
+  font-size: 1.08rem;
+  margin-left: 10px;
+  width: 100%;
+  outline: none;
+  color: #222;
+}
+
+.search-icon {
+  font-size: 1.3rem;
+  color: #A3A3B3;
+}
+
+/* New Admin Button */
+.new-admin-btn {
+  background: var(--admins-blue);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+}
+
+.new-admin-btn:hover, 
+.new-admin-btn:focus {
+  background: var(--admins-blue-hover);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Table Wrapper */
+.admins-table-wrapper {
+  border: 1.5px solid var(--admins-border);
+  border-radius: 12px;
+  background: #fff;
+  overflow-x: auto;
+  margin-top: 18px;
+}
+
+/* Table */
+.admins-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+}
+
+.admins-table th, 
+.admins-table td {
+  border-bottom: 1px solid var(--admins-border);
+  padding: 20px 18px;
+  text-align: left;
+  background: #fff;
+}
+
+.admins-table th {
+  background: #fff;
+  font-weight: 700;
+  color: #222;
+  font-size: 1.01rem;
+  border-top: none;
+}
+
+.admins-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 7px 28px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--admins-blue);
+  color: #fff;
+  border: none;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+  transition: background 0.18s;
+}
+
+.status-badge.active {
+  background: var(--admins-blue);
+  color: #fff;
+}
+
+.status-badge:hover, 
+.status-badge:focus {
+  background: var(--admins-blue-hover);
+}
+
+/* Edit Link */
+.edit-link {
+  color: var(--admins-blue);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.18s;
+  font-size: 1rem;
+}
+
+.edit-link:hover, 
+.edit-link:focus {
+  color: var(--admins-blue-hover);
+  text-decoration: underline;
+}
+
+/* Muted Text */
+.clinic-muted {
+  color: var(--admins-muted);
+  font-weight: 500;
+}
+
+/* Filter Row */
+.admins-filters-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.admins-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .admins-container {
+    padding: 8px 2px;
+  }
+  
+  .admins-table th, 
+  .admins-table td {
+    padding: 12px 6px;
+    font-size: 0.97rem;
+  }
+  
+  .admins-header-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 700px) {
+  .admins-filters-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .admins-actions {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-end;
+  }
+} 

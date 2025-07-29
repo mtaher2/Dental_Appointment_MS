@@ -1,0 +1,277 @@
+/* Super Admin Dashboard Styles */
+.superadmin-dashboard-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.dashboard-description {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.dashboard-stats-cards {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  flex: 1;
+  background: #f3e8ff;
+  border-radius: 12px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.stat-change {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.stat-change.positive {
+  color: #22c55e;
+}
+
+.dashboard-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.section-content.stats-charts {
+  display: flex;
+  gap: 24px;
+}
+
+.chart-card {
+  flex: 1;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 20px 18px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-card.full-width {
+  width: 100%;
+}
+
+.chart-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.chart-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.chart-value.positive {
+  color: #22c55e;
+}
+
+.chart-subtitle {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.chart-change.positive {
+  color: #22c55e;
+}
+
+.chart-placeholder {
+  height: 80px;
+  background: repeating-linear-gradient(90deg, #e5e7eb 0 8px, transparent 8px 16px);
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+/* Dashboard Graph Styles */
+.dashboard-graph {
+  width: 100% !important;
+  height: 120px !important;
+  display: block;
+  margin-top: 12px;
+  background: none;
+  max-width: 100%;
+}
+
+.chart-card canvas {
+  border-radius: 8px;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+.appointments-over-time-graph,
+.system-uptime-graph {
+  height: 120px !important;
+  min-height: 120px;
+}
+
+.appointments-by-clinic-graph,
+.billing-by-clinic-graph {
+  height: 100px !important;
+  min-height: 100px;
+}
+
+.payment-methods-graph {
+  height: 140px !important;
+  min-height: 140px;
+}
+
+.chart-card.full-width .dashboard-graph {
+  height: 160px !important;
+  min-height: 160px;
+}
+
+/* Dashboard Responsive Styles */
+@media (max-width: 1024px) {
+  .superadmin-dashboard-container {
+    margin: 20px auto;
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-stats-cards, 
+  .section-content.stats-charts {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .superadmin-dashboard-container {
+    padding: 16px 4px;
+  }
+  
+  .dashboard-graph {
+    height: 80px !important;
+    min-height: 80px;
+  }
+  
+  .chart-card.full-width .dashboard-graph {
+    height: 120px !important;
+    min-height: 120px;
+  }
+  
+  .payment-methods-graph {
+    height: 120px !important;
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .superadmin-dashboard-container {
+    margin: 16px auto;
+    padding: 20px 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+  }
+  
+  .dashboard-stats-cards {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  
+  .stat-card {
+    padding: 20px 16px !important;
+    border-radius: 8px !important;
+  }
+  
+  .stat-value {
+    font-size: 1.3rem !important;
+  }
+  
+  .section-content.stats-charts {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  
+  .chart-card {
+    padding: 16px 14px !important;
+    border-radius: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .superadmin-dashboard-container {
+    margin: 8px auto;
+    padding: 16px 12px;
+    border-radius: 6px;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 20px !important;
+  }
+  
+  .dashboard-description {
+    font-size: 0.9rem !important;
+  }
+  
+  .stat-card {
+    padding: 16px 12px !important;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem !important;
+  }
+  
+  .stat-value {
+    font-size: 1.2rem !important;
+  }
+  
+  .section-title {
+    font-size: 1.1rem !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .chart-card {
+    padding: 12px 10px !important;
+  }
+  
+  .chart-title {
+    font-size: 0.9rem !important;
+  }
+} 

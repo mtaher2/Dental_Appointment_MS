@@ -1,0 +1,435 @@
+/* Invoices Page Styles */
+
+/* --- Invoices Modern Styles --- */
+.invoices-modern-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(80, 80, 120, 0.07);
+  padding: 40px 36px 36px 36px;
+}
+
+.invoices-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.invoices-subtitle {
+  color: #888;
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+}
+
+.invoices-table-wrapper {
+  border: 2px solid #bfc7e6;
+  border-radius: 12px;
+  overflow-x: auto;
+  background: #fff;
+}
+
+.invoices-modern-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.invoices-modern-table th, 
+.invoices-modern-table td {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.invoices-modern-table th {
+  background: #fff;
+  color: #222;
+  font-weight: 700;
+  border-bottom: 2px solid #bfc7e6;
+}
+
+.invoices-modern-table td {
+  background: #fff;
+  color: #222;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.invoices-modern-table tr:last-child td {
+  border-bottom: none;
+}
+
+.invoice-status {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 18px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #fff;
+  min-width: 70px;
+  text-align: center;
+}
+
+.invoice-status.paid {
+  background: #415FA5;
+}
+
+.invoice-status.unpaid {
+  background: #f5a623;
+}
+
+.invoice-status.overdue {
+  background: #e57373;
+}
+
+.pay-now-btn {
+  background: #415FA5;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px 0 rgba(80, 80, 120, 0.10);
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 100px;
+  text-align: center;
+}
+
+.invoices-modern-table td:last-child {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pay-now-btn:hover, 
+.pay-now-btn:focus {
+  background: #2d3a8c;
+  box-shadow: 0 4px 16px 0 rgba(80, 80, 120, 0.16);
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+
+.view-btn {
+  background: #415FA5;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px 0 rgba(80, 80, 120, 0.10);
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 100px;
+  text-align: center;
+}
+
+.view-btn:hover, 
+.view-btn:focus {
+  background: #2d3a8c;
+  box-shadow: 0 4px 16px 0 rgba(80, 80, 120, 0.16);
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+
+/* --- Invoices Modern Table Styles (Updated for Screenshot) --- */
+.invoices-page-container {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.invoices-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+.invoices-subtitle {
+  color: #888;
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+  margin-top: 4px;
+  text-align: left;
+}
+
+.invoices-table-wrapper {
+  border: 1.5px solid #6c63ff;
+  border-radius: 12px;
+  overflow-x: auto;
+  background: #fff;
+  margin-top: 18px;
+  box-shadow: none;
+}
+
+.invoices-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.invoices-table th, 
+.invoices-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 1rem;
+  color: #222;
+  background: #fff;
+}
+
+.invoices-table th {
+  font-weight: 700;
+  border-bottom: 1.5px solid #6c63ff;
+}
+
+.invoices-table td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.invoices-table tr:last-child td {
+  border-bottom: none;
+}
+
+.invoices-table td:last-child {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Uniform size for all invoice-status buttons in invoices table */
+.invoices-table .invoice-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  padding: 0;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  border: none;
+  margin: 0 auto;
+  background: #415FA5;
+}
+
+.invoices-table .invoice-status.paid {
+  background: #415FA5;
+}
+
+.invoices-table .invoice-status.unpaid {
+  background: #f5a623;
+}
+
+.invoices-table .invoice-status.overdue {
+  background: #e57373;
+}
+
+/* Center status in its column for invoices table */
+.invoices-table td:nth-child(5),
+.invoices-table th:nth-child(5) {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.invoices-table .invoice-status {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center action in its column for invoices table */
+.invoices-table td:nth-child(6),
+.invoices-table th:nth-child(6) {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.invoices-table .pay-now-btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+/* Make Pay Now button in invoices table match the View button style */
+.invoices-table .pay-now-btn {
+  color: #6c63ff;
+  font-weight: 700;
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  transition: color 0.18s, text-decoration 0.18s;
+}
+
+.invoices-table .pay-now-btn:hover, 
+.invoices-table .pay-now-btn:focus {
+  color: #4b61b8;
+  text-decoration: underline;
+  background: none;
+}
+
+/* Remove white rectangle from Pay Now button in invoices table */
+.invoices-table .pay-now-btn {
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  color: #6c63ff;
+  font-weight: 700;
+  border-radius: 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.18s, text-decoration 0.18s;
+}
+
+/* Shared Table Styles for Patient Pages */
+.payment-history-container,
+.invoices-container,
+.health-record-container,
+.family-dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(80, 80, 120, 0.07);
+  padding: 32px 24px;
+}
+
+.payment-history-table,
+.invoices-table,
+.health-record-table,
+.family-dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+}
+
+.payment-history-table th,
+.invoices-table th,
+.health-record-table th,
+.family-dashboard-table th {
+  background: #f4f6fa;
+  color: #4b61b8;
+  font-weight: 600;
+  padding: 12px 8px;
+  border-bottom: 2px solid #e5e7eb;
+  text-align: left;
+}
+
+.payment-history-table td,
+.invoices-table td,
+.health-record-table td,
+.family-dashboard-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.payment-history-table tr:last-child td,
+.invoices-table tr:last-child td,
+.health-record-table tr:last-child td,
+.family-dashboard-table tr:last-child td {
+  border-bottom: none;
+}
+
+.family-dashboard-table a,
+.invoices-table a {
+  color: #4b61b8;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .invoices-modern-container {
+    padding: 18px 4vw;
+  }
+  
+  .invoices-table-wrapper {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .invoices-modern-table th, 
+  .invoices-modern-table td {
+    padding: 12px 8px;
+    font-size: 0.97rem;
+  }
+  
+  .invoices-page-container {
+    padding: 0 4vw;
+  }
+  
+  .invoices-table th, 
+  .invoices-table td {
+    padding: 12px 8px;
+    font-size: 0.97rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.invoices-modern-container {
+  animation: fadeSlideIn 0.7s cubic-bezier(0.4, 0.2, 0.2, 1) 0.1s both;
+}
+
+.invoices-table-wrapper {
+  animation: fadeSlideIn 0.8s cubic-bezier(0.4, 0.2, 0.2, 1) 0.2s both;
+}
+
+.invoices-modern-table tr {
+  opacity: 0;
+  animation: fadeSlideIn 0.7s cubic-bezier(0.4, 0.2, 0.2, 1) both;
+}
+
+.invoices-modern-table tr:nth-child(1) { animation-delay: 0.25s; }
+.invoices-modern-table tr:nth-child(2) { animation-delay: 0.32s; }
+.invoices-modern-table tr:nth-child(3) { animation-delay: 0.39s; }
+.invoices-modern-table tr:nth-child(4) { animation-delay: 0.46s; }
+.invoices-modern-table tr:nth-child(5) { animation-delay: 0.53s; }
+.invoices-modern-table tr:nth-child(6) { animation-delay: 0.60s; }
+.invoices-modern-table tr:nth-child(7) { animation-delay: 0.67s; }
+.invoices-modern-table tr:nth-child(8) { animation-delay: 0.74s; }
+.invoices-modern-table tr:nth-child(9) { animation-delay: 0.81s; }
+.invoices-modern-table tr:nth-child(10) { animation-delay: 0.88s; } 

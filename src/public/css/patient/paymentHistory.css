@@ -1,0 +1,342 @@
+/* Payment History Page Styles */
+
+/* Payment History Page (ph-table) */
+.ph-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 40px 0 24px 0;
+  letter-spacing: -0.5px;
+}
+
+.ph-table-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: none;
+  border: 2px solid #6c63ff;
+  padding: 0;
+}
+
+.ph-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.ph-table th, 
+.ph-table td {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.ph-table th {
+  background: #fff;
+  color: #222;
+  font-weight: 600;
+  border-bottom: 2px solid #6c63ff;
+}
+
+.ph-table td {
+  background: #fff;
+  color: #222;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ph-table tr:last-child td {
+  border-bottom: none;
+}
+
+.ph-table a {
+  color: #6c63ff;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ph-table th:first-child, 
+.ph-table td:first-child {
+  border-top-left-radius: 12px;
+}
+
+.ph-table th:last-child, 
+.ph-table td:last-child {
+  border-top-right-radius: 12px;
+}
+
+/* Payment History Page - Professional Card Design */
+.ph-bg {
+  min-height: 100vh;
+  background: #f6f7fb;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 0 0 0;
+}
+
+.ph-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(80, 80, 120, 0.10);
+  max-width: 950px;
+  width: 100%;
+  margin: 0 16px;
+  padding: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ph-card-header {
+  padding: 32px 36px 0 36px;
+}
+
+.ph-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.5px;
+  color: #222;
+}
+
+.ph-table-wrapper {
+  padding: 0 36px;
+}
+
+.ph-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 0;
+}
+
+.ph-table th, 
+.ph-table td {
+  padding: 18px 18px;
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+.ph-table th {
+  background: #f4f6fa;
+  color: #415FA5;
+  font-weight: 700;
+  border-bottom: 2px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.ph-table td {
+  background: #fff;
+  color: #222;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+
+.ph-table tr:last-child td {
+  border-bottom: none;
+}
+
+.ph-table tr:hover td {
+  background: #f6f7fb;
+}
+
+.ph-table a {
+  color: #6c63ff;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.ph-table a:hover {
+  color: #354a8c;
+}
+
+.ph-table th:first-child, 
+.ph-table td:first-child {
+  border-top-left-radius: 12px;
+}
+
+.ph-table th:last-child, 
+.ph-table td:last-child {
+  border-top-right-radius: 12px;
+}
+
+.ph-table td:last-child {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.ph-modern-view-link {
+  color: #6c63ff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.18s;
+}
+
+.ph-modern-view-link:hover, 
+.ph-modern-view-link:focus {
+  color: #415FA5;
+  text-decoration: underline;
+}
+
+/* --- Payment History Modern Table Styles --- */
+.payment-history-modern-container {
+  max-width: 900px;
+  margin: 48px auto 0 auto;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.payment-history-modern-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.5px;
+  color: #111;
+}
+
+.payment-history-modern-table-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: none;
+  border-radius: 12px;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.payment-history-modern-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 2px solid #6c63ff;
+}
+
+.payment-history-modern-table th, 
+.payment-history-modern-table td {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.payment-history-modern-table th {
+  background: #fff;
+  color: #222;
+  font-weight: 600;
+  border-bottom: 2px solid #6c63ff;
+}
+
+.payment-history-modern-table td {
+  background: #fff;
+  color: #222;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.payment-history-modern-table tr:last-child td {
+  border-bottom: none;
+}
+
+.payment-history-modern-table td:last-child {
+  text-align: center;
+}
+
+/* View Button */
+.view-btn {
+  background: #415FA5;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px 0 rgba(80, 80, 120, 0.10);
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 100px;
+  text-align: center;
+}
+
+.view-btn:hover, 
+.view-btn:focus {
+  background: #2d3a8c;
+  box-shadow: 0 4px 16px 0 rgba(80, 80, 120, 0.16);
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .ph-card-header, 
+  .ph-table-wrapper {
+    padding: 0 10px;
+  }
+  
+  .ph-card {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+  
+  .payment-history-modern-container {
+    padding: 0 4vw;
+  }
+  
+  .payment-history-modern-table th, 
+  .payment-history-modern-table td {
+    padding: 12px 8px;
+    font-size: 0.97rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeSlideInPH {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ph-animate-bg, 
+.ph-animate-card {
+  animation: fadeSlideInPH 0.7s cubic-bezier(0.4, 0.2, 0.2, 1) 0.1s both;
+}
+
+.ph-animate-table-wrapper {
+  animation: fadeSlideInPH 0.8s cubic-bezier(0.4, 0.2, 0.2, 1) 0.2s both;
+}
+
+.ph-animate-table tr {
+  opacity: 0;
+  animation: fadeSlideInPH 0.7s cubic-bezier(0.4, 0.2, 0.2, 1) both;
+}
+
+.ph-animate-table tr:nth-child(1) { animation-delay: 0.25s; }
+.ph-animate-table tr:nth-child(2) { animation-delay: 0.32s; }
+.ph-animate-table tr:nth-child(3) { animation-delay: 0.39s; }
+.ph-animate-table tr:nth-child(4) { animation-delay: 0.46s; }
+.ph-animate-table tr:nth-child(5) { animation-delay: 0.53s; }
+.ph-animate-table tr:nth-child(6) { animation-delay: 0.60s; }
+.ph-animate-table tr:nth-child(7) { animation-delay: 0.67s; }
+.ph-animate-table tr:nth-child(8) { animation-delay: 0.74s; }
+.ph-animate-table tr:nth-child(9) { animation-delay: 0.81s; }
+.ph-animate-table tr:nth-child(10) { animation-delay: 0.88s; } 

@@ -1,0 +1,282 @@
+/* Super Admin System Configuration Page Styles */
+
+/* Color Variables */
+:root {
+  --admins-blue: #415FA5;
+  --admins-blue-hover: #2d3a8c;
+  --admins-muted: #A3A3B3;
+}
+
+/* Animations */
+@keyframes fadeSlideInAdmins {
+  0% { opacity: 0; transform: translateY(32px); }
+  100% { opacity: 1; transform: none; }
+}
+
+.fade-slide-in {
+  animation: fadeSlideInAdmins 0.7s cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+
+/* Main Container */
+.system-config-container {
+  max-width: 540px;
+  margin: 48px auto;
+  padding: 32px 0 32px 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Title and Description */
+.system-config-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.system-config-description {
+  color: var(--admins-muted);
+  font-size: 1rem;
+  margin-bottom: 32px;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+/* Form */
+.system-config-form {
+  width: 100%;
+}
+
+/* Sections */
+.config-section {
+  margin-bottom: 32px;
+}
+
+.config-section-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+/* Fields */
+.config-field {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.config-field label {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.config-field input[type="text"],
+.config-field input[type="number"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 1rem;
+  margin-bottom: 0;
+  background: #f9f9fb;
+  transition: border 0.2s;
+}
+
+.config-field input:focus {
+  border: 1.5px solid var(--admins-blue);
+  outline: none;
+}
+
+/* Language Buttons */
+.language-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.lang-btn.admins-blue-btn {
+  width: 100%;
+  border-radius: 12px;
+  background: var(--admins-blue);
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+  margin: 0;
+  text-align: center;
+  display: block;
+}
+
+.lang-btn.admins-blue-btn:hover, 
+.lang-btn.admins-blue-btn:focus {
+  background: var(--admins-blue-hover);
+  color: #fff;
+}
+
+/* Actions */
+.config-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.save-config-btn.admins-blue-btn {
+  float: right;
+  margin-top: 24px;
+  min-width: 180px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 999px;
+  background: var(--admins-blue);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+}
+
+.save-config-btn.admins-blue-btn:hover, 
+.save-config-btn.admins-blue-btn:focus {
+  background: var(--admins-blue-hover);
+  color: #fff;
+}
+
+/* Enhanced System Config Responsiveness */
+@media (max-width: 1024px) {
+  .system-config-container {
+    max-width: 100%;
+    margin: 32px auto;
+    padding: 24px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .system-config-container {
+    margin: 20px auto;
+    padding: 16px 0;
+  }
+  
+  .system-config-title {
+    font-size: 1.6rem !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .system-config-description {
+    font-size: 0.95rem !important;
+    margin-bottom: 24px !important;
+  }
+  
+  .system-config-form {
+    width: 100%;
+  }
+  
+  .config-section {
+    margin-bottom: 28px !important;
+  }
+  
+  .config-section-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .config-field {
+    margin-bottom: 16px !important;
+  }
+  
+  .config-field label {
+    font-size: 0.95rem !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .config-field input[type="text"],
+  .config-field input[type="number"] {
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .language-buttons {
+    gap: 12px !important;
+  }
+  
+  .lang-btn.admins-blue-btn {
+    padding: 14px 0 !important;
+    font-size: 1.1rem !important;
+    border-radius: 10px !important;
+  }
+  
+  .save-config-btn.admins-blue-btn {
+    padding: 14px 0 !important;
+    font-size: 1.05rem !important;
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .system-config-container {
+    margin: 16px auto;
+    padding: 12px 0;
+  }
+  
+  .system-config-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .system-config-description {
+    font-size: 0.9rem !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .config-section {
+    margin-bottom: 24px !important;
+  }
+  
+  .config-section-title {
+    font-size: 1rem !important;
+  }
+  
+  .config-field {
+    margin-bottom: 14px !important;
+  }
+  
+  .config-field label {
+    font-size: 0.9rem !important;
+  }
+  
+  .config-field input[type="text"],
+  .config-field input[type="number"] {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+  
+  .language-buttons {
+    gap: 10px !important;
+  }
+  
+  .lang-btn.admins-blue-btn {
+    padding: 12px 0 !important;
+    font-size: 1rem !important;
+    border-radius: 8px !important;
+  }
+  
+  .save-config-btn.admins-blue-btn {
+    min-width: 100%;
+    float: none;
+    width: 100%;
+    padding: 12px 0 !important;
+    font-size: 1rem !important;
+    margin-top: 16px !important;
+  }
+} 

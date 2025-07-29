@@ -1,0 +1,175 @@
+/* Super Admin Developer Tools Page Styles */
+
+/* Color Variables */
+:root {
+  --admins-blue: #415FA5;
+  --admins-blue-hover: #2d3a8c;
+  --admins-muted: #A3A3B3;
+}
+
+/* Animations */
+@keyframes fadeSlideInAdmins {
+  0% { opacity: 0; transform: translateY(32px); }
+  100% { opacity: 1; transform: none; }
+}
+
+.fade-slide-in {
+  animation: fadeSlideInAdmins 0.7s cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+
+/* Main Container */
+.devtools-container {
+  max-width: 700px;
+  margin: 48px auto;
+  padding: 32px 0 32px 0;
+  background: none;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Title and Description */
+.devtools-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.devtools-description {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+
+/* Sections */
+.devtools-section {
+  margin-bottom: 32px;
+}
+
+.devtools-section-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.devtools-section-desc {
+  color: var(--admins-muted);
+  font-size: 0.98rem;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.devtools-btn,
+.admins-blue-btn {
+  background: var(--admins-blue);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.devtools-btn:hover, 
+.devtools-btn:focus,
+.admins-blue-btn:hover, 
+.admins-blue-btn:focus {
+  background: var(--admins-blue-hover);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Muted Text */
+.clinic-muted {
+  color: var(--admins-muted);
+  font-weight: 400;
+}
+
+/* Enhanced Developer Tools Responsiveness */
+@media (max-width: 1024px) {
+  .devtools-container {
+    max-width: 100%;
+    margin: 32px auto;
+    padding: 24px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .devtools-container {
+    margin: 20px auto;
+    padding: 16px 0;
+  }
+  
+  .devtools-title {
+    font-size: 1.6rem !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .devtools-description {
+    font-size: 0.95rem !important;
+    margin-bottom: 24px !important;
+  }
+  
+  .devtools-section {
+    margin-bottom: 28px !important;
+  }
+  
+  .devtools-section-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 6px !important;
+  }
+  
+  .devtools-section-desc {
+    font-size: 0.95rem !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .devtools-btn.admins-blue-btn {
+    padding: 10px 28px !important;
+    font-size: 1rem !important;
+    margin-top: 8px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .devtools-container {
+    margin: 16px auto;
+    padding: 12px 0;
+  }
+  
+  .devtools-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .devtools-description {
+    font-size: 0.9rem !important;
+    margin-bottom: 20px !important;
+  }
+  
+  .devtools-section {
+    margin-bottom: 24px !important;
+  }
+  
+  .devtools-section-title {
+    font-size: 1rem !important;
+  }
+  
+  .devtools-section-desc {
+    font-size: 0.9rem !important;
+  }
+  
+  .devtools-btn.admins-blue-btn {
+    width: 100%;
+    padding: 12px 0 !important;
+    font-size: 1rem !important;
+    text-align: center;
+    margin-top: 8px !important;
+  }
+} 

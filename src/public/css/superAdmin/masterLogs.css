@@ -1,0 +1,352 @@
+/* Super Admin Master Logs & Audit Page Styles */
+
+/* Color Variables */
+:root {
+  --admins-blue: #415FA5;
+  --admins-blue-hover: #2d3a8c;
+  --admins-border: #B9AFFF;
+  --admins-muted: #A3A3B3;
+}
+
+/* Animations */
+@keyframes fadeSlideInAdmins {
+  0% { opacity: 0; transform: translateY(32px); }
+  100% { opacity: 1; transform: none; }
+}
+
+.fade-slide-in {
+  animation: fadeSlideInAdmins 0.7s cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+
+/* Main Container */
+.masterlogs-container {
+  max-width: 1100px;
+  margin: 48px auto;
+  padding: 32px 0 32px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Title and Description */
+.masterlogs-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.masterlogs-description {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+
+/* Search Form */
+.masterlogs-search-form {
+  margin-bottom: 18px;
+}
+
+.masterlogs-searchbar-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.masterlogs-searchbar {
+  display: flex;
+  align-items: center;
+  background: #E5E5EA;
+  border-radius: 12px;
+  padding: 10px 20px;
+  min-width: 260px;
+  max-width: 420px;
+  width: 100%;
+}
+
+.masterlogs-search-input {
+  border: none;
+  background: transparent;
+  font-size: 1.08rem;
+  margin-left: 10px;
+  width: 100%;
+  outline: none;
+  color: #222;
+}
+
+.search-icon {
+  font-size: 1.3rem;
+  color: #A3A3B3;
+}
+
+/* Excel-style Filter Dropdowns */
+.masterlogs-filters-row {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0 18px 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-dropdown-group {
+  position: relative;
+  min-width: 130px;
+}
+
+.filter-dropdown {
+  width: 100%;
+  padding: 8px 30px 8px 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 20px;
+  background: #F9F9F9;
+  font-size: 0.9rem;
+  color: #374151;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+  font-family: 'Inter', Arial, sans-serif;
+  height: 38px;
+}
+
+.filter-dropdown:hover {
+  border-color: #9CA3AF;
+  background: #F3F4F6;
+}
+
+.filter-dropdown:focus {
+  border-color: #6366F1;
+  background: #fff;
+  box-shadow: 0 0 0 1px #6366F1;
+}
+
+.filter-dropdown option {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #374151;
+  background: #fff;
+}
+
+.filter-dropdown option:hover {
+  background: #F3F4F6;
+}
+
+.filter-dropdown option[value=""] {
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: #6B7280;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.filter-dropdown-group:hover .dropdown-arrow {
+  color: #374151;
+}
+
+.filter-dropdown:focus + .dropdown-arrow {
+  color: #6366F1;
+}
+
+/* Date Fields */
+.masterlogs-date-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.date-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.date-field label {
+  font-size: 0.97rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.date-input {
+  padding: 12px 18px;
+  border: 1px solid #E5E5EA;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+  color: #222;
+}
+
+.date-input:focus {
+  border-color: var(--admins-blue);
+  outline: none;
+}
+
+/* Table Wrapper */
+.masterlogs-table-wrapper {
+  border: 1.5px solid var(--admins-border);
+  border-radius: 12px;
+  background: #fff;
+  overflow-x: auto;
+  margin-top: 18px;
+}
+
+/* Table */
+.masterlogs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+}
+
+.masterlogs-table th, 
+.masterlogs-table td {
+  border-bottom: 1px solid var(--admins-border);
+  padding: 20px 18px;
+  text-align: left;
+  background: #fff;
+}
+
+.masterlogs-table th {
+  background: #fff;
+  font-weight: 700;
+  color: #222;
+  font-size: 1.01rem;
+  border-top: none;
+}
+
+.masterlogs-table tr:last-child td {
+  border-bottom: none;
+}
+
+.masterlogs-table td.clinic-muted {
+  color: var(--admins-muted);
+  font-weight: 500;
+}
+
+/* Actions */
+.masterlogs-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.export-logs-btn {
+  background: var(--admins-blue);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+}
+
+.export-logs-btn:hover, 
+.export-logs-btn:focus {
+  background: var(--admins-blue-hover);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Filter Chips (if used) */
+.filter-chip {
+  background: #F3F4F6;
+  color: #222;
+  border: none;
+  border-radius: 999px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+
+.filter-chip:hover, 
+.filter-chip.active {
+  background: var(--admins-blue);
+  color: #fff;
+}
+
+/* Muted Text */
+.clinic-muted {
+  color: var(--admins-muted);
+  font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .masterlogs-container {
+    padding: 8px 2px;
+  }
+  
+  .masterlogs-table th, 
+  .masterlogs-table td {
+    padding: 12px 6px;
+    font-size: 0.97rem;
+  }
+  
+  .masterlogs-filters-row {
+    gap: 6px;
+    margin: 12px 0 16px 0;
+  }
+  
+  .filter-dropdown-group {
+    min-width: 110px;
+    flex: 1;
+  }
+  
+  .filter-dropdown {
+    padding: 7px 26px 7px 10px;
+    font-size: 0.85rem;
+    height: 36px;
+  }
+  
+  .dropdown-arrow {
+    right: 8px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .masterlogs-filters-row {
+    gap: 8px;
+    margin: 12px 0 16px 0;
+  }
+  
+  .filter-dropdown-group {
+    min-width: calc(50% - 4px);
+    flex: 1;
+  }
+  
+  .filter-dropdown {
+    font-size: 0.8rem;
+    height: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .masterlogs-filters-row {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+  
+  .filter-dropdown-group {
+    min-width: unset;
+    width: 100%;
+  }
+} 
