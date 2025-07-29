@@ -3,31 +3,43 @@ const cors = require('cors');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const compression = require('compression');
-// const mongoSanitize = require('express-mongo-sanitize');
-// const xss = require('xss-clean');
-// const rateLimit = require('express-rate-limit');
 const hpp = require('hpp');
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts');
-// require('dotenv').config();
+const fileUpload = require('express-fileupload');
+require('dotenv').config();
 
-// const connectDB = require('./src/database/connection');
-// const errorHandler = require('./src/middleware/errorHandler');
+const connectDB = require('./src/database/connection');
+const errorHandler = require('./src/middleware/errorHandler');
 
 // Import routes
-const patientRoutes = require('./src/routes/patient');
+const patientRoutes = require('./src/routes/patient/patient');
 const billingRoutes = require('./src/routes/billing/billing');
+const authRoutes = require('./src/routes/auth/auth');
+const adminViewRoutes = require('./src/routes/admin/admin');
+const adminApiRoutes = require('./src/routes/superAdmin/adminRoutes');
 
 const app = express();
 
 // Connect to MongoDB
-// connectDB();
+connectDB().then(() => {
+    console.log('Database connection ready');
+}).catch((err) => {
+    console.error('Database connection error:', err);
+    process.exit(1);
+});
 
 // EJS setup
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('layout', 'layouts/main');
+
+// File Upload
+app.use(fileUpload({
+    limits: { fileSize: 5 * 1024 * 1024 }, // 5MB max file size
+    createParentPath: true
+}));
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'src/public')));
@@ -53,45 +65,47 @@ app.use(helmet({
 }));
 app.use(morgan('dev'));
 app.use(compression());
-// app.use(mongoSanitize());
-// app.use(xss());
-// app.use(hpp());
+app.use(hpp());
 
-// // Rate limiting
-// const limiter = rateLimit({
-//     max: 100,
-//     windowMs: 60 * 60 * 1000, // 1 hour
-//     message: 'Too many requests from this IP, please try again in an hour!'
-// });
-// app.use('/api', limiter);
+// Routes
+app.use('/api/v1/admin', adminApiRoutes);
+
+// Auth routes
+app.use('/auth', authRoutes);
+
+// Patient routes (includes both view and API routes)
+app.use('/patient', patientRoutes);
+
+// Admin view routes
+app.use('/admin', adminViewRoutes);
+
+// Billing routes
+app.use('/billing', billingRoutes);
 
 // Home route
 app.get('/', (req, res) => {
-    res.render('pages/home', {
-        title: 'Welcome',
+    res.render('pages/auth/login', {
+        title: 'Login',
         success_msg: '',
-        error_msg: ''
+        error_msg: '',
+        layout: false,
+        pageCSS: 'auth/login.css'
     });
 });
 
-// Register patient routes
-app.use('/patient', patientRoutes);
-app.use('/billing', billingRoutes);
-
 // Error handling
-// app.use(errorHandler);
+app.use(errorHandler);
 
 // Handle unhandled routes
-app.all('*', (req, res) => {
-    res.status(404).render('pages/home', {
-        title: '404 - Not Found',
-        success_msg: '',
-        error_msg: 'Page not found'
-    });
+app.all('*', (req, res, next) => {
+    const err = new Error(`Can't find ${req.originalUrl} on this server!`);
+    err.status = 'fail';
+    err.statusCode = 404;
+    next(err);
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
     console.log(`http://localhost:${PORT}`);
-}); 
+});
