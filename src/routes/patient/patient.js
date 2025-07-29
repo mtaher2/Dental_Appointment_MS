@@ -6,7 +6,7 @@ const router = express.Router();
 // ===== VIEW ROUTES =====
 
 // Payment Options
-router.get('/payment', (req, res) => {
+router.get('/payment-options', (req, res) => {
   res.render('pages/patient/paymentOptions', {
     title: 'Payment Options',
     success_msg: '',

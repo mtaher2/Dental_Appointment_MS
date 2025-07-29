@@ -1,0 +1,170 @@
+/*
+  invoices.css
+  CSS for the invoices page
+*/
+
+/* --- Invoices Page Container --- */
+.invoices-page-container {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.invoices-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+.invoices-subtitle {
+  color: #888;
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+  margin-top: 4px;
+  text-align: left;
+}
+
+.invoices-table-wrapper {
+  border: 1.5px solid #6c63ff;
+  border-radius: 12px;
+  overflow-x: auto;
+  background: #fff;
+  margin-top: 18px;
+  box-shadow: none;
+}
+
+.invoices-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.invoices-table th, .invoices-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 1rem;
+  color: #222;
+  background: #fff;
+}
+
+.invoices-table th {
+  font-weight: 700;
+  border-bottom: 1.5px solid #6c63ff;
+}
+
+.invoices-table td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.invoices-table tr:last-child td {
+  border-bottom: none;
+}
+
+.invoices-table td:last-child {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* --- Invoice Status Styles --- */
+.invoices-table .invoice-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  padding: 0;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  border: none;
+  margin: 0 auto;
+  background: #4660ad;
+}
+
+.invoices-table .invoice-status.paid {
+  background: #4660ad;
+}
+
+.invoices-table .invoice-status.unpaid {
+  background: #f5a623;
+}
+
+.invoices-table .invoice-status.overdue {
+  background: #e57373;
+}
+
+/* --- Pay Now Button Styles --- */
+.invoices-table .pay-now-btn {
+  all: unset;
+  display: inline-block;
+  padding: initial;
+  margin: initial;
+  color: initial;
+  background: initial;
+  border: initial;
+  border-radius: initial;
+  font: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+
+.invoices-table .pay-now-btn:hover, .invoices-table .pay-now-btn:focus {
+  color: #4b61b8;
+  text-decoration: underline;
+  background: none;
+  outline: none;
+}
+
+/* --- Center Status in its Column --- */
+.invoices-table td:nth-child(5),
+.invoices-table th:nth-child(5) {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.invoices-table .invoice-status {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Center Action in its Column --- */
+.invoices-table td:nth-child(6),
+.invoices-table th:nth-child(6) {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.invoices-table .pay-now-btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+  .invoices-page-container {
+    padding: 0 4vw;
+  }
+  .invoices-table-wrapper {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .invoices-table th, .invoices-table td {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+} 

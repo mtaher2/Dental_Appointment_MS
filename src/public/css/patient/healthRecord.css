@@ -1,0 +1,292 @@
+/*
+  healthRecord.css
+  CSS for the health record page
+*/
+
+/* --- Health Record Modern Container --- */
+.health-record-modern-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(80, 80, 120, 0.07);
+  padding: 40px 36px 36px 36px;
+}
+
+.hr-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.hr-section {
+  margin-bottom: 36px;
+}
+
+.hr-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+/* --- Timeline Styles --- */
+.hr-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hr-timeline li {
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.hr-timeline-icon {
+  color: #4b61b8;
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+.hr-timeline-date {
+  margin-left: auto;
+  color: #888;
+  font-size: 0.98rem;
+  font-weight: 400;
+}
+
+/* --- Health Record Timeline Vertical Styles --- */
+.hr-timeline-vertical {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 24px;
+  position: relative;
+  border-left: 2px solid #ece6fa;
+  margin-bottom: 32px;
+}
+
+.hr-timeline-event {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.hr-timeline-event:last-child {
+  margin-bottom: 0;
+}
+
+.hr-timeline-icon {
+  position: absolute;
+  left: -32px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3eaff;
+  color: #7c5fc9;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  box-shadow: 0 1px 6px 0 rgba(80, 80, 120, 0.04);
+}
+
+.hr-timeline-icon i {
+  font-size: 1.2rem;
+}
+
+.hr-timeline-content {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-timeline-title {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.hr-timeline-date {
+  font-size: 0.97rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* --- Health Metrics Cards --- */
+.hr-metrics-cards {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.hr-metric-card {
+  background: #fafaff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px 0 rgba(80, 80, 120, 0.04);
+  padding: 22px 24px 18px 24px;
+  min-width: 260px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hr-metric-title {
+  font-size: 1.02rem;
+  color: #888;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.hr-metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.hr-metric-sub {
+  font-size: 0.98rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.hr-metric-up {
+  color: #4b61b8;
+  font-weight: 600;
+}
+
+.hr-metric-down {
+  color: #e57373;
+  font-weight: 600;
+}
+
+.hr-metric-chart {
+  margin-bottom: 4px;
+  width: 100%;
+  height: 60px;
+  display: block;
+}
+
+.hr-metric-xaxis {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+/* --- Medical History Grid --- */
+.hr-history-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px 32px;
+  margin-bottom: 8px;
+}
+
+.hr-history-label {
+  font-size: 0.98rem;
+  color: #888;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.hr-history-value {
+  font-size: 1.05rem;
+  color: #222;
+  font-weight: 500;
+}
+
+/* --- Emergency Contact Form --- */
+.hr-emergency-form {
+  max-width: 400px;
+  margin-top: 8px;
+}
+
+.hr-form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.hr-form-row label {
+  font-size: 0.98rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.hr-form-row input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f9f9fb;
+  transition: border 0.2s;
+}
+
+.hr-form-row input:focus {
+  border: 1.5px solid #4b61b8;
+  outline: none;
+}
+
+.hr-update-btn {
+  background: #4b61b8;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 22px;
+  padding: 12px 0;
+  font-size: 1.08rem;
+  width: 100%;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hr-update-btn:hover {
+  background: #354a8c;
+}
+
+/* --- Animations --- */
+@keyframes fadeSlideInHR {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hr-animate-container {
+  animation: fadeSlideInHR 0.7s cubic-bezier(0.4, 0.2, 0.2, 1) 0.1s both;
+}
+
+.hr-animate-section {
+  animation: fadeSlideInHR 0.8s cubic-bezier(0.4, 0.2, 0.2, 1) 0.2s both;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+  .health-record-modern-container {
+    padding: 24px 20px;
+  }
+  .hr-metrics-cards {
+    flex-direction: column;
+  }
+  .hr-history-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+} 
