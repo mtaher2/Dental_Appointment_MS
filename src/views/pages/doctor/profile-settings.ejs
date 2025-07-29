@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings - HealthPlus</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="doctor-header">
+        <div class="doctor-header-content">
+            <div class="doctor-header-left">
+                <div class="doctor-logo">
+                    <i class="fas fa-tooth"></i>
+                    <span>HealthPlus</span>
+                </div>
+            </div>
+            <nav class="doctor-nav">
+                <a href="/doctor/dashboard" class="nav-link">Dashboard</a>
+                <a href="/doctor/appointments" class="nav-link">Appointments</a>
+                <a href="/doctor/patients" class="nav-link">Patients</a>
+                <a href="/doctor/billing" class="nav-link">Billing</a>
+                <a href="/doctor/messages" class="nav-link">Messages</a>
+            </nav>
+            <div class="doctor-header-right">
+                <i class="fas fa-bell doctor-notification"></i>
+                <div class="doctor-profile">
+                    <img src="/images/doctor-avatar.jpg" alt="Doctor" class="doctor-avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="doctor-main">
+        <div class="doctor-container">
+            <!-- Page Title -->
+            <div class="doctor-profile-header">
+                <h1 class="doctor-profile-title">Profile Settings</h1>
+                <p class="doctor-profile-subtitle">Customize your professional profile</p>
+            </div>
+
+            <!-- Profile Form -->
+            <div class="doctor-profile-form-container">
+                <!-- Profile Photo Section -->
+                <div class="doctor-profile-photo-section">
+                    <div class="doctor-profile-photo">
+                        <img src="/images/doctor-profile.jpg" alt="Doctor Profile" class="doctor-profile-image">
+                    </div>
+                </div>
+
+                <!-- Form Fields -->
+                <form class="doctor-profile-form">
+                    <!-- Biography -->
+                    <div class="doctor-form-group">
+                        <label for="biography" class="doctor-form-label">Biography (Visible to Admin, Receptionists, Billing)</label>
+                        <textarea id="biography" name="biography" class="doctor-form-textarea" rows="6" placeholder="Enter your professional biography..."></textarea>
+                    </div>
+
+                    <!-- Medical Specialty -->
+                    <div class="doctor-form-group">
+                        <label for="specialty" class="doctor-form-label">Medical Specialty (Visible to Admin, Receptionists, Billing)</label>
+                        <input type="text" id="specialty" name="specialty" class="doctor-form-input" placeholder="e.g., General Dentistry, Orthodontics">
+                    </div>
+
+                    <!-- Languages Spoken -->
+                    <div class="doctor-form-group">
+                        <label for="languages" class="doctor-form-label">Languages Spoken (Visible to Admin, Receptionists, Billing)</label>
+                        <input type="text" id="languages" name="languages" class="doctor-form-input" placeholder="e.g., English, Spanish, French">
+                    </div>
+
+                    <!-- Consultation Fee -->
+                    <div class="doctor-form-group">
+                        <label for="consultation-fee" class="doctor-form-label">Consultation Fee (Visible to Admin, Receptionists, Billing, not shown to other doctors or patients unless configured)</label>
+                        <input type="text" id="consultation-fee" name="consultation-fee" class="doctor-form-input" placeholder="Enter consultation fee">
+                    </div>
+
+                    <!-- Upload Photo Button -->
+                    <div class="doctor-form-group">
+                        <button type="button" class="doctor-upload-btn">Upload Photo</button>
+                    </div>
+
+                    <!-- Update Profile Button -->
+                    <div class="doctor-form-actions">
+                        <button type="submit" class="doctor-update-btn">Update Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 

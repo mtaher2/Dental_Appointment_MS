@@ -17,6 +17,7 @@ const authRoutes = require('./src/routes/auth/auth');
 const patientRoutes = require('./src/routes/patient/patient');
 const adminViewRoutes = require('./src/routes/admin/admin');
 const adminApiRoutes = require('./src/routes/superAdmin/adminRoutes');
+const doctorRoutes = require('./src/routes/doctor/doctor');
 
 const app = express();
 
@@ -77,6 +78,9 @@ app.use('/patient', patientRoutes);
 
 // Admin view routes
 app.use('/admin', adminViewRoutes);
+
+// Doctor routes
+app.use('/doctor', doctorRoutes);
 
 // Home route
 app.get('/', (req, res) => {

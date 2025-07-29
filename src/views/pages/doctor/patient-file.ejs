@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient File - Dr. Emily Carter</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="doctor-sidebar">
+        <div class="doctor-sidebar-header">
+            <div class="doctor-sidebar-profile">
+                <img src="/images/doctor-avatar.jpg" alt="Dr. Emily Carter" class="doctor-sidebar-avatar">
+                <span class="doctor-sidebar-name">Dr. Emily Carter</span>
+            </div>
+        </div>
+        <nav class="doctor-sidebar-nav">
+            <a href="/doctor/dashboard" class="doctor-sidebar-link">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="/doctor/patients" class="doctor-sidebar-link active">
+                <i class="fas fa-users"></i>
+                <span>Patients</span>
+            </a>
+            <a href="/doctor/calendar" class="doctor-sidebar-link">
+                <i class="fas fa-calendar"></i>
+                <span>Calendar</span>
+            </a>
+            <a href="/doctor/messages" class="doctor-sidebar-link">
+                <i class="fas fa-envelope"></i>
+                <span>Messages</span>
+            </a>
+            <a href="/doctor/billing" class="doctor-sidebar-link">
+                <i class="fas fa-dollar-sign"></i>
+                <span>Billing</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="doctor-patient-main">
+        <div class="doctor-patient-container">
+            <!-- Page Header -->
+            <div class="doctor-patient-header">
+                <h1 class="doctor-patient-title">Patient File</h1>
+                <p class="doctor-patient-subtitle">Review and manage patient clinical history</p>
+            </div>
+
+            <!-- Patient Info Card -->
+            <div class="doctor-patient-info-card">
+                <div class="doctor-patient-avatar">
+                    <img src="/images/patient-sophia.jpg" alt="Sophia Bennett" class="doctor-patient-photo">
+                </div>
+                <div class="doctor-patient-details">
+                    <h2 class="doctor-patient-name">Sophia Bennett</h2>
+                    <p class="doctor-patient-id">Patient ID: 123456</p>
+                    <p class="doctor-patient-visit">Last visit: 2 weeks ago</p>
+                </div>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="doctor-patient-tabs">
+                <button class="doctor-tab-btn active" data-tab="medical-history">Medical History</button>
+                <button class="doctor-tab-btn" data-tab="dental-history">Dental History</button>
+                <button class="doctor-tab-btn" data-tab="allergies">Allergies</button>
+                <button class="doctor-tab-btn" data-tab="medications">Medications</button>
+                <button class="doctor-tab-btn" data-tab="vital-signs">Vital Signs</button>
+                <button class="doctor-tab-btn" data-tab="notes-appointments">Notes & Appointments</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="doctor-patient-content">
+                <!-- Medical History Tab -->
+                <div id="medical-history" class="doctor-tab-content active">
+                    <h3 class="doctor-content-title">Medical History</h3>
+                    <div class="doctor-history-grid">
+                        <div class="doctor-history-item">
+                            <div class="doctor-history-label">Condition</div>
+                            <div class="doctor-history-value">Hypertension</div>
+                        </div>
+                        <div class="doctor-history-item">
+                            <div class="doctor-history-label">Diagnosis Date</div>
+                            <div class="doctor-history-value">2018-05-15</div>
+                        </div>
+                        <div class="doctor-history-item">
+                            <div class="doctor-history-label">Treatment</div>
+                            <div class="doctor-history-value">Medication and lifestyle changes</div>
+                        </div>
+                        <div class="doctor-history-item">
+                            <div class="doctor-history-label">Outcome</div>
+                            <div class="doctor-history-value">Controlled</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dental History Tab -->
+                <div id="dental-history" class="doctor-tab-content">
+                    <h3 class="doctor-content-title">Dental History</h3>
+                    <div class="doctor-dental-timeline">
+                        <div class="doctor-dental-item">
+                            <div class="doctor-dental-date">2023-11-20</div>
+                            <div class="doctor-dental-procedure">Routine Check-up</div>
+                            <div class="doctor-dental-notes">No issues detected</div>
+                        </div>
+                        <div class="doctor-dental-item">
+                            <div class="doctor-dental-date">2022-06-10</div>
+                            <div class="doctor-dental-procedure">Filling</div>
+                            <div class="doctor-dental-notes">Cavity in tooth #18 filled</div>
+                        </div>
+                        <div class="doctor-dental-item">
+                            <div class="doctor-dental-date">2021-03-15</div>
+                            <div class="doctor-dental-procedure">Cleaning</div>
+                            <div class="doctor-dental-notes">Regular cleaning</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Allergies Tab -->
+                <div id="allergies" class="doctor-tab-content">
+                    <h3 class="doctor-content-title">Allergies</h3>
+                    <div class="doctor-allergies-grid">
+                        <div class="doctor-allergy-item">
+                            <div class="doctor-allergy-name">Penicillin</div>
+                            <div class="doctor-allergy-reaction">Rash</div>
+                        </div>
+                        <div class="doctor-allergy-item">
+                            <div class="doctor-allergy-name">Latex</div>
+                            <div class="doctor-allergy-reaction">Hives</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medications Tab -->
+                <div id="medications" class="doctor-tab-content">
+                    <h3 class="doctor-content-title">Medications</h3>
+                    <div class="doctor-medications-list">
+                        <div class="doctor-medication-item">
+                            <div class="doctor-medication-name">Lisinopril</div>
+                            <div class="doctor-medication-dosage">10mg daily</div>
+                        </div>
+                        <div class="doctor-medication-item">
+                            <div class="doctor-medication-name">Ibuprofen</div>
+                            <div class="doctor-medication-dosage">200mg as needed</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vital Signs Tab -->
+                <div id="vital-signs" class="doctor-tab-content">
+                    <h3 class="doctor-content-title">Vital Signs</h3>
+                    <div class="doctor-vitals-grid">
+                        <div class="doctor-vital-card">
+                            <div class="doctor-vital-label">Blood Pressure</div>
+                            <div class="doctor-vital-value">120/80 mmHg</div>
+                        </div>
+                        <div class="doctor-vital-card">
+                            <div class="doctor-vital-label">Heart Rate</div>
+                            <div class="doctor-vital-value">72 bpm</div>
+                        </div>
+                        <div class="doctor-vital-card">
+                            <div class="doctor-vital-label">Temperature</div>
+                            <div class="doctor-vital-value">98.6°F</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notes & Appointments Tab -->
+                <div id="notes-appointments" class="doctor-tab-content">
+                    <h3 class="doctor-content-title">Notes & Appointments</h3>
+                    <div class="doctor-appointments-list">
+                        <div class="doctor-appointment-item">
+                            <div class="doctor-appointment-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="doctor-appointment-details">
+                                <div class="doctor-appointment-type">Appointment - General Checkup</div>
+                                <div class="doctor-appointment-date">2023-11-20</div>
+                            </div>
+                        </div>
+                        <div class="doctor-appointment-item">
+                            <div class="doctor-appointment-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="doctor-appointment-details">
+                                <div class="doctor-appointment-type">Treatment - Filling</div>
+                                <div class="doctor-appointment-date">2022-06-10</div>
+                            </div>
+                        </div>
+                        <div class="doctor-appointment-item">
+                            <div class="doctor-appointment-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="doctor-appointment-details">
+                                <div class="doctor-appointment-type">Appointment - Cleaning</div>
+                                <div class="doctor-appointment-date">2021-03-15</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 
