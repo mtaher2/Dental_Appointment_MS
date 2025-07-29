@@ -1552,7 +1552,6 @@ main.container.mt-4 {
 }
 
 .assistant-room-status-section {
-  border: 1.5px solid #B9AFFF;
 }
 
 .assistant-section-header {
@@ -1560,7 +1559,6 @@ main.container.mt-4 {
   justify-content: space-between;
   align-items: center;
   padding: 24px 32px 20px 32px;
-  border-bottom: 1px solid #E5E5EA;
 }
 
 .assistant-section-title {
