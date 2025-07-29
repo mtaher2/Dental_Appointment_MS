@@ -1,0 +1,310 @@
+/*
+  familyDashboard.css
+  CSS for the family dashboard page
+*/
+
+/* --- Family Dashboard Modern Container --- */
+.family-dashboard-modern-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(80, 80, 120, 0.07);
+  padding: 40px 32px 32px 32px;
+}
+
+.fd-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.fd-subtitle {
+  color: #888;
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+}
+
+.fd-section {
+  margin-bottom: 36px;
+}
+
+.fd-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+/* --- Family Members List --- */
+.fd-family-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fd-family-member {
+  display: flex;
+  align-items: center;
+  background: #fafaff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px 0 rgba(80, 80, 120, 0.04);
+  padding: 14px 18px;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.fd-family-member:hover {
+  box-shadow: 0 4px 16px 0 rgba(80, 80, 120, 0.10);
+}
+
+.fd-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 18px;
+  border: 2px solid #e5e7eb;
+}
+
+.fd-member-info {
+  flex: 1;
+}
+
+.fd-member-name {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.fd-member-age {
+  font-size: 0.98rem;
+  color: #888;
+}
+
+.fd-arrow {
+  font-size: 1.5rem;
+  color: #bbb;
+  margin-left: 12px;
+  font-weight: 700;
+}
+
+/* --- Appointments List --- */
+.fd-appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fd-appointment {
+  display: flex;
+  align-items: center;
+  background: #fafaff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px 0 rgba(80, 80, 120, 0.04);
+  padding: 14px 18px;
+  transition: box-shadow 0.2s;
+}
+
+.fd-appointment-icon {
+  margin-right: 18px;
+  color: #4b61b8;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.fd-appointment-info {
+  flex: 1;
+}
+
+.fd-appointment-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.fd-appointment-type {
+  font-size: 0.97rem;
+  color: #6c63ff;
+  margin-bottom: 2px;
+}
+
+.fd-appointment-doctor {
+  font-size: 0.97rem;
+  color: #888;
+}
+
+.fd-appointment-date {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+  margin-left: 18px;
+  min-width: 120px;
+  text-align: right;
+}
+
+/* --- Family Dashboard Upcoming Appointments Row Design --- */
+.fd-appointments-list-row {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fd-appointment-row {
+  display: flex;
+  align-items: flex-start;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0 0 18px 0;
+  border-bottom: 1px solid #f2f2fa;
+  min-height: 56px;
+}
+
+.fd-appointment-row:last-child {
+  border-bottom: none;
+}
+
+/* --- Improved Appointment Row Icon --- */
+.fd-appointment-row-icon {
+  background: #f5f6fa;
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 18px;
+  margin-top: 2px;
+  min-width: 44px;
+  box-shadow: 0 1px 4px 0 rgba(80, 80, 120, 0.06);
+}
+
+.fd-appointment-row-icon i.fa-calendar-days {
+  font-size: 1.7rem;
+  color: #888ca0;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.fd-appointment-row-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fd-appointment-row-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.fd-appointment-row-type a {
+  color: #6c63ff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.fd-appointment-row-type a:hover {
+  color: #4b61b8;
+  text-decoration: underline;
+}
+
+.fd-appointment-row-doctor {
+  font-size: 0.98rem;
+  color: #888;
+  font-weight: 400;
+}
+
+.fd-appointment-row-date {
+  font-size: 1.05rem;
+  color: #222;
+  font-weight: 500;
+  margin-left: 32px;
+  min-width: 120px;
+  text-align: right;
+  margin-top: 2px;
+}
+
+/* --- Material Icons (if not already included) --- */
+.material-icons {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Animations --- */
+@keyframes fadeSlideInFD {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fd-animate-container {
+  animation: fadeSlideInFD 0.7s cubic-bezier(0.4, 0.2, 0.2, 1) 0.1s both;
+}
+
+.fd-animate-section {
+  animation: fadeSlideInFD 0.8s cubic-bezier(0.4, 0.2, 0.2, 1) 0.2s both;
+}
+
+.fd-animate-item {
+  opacity: 0;
+  animation: fadeSlideInFD 0.7s cubic-bezier(0.4, 0.2, 0.2, 1) both;
+}
+
+.fd-family-list .fd-animate-item:nth-child(1), .fd-appointments-list .fd-animate-item:nth-child(1) { animation-delay: 0.25s; }
+.fd-family-list .fd-animate-item:nth-child(2), .fd-appointments-list .fd-animate-item:nth-child(2) { animation-delay: 0.32s; }
+.fd-family-list .fd-animate-item:nth-child(3), .fd-appointments-list .fd-animate-item:nth-child(3) { animation-delay: 0.39s; }
+.fd-family-list .fd-animate-item:nth-child(4), .fd-appointments-list .fd-animate-item:nth-child(4) { animation-delay: 0.46s; }
+
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+  .family-dashboard-modern-container {
+    padding: 18px 4vw;
+  }
+  .fd-appointment-date {
+    min-width: 80px;
+    font-size: 0.95rem;
+  }
+  .fd-avatar {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 700px) {
+  .fd-appointment-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 14px 0;
+    gap: 6px;
+  }
+  .fd-appointment-row-date {
+    margin-left: 0;
+    margin-top: 8px;
+    text-align: left;
+    min-width: unset;
+  }
+} 

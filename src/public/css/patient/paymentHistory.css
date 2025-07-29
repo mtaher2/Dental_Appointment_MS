@@ -1,0 +1,94 @@
+/*
+  paymentHistory.css
+  CSS for the payment history page
+*/
+
+/* --- Payment History Modern Container --- */
+.payment-history-modern-container {
+  max-width: 900px;
+  margin: 48px auto 0 auto;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.payment-history-modern-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.5px;
+  color: #111;
+}
+
+.payment-history-modern-table-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: none;
+  border-radius: 12px;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.payment-history-modern-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 2px solid #6c63ff;
+}
+
+.payment-history-modern-table th, .payment-history-modern-table td {
+  padding: 16px 18px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.payment-history-modern-table th {
+  background: #fff;
+  color: #222;
+  font-weight: 600;
+  border-bottom: 2px solid #6c63ff;
+}
+
+.payment-history-modern-table td {
+  background: #fff;
+  color: #222;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.payment-history-modern-table tr:last-child td {
+  border-bottom: none;
+}
+
+.payment-history-modern-table td:last-child {
+  text-align: center;
+}
+
+/* --- View Link Styles --- */
+.ph-modern-view-link {
+  color: #6c63ff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.18s;
+}
+
+.ph-modern-view-link:hover, .ph-modern-view-link:focus {
+  color: #4b61b8;
+  text-decoration: underline;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+  .payment-history-modern-container {
+    padding: 0 4vw;
+  }
+  .payment-history-modern-table th, .payment-history-modern-table td {
+    padding: 12px 8px;
+    font-size: 0.97rem;
+  }
+} 

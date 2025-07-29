@@ -1,180 +1,193 @@
-<div class="health-record-modern-container hr-animate-container">
-  <h2 class="hr-title">My Health Record</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Record - Dental Clinic</title>
+    <link rel="stylesheet" href="/css/patient/healthRecord.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="health-record-modern-container hr-animate-container">
+        <h2 class="hr-title">My Health Record</h2>
 
-  <!-- Timeline -->
-  <div class="hr-section hr-animate-section">
-    <h3 class="hr-section-title">Timeline</h3>
-    <ul class="hr-timeline-vertical">
-      <li class="hr-timeline-event">
-        <span class="hr-timeline-icon"><i class="fa-regular fa-calendar"></i></span>
-        <div class="hr-timeline-content">
-          <div class="hr-timeline-title">Annual Checkup</div>
-          <div class="hr-timeline-date">January 15, 2024</div>
+        <!-- Timeline -->
+        <div class="hr-section hr-animate-section">
+            <h3 class="hr-section-title">Timeline</h3>
+            <ul class="hr-timeline-vertical">
+                <li class="hr-timeline-event">
+                    <span class="hr-timeline-icon"><i class="fa-regular fa-calendar"></i></span>
+                    <div class="hr-timeline-content">
+                        <div class="hr-timeline-title">Annual Checkup</div>
+                        <div class="hr-timeline-date">January 15, 2024</div>
+                    </div>
+                </li>
+                <li class="hr-timeline-event">
+                    <span class="hr-timeline-icon"><i class="fa-solid fa-tooth"></i></span>
+                    <div class="hr-timeline-content">
+                        <div class="hr-timeline-title">Dental Cleaning</div>
+                        <div class="hr-timeline-date">March 20, 2024</div>
+                    </div>
+                </li>
+                <li class="hr-timeline-event">
+                    <span class="hr-timeline-icon"><i class="fa-solid fa-allergies"></i></span>
+                    <div class="hr-timeline-content">
+                        <div class="hr-timeline-title">Allergy Test</div>
+                        <div class="hr-timeline-date">May 10, 2024</div>
+                    </div>
+                </li>
+                <li class="hr-timeline-event">
+                    <span class="hr-timeline-icon"><i class="fa-solid fa-syringe"></i></span>
+                    <div class="hr-timeline-content">
+                        <div class="hr-timeline-title">Flu Shot</div>
+                        <div class="hr-timeline-date">October 5, 2023</div>
+                    </div>
+                </li>
+                <li class="hr-timeline-event">
+                    <span class="hr-timeline-icon"><i class="fa-solid fa-dumbbell"></i></span>
+                    <div class="hr-timeline-content">
+                        <div class="hr-timeline-title">Physical Therapy</div>
+                        <div class="hr-timeline-date">November 12, 2023</div>
+                    </div>
+                </li>
+            </ul>
         </div>
-      </li>
-      <li class="hr-timeline-event">
-        <span class="hr-timeline-icon"><i class="fa-solid fa-tooth"></i></span>
-        <div class="hr-timeline-content">
-          <div class="hr-timeline-title">Dental Cleaning</div>
-          <div class="hr-timeline-date">March 20, 2024</div>
-        </div>
-      </li>
-      <li class="hr-timeline-event">
-        <span class="hr-timeline-icon"><i class="fa-solid fa-allergies"></i></span>
-        <div class="hr-timeline-content">
-          <div class="hr-timeline-title">Allergy Test</div>
-          <div class="hr-timeline-date">May 10, 2024</div>
-        </div>
-      </li>
-      <li class="hr-timeline-event">
-        <span class="hr-timeline-icon"><i class="fa-solid fa-syringe"></i></span>
-        <div class="hr-timeline-content">
-          <div class="hr-timeline-title">Flu Shot</div>
-          <div class="hr-timeline-date">October 5, 2023</div>
-        </div>
-      </li>
-      <li class="hr-timeline-event">
-        <span class="hr-timeline-icon"><i class="fa-solid fa-dumbbell"></i></span>
-        <div class="hr-timeline-content">
-          <div class="hr-timeline-title">Physical Therapy</div>
-          <div class="hr-timeline-date">November 12, 2023</div>
-        </div>
-      </li>
-    </ul>
-  </div>
 
-  <!-- Health Metrics -->
-  <div class="hr-section hr-animate-section">
-    <h3 class="hr-section-title">Health Metrics</h3>
-    <div class="hr-metrics-cards">
-      <div class="hr-metric-card">
-        <div class="hr-metric-title">Blood Pressure</div>
-        <div class="hr-metric-value">120/80 mmHg</div>
-        <div class="hr-metric-sub">Last 12 Months <span class="hr-metric-up">+2%</span></div>
-        <canvas id="bpChart" width="320" height="80" class="hr-metric-chart"></canvas>
-        <div class="hr-metric-xaxis">Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</div>
-      </div>
-      <div class="hr-metric-card">
-        <div class="hr-metric-title">Cholesterol Level</div>
-        <div class="hr-metric-value">200 mg/dL</div>
-        <div class="hr-metric-sub">Last 12 Months <span class="hr-metric-down">-5%</span></div>
-        <canvas id="cholChart" width="320" height="80" class="hr-metric-chart"></canvas>
-        <div class="hr-metric-xaxis">Jan Feb Mar Apr May Jun Jul Aug Sep</div>
-      </div>
+        <!-- Health Metrics -->
+        <div class="hr-section hr-animate-section">
+            <h3 class="hr-section-title">Health Metrics</h3>
+            <div class="hr-metrics-cards">
+                <div class="hr-metric-card">
+                    <div class="hr-metric-title">Blood Pressure</div>
+                    <div class="hr-metric-value">120/80 mmHg</div>
+                    <div class="hr-metric-sub">Last 12 Months <span class="hr-metric-up">+2%</span></div>
+                    <canvas id="bpChart" width="320" height="80" class="hr-metric-chart"></canvas>
+                    <div class="hr-metric-xaxis">Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec</div>
+                </div>
+                <div class="hr-metric-card">
+                    <div class="hr-metric-title">Cholesterol Level</div>
+                    <div class="hr-metric-value">200 mg/dL</div>
+                    <div class="hr-metric-sub">Last 12 Months <span class="hr-metric-down">-5%</span></div>
+                    <canvas id="cholChart" width="320" height="80" class="hr-metric-chart"></canvas>
+                    <div class="hr-metric-xaxis">Jan Feb Mar Apr May Jun Jul Aug Sep</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical History -->
+        <div class="hr-section hr-animate-section">
+            <h3 class="hr-section-title">Medical History</h3>
+            <div class="hr-history-grid">
+                <div>
+                    <div class="hr-history-label">Chronic Illnesses</div>
+                    <div class="hr-history-value">None</div>
+                </div>
+                <div>
+                    <div class="hr-history-label">Allergies</div>
+                    <div class="hr-history-value">Pollen, Dust</div>
+                </div>
+            </div>
+            <div class="hr-history-grid">
+                <div>
+                    <div class="hr-history-label">Medications</div>
+                    <div class="hr-history-value">Ibuprofen, Cetirizine</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Procedures & Treatments -->
+        <div class="hr-section hr-animate-section">
+            <h3 class="hr-section-title">Procedures & Treatments</h3>
+            <div class="hr-history-grid">
+                <div>
+                    <div class="hr-history-label">Past Treatments</div>
+                    <div class="hr-history-value">Physical Therapy (2023), Dental Filling (2022)</div>
+                </div>
+                <div>
+                    <div class="hr-history-label">X-rays</div>
+                    <div class="hr-history-value">Chest X-ray (2023), Dental X-ray (2022)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emergency Contact -->
+        <div class="hr-section hr-animate-section">
+            <h3 class="hr-section-title">Emergency Contact</h3>
+            <form class="hr-emergency-form">
+                <div class="hr-form-row">
+                    <label for="emergencyName">Contact Name</label>
+                    <input type="text" id="emergencyName" name="emergencyName" placeholder="Enter name">
+                </div>
+                <div class="hr-form-row">
+                    <label for="emergencyRelation">Relationship</label>
+                    <input type="text" id="emergencyRelation" name="emergencyRelation" placeholder="Enter relationship">
+                </div>
+                <div class="hr-form-row">
+                    <label for="emergencyPhone">Phone Number</label>
+                    <input type="text" id="emergencyPhone" name="emergencyPhone" placeholder="Enter phone number">
+                </div>
+                <button type="submit" class="hr-update-btn">Update Emergency Contact</button>
+            </form>
+        </div>
     </div>
-  </div>
-
-  <!-- Medical History -->
-  <div class="hr-section hr-animate-section">
-    <h3 class="hr-section-title">Medical History</h3>
-    <div class="hr-history-grid">
-      <div>
-        <div class="hr-history-label">Chronic Illnesses</div>
-        <div class="hr-history-value">None</div>
-      </div>
-      <div>
-        <div class="hr-history-label">Allergies</div>
-        <div class="hr-history-value">Pollen, Dust</div>
-      </div>
-    </div>
-    <div class="hr-history-grid">
-      <div>
-        <div class="hr-history-label">Medications</div>
-        <div class="hr-history-value">Ibuprofen, Cetirizine</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Procedures & Treatments -->
-  <div class="hr-section hr-animate-section">
-    <h3 class="hr-section-title">Procedures & Treatments</h3>
-    <div class="hr-history-grid">
-      <div>
-        <div class="hr-history-label">Past Treatments</div>
-        <div class="hr-history-value">Physical Therapy (2023), Dental Filling (2022)</div>
-      </div>
-      <div>
-        <div class="hr-history-label">X-rays</div>
-        <div class="hr-history-value">Chest X-ray (2023), Dental X-ray (2022)</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Emergency Contact -->
-  <div class="hr-section hr-animate-section">
-    <h3 class="hr-section-title">Emergency Contact</h3>
-    <form class="hr-emergency-form">
-      <div class="hr-form-row">
-        <label for="emergencyName">Contact Name</label>
-        <input type="text" id="emergencyName" name="emergencyName" placeholder="Enter name">
-      </div>
-      <div class="hr-form-row">
-        <label for="emergencyRelation">Relationship</label>
-        <input type="text" id="emergencyRelation" name="emergencyRelation" placeholder="Enter relationship">
-      </div>
-      <div class="hr-form-row">
-        <label for="emergencyPhone">Phone Number</label>
-        <input type="text" id="emergencyPhone" name="emergencyPhone" placeholder="Enter phone number">
-      </div>
-      <button type="submit" class="hr-update-btn">Update Emergency Contact</button>
-    </form>
-  </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-// Blood Pressure Line Chart
-const bpCtx = document.getElementById('bpChart').getContext('2d');
-new Chart(bpCtx, {
-  type: 'line',
-  data: {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    datasets: [{
-      label: 'Blood Pressure',
-      data: [120, 122, 121, 123, 124, 125, 126, 124, 123, 125, 127, 128],
-      borderColor: '#4b61b8',
-      backgroundColor: 'rgba(75,97,184,0.08)',
-      tension: 0.4,
-      pointRadius: 0,
-      borderWidth: 2,
-      fill: true,
-    }]
-  },
-  options: {
-    plugins: { legend: { display: false } },
-    scales: {
-      x: { display: false },
-      y: { display: false, min: 110, max: 130 }
-    },
-    elements: { line: { borderJoinStyle: 'round' } },
-    responsive: false,
-    maintainAspectRatio: false
-  }
-});
-// Cholesterol Bar Chart
-const cholCtx = document.getElementById('cholChart').getContext('2d');
-new Chart(cholCtx, {
-  type: 'bar',
-  data: {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
-    datasets: [{
-      label: 'Cholesterol',
-      data: [180, 185, 190, 200, 210, 205, 200, 195, 200],
-      backgroundColor: function(context) {
-        // Highlight May as the highest bar
-        return context.dataIndex === 4 ? '#4b61b8' : '#bfc7e6';
-      },
-      borderRadius: 4,
-      borderSkipped: false
-    }]
-  },
-  options: {
-    plugins: { legend: { display: false } },
-    scales: {
-      x: { display: false },
-      y: { display: false, min: 170, max: 220 }
-    },
-    responsive: false,
-    maintainAspectRatio: false
-  }
-});
-</script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    // Blood Pressure Line Chart
+    const bpCtx = document.getElementById('bpChart').getContext('2d');
+    new Chart(bpCtx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'Blood Pressure',
+                data: [120, 122, 121, 123, 124, 125, 126, 124, 123, 125, 127, 128],
+                borderColor: '#4b61b8',
+                backgroundColor: 'rgba(75,97,184,0.08)',
+                tension: 0.4,
+                pointRadius: 0,
+                borderWidth: 2,
+                fill: true,
+            }]
+        },
+        options: {
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { display: false },
+                y: { display: false, min: 110, max: 130 }
+            },
+            elements: { line: { borderJoinStyle: 'round' } },
+            responsive: false,
+            maintainAspectRatio: false
+        }
+    });
+    // Cholesterol Bar Chart
+    const cholCtx = document.getElementById('cholChart').getContext('2d');
+    new Chart(cholCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+            datasets: [{
+                label: 'Cholesterol',
+                data: [180, 185, 190, 200, 210, 205, 200, 195, 200],
+                backgroundColor: function(context) {
+                    // Highlight May as the highest bar
+                    return context.dataIndex === 4 ? '#4b61b8' : '#bfc7e6';
+                },
+                borderRadius: 4,
+                borderSkipped: false
+            }]
+        },
+        options: {
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { display: false },
+                y: { display: false, min: 170, max: 220 }
+            },
+            responsive: false,
+            maintainAspectRatio: false
+        }
+    });
+    </script>
+</body>
+</html> 
