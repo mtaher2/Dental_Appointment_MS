@@ -4652,6 +4652,15 @@ ANIMATIONS FOR AUTH PAGES IMAGES
     border-radius: 8px;
     font-size: 14px;
     transition: border-color 0.2s;
+    background: #ffffff;
+    color: #374151;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    height: 44px;
+    line-height: 1.2;
+    vertical-align: top;
+    text-align: left;
 }
 
 .doctor-time-input:focus {
@@ -4660,16 +4669,48 @@ ANIMATIONS FOR AUTH PAGES IMAGES
     box-shadow: 0 0 0 3px rgba(51, 105, 156, 0.1);
 }
 
+.doctor-time-input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.5);
+    transition: filter 0.2s;
+    margin-left: 8px;
+}
+
+.doctor-time-input::-webkit-calendar-picker-indicator:hover {
+    filter: invert(0.3);
+}
+
+.doctor-time-input::-webkit-datetime-edit {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.doctor-time-input::-webkit-datetime-edit-fields-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.doctor-time-input::-webkit-datetime-edit-hour-field,
+.doctor-time-input::-webkit-datetime-edit-minute-field {
+    padding: 0 2px;
+    text-align: center;
+    min-width: 20px;
+}
+
+.doctor-time-input::-webkit-datetime-edit-text {
+    padding: 0 4px;
+}
+
 /* Privilege Control */
 .doctor-privilege-info {
-    background: #f0f9ff;
-    border: 1px solid #bae6fd;
-    border-radius: 8px;
-    padding: 16px;
+    padding: 0;
 }
 
 .doctor-privilege-text {
-    color: #0369a1;
+    color: #6b7280;
     font-size: 14px;
     margin: 0;
     line-height: 1.4;
@@ -4773,4 +4814,64 @@ ANIMATIONS FOR AUTH PAGES IMAGES
     .doctor-table td {
         padding: 8px 12px;
     }
+}
+
+/* Visibility Toggle */
+.doctor-visibility-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.doctor-visibility-content {
+    flex: 1;
+}
+
+.doctor-toggle-container {
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.doctor-toggle-input {
+    display: none;
+}
+
+.doctor-toggle-label {
+    display: block;
+    width: 44px;
+    height: 24px;
+    background: #e5e7eb;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.doctor-toggle-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.doctor-toggle-input:checked + .doctor-toggle-label {
+    background: #33699C;
+}
+
+.doctor-toggle-input:checked + .doctor-toggle-label .doctor-toggle-slider {
+    transform: translateX(20px);
+}
+
+.doctor-toggle-label:hover {
+    background: #d1d5db;
+}
+
+.doctor-toggle-input:checked + .doctor-toggle-label:hover {
+    background: #2a5a8a;
 }
