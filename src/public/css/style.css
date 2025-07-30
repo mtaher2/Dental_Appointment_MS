@@ -2138,6 +2138,12 @@ html, body {
   }
 }
 
+@media (min-width: 992px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
 /* Add spacing below header for main content */
 main.container.mt-4 {
   margin-top: 48px !important;
