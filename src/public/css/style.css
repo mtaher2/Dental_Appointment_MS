@@ -4074,11 +4074,13 @@ ANIMATIONS FOR AUTH PAGES IMAGES
     border-radius: 12px;
     padding: 32px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .doctor-profile-photo-section {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 32px;
 }
 
@@ -4087,16 +4089,18 @@ ANIMATIONS FOR AUTH PAGES IMAGES
 }
 
 .doctor-profile-image {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     border-radius: 12px;
     object-fit: cover;
-    background: #fcd4c9;
+    background: #f3f4f6;
+    display: block;
+    border: none;
 }
 
 .doctor-profile-form {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
 }
 
 .doctor-form-group {
@@ -4121,6 +4125,7 @@ ANIMATIONS FOR AUTH PAGES IMAGES
     font-size: 14px;
     transition: border-color 0.2s;
     box-sizing: border-box;
+    background: #ffffff;
 }
 
 .doctor-form-input:focus,
@@ -4132,27 +4137,28 @@ ANIMATIONS FOR AUTH PAGES IMAGES
 
 .doctor-form-textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 100px;
 }
 
 .doctor-upload-btn {
     padding: 12px 24px;
-    background: #f3f4f6;
+    background: #f8f9fa;
     border: 1px solid #d1d5db;
     border-radius: 8px;
     color: #374151;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s;
+    font-size: 14px;
 }
 
 .doctor-upload-btn:hover {
-    background: #e5e7eb;
+    background: #e9ecef;
 }
 
 .doctor-form-actions {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 32px;
 }
 
@@ -4165,6 +4171,7 @@ ANIMATIONS FOR AUTH PAGES IMAGES
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
+    font-size: 14px;
 }
 
 .doctor-update-btn:hover {
