@@ -4,6 +4,908 @@
   Merged styles from checkemail.css, forgot-password.css, login.css, resetpassword.css, and success.css into this file.
 */
 
+/* ===== DOCTOR CLINICAL DOCUMENTATION PAGES ===== */
+
+/* ===== HEALTHPLUS CLINICAL NOTES STYLES ===== */
+.healthplus-nav {
+    background: #ffffff;
+    padding: 16px 32px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.clinical-notes-container {
+    background: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin-top: 80px;
+}
+
+.healthplus-nav .nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.healthplus-nav .healthplus-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.healthplus-nav .healthplus-logo-icon {
+    width: 24px;
+    height: 24px;
+    background: #000000;
+    border-radius: 3px;
+}
+
+.healthplus-nav .healthplus-logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.healthplus-nav .nav-center {
+    display: flex;
+    gap: 40px;
+}
+
+.healthplus-nav .nav-link {
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.healthplus-nav .nav-link:hover {
+    color: #000000;
+}
+
+.healthplus-nav .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.healthplus-nav .notification-icon {
+    color: #6b7280;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.healthplus-nav .notification-icon:hover {
+    color: #000000;
+}
+
+.healthplus-nav .avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    display: block;
+    border: 2px solid #e5e7eb;
+}
+
+.clinical-notes-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+}
+
+.page-header {
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.patient-info {
+    font-size: 16px;
+    color: #6b7280;
+    margin: 0;
+    font-weight: 400;
+}
+
+.notes-form {
+    background: #ffffff;
+}
+
+.notes-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 16px 0;
+}
+
+.notes-textarea-container {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.notes-textarea {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #374151;
+    background: #ffffff;
+    resize: vertical;
+    outline: none;
+    min-height: 120px;
+}
+
+.notes-textarea:focus {
+    background: #ffffff;
+}
+
+.notes-textarea::placeholder {
+    color: #9ca3af;
+}
+
+.notes-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    margin-top: 40px;
+}
+
+.last-edited {
+    color: #9ca3af;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-edit {
+    padding: 12px 24px;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #374151;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-edit:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.btn-save {
+    padding: 12px 24px;
+    border: none;
+    background: #4A80B2;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-save:hover {
+    background: #3a6b96;
+}
+
+/* ===== MEDICONNECT PATIENT FILES STYLES ===== */
+.mediconnect-nav {
+    background: #ffffff;
+    padding: 16px 32px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.patient-files-container {
+    background: #f8f9fa;
+    font-family: 'Inter', sans-serif;
+    margin-top: 80px;
+}
+
+.mediconnect-nav .nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.mediconnect-nav .mediconnect-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mediconnect-nav .mediconnect-logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.mediconnect-nav .nav-center {
+    display: flex;
+    gap: 40px;
+}
+
+.mediconnect-nav .nav-link {
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.mediconnect-nav .nav-link:hover {
+    color: #000000;
+}
+
+.mediconnect-nav .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mediconnect-nav .notification-icon {
+    color: #6b7280;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.mediconnect-nav .notification-icon:hover {
+    color: #000000;
+}
+
+.mediconnect-nav .avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    display: block;
+    border: 2px solid #e5e7eb;
+}
+
+.mediconnect-nav .mediconnect-logo-icon {
+    width: 32px;
+    height: 32px;
+    background: #f59e0b;
+    border-radius: 6px;
+    position: relative;
+}
+
+.mediconnect-nav .mediconnect-logo-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 2px;
+}
+
+.patient-files-main {
+    padding: 40px 24px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.files-section {
+    flex: 1;
+}
+
+.page-subtitle {
+    font-size: 16px;
+    color: #6b7280;
+    margin: 8px 0 32px 0;
+}
+
+.upload-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.upload-area {
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9fafb;
+}
+
+.upload-icon {
+    color: #6b7280;
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.upload-text {
+    color: #374151;
+    font-size: 16px;
+    margin: 0 0 4px 0;
+}
+
+.upload-browse {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0 0 20px 0;
+}
+
+.upload-btn {
+    background: #415FA5;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.upload-btn:hover {
+    background: #374c84;
+}
+
+.uploaded-files-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.files-table-container {
+    overflow-x: auto;
+}
+
+.files-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.files-table th {
+    background: #f9fafb;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.files-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f3f4f6;
+    color: #374151;
+}
+
+.view-link {
+    color: #415FA5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.view-link:hover {
+    color: #2563eb;
+}
+
+.patient-info-section {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.patient-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.patient-avatar {
+    margin-bottom: 16px;
+}
+
+.patient-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+}
+
+.patient-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.patient-id {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0;
+}
+
+.appointment-details {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.details-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 16px 0;
+}
+
+.details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-item.detail-reason {
+    align-items: flex-start;
+}
+
+.detail-label {
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.detail-value {
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===== MEDICARE TREATMENT PLAN STYLES ===== */
+.medicare-nav {
+    background: #ffffff;
+    padding: 16px 32px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.treatment-plan-container {
+    background: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin-top: 80px;
+}
+
+.treatment-plan-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+}
+
+.medicare-nav .nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.medicare-nav .medicare-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.medicare-nav .medicare-logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.medicare-nav .nav-center {
+    display: flex;
+    gap: 40px;
+}
+
+.medicare-nav .nav-link {
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.medicare-nav .nav-link:hover {
+    color: #000000;
+}
+
+.medicare-nav .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.medicare-nav .notification-icon {
+    color: #6b7280;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.medicare-nav .notification-icon:hover {
+    color: #000000;
+}
+
+.medicare-nav .avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    display: block;
+    border: 2px solid #e5e7eb;
+}
+
+.medicare-nav .medicare-logo-icon {
+    width: 32px;
+    height: 32px;
+    background: #10b981;
+    border-radius: 6px;
+    position: relative;
+}
+
+.medicare-nav .medicare-logo-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.medicare-nav .medicare-logo-icon::after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #10b981;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+
+.tab-navigation {
+    display: flex;
+    gap: 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-btn {
+    padding: 16px 24px;
+    background: transparent;
+    border: none;
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.tab-btn.tab-active {
+    color: #1f2937;
+    border-bottom-color: #415FA5;
+    font-weight: 600;
+}
+
+.tab-btn:hover {
+    color: #1f2937;
+}
+
+
+
+.treatment-phases {
+    margin-bottom: 40px;
+}
+
+.phase-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.phase-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.phase-icon {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #415FA5;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.phase-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.phase-duration {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0;
+}
+
+.tooth-tagging-section {
+    margin-bottom: 40px;
+}
+
+.subsection-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 16px 0;
+}
+
+.tooth-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.teeth-row {
+    display: flex;
+    gap: 4px;
+}
+
+.tooth {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tooth:hover {
+    border-color: #415FA5;
+    background: #eff6ff;
+}
+
+.tooth.selected {
+    background: #415FA5;
+    color: #ffffff;
+    border-color: #415FA5;
+}
+
+.progress-markers {
+    margin-bottom: 40px;
+}
+
+.progress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.progress-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #415FA5;
+    border-radius: 4px;
+    cursor: pointer;
+    accent-color: #415FA5;
+    appearance: none;
+    background: #ffffff;
+    position: relative;
+}
+
+.progress-checkbox:checked {
+    background: #415FA5;
+    border-color: #415FA5;
+}
+
+.progress-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.progress-label {
+    color: #374151;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.treatment-footer {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+}
+
+.update-btn {
+    background: #415FA5;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+    min-width: 200px;
+}
+
+.update-btn:hover {
+    background: #374c84;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .healthplus-nav,
+    .mediconnect-nav,
+    .medicare-nav {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .healthplus-nav .nav-center,
+    .mediconnect-nav .nav-center,
+    .medicare-nav .nav-center {
+        order: 3;
+        gap: 16px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .patient-info-section {
+        width: 100%;
+    }
+
+    .clinical-notes-content,
+    .treatment-plan-content {
+        padding: 20px 16px;
+    }
+    
+    .healthplus-nav,
+    .mediconnect-nav,
+    .medicare-nav {
+        position: relative;
+        margin-top: 0;
+    }
+    
+    .clinical-notes-container,
+    .patient-files-container,
+    .treatment-plan-container {
+        margin-top: 0;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .notes-footer {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .action-buttons {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .btn-edit,
+    .btn-save,
+    .btn-secondary,
+    .btn-primary {
+        flex: 1;
+    }
+
+    .tooth-grid {
+        transform: scale(0.8);
+    }
+
+    .tab-navigation {
+        flex-direction: column;
+    }
+}
+
 /* ===== checkemail.css ===== */
 body {
     font-family: 'Inter', sans-serif;
@@ -206,7 +1108,7 @@ body {
 }
 
 .exact-login-btn:hover {
-    background: #2563eb;
+    background: #374c84;
     box-shadow: 0 4px 16px rgba(80, 80, 160, 0.10);
 }
 
@@ -655,7 +1557,7 @@ body {
     letter-spacing: 0.2px;
 }
 .login-reset-btn:hover {
-    background: #2563eb;
+    background: #374c84;
     box-shadow: 0 4px 16px rgba(80, 80, 160, 0.10);
 }
 
@@ -874,7 +1776,7 @@ body {
     letter-spacing: 0.2px;
 }
 .reset-reset-btn:hover {
-    background: #2563eb;
+    background: #374c84;
     box-shadow: 0 4px 16px rgba(80, 80, 160, 0.10);
 }
 
@@ -1080,7 +1982,7 @@ body {
     letter-spacing: 0.2px;
 }
 .success-reset-btn:hover {
-    background: #2563eb;
+    background: #374c84;
     box-shadow: 0 4px 16px rgba(80, 80, 160, 0.10);
 }
 
@@ -1375,7 +2277,7 @@ body {
 }
 
 .login-btn:hover, .exact-login-btn:hover {
-    background: #2563eb;
+    background: #374c84;
     box-shadow: 0 4px 16px rgba(80, 80, 160, 0.10);
 }
 

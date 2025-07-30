@@ -1,0 +1,121 @@
+<!-- Navigation Header -->
+<nav class="mediconnect-nav">
+    <div class="nav-left">
+        <div class="mediconnect-logo-section">
+            <div class="mediconnect-logo-icon"></div>
+            <span class="mediconnect-logo-text">MediConnect</span>
+        </div>
+    </div>
+    <div class="nav-center">
+        <a href="#" class="nav-link">Dashboard</a>
+        <a href="#" class="nav-link">Patients</a>
+        <a href="#" class="nav-link">Appointments</a>
+        <a href="#" class="nav-link">Messages</a>
+    </div>
+    <div class="nav-right">
+        <div class="notification-icon">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <div class="user-avatar">
+            <img src="/images/doctor-profile.svg" alt="Doctor" class="avatar-img">
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="patient-files-container">
+    <main class="patient-files-main">
+            <div class="content-wrapper">
+                <!-- Left Section - Upload and Files -->
+                <div class="files-section">
+                    <div class="page-header">
+                        <h1 class="page-title">Patient Files</h1>
+                        <p class="page-subtitle">Manage and annotate patient files</p>
+                    </div>
+
+                    <!-- Upload Section -->
+                    <div class="upload-section">
+                        <h3 class="section-title">Upload Files</h3>
+                        <div class="upload-area">
+                            <div class="upload-content">
+                                <div class="upload-icon">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                </div>
+                                <p class="upload-text">Drag and drop files here or</p>
+                                <p class="upload-browse">Browse files</p>
+                                <button class="upload-btn">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Uploaded Files Section -->
+                    <div class="uploaded-files-section">
+                        <h3 class="section-title">Uploaded Files</h3>
+                        <div class="files-table-container">
+                            <table class="files-table">
+                                <thead>
+                                    <tr>
+                                        <th>File Name</th>
+                                        <th>Type</th>
+                                        <th>Uploaded Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>X-Ray - Chest</td>
+                                        <td>Image</td>
+                                        <td>2024-07-26</td>
+                                        <td><a href="#" class="view-link">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MRI - Brain</td>
+                                        <td>Image</td>
+                                        <td>2024-07-25</td>
+                                        <td><a href="#" class="view-link">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ECG Report</td>
+                                        <td>PDF</td>
+                                        <td>2024-07-24</td>
+                                        <td><a href="#" class="view-link">View</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section - Patient Info -->
+                <div class="patient-info-section">
+                    <div class="patient-card">
+                        <div class="patient-avatar">
+                            <img src="/images/sophia-clark.svg" alt="Sophia Clark" class="patient-photo">
+                        </div>
+                        <div class="patient-details">
+                            <h2 class="patient-name">Sophia Clark</h2>
+                            <p class="patient-id">Patient ID: 12345</p>
+                        </div>
+                    </div>
+
+                    <div class="appointment-details">
+                        <h3 class="details-title">Appointment Details</h3>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Date</span>
+                                <span class="detail-value">2024-07-27</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Time</span>
+                                <span class="detail-value">10:00 AM</span>
+                            </div>
+                            <div class="detail-item detail-reason">
+                                <span class="detail-label">Reason</span>
+                                <span class="detail-value">Follow-up</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+</div>

@@ -15,6 +15,7 @@ const errorHandler = require('./src/middleware/errorHandler');
 // Import routes
 const authRoutes = require('./src/routes/auth/auth');
 const patientRoutes = require('./src/routes/patient/patient');
+const doctorRoutes = require('./src/routes/doctor/doctor');
 const adminViewRoutes = require('./src/routes/admin/admin');
 const adminApiRoutes = require('./src/routes/superAdmin/adminRoutes');
 
@@ -74,6 +75,9 @@ app.use('/auth', authRoutes);
 
 // Patient routes (includes both view and API routes)
 app.use('/patient', patientRoutes);
+
+// Doctor routes (includes both view and API routes)
+app.use('/doctor', doctorRoutes);
 
 // Admin view routes
 app.use('/admin', adminViewRoutes);
