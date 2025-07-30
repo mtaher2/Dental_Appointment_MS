@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Availability Management - HealthPlus</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="doctor-header">
+        <div class="doctor-header-content">
+            <div class="doctor-header-left">
+                <div class="doctor-logo">
+                    <i class="fas fa-tooth"></i>
+                    <span>HealthPlus</span>
+                </div>
+            </div>
+            <nav class="doctor-nav">
+                <a href="/doctor/dashboard" class="nav-link">Dashboard</a>
+                <a href="/doctor/patients" class="nav-link">Patients</a>
+                <a href="/doctor/appointments" class="nav-link">Appointments</a>
+                <a href="/doctor/messages" class="nav-link">Messages</a>
+                <a href="/doctor/billing" class="nav-link">Billing</a>
+            </nav>
+            <div class="doctor-header-right">
+                <i class="fas fa-bell doctor-notification"></i>
+                <div class="doctor-profile">
+                    <img src="/images/avatar.png" alt="Doctor Profile" class="doctor-avatar" 
+                         onload="console.log('Avatar image loaded successfully')"
+                         onerror="console.log('Avatar image failed to load:', this.src); this.style.display='none';">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="doctor-main">
+        <div class="doctor-container">
+            <!-- Page Header -->
+            <div class="doctor-availability-header">
+                <h1 class="doctor-availability-title">Availability Management</h1>
+                <p class="doctor-availability-subtitle">Configure your work schedule, set daily hours, and manage breaks. Control visibility in patient-facing booking interfaces and internal selection lists.</p>
+            </div>
+
+            <!-- Availability Form -->
+            <form class="doctor-availability-form">
+                <!-- Schedule Visibility -->
+                <section class="doctor-availability-section">
+                    <h2 class="doctor-section-title">Schedule Visibility</h2>
+                    <div class="doctor-visibility-section">
+                        <div class="doctor-visibility-row">
+                            <div class="doctor-visibility-content">
+                                <h3 class="doctor-subsection-title">Show in Booking Interfaces</h3>
+                                <p class="doctor-subsection-description">Control whether your availability is visible to patients and in internal selection lists.</p>
+                            </div>
+                            <div class="doctor-toggle-container">
+                                <input type="checkbox" id="booking-visibility" name="booking_visibility" class="doctor-toggle-input">
+                                <label for="booking-visibility" class="doctor-toggle-label">
+                                    <span class="doctor-toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Working Days -->
+                <section class="doctor-availability-section">
+                    <h2 class="doctor-section-title">Working Days</h2>
+                    <div class="doctor-working-days">
+                        <div class="doctor-day-checkbox">
+                            <input type="checkbox" id="monday" name="working_days" value="monday">
+                            <label for="monday" class="doctor-day-label">Monday</label>
+                        </div>
+                        <div class="doctor-day-checkbox">
+                            <input type="checkbox" id="tuesday" name="working_days" value="tuesday">
+                            <label for="tuesday" class="doctor-day-label">Tuesday</label>
+                        </div>
+                        <div class="doctor-day-checkbox">
+                            <input type="checkbox" id="wednesday" name="working_days" value="wednesday">
+                            <label for="wednesday" class="doctor-day-label">Wednesday</label>
+                        </div>
+                        <div class="doctor-day-checkbox">
+                            <input type="checkbox" id="thursday" name="working_days" value="thursday">
+                            <label for="thursday" class="doctor-day-label">Thursday</label>
+                        </div>
+                        <div class="doctor-day-checkbox">
+                            <input type="checkbox" id="friday" name="working_days" value="friday">
+                            <label for="friday" class="doctor-day-label">Friday</label>
+                        </div>
+                        <div class="doctor-day-checkbox">
+                            <input type="checkbox" id="saturday" name="working_days" value="saturday">
+                            <label for="saturday" class="doctor-day-label">Saturday</label>
+                        </div>
+                        <div class="doctor-day-checkbox">
+                            <input type="checkbox" id="sunday" name="working_days" value="sunday">
+                            <label for="sunday" class="doctor-day-label">Sunday</label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Daily Working Hours -->
+                <section class="doctor-availability-section">
+                    <h2 class="doctor-section-title">Daily Working Hours</h2>
+                    <div class="doctor-hours-row">
+                        <div class="doctor-time-group">
+                            <label for="start-time" class="doctor-time-label">Start Time</label>
+                            <input type="time" id="start-time" name="start_time" class="doctor-time-input">
+                        </div>
+                        <div class="doctor-time-group">
+                            <label for="end-time" class="doctor-time-label">End Time</label>
+                            <input type="time" id="end-time" name="end_time" class="doctor-time-input">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Breaks -->
+                <section class="doctor-availability-section">
+                    <h2 class="doctor-section-title">Breaks</h2>
+                    <div class="doctor-hours-row">
+                        <div class="doctor-time-group">
+                            <label for="break-start" class="doctor-time-label">Start Time</label>
+                            <input type="time" id="break-start" name="break_start" class="doctor-time-input">
+                        </div>
+                        <div class="doctor-time-group">
+                            <label for="break-end" class="doctor-time-label">End Time</label>
+                            <input type="time" id="break-end" name="break_end" class="doctor-time-input">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Privilege Control -->
+                <section class="doctor-availability-section">
+                    <h2 class="doctor-section-title">Privilege Control</h2>
+                    <div class="doctor-privilege-info">
+                        <p class="doctor-privilege-text">You have full management capabilities. Your availability is not restricted by admin-defined limits.</p>
+                    </div>
+                </section>
+
+                <!-- Save Button -->
+                <div class="doctor-form-actions">
+                    <button type="submit" class="doctor-save-btn">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html> 
