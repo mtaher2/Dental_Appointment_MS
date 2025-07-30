@@ -4875,3 +4875,354 @@ ANIMATIONS FOR AUTH PAGES IMAGES
 .doctor-toggle-input:checked + .doctor-toggle-label:hover {
     background: #2a5a8a;
 }
+
+/* Patient File Page - New Layout */
+.patient-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    padding: 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.patient-sidebar-header {
+    padding: 24px 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.patient-sidebar-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.patient-sidebar-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.patient-sidebar-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.patient-sidebar-nav {
+    padding: 16px 0;
+}
+
+.patient-sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #6b7280;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.patient-sidebar-link:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.patient-sidebar-link.active {
+    background: #e5e7eb;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.patient-sidebar-link i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.patient-main {
+    margin-left: 240px;
+    background: #f9fafb;
+    min-height: 100vh;
+    padding: 24px 32px;
+}
+
+.patient-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.patient-header {
+    margin-bottom: 24px;
+}
+
+.patient-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 8px 0;
+}
+
+.patient-subtitle {
+    color: #6b7280;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.patient-info-card {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    gap: 20px;
+}
+
+.patient-avatar {
+    flex-shrink: 0;
+}
+
+.patient-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.patient-details {
+    flex: 1;
+}
+
+.patient-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.patient-id,
+.patient-visit {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+/* Tabs */
+.patient-tabs {
+    display: flex;
+    background: #ffffff;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #e5e7eb;
+    overflow-x: auto;
+}
+
+.patient-tab-btn {
+    padding: 16px 24px;
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+}
+
+.patient-tab-btn:hover {
+    color: #374151;
+    background: #f9fafb;
+}
+
+.patient-tab-btn.active {
+    color: #1f2937;
+    border-bottom-color: #33699C;
+    background: #ffffff;
+    font-weight: 600;
+}
+
+/* Tab Content */
+.patient-content {
+    background: #ffffff;
+    border-radius: 0 0 8px 8px;
+    padding: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    min-height: 400px;
+}
+
+.patient-section {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.patient-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.patient-section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 24px 0;
+}
+
+/* History Lists - Two Column Layout */
+.patient-history-grid,
+.patient-dental-list,
+.patient-allergies-list,
+.patient-medications-list,
+.patient-vitals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.patient-history-row,
+.patient-dental-row,
+.patient-allergy-row,
+.patient-medication-row,
+.patient-vital-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 16px 0;
+    border-bottom: 1px solid #f3f4f6;
+    align-items: center;
+}
+
+.patient-history-row:last-child,
+.patient-dental-row:last-child,
+.patient-allergy-row:last-child,
+.patient-medication-row:last-child,
+.patient-vital-row:last-child {
+    border-bottom: none;
+}
+
+.patient-history-label,
+.patient-dental-procedure,
+.patient-allergy-label,
+.patient-medication-label,
+.patient-vital-label {
+    font-size: 14px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.patient-history-value,
+.patient-dental-date,
+.patient-dental-status,
+.patient-allergy-value,
+.patient-medication-value,
+.patient-vital-value {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: right;
+}
+
+/* Appointments List */
+.patient-appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.patient-appointment-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.patient-appointment-item:last-child {
+    border-bottom: none;
+}
+
+.patient-appointment-icon {
+    width: 20px;
+    height: 20px;
+    color: #33699C;
+    flex-shrink: 0;
+}
+
+.patient-appointment-details {
+    flex: 1;
+}
+
+.patient-appointment-type {
+    font-size: 14px;
+    color: #374151;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.patient-appointment-date {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .patient-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .patient-sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .patient-main {
+        margin-left: 0;
+    }
+    
+    .patient-history-row,
+    .patient-dental-row,
+    .patient-allergy-row,
+    .patient-medication-row,
+    .patient-vital-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .patient-history-value,
+    .patient-dental-date,
+    .patient-dental-status,
+    .patient-allergy-value,
+    .patient-medication-value,
+    .patient-vital-value {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .patient-main {
+        padding: 16px;
+    }
+    
+    .patient-content {
+        padding: 24px 16px;
+    }
+    
+    .patient-tabs {
+        overflow-x: scroll;
+    }
+    
+    .patient-tab-btn {
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+}

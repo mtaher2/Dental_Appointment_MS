@@ -10,31 +10,31 @@
 </head>
 <body>
     <!-- Sidebar -->
-    <aside class="doctor-sidebar">
-        <div class="doctor-sidebar-header">
-            <div class="doctor-sidebar-profile">
-                <img src="/images/doctor-avatar.jpg" alt="Dr. Emily Carter" class="doctor-sidebar-avatar">
-                <span class="doctor-sidebar-name">Dr. Emily Carter</span>
+    <aside class="patient-sidebar">
+        <div class="patient-sidebar-header">
+            <div class="patient-sidebar-profile">
+                <img src="/images/patient-sophia.jpg" alt="Dr. Emily Carter" class="patient-sidebar-avatar">
+                <span class="patient-sidebar-name">Dr. Emily Carter</span>
             </div>
         </div>
-        <nav class="doctor-sidebar-nav">
-            <a href="/doctor/dashboard" class="doctor-sidebar-link">
+        <nav class="patient-sidebar-nav">
+            <a href="/doctor/dashboard" class="patient-sidebar-link">
                 <i class="fas fa-home"></i>
                 <span>Dashboard</span>
             </a>
-            <a href="/doctor/patients" class="doctor-sidebar-link active">
+            <a href="/doctor/patients" class="patient-sidebar-link active">
                 <i class="fas fa-users"></i>
                 <span>Patients</span>
             </a>
-            <a href="/doctor/calendar" class="doctor-sidebar-link">
+            <a href="/doctor/calendar" class="patient-sidebar-link">
                 <i class="fas fa-calendar"></i>
                 <span>Calendar</span>
             </a>
-            <a href="/doctor/messages" class="doctor-sidebar-link">
+            <a href="/doctor/messages" class="patient-sidebar-link">
                 <i class="fas fa-envelope"></i>
                 <span>Messages</span>
             </a>
-            <a href="/doctor/billing" class="doctor-sidebar-link">
+            <a href="/doctor/billing" class="patient-sidebar-link">
                 <i class="fas fa-dollar-sign"></i>
                 <span>Billing</span>
             </a>
@@ -42,165 +42,182 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="doctor-patient-main">
-        <div class="doctor-patient-container">
+    <main class="patient-main">
+        <div class="patient-container">
             <!-- Page Header -->
-            <div class="doctor-patient-header">
-                <h1 class="doctor-patient-title">Patient File</h1>
-                <p class="doctor-patient-subtitle">Review and manage patient clinical history</p>
+            <div class="patient-header">
+                <h1 class="patient-title">Patient File</h1>
+                <p class="patient-subtitle">Review and manage patient clinical history</p>
             </div>
 
             <!-- Patient Info Card -->
-            <div class="doctor-patient-info-card">
-                <div class="doctor-patient-avatar">
-                    <img src="/images/patient-sophia.jpg" alt="Sophia Bennett" class="doctor-patient-photo">
+            <div class="patient-info-card">
+                <div class="patient-avatar">
+                    <img src="/images/patient-sophia.jpg" alt="Sophia Bennett" class="patient-photo">
                 </div>
-                <div class="doctor-patient-details">
-                    <h2 class="doctor-patient-name">Sophia Bennett</h2>
-                    <p class="doctor-patient-id">Patient ID: 123456</p>
-                    <p class="doctor-patient-visit">Last visit: 2 weeks ago</p>
+                <div class="patient-details">
+                    <h2 class="patient-name">Sophia Bennett</h2>
+                    <p class="patient-id">Patient ID: 123456</p>
+                    <p class="patient-visit">Last visit: 2 weeks ago</p>
                 </div>
             </div>
 
             <!-- Tab Navigation -->
-            <div class="doctor-patient-tabs">
-                <button class="doctor-tab-btn active" data-tab="medical-history">Medical History</button>
-                <button class="doctor-tab-btn" data-tab="dental-history">Dental History</button>
-                <button class="doctor-tab-btn" data-tab="allergies">Allergies</button>
-                <button class="doctor-tab-btn" data-tab="medications">Medications</button>
-                <button class="doctor-tab-btn" data-tab="vital-signs">Vital Signs</button>
-                <button class="doctor-tab-btn" data-tab="notes-appointments">Notes & Appointments</button>
+            <div class="patient-tabs">
+                <button class="patient-tab-btn active" data-tab="medical-history">Medical History</button>
+                <button class="patient-tab-btn" data-tab="dental-history">Dental History</button>
+                <button class="patient-tab-btn" data-tab="allergies">Allergies</button>
+                <button class="patient-tab-btn" data-tab="medications">Medications</button>
+                <button class="patient-tab-btn" data-tab="vital-signs">Vital Signs</button>
+                <button class="patient-tab-btn" data-tab="notes-appointments">Notes & Appointments</button>
             </div>
 
-            <!-- Tab Content -->
-            <div class="doctor-patient-content">
-                <!-- Medical History Tab -->
-                <div id="medical-history" class="doctor-tab-content active">
-                    <h3 class="doctor-content-title">Medical History</h3>
-                    <div class="doctor-history-grid">
-                        <div class="doctor-history-item">
-                            <div class="doctor-history-label">Condition</div>
-                            <div class="doctor-history-value">Hypertension</div>
+            <!-- All Content Visible -->
+            <div class="patient-content">
+                <!-- Medical History Section -->
+                <section class="patient-section">
+                    <h3 class="patient-section-title">Medical History</h3>
+                    <div class="patient-history-grid">
+                        <div class="patient-history-row">
+                            <span class="patient-history-label">Condition</span>
+                            <span class="patient-history-value">Diagnosis Date</span>
                         </div>
-                        <div class="doctor-history-item">
-                            <div class="doctor-history-label">Diagnosis Date</div>
-                            <div class="doctor-history-value">2018-05-15</div>
+                        <div class="patient-history-row">
+                            <span class="patient-history-label">Hypertension</span>
+                            <span class="patient-history-value">2018-05-15</span>
                         </div>
-                        <div class="doctor-history-item">
-                            <div class="doctor-history-label">Treatment</div>
-                            <div class="doctor-history-value">Medication and lifestyle changes</div>
+                        <div class="patient-history-row">
+                            <span class="patient-history-label">Treatment</span>
+                            <span class="patient-history-value">Outcome</span>
                         </div>
-                        <div class="doctor-history-item">
-                            <div class="doctor-history-label">Outcome</div>
-                            <div class="doctor-history-value">Controlled</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dental History Tab -->
-                <div id="dental-history" class="doctor-tab-content">
-                    <h3 class="doctor-content-title">Dental History</h3>
-                    <div class="doctor-dental-timeline">
-                        <div class="doctor-dental-item">
-                            <div class="doctor-dental-date">2023-11-20</div>
-                            <div class="doctor-dental-procedure">Routine Check-up</div>
-                            <div class="doctor-dental-notes">No issues detected</div>
-                        </div>
-                        <div class="doctor-dental-item">
-                            <div class="doctor-dental-date">2022-06-10</div>
-                            <div class="doctor-dental-procedure">Filling</div>
-                            <div class="doctor-dental-notes">Cavity in tooth #18 filled</div>
-                        </div>
-                        <div class="doctor-dental-item">
-                            <div class="doctor-dental-date">2021-03-15</div>
-                            <div class="doctor-dental-procedure">Cleaning</div>
-                            <div class="doctor-dental-notes">Regular cleaning</div>
+                        <div class="patient-history-row">
+                            <span class="patient-history-label">Medication and lifestyle changes</span>
+                            <span class="patient-history-value">Controlled</span>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <!-- Allergies Tab -->
-                <div id="allergies" class="doctor-tab-content">
-                    <h3 class="doctor-content-title">Allergies</h3>
-                    <div class="doctor-allergies-grid">
-                        <div class="doctor-allergy-item">
-                            <div class="doctor-allergy-name">Penicillin</div>
-                            <div class="doctor-allergy-reaction">Rash</div>
+                <!-- Dental History Section -->
+                <section class="patient-section">
+                    <h3 class="patient-section-title">Dental History</h3>
+                    <div class="patient-dental-list">
+                        <div class="patient-dental-row">
+                            <span class="patient-dental-procedure">Routine Check-up</span>
+                            <span class="patient-dental-date">2023-11-20</span>
                         </div>
-                        <div class="doctor-allergy-item">
-                            <div class="doctor-allergy-name">Latex</div>
-                            <div class="doctor-allergy-reaction">Hives</div>
+                        <div class="patient-dental-row">
+                            <span class="patient-dental-procedure">No issues detected</span>
+                            <span class="patient-dental-status">Filling</span>
+                        </div>
+                        <div class="patient-dental-row">
+                            <span class="patient-dental-procedure">2022-06-10</span>
+                            <span class="patient-dental-date">Cavity in tooth #18 filled</span>
+                        </div>
+                        <div class="patient-dental-row">
+                            <span class="patient-dental-procedure">Cleaning</span>
+                            <span class="patient-dental-date">2021-03-15</span>
+                        </div>
+                        <div class="patient-dental-row">
+                            <span class="patient-dental-procedure">Regular cleaning</span>
+                            <span class="patient-dental-date"></span>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <!-- Medications Tab -->
-                <div id="medications" class="doctor-tab-content">
-                    <h3 class="doctor-content-title">Medications</h3>
-                    <div class="doctor-medications-list">
-                        <div class="doctor-medication-item">
-                            <div class="doctor-medication-name">Lisinopril</div>
-                            <div class="doctor-medication-dosage">10mg daily</div>
+                <!-- Allergies Section -->
+                <section class="patient-section">
+                    <h3 class="patient-section-title">Allergies</h3>
+                    <div class="patient-allergies-list">
+                        <div class="patient-allergy-row">
+                            <span class="patient-allergy-label">Penicillin</span>
+                            <span class="patient-allergy-value">Reaction</span>
                         </div>
-                        <div class="doctor-medication-item">
-                            <div class="doctor-medication-name">Ibuprofen</div>
-                            <div class="doctor-medication-dosage">200mg as needed</div>
+                        <div class="patient-allergy-row">
+                            <span class="patient-allergy-label"></span>
+                            <span class="patient-allergy-value">Rash</span>
+                        </div>
+                        <div class="patient-allergy-row">
+                            <span class="patient-allergy-label">Latex</span>
+                            <span class="patient-allergy-value">Hives</span>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <!-- Vital Signs Tab -->
-                <div id="vital-signs" class="doctor-tab-content">
-                    <h3 class="doctor-content-title">Vital Signs</h3>
-                    <div class="doctor-vitals-grid">
-                        <div class="doctor-vital-card">
-                            <div class="doctor-vital-label">Blood Pressure</div>
-                            <div class="doctor-vital-value">120/80 mmHg</div>
+                <!-- Medications Section -->
+                <section class="patient-section">
+                    <h3 class="patient-section-title">Medications</h3>
+                    <div class="patient-medications-list">
+                        <div class="patient-medication-row">
+                            <span class="patient-medication-label">Lisinopril</span>
+                            <span class="patient-medication-value">Dosage</span>
                         </div>
-                        <div class="doctor-vital-card">
-                            <div class="doctor-vital-label">Heart Rate</div>
-                            <div class="doctor-vital-value">72 bpm</div>
+                        <div class="patient-medication-row">
+                            <span class="patient-medication-label"></span>
+                            <span class="patient-medication-value">10mg daily</span>
                         </div>
-                        <div class="doctor-vital-card">
-                            <div class="doctor-vital-label">Temperature</div>
-                            <div class="doctor-vital-value">98.6°F</div>
+                        <div class="patient-medication-row">
+                            <span class="patient-medication-label">Ibuprofen</span>
+                            <span class="patient-medication-value">200mg as needed</span>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <!-- Notes & Appointments Tab -->
-                <div id="notes-appointments" class="doctor-tab-content">
-                    <h3 class="doctor-content-title">Notes & Appointments</h3>
-                    <div class="doctor-appointments-list">
-                        <div class="doctor-appointment-item">
-                            <div class="doctor-appointment-icon">
+                <!-- Vital Signs Section -->
+                <section class="patient-section">
+                    <h3 class="patient-section-title">Vital Signs</h3>
+                    <div class="patient-vitals-list">
+                        <div class="patient-vital-row">
+                            <span class="patient-vital-label">Blood Pressure</span>
+                            <span class="patient-vital-value">Heart Rate</span>
+                        </div>
+                        <div class="patient-vital-row">
+                            <span class="patient-vital-label">120/80 mmHg</span>
+                            <span class="patient-vital-value">72 bpm</span>
+                        </div>
+                        <div class="patient-vital-row">
+                            <span class="patient-vital-label">Temperature</span>
+                            <span class="patient-vital-value"></span>
+                        </div>
+                        <div class="patient-vital-row">
+                            <span class="patient-vital-label">98.6°F</span>
+                            <span class="patient-vital-value"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Notes & Appointments Section -->
+                <section class="patient-section">
+                    <h3 class="patient-section-title">Notes & Appointments</h3>
+                    <div class="patient-appointments-list">
+                        <div class="patient-appointment-item">
+                            <div class="patient-appointment-icon">
                                 <i class="fas fa-calendar-check"></i>
                             </div>
-                            <div class="doctor-appointment-details">
-                                <div class="doctor-appointment-type">Appointment - General Checkup</div>
-                                <div class="doctor-appointment-date">2023-11-20</div>
+                            <div class="patient-appointment-details">
+                                <div class="patient-appointment-type">Appointment - General Checkup</div>
+                                <div class="patient-appointment-date">2023-11-20</div>
                             </div>
                         </div>
-                        <div class="doctor-appointment-item">
-                            <div class="doctor-appointment-icon">
+                        <div class="patient-appointment-item">
+                            <div class="patient-appointment-icon">
                                 <i class="fas fa-tools"></i>
                             </div>
-                            <div class="doctor-appointment-details">
-                                <div class="doctor-appointment-type">Treatment - Filling</div>
-                                <div class="doctor-appointment-date">2022-06-10</div>
+                            <div class="patient-appointment-details">
+                                <div class="patient-appointment-type">Treatment - Filling</div>
+                                <div class="patient-appointment-date">2022-06-10</div>
                             </div>
                         </div>
-                        <div class="doctor-appointment-item">
-                            <div class="doctor-appointment-icon">
+                        <div class="patient-appointment-item">
+                            <div class="patient-appointment-icon">
                                 <i class="fas fa-calendar-check"></i>
                             </div>
-                            <div class="doctor-appointment-details">
-                                <div class="doctor-appointment-type">Appointment - Cleaning</div>
-                                <div class="doctor-appointment-date">2021-03-15</div>
+                            <div class="patient-appointment-details">
+                                <div class="patient-appointment-type">Appointment - Cleaning</div>
+                                <div class="patient-appointment-date">2021-03-15</div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </main>
