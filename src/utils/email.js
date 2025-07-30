@@ -49,7 +49,7 @@ class Email {
                     <body style="margin: 0; padding: 0; background-color: #f6f7fb; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
                         <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
                             <!-- Header -->
-                            <div style="background: linear-gradient(135deg, #6c63ff 0%, #4b61b8 100%); padding: 40px 32px; text-align: center;">
+                            <div style="background: linear-gradient(135deg, #415FA5 0%, #415FA5 100%); padding: 40px 32px; text-align: center;">
                                 <h1 style="color: #ffffff; font-size: 1.5rem; font-weight: 700; margin: 0; letter-spacing: 0.5px;">
                                     🦷 Dental Clinic
                                 </h1>
@@ -69,12 +69,12 @@ class Email {
                                     </p>
                                 </div>
 
-                                <div style="background: linear-gradient(135deg, #f4f6fa 0%, #fafaff 100%); border: 2px solid #6c63ff; border-radius: 16px; padding: 32px; text-align: center; margin: 32px 0;">
-                                    <p style="color: #4b61b8; font-size: 1rem; font-weight: 600; margin: 0 0 16px 0; text-transform: uppercase; letter-spacing: 1px;">
+                                <div style="background: linear-gradient(135deg, #f4f6fa 0%, #fafaff 100%); border: 2px solid #415FA5; border-radius: 16px; padding: 32px; text-align: center; margin: 32px 0;">
+                                    <p style="color: #415FA5; font-size: 1rem; font-weight: 600; margin: 0 0 16px 0; text-transform: uppercase; letter-spacing: 1px;">
                                         Your One-Time Password
                                     </p>
                                     <div style="background: #ffffff; border-radius: 12px; padding: 24px; margin: 16px 0; box-shadow: 0 2px 12px 0 rgba(80, 80, 120, 0.10);">
-                                        <h3 style="color: #6c63ff; margin: 0; font-size: 2.5rem; font-weight: 800; letter-spacing: 8px; font-family: 'Courier New', monospace;">
+                                        <h3 style="color: #415FA5; margin: 0; font-size: 2.5rem; font-weight: 800; letter-spacing: 8px; font-family: 'Courier New', monospace;">
                                             ${this.otp}
                                         </h3>
                                     </div>
@@ -99,7 +99,7 @@ class Email {
                                 <div style="text-align: center; margin-top: 40px;">
                                     <p style="color: #888; font-size: 0.95rem; margin: 0;">
                                         Need help? Contact our support team at 
-                                        <a href="mailto:support@dentalclinic.com" style="color: #6c63ff; text-decoration: none; font-weight: 600;">support@dentalclinic.com</a>
+                                        <a href="mailto:support@dentalclinic.com" style="color: #415FA5; text-decoration: none; font-weight: 600;">support@dentalclinic.com</a>
                                     </p>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@ class Email {
                     <body style="margin: 0; padding: 0; background-color: #f6f7fb; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;">
                         <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
                             <!-- Header -->
-                            <div style="background: linear-gradient(135deg, #6c63ff 0%, #4b61b8 100%); padding: 40px 32px; text-align: center;">
+                            <div style="background: linear-gradient(135deg, #415FA5 0%, #415FA5 100%); padding: 40px 32px; text-align: center;">
                                 <h1 style="color: #ffffff; font-size: 1.5rem; font-weight: 700; margin: 0; letter-spacing: 0.5px;">
                                     🦷 Dental Clinic
                                 </h1>
@@ -150,9 +150,9 @@ class Email {
                                 </div>
 
                                 <!-- Login Credentials Card -->
-                                <div style="background: linear-gradient(135deg, #f4f6fa 0%, #fafaff 100%); border: 2px solid #6c63ff; border-radius: 16px; padding: 32px; margin: 32px 0;">
+                                <div style="background: linear-gradient(135deg, #f4f6fa 0%, #fafaff 100%); border: 2px solid #415FA5; border-radius: 16px; padding: 32px; margin: 32px 0;">
                                     <div style="text-align: center; margin-bottom: 24px;">
-                                        <h3 style="color: #4b61b8; font-size: 1.3rem; font-weight: 700; margin: 0; display: flex; align-items: center; justify-content: center;">
+                                        <h3 style="color: #415FA5; font-size: 1.3rem; font-weight: 700; margin: 0; display: flex; align-items: center; justify-content: center;">
                                             <span style="margin-right: 8px;">🔑</span>
                                             Your Login Credentials
                                         </h3>
@@ -160,7 +160,7 @@ class Email {
                                     
                                     <div style="background: #ffffff; border-radius: 12px; padding: 24px; margin: 16px 0; box-shadow: 0 2px 12px 0 rgba(80, 80, 120, 0.10);">
                                         <div style="margin-bottom: 16px;">
-                                            <label style="color: #6c63ff; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">
+                                            <label style="color: #415FA5; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">
                                                 Email Address
                                             </label>
                                             <p style="color: #222; font-size: 1.1rem; font-weight: 600; margin: 0; font-family: 'Courier New', monospace; background: #f9f9fb; padding: 8px 12px; border-radius: 6px;">
@@ -169,7 +169,7 @@ class Email {
                                         </div>
                                         
                                         <div style="margin-bottom: 16px;">
-                                            <label style="color: #6c63ff; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">
+                                            <label style="color: #415FA5; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">
                                                 Temporary Password
                                             </label>
                                             <p style="color: #222; font-size: 1.1rem; font-weight: 600; margin: 0; font-family: 'Courier New', monospace; background: #f9f9fb; padding: 8px 12px; border-radius: 6px;">
@@ -188,14 +188,14 @@ class Email {
 
                                 <!-- Call to Action -->
                                 <div style="text-align: center; margin: 40px 0 32px 0;">
-                                    <a href="${this.url}" style="display: inline-block; background: linear-gradient(135deg, #6c63ff 0%, #4b61b8 100%); color: #ffffff; text-decoration: none; font-size: 1.1rem; font-weight: 700; padding: 16px 32px; border-radius: 12px; box-shadow: 0 4px 16px 0 rgba(108, 99, 255, 0.25); transition: transform 0.2s;">
+                                    <a href="${this.url}" style="display: inline-block; background: linear-gradient(135deg, #415FA5 0%, #415FA5 100%); color: #ffffff; text-decoration: none; font-size: 1.1rem; font-weight: 700; padding: 16px 32px; border-radius: 12px; box-shadow: 0 4px 16px 0 rgba(65, 95, 165, 0.25); transition: transform 0.2s;">
                                         🚀 Access Your Account
                                     </a>
                                 </div>
 
                                 <!-- Security Best Practices -->
-                                <div style="background: #f0f9ff; border-left: 4px solid #6c63ff; border-radius: 8px; padding: 24px; margin: 32px 0;">
-                                    <h4 style="color: #4b61b8; font-size: 1.1rem; font-weight: 700; margin: 0 0 16px 0; display: flex; align-items: center;">
+                                <div style="background: #f0f9ff; border-left: 4px solid #415FA5; border-radius: 8px; padding: 24px; margin: 32px 0;">
+                                    <h4 style="color: #415FA5; font-size: 1.1rem; font-weight: 700; margin: 0 0 16px 0; display: flex; align-items: center;">
                                         <span style="margin-right: 8px;">🛡️</span>
                                         Security Best Practices
                                     </h4>
@@ -214,9 +214,9 @@ class Email {
                                     </h4>
                                     <p style="color: #888; font-size: 1rem; margin: 0 0 16px 0; line-height: 1.6;">
                                         Our support team is here to help you every step of the way.<br>
-                                        Contact us at <a href="mailto:support@dentalclinic.com" style="color: #6c63ff; text-decoration: none; font-weight: 600;">support@dentalclinic.com</a>
+                                        Contact us at <a href="mailto:support@dentalclinic.com" style="color: #415FA5; text-decoration: none; font-weight: 600;">support@dentalclinic.com</a>
                                     </p>
-                                    <p style="color: #6c63ff; font-size: 0.9rem; font-weight: 600; margin: 0;">
+                                    <p style="color: #415FA5; font-size: 0.9rem; font-weight: 600; margin: 0;">
                                         📞 Support Hours: Monday - Friday, 9:00 AM - 6:00 PM
                                     </p>
                                 </div>
