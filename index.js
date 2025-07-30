@@ -15,7 +15,6 @@ const errorHandler = require('./src/middleware/errorHandler');
 // Import routes
 const patientRoutes = require('./src/routes/patientRoutes');
 const adminRoutes = require('./src/routes/adminRoutes');
-const emailPreviewRoutes = require('./src/routes/emailPreview');
 
 const app = express();
 
@@ -68,7 +67,6 @@ app.use(hpp());
 // Routes
 app.use('/api/v1/patients', patientRoutes);
 app.use('/api/v1/admin', adminRoutes);
-app.use('/email-preview', emailPreviewRoutes);
 
 // Home route
 app.get('/', (req, res) => {
