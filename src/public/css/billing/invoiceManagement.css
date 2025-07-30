@@ -1,0 +1,176 @@
+/* --- Billing Officer Invoice Management: Match Screenshot Design & Colors --- */
+.billing-invoice-table-wrapper {
+  border: 2px solid #B9AFFF;
+  border-radius: 16px;
+  background: #fff;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+.billing-invoice-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+}
+.billing-invoice-table th, .billing-invoice-table td {
+  border-bottom: 1px solid #B9AFFF;
+  padding: 18px 14px;
+  text-align: left;
+  background: #fff;
+}
+.billing-invoice-table th {
+  background: #fff;
+  font-weight: 700;
+  color: #222;
+  font-size: 1.01rem;
+  border-top: none;
+}
+.billing-invoice-table tr:last-child td {
+  border-bottom: none;
+}
+/* --- Billing Status Badges: Uniform Size --- */
+.billing-status-badge {
+  display: inline-block;
+  min-width: 140px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #4B6CB7;
+  color: #fff;
+  border: none;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+  transition: background 0.18s;
+  vertical-align: middle;
+}
+.billing-status-badge.partial {
+  background: #6B7FD7;
+}
+.billing-invoice-filters-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+.billing-filter-chip {
+  background: #F3F4F6;
+  color: #222;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+}
+.billing-filter-chip.active {
+  background: #222;
+  color: #fff;
+}
+.billing-filter-chip:hover:not(.active) {
+  background: #E5E5EA;
+  color: #222;
+}
+
+/* Table row animation for filtering */
+.billing-invoice-table tbody tr {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.billing-invoice-table tbody tr.hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+.billing-invoice-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 18px;
+  margin-bottom: 40px;
+}
+.billing-invoice-action-btn {
+  background: #4B6CB7;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+}
+.billing-invoice-action-btn.secondary {
+  background: #F3F4F6;
+  color: #222;
+  font-weight: 700;
+}
+.billing-invoice-action-btn:hover, .billing-invoice-action-btn:focus {
+  background: #3957a3;
+  color: #fff;
+}
+.billing-invoice-action-btn.secondary:hover, .billing-invoice-action-btn.secondary:focus {
+  background: #E5E5EA;
+  color: #222;
+}
+
+/* --- Billing Invoice Management: Improved Search & Filter Row --- */
+.billing-invoice-search-row {
+  margin-bottom: 0;
+  width: 100%;
+}
+.billing-invoice-searchbar {
+  display: flex;
+  align-items: center;
+  background: #F3F4F6;
+  border-radius: 999px;
+  padding: 0 20px;
+  min-width: 260px;
+  max-width: 100%;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+}
+.billing-invoice-searchbar .search-icon {
+  font-size: 1.3rem;
+  color: #A3A3B3;
+  margin-right: 10px;
+}
+.billing-invoice-search-input {
+  border: none;
+  background: transparent;
+  font-size: 1.08rem;
+  width: 100%;
+  outline: none;
+  color: #222;
+  padding: 12px 0;
+}
+.billing-invoice-search-input::placeholder {
+  color: #A3A3B3;
+  opacity: 1;
+}
+.billing-invoice-filters-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .billing-invoice-container {
+    padding: 8px 2px;
+  }
+  .billing-invoice-table th, .billing-invoice-table td {
+    padding: 10px 6px;
+    font-size: 0.97rem;
+  }
+  .billing-invoice-actions-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+} 

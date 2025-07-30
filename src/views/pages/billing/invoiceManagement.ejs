@@ -1,0 +1,126 @@
+<div class="billing-invoice-container fade-slide-in">
+  <h1 class="billing-invoice-title">Invoice Management</h1>
+  <p class="billing-invoice-subtitle clinic-muted">View and manage all patient invoices. Generate new invoices for completed visits, walk-in services, or additional charges.</p>
+  <div class="billing-invoice-search-row">
+    <div class="billing-invoice-searchbar">
+      <input type="text" placeholder="Search by patient name or invoice number" class="billing-invoice-search-input" id="invoice-search" />
+    </div>
+  </div>
+  <div class="billing-invoice-filters-row">
+    <button type="button" class="billing-filter-chip active">All Invoices</button>
+    <button type="button" class="billing-filter-chip">Paid</button>
+    <button type="button" class="billing-filter-chip">Unpaid</button>
+    <button type="button" class="billing-filter-chip">Partially Paid</button>
+  </div>
+  <div class="billing-invoice-table-wrapper">
+    <table class="billing-invoice-table">
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>Invoice Number</th>
+          <th>Date</th>
+          <th>Service Details</th>
+          <th>Total Amount</th>
+          <th>Amount Due</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sophia Clark</td>
+          <td>INV-2024-001</td>
+          <td>2024-07-26</td>
+          <td>Consultation</td>
+          <td>$150.00</td>
+          <td>$0.00</td>
+          <td><span class="billing-status-badge paid">Paid</span></td>
+        </tr>
+        <tr>
+          <td>Ethan Miller</td>
+          <td>INV-2024-002</td>
+          <td>2024-07-27</td>
+          <td>Lab Tests</td>
+          <td>$200.00</td>
+          <td>$200.00</td>
+          <td><span class="billing-status-badge unpaid">Unpaid</span></td>
+        </tr>
+        <tr>
+          <td>Olivia Davis</td>
+          <td>INV-2024-003</td>
+          <td>2024-07-28</td>
+          <td>Physical Therapy</td>
+          <td>$300.00</td>
+          <td>$150.00</td>
+          <td><span class="billing-status-badge partial">Partially Paid</span></td>
+        </tr>
+        <tr>
+          <td>Liam Wilson</td>
+          <td>INV-2024-004</td>
+          <td>2024-07-29</td>
+          <td>Vaccination</td>
+          <td>$75.00</td>
+          <td>$75.00</td>
+          <td><span class="billing-status-badge unpaid">Unpaid</span></td>
+        </tr>
+        <tr>
+          <td>Ava Taylor</td>
+          <td>INV-2024-005</td>
+          <td>2024-07-30</td>
+          <td>Follow-up Visit</td>
+          <td>$100.00</td>
+          <td>$0.00</td>
+          <td><span class="billing-status-badge paid">Paid</span></td>
+        </tr>
+        <tr>
+          <td>Noah Anderson</td>
+          <td>INV-2024-006</td>
+          <td>2024-07-31</td>
+          <td>Emergency Care</td>
+          <td>$500.00</td>
+          <td>$500.00</td>
+          <td><span class="billing-status-badge unpaid">Unpaid</span></td>
+        </tr>
+        <tr>
+          <td>Isabella Thomas</td>
+          <td>INV-2024-007</td>
+          <td>2024-08-01</td>
+          <td>Dental Checkup</td>
+          <td>$80.00</td>
+          <td>$0.00</td>
+          <td><span class="billing-status-badge paid">Paid</span></td>
+        </tr>
+        <tr>
+          <td>Jackson Moore</td>
+          <td>INV-2024-008</td>
+          <td>2024-08-02</td>
+          <td>Specialist Consultation</td>
+          <td>$250.00</td>
+          <td>$250.00</td>
+          <td><span class="billing-status-badge unpaid">Unpaid</span></td>
+        </tr>
+        <tr>
+          <td>Mia Jackson</td>
+          <td>INV-2024-009</td>
+          <td>2024-08-03</td>
+          <td>Routine Checkup</td>
+          <td>$120.00</td>
+          <td>$120.00</td>
+          <td><span class="billing-status-badge unpaid">Unpaid</span></td>
+        </tr>
+        <tr>
+          <td>Aiden White</td>
+          <td>INV-2024-010</td>
+          <td>2024-08-04</td>
+          <td>Allergy Testing</td>
+          <td>$180.00</td>
+          <td>$180.00</td>
+          <td><span class="billing-status-badge unpaid">Unpaid</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="billing-invoice-actions-row">
+    <button class="billing-invoice-action-btn">Generate Invoice</button>
+    <button class="billing-invoice-action-btn secondary">Export Report</button>
+  </div>
+</div> 

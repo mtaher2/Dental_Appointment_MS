@@ -1,0 +1,104 @@
+/* --- Billing Officer Record Payment Styles --- */
+.record-payment-container {
+  max-width: 540px;
+  margin: 48px auto;
+  padding: 32px 0 32px 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.record-payment-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+}
+.record-payment-form {
+  width: 100%;
+}
+.record-payment-field {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.record-payment-field label {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.record-payment-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid #E5E5EA;
+  border-radius: 15px;
+  font-size: 1.08rem;
+  background: #fff;
+  transition: border 0.2s;
+  margin-bottom: 0;
+  color: #222;
+  font-family: inherit;
+}
+.record-payment-input:focus {
+  border-color: #4B6CB7;
+  outline: none;
+}
+.record-payment-input::placeholder {
+  color: #A3A3B3;
+  opacity: 1;
+}
+.record-payment-input[type="date"] {
+  color: #222;
+}
+.record-payment-notes {
+  min-height: 90px;
+  resize: vertical;
+}
+.record-payment-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  margin-top: 8px;
+}
+.record-payment-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #4B6CB7;
+  margin: 0;
+}
+.record-payment-checkbox-label {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 400;
+  cursor: pointer;
+}
+.record-payment-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+.record-payment-btn {
+  background: #4B6CB7;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: none;
+}
+.record-payment-btn:hover, .record-payment-btn:focus {
+  background: #3957a3;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .record-payment-container {
+    padding: 8px 2px;
+  }
+  .record-payment-actions-row {
+    justify-content: center;
+  }
+} 

@@ -1,0 +1,222 @@
+/* Payment Options Page */
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 32px 0;
+}
+.payment-form-section {
+  flex: 2;
+}
+.payment-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+.payment-form input[type="text"],
+.payment-form input[type="password"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  background: #f9f9fb;
+  transition: border 0.2s;
+}
+.payment-form input:focus {
+  border: 1.5px solid #6c63ff;
+  outline: none;
+}
+.payment-row {
+  display: flex;
+  gap: 18px;
+}
+.paypal-section {
+  margin: 20px 0 12px 0;
+}
+.paypal-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+.pay-now-btn {
+  display: block;
+  margin: 32px auto 0 auto;
+  width: 80%;
+  max-width: 500px;
+  background: #4660ad;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 40px;
+  padding: 18px 0;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px 0 rgba(80, 80, 120, 0.10);
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.pay-now-btn:hover, .pay-now-btn:focus {
+  background: #354a8c;
+  color: #fff;
+  box-shadow: 0 4px 16px 0 rgba(80, 80, 120, 0.13);
+  text-decoration: none;
+}
+
+/* --- Improved Breadcrumb Styles --- */
+.breadcrumb {
+  font-size: 1.05rem;
+  color: #6c63ff;
+  margin-bottom: 28px;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background: none;
+  padding: 0;
+}
+.breadcrumb a {
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.18s;
+}
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+  color: #4b61b8;
+  text-decoration: underline;
+}
+.breadcrumb span {
+  color: #b3b3c6;
+  font-weight: 400;
+  margin: 0 0.2em;
+  font-size: 1.1em;
+}
+.breadcrumb .breadcrumb-current {
+  color: #222;
+  font-weight: 700;
+}
+
+/* --- Improved Payment Summary Styles --- */
+.payment-summary {
+  flex: 1;
+  background: #fafaff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px 0 rgba(80, 80, 120, 0.07);
+  padding: 32px 32px 20px 32px;
+  min-width: 220px;
+  max-width: 260px;
+  margin-top: 32px;
+  align-self: flex-start;
+  border: 1.5px solid #ece6fa;
+}
+.payment-summary h3 {
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: #222;
+}
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 1.01rem;
+  color: #555;
+  font-weight: 500;
+}
+.summary-row span:first-child {
+  color: #6c63ff;
+  font-weight: 500;
+  transition: color 0.18s;
+}
+.summary-row span:first-child:hover {
+  color: #4b61b8;
+}
+.summary-row.total {
+  font-weight: 700;
+  color: #222;
+  margin-top: 18px;
+  font-size: 1.12rem;
+}
+.summary-row.total span:first-child {
+  color: #222;
+}
+
+/* --- Improved PayPal Checkbox Alignment --- */
+.paypal-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 6px 12px;
+  box-shadow: 0 1px 4px 0 rgba(80, 80, 120, 0.04);
+  border: 1px solid #ece6fa;
+  width: fit-content;
+}
+.paypal-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #6c63ff;
+  margin-right: 6px;
+}
+.paypal-option label {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Payment Options Page (po-title) */
+.po-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+@keyframes fadeSlideInPO {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.po-animate-container {
+  animation: fadeSlideInPO 0.7s cubic-bezier(0.4, 0.2, 0.2, 1) 0.1s both;
+}
+.po-animate-form {
+  animation: fadeSlideInPO 0.8s cubic-bezier(0.4, 0.2, 0.2, 1) 0.2s both;
+}
+.po-animate-summary {
+  animation: fadeSlideInPO 0.9s cubic-bezier(0.4, 0.2, 0.2, 1) 0.3s both;
+}
+
+@media (max-width: 900px) {
+  .payment-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .payment-summary {
+    max-width: 100%;
+    min-width: unset;
+    margin-top: 18px;
+    padding: 24px 12px 16px 12px;
+  }
+  .breadcrumb {
+    font-size: 0.98rem;
+    margin-bottom: 18px;
+  }
+} 

@@ -13,8 +13,9 @@ const connectDB = require('./src/database/connection');
 const errorHandler = require('./src/middleware/errorHandler');
 
 // Import routes
-const authRoutes = require('./src/routes/auth/auth');
 const patientRoutes = require('./src/routes/patient/patient');
+const billingRoutes = require('./src/routes/billing/billing');
+const authRoutes = require('./src/routes/auth/auth');
 const adminViewRoutes = require('./src/routes/admin/admin');
 const adminApiRoutes = require('./src/routes/superAdmin/adminRoutes');
 
@@ -78,14 +79,22 @@ app.use('/patient', patientRoutes);
 // Admin view routes
 app.use('/admin', adminViewRoutes);
 
+// Billing routes
+app.use('/billing', billingRoutes);
+
 // Home route
 app.get('/', (req, res) => {
     res.render('pages/auth/login', {
         title: 'Login',
         success_msg: '',
-        error_msg: ''
+        error_msg: '',
+        layout: false,
+        pageCSS: 'auth/login.css'
     });
 });
+
+// Error handling
+app.use(errorHandler);
 
 // Handle unhandled routes
 app.all('*', (req, res, next) => {
@@ -95,13 +104,8 @@ app.all('*', (req, res, next) => {
     next(err);
 });
 
-// Error handling middleware
-app.use(errorHandler);
-
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
     console.log(`http://localhost:${PORT}`);
-}); 
-
-//
+});

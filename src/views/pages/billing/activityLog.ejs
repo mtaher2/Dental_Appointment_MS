@@ -1,0 +1,88 @@
+<div class="activity-log-container">
+  <h2 class="activity-log-title">Billing Officer Activity Log</h2>
+  
+  <!-- Search and Filter Bar -->
+  <div class="activity-log-search-row">
+    <div class="activity-log-searchbar">
+      
+      <input type="text" class="activity-log-search-input" placeholder="Search activities">
+    </div>
+    <div class="activity-log-filter-wrapper">
+      <select class="activity-log-filter" name="actionFilter">
+        <option value="">Filter by Action</option>
+        <option value="invoice-created">Invoice Created</option>
+        <option value="invoice-edited">Invoice Edited</option>
+        <option value="payment-processed">Payment Processed</option>
+        <option value="refund-processed">Refund Processed</option>
+        <option value="insurance-updated">Insurance Updated</option>
+        <option value="reconciliation">Reconciliation</option>
+      </select>
+      <div class="filter-arrow">▼</div>
+    </div>
+  </div>
+  
+  <!-- Activity Log Table -->
+  <div class="activity-log-table-wrapper">
+    <table class="activity-log-table">
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Billing Officer</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2024-03-15 10:30 AM</td>
+          <td>Dr. Emily Carter</td>
+          <td>Invoice #12345 edited</td>
+        </tr>
+        <tr>
+          <td>2024-03-15 11:15 AM</td>
+          <td>Dr. Robert Harris</td>
+          <td>Refund processed for patient Sarah Johnson</td>
+        </tr>
+        <tr>
+          <td>2024-03-15 12:00 PM</td>
+          <td>Dr. Emily Carter</td>
+          <td>Insurance data updated for patient Michael Brown</td>
+        </tr>
+        <tr>
+          <td>2024-03-15 01:45 PM</td>
+          <td>Dr. Robert Harris</td>
+          <td>Payment marked manually for invoice #57890</td>
+        </tr>
+        <tr>
+          <td>2024-03-15 02:30 PM</td>
+          <td>Dr. Emily Carter</td>
+          <td>Reconciliation made for March 15th</td>
+        </tr>
+        <tr>
+          <td>2024-03-14 09:00 AM</td>
+          <td>Dr. Robert Harris</td>
+          <td>Invoice #4321 created</td>
+        </tr>
+        <tr>
+          <td>2024-03-14 10:00 AM</td>
+          <td>Dr. Emily Carter</td>
+          <td>Invoice #93765 edited</td>
+        </tr>
+        <tr>
+          <td>2024-03-14 11:30 AM</td>
+          <td>Dr. Robert Harris</td>
+          <td>Refund processed for patient David Lee</td>
+        </tr>
+        <tr>
+          <td>2024-03-14 01:00 PM</td>
+          <td>Dr. Emily Carter</td>
+          <td>Insurance data updated for patient Jessica Wilson</td>
+        </tr>
+        <tr>
+          <td>2024-03-14 02:15 PM</td>
+          <td>Dr. Robert Harris</td>
+          <td>Payment marked manually for invoice #11222</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> 

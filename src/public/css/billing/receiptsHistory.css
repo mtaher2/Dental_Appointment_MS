@@ -1,0 +1,111 @@
+/* Receipts & History Page Styles */
+.receipts-history-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.receipts-history-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.receipts-section,
+.payment-history-section {
+  margin-bottom: 50px;
+}
+
+.receipts-subtitle,
+.payment-history-subtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.receipts-table-wrapper,
+.payment-history-table-wrapper {
+  background: #fff;
+  border: 1.5px solid #B9AFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(185, 175, 255, 0.1);
+}
+
+.receipts-table,
+.payment-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.receipts-table th,
+.receipts-table td,
+.payment-history-table th,
+.payment-history-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #B9AFFF;
+  color: #222;
+}
+
+.receipts-table th,
+.payment-history-table th {
+  background: #f8f9ff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #222;
+  border-bottom: 2px solid #B9AFFF;
+}
+
+.receipts-table tr:last-child td,
+.payment-history-table tr:last-child td {
+  border-bottom: none;
+}
+
+.amount-cell {
+  text-align: right;
+  font-weight: 600;
+}
+
+.view-receipt-link {
+  color: #4256D0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.view-receipt-link:hover,
+.view-receipt-link:focus {
+  color: #354a8c;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .receipts-history-page-container {
+    padding: 20px 15px;
+  }
+  
+  .receipts-table th,
+  .receipts-table td,
+  .payment-history-table th,
+  .payment-history-table td {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .receipts-history-title {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+  
+  .receipts-subtitle,
+  .payment-history-subtitle {
+    font-size: 1.1rem;
+  }
+} 
