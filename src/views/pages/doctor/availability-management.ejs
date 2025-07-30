@@ -28,7 +28,9 @@
             <div class="doctor-header-right">
                 <i class="fas fa-bell doctor-notification"></i>
                 <div class="doctor-profile">
-                    <img src="/images/doctor-avatar.jpg" alt="Doctor" class="doctor-avatar">
+                    <img src="/images/avatar.png" alt="Doctor Profile" class="doctor-avatar" 
+                         onload="console.log('Avatar image loaded successfully')"
+                         onerror="console.log('Avatar image failed to load:', this.src); this.style.display='none';">
                 </div>
             </div>
         </div>

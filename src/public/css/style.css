@@ -3782,6 +3782,12 @@ ANIMATIONS FOR AUTH PAGES IMAGES
     display: block;
     min-width: 32px;
     min-height: 32px;
+    flex-shrink: 0;
+    /* Fallback styling to ensure visibility */
+    background-image: url('/images/avatar.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Doctor Main Content */
